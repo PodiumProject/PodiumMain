@@ -1,0 +1,728 @@
+# Translation of Metro CreativeX in Spanish (Spain)
+# This file is distributed under the same license as the Metro CreativeX package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-03-29 22:30:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.1.0-alpha\n"
+"Project-Id-Version: Metro CreativeX\n"
+
+#. Theme Name of the plugin/theme
+msgid "Metro CreativeX"
+msgstr "Metro CreativeX"
+
+#. Description of the plugin/theme
+msgid "Metro CreativeX is a free metro WordPress theme, super clean,colorful,minimal and with a fully responsive design. Coded with care in HTML5 &amp; CSS3, is easy to customize and well documented.<a href=\"https://themeisle.com/forums/forum/metrox/\">Official support forum</a> (https://themeisle.com/forums/forum/metrox/)"
+msgstr "Metro CreativeX es un tema gratuito de WordPress con diseño metro, muy limpio, a todo color, minimalista y con un diseño adaptativo. Desarrollado cuidando los estándares de HTML5 &amp; CSS3, es muy sencillo de personalizar y muy bien documentado.<a href=\"https://themeisle.com/forums/forum/metrox/\">Foros oficiales de soporte</a> (https://themeisle.com/forums/forum/metrox/)"
+
+#: inc/customizer.php:91
+msgid "Sidebar position"
+msgstr "Posición de Barra Lateral"
+
+#: inc/customizer.php:110
+msgid "Add new social icon"
+msgstr "Añadir nuevo icono social"
+
+#: inc/customizer.php:113
+msgid "More icons?<br/>Icon repeater is available in <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+msgstr "¿Más iconos?<br/> Icon repeater lo puedes encontrar en <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+
+#: inc/customizer.php:139
+msgid "Change the color scheme"
+msgstr "Cambiar esquema de colores"
+
+#: inc/customizer.php:142
+msgid "Change all colors with just two clicks.<br/>Pallete picker is available in <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+msgstr "Cambia todos los colores con tan solo dos clics.<br/>La paleta de selección la puedes encontrar en <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+
+#: inc/customizer.php:81
+msgid "Choose the font that suits your page.<br/>Font picker is available in <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+msgstr "Selecciona la fuente que se adapte más a tu página.<br/>El selector de fuentes lo puedes encontrar en <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+
+#: inc/customizer.php:94
+msgid "Change the sidebar position.<br/>Sidebar position is available in <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+msgstr "Cambia la posición de la barra lateral.<br/>La posición de la barra lateral la puedes encontrar en <a href=\"%s\" target=\"_blank\">Metro CustomizR</a>."
+
+#: inc/customizer.php:78
+msgid "Font"
+msgstr "Fuente"
+
+#: inc/customizer.php:68
+msgid "General"
+msgstr "Generales"
+
+#: class-tgm-plugin-activation.php:3362
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "Actualizando plugin %1$s (%2$d/%3$d)"
+
+#: functions.php:521
+msgid "Fonts"
+msgstr "Fuentes"
+
+#: functions.php:486
+msgid "Get unlimited customization possibilities"
+msgstr "Consigue personalizaciones ilimitadas"
+
+#: functions.php:487
+msgid "Fonts, colors, layout, everything is customizable. Super easy, super fast!"
+msgstr "Fuentes, colores, diseños, todo es personalizable. ¡Super fácil, super rápido!"
+
+#: functions.php:488
+msgid "Get Metro CustomizR now!"
+msgstr "¡Consigue ahora Metro CustomizR!"
+
+#: functions.php:493
+msgid "What You Will Get"
+msgstr "Qué conseguirás"
+
+#: functions.php:497
+msgid "Metro CustomizR is an addon plugin for Metro CreativeX that allows you to customize your theme the way you want. No more child themes or support needed. Just install it and you're ready to customize your website. Easy peasy!"
+msgstr "Metro CustomizR es un addon para Metro CreativeX que te permite personalizar el tema como tu quieras. No más temas hijo o soporte. Tan solo instálalo y ya estarás listo para personalizar tu sitio. ¡Pan comido!"
+
+#: functions.php:504
+msgid "Palette picker"
+msgstr "Selector de paleta"
+
+#: functions.php:505
+msgid "Change your page colors in just a few clicks with our palette picker control."
+msgstr "Cambia los colores de tu página en solo uso pocos clics con nuestro selector de paleta."
+
+#: functions.php:509
+msgid "Individual post color"
+msgstr "Color de entrada individual"
+
+#: functions.php:510
+msgid "No more child theme required.Customize each post background color."
+msgstr "Ya no se necesitan más temas hijos. Personaliza cada color de fondo."
+
+#: functions.php:516
+msgid "Website layout"
+msgstr "Diseño del sitio"
+
+#: functions.php:517
+msgid "With just one click you can change the sidebar position."
+msgstr "Con tan solo un clic, puedes cambiar la posición de la barra lateral"
+
+#: functions.php:522
+msgid "Choose from over 100 fonts to style your page."
+msgstr "Selecciona el estilo de tu página entre más de 100 fuentes."
+
+#: class-tgm-plugin-activation.php:2609
+msgid "Update"
+msgstr "Actualizar"
+
+#: class-tgm-plugin-activation.php:2683
+msgid "No plugins are available to be updated at this time."
+msgstr "No hay plugins disponibles para activar en este momento."
+
+#: class-tgm-plugin-activation.php:2645
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "No se han seleccionado plugins para actualizar. No se realizará ninguna acción."
+
+#: class-tgm-plugin-activation.php:2643
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "No se han seleccionado plugins para instalar. No se realizará ninguna acción."
+
+#: class-tgm-plugin-activation.php:2788
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "No se han seleccionado plugins para instalar. No se realizará ninguna acción."
+
+#: class-tgm-plugin-activation.php:2570
+msgid "Upgrade message from the plugin author:"
+msgstr "Mensaje de actualización del autor del plugin:"
+
+#: class-tgm-plugin-activation.php:2495
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr "Actualizar %2$s"
+
+#: class-tgm-plugin-activation.php:2500
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
+msgstr "Activar %2$s"
+
+#: class-tgm-plugin-activation.php:2442
+msgid "Version"
+msgstr "Versión"
+
+#: class-tgm-plugin-activation.php:2399
+msgid "Available version:"
+msgstr "Versión disponible:"
+
+#: class-tgm-plugin-activation.php:2289
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "Para activar <span class=\"count\">(%s)</span>"
+msgstr[1] "Para activar <span class=\"count\">(%s)</span>"
+
+#: class-tgm-plugin-activation.php:2371
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "desconocido"
+
+#: class-tgm-plugin-activation.php:2379
+msgid "Installed version:"
+msgstr "Versión instalada:"
+
+#: class-tgm-plugin-activation.php:2387
+msgid "Minimum required version:"
+msgstr "Versión mínima requerida:"
+
+#: class-tgm-plugin-activation.php:2422
+msgid "No plugins to install, update or activate. <a href=\"%1$s\">Return to the Dashboard</a>"
+msgstr "No hay plugins para instalar, actualizar o activar. <a href=\"%1$s\" title=\"Volver al Escritorio\">Volver al Escritorio</a>"
+
+#: class-tgm-plugin-activation.php:2491
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr "Instalar %2$s"
+
+#: class-tgm-plugin-activation.php:2286
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "Actualización disponible <span class=\"count\">(%s)</span>"
+msgstr[1] "Actualizaciones disponibles <span class=\"count\">(%s)</span>"
+
+#: class-tgm-plugin-activation.php:2283
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "A instalar <span class=\"count\">(%s)</span>"
+msgstr[1] "A instalar <span class=\"count\">(%s)</span>"
+
+#: class-tgm-plugin-activation.php:2280
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "Todos <span class=\"count\">(%s)</span>"
+msgstr[1] "Todos <span class=\"count\">(%s)</span>"
+
+#: class-tgm-plugin-activation.php:2224
+msgid "Requires Update"
+msgstr "Requiere actualización"
+
+#: class-tgm-plugin-activation.php:2221
+msgid "Required Update not Available"
+msgstr "Actualización requerida no disponible"
+
+#: class-tgm-plugin-activation.php:2235
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#: class-tgm-plugin-activation.php:2227
+msgid "Update recommended"
+msgstr "Actualización recomendada"
+
+#: class-tgm-plugin-activation.php:387
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "Comenzar la actualización del plugin"
+msgstr[1] "Comenzar la actualización de los plugins"
+
+#: class-tgm-plugin-activation.php:2215
+msgid "Active"
+msgstr "Activo"
+
+#: class-tgm-plugin-activation.php:377
+msgid "Sorry, but you do not have the correct permissions to activate the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %1$s plugins."
+msgstr[0] "Lo siento pero no tienes suficientes permisos para activar el plugin %1$s."
+msgstr[1] "Lo siento pero no tienes suficientes permisos para activar los plugins %1$s."
+
+#: class-tgm-plugin-activation.php:362
+msgid "Sorry, but you do not have the correct permissions to update the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %1$s plugins."
+msgstr[0] "Lo siento pero no tienes suficientes permisos para actualizar el plugin %1$s."
+msgstr[1] "Lo siento pero no tienes suficientes permisos para actualizar los plugins %1$s."
+
+#: class-tgm-plugin-activation.php:347
+msgid "Sorry, but you do not have the correct permissions to install the %1$s plugin."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %1$s plugins."
+msgstr[0] "Lo siento pero no tienes suficientes permisos para instalar el plugin %1$s."
+msgstr[1] "Lo siento pero no tienes suficientes permisos para instalar los plugins %1$s."
+
+#: class-tgm-plugin-activation.php:401
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "No se realizó ninguna acción. El plugin %1$s ya estaba activado."
+
+#: class-tgm-plugin-activation.php:521
+msgid "Update Required"
+msgstr "Requiere actualización"
+
+#: class-tgm-plugin-activation.php:357
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "Hay una actualización disponible para: %1$s."
+msgstr[1] "Hay actualizaciones disponibles para los siguientes plugins: %1$s."
+
+#: class-tgm-plugin-activation.php:402
+msgid "Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin."
+msgstr "Plugin desactivado. Necesitas una versión superior de %s para este tema. Por favor, actualiza el plugin."
+
+#: class-tgm-plugin-activation.php:405
+msgid "Please contact the administrator of this site for help."
+msgstr "Por favor, contacta con al administrador de este sitio."
+
+#: class-tgm-plugin-activation.php:1881
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: class-tgm-plugin-activation.php:2189
+msgid "External Source"
+msgstr "Fuente externa"
+
+#: class-tgm-plugin-activation.php:935
+msgid "The remote plugin package does not contain a folder with the desired slug and renaming did not work."
+msgstr "El paquete remoto del plugin no contiene una carpeta con el slug apropiado y no funcionó el cambio de nombre."
+
+#: class-tgm-plugin-activation.php:938
+msgid "The remote plugin package consists of more than one file, but the files are not packaged in a folder."
+msgstr "El paquete remoto del plugin está compuesto por más de un archivo, pero los archivos no están dentro de una carpeta."
+
+#: class-tgm-plugin-activation.php:1116 class-tgm-plugin-activation.php:2828
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "y"
+
+#: class-tgm-plugin-activation.php:520
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "Este plugin debe actualizarse para que sea compatible con tu tema."
+
+#: class-tgm-plugin-activation.php:635
+msgid "Set the parent_slug config variable instead."
+msgstr "Establece la variable de configuración parent_slug en su lugar."
+
+#: class-tgm-plugin-activation.php:935 class-tgm-plugin-activation.php:938
+msgid "Please contact the plugin provider and ask them to package their plugin according to the WordPress guidelines."
+msgstr "Por favor, ponte en contacto con el autor del plugin y pídele que lo empaquete de acuerdo a las prácticas recomendadas de WordPress."
+
+#: tag.php:9
+msgid "Tag Archives: %s"
+msgstr "Archivo de la etiqueta: %s"
+
+#: single.php:28
+msgid "Edit post"
+msgstr "Editar entrada"
+
+#: page.php:18
+msgid "Edit page"
+msgstr "Editar página"
+
+#: searchform.php:9
+msgctxt "label"
+msgid "Search for:"
+msgstr "Buscar:"
+
+#: search.php:3
+msgid "Search Results for: "
+msgstr "Resultados de la búsqueda para:"
+
+#: index.php:13
+msgid "404 - not found"
+msgstr "404 - no encontrado"
+
+#: inc/customizer.php:49 inc/customizer.php:59
+msgid "Logo"
+msgstr "Logotipo"
+
+#: inc/customizer.php:171
+msgid "Links color"
+msgstr "Color de los enlaces"
+
+#: functions.php:436
+msgid "Latest articles"
+msgstr "Latest Articles"
+
+#: inc/customizer.php:100
+msgid "Socials"
+msgstr "Redes Sociales"
+
+#: inc/customizer.php:119
+msgid "Facebook link"
+msgstr "Enlace de Facebook"
+
+#: inc/customizer.php:127
+msgid "Twitter link"
+msgstr "Enlace de Twitter"
+
+#: inc/customizer.php:33
+msgid "ThemeIsle theme notes"
+msgstr "Notas del tema ThemeIsle"
+
+#: inc/customizer.php:34
+msgid ""
+"Thank you for being part of this! We've spent almost 6 months building ThemeIsle without really knowing if anyone will ever use a theme or not, so we're very grateful that you've decided to work with us. Wanna <a href='http://themeisle.com/contact/' target='_blank'>say hi</a>?\n"
+"\t\t<br/><br/><a href='http://themeisle.com/demo/?theme=MetroX' target='_blank'>View Theme Demo</a> | <a href='https://themeisle.com/forums/forum/metrox/' target='_blank'>Get theme support</a>"
+msgstr ""
+"¡Gracias por formar parte de esto! Hemos invertido al rededor de 6 meses in crear ThemeIsle sin saber si realmente alguien iba a usar el tema o no, así que estamos muy agradecidos que hayas decidido trabajar con nosotros. ¿Quieres  <a href='http://themeisle.com/contact/' target='_blank'>decir hola</a>?\n"
+"  <br/><br/><a href='http://themeisle.com/demo/?theme=MetroX' target='_blank'>Ver demo del tema</a> | <a href='https://themeisle.com/forums/forum/metrox/' target='_blank'>Consigue soporte para el tema</a>"
+
+#: inc/customizer.php:51
+msgid "Upload a logo to replace the default site name and description in the header"
+msgstr "Sube un logo para sustituir el nombre y descripción del sitio de la cabecera"
+
+#: inc/customizer.php:155
+msgid "Texts color"
+msgstr "Color de textos"
+
+#: inc/customizer.php:187
+msgid "Links color - hover"
+msgstr "Color de enlace - hover"
+
+#: inc/customizer.php:203
+msgid "Navigation menu color"
+msgstr "Color del menú de navegación"
+
+#: inc/customizer.php:219
+msgid "Navigation menu color - hover"
+msgstr "Color del menú de navegación - hover"
+
+#: inc/customizer.php:235
+msgid "Sidebar title color"
+msgstr "Color del titulo de la barra lateral"
+
+#: header.php:83
+msgid "Menu"
+msgstr "Menu"
+
+#: functions.php:303
+msgid "Reply"
+msgstr "Respuesta"
+
+#: functions.php:301
+msgid "Edit"
+msgstr "Editar"
+
+#: functions.php:299
+msgid "Your comment is awaiting moderation."
+msgstr "Tu comentario está esperando ser moderado."
+
+#. translators: 1: date, 2: time
+#: functions.php:294
+msgid "%1$s at %2$s"
+msgstr "el %1$s a las %2$s"
+
+#: functions.php:274
+msgid "(Edit)"
+msgstr "(Editar)"
+
+#: class-tgm-plugin-activation.php:336 functions.php:213
+msgid "Something went wrong with the plugin API."
+msgstr "Algo salió mal con API del plugin."
+
+#: functions.php:239
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Todos los plugins instalados y activados correctamente. %s"
+
+#: functions.php:274
+msgid "Pingback:"
+msgstr "Pingback: "
+
+#: functions.php:148
+msgid "Newer posts"
+msgstr "Artículos siguientes"
+
+#: functions.php:145
+msgid "Older posts"
+msgstr "Entradas antiguas"
+
+#: functions.php:91
+msgid "Page %s"
+msgstr "Página %s"
+
+#: functions.php:19
+msgid "Header menu"
+msgstr "Menu Principal"
+
+#: functions.php:60
+msgid "Left sidebar"
+msgstr "Barra lateral izquierda"
+
+#: footer.php:7
+msgid "Powered by <a href=\"%s\">WordPress</a>"
+msgstr "Funciona gracias a <a href=\"%s\">WordPress</a>"
+
+#: footer.php:8
+msgid "Theme by <a rel=\"nofollow\" target=\"_blank\" href=\"%s\">ThemeIsle</a>"
+msgstr "Tema por <a rel=\"nofollow\" target=\"_blank\" href=\"%s\">ThemeIsle</a>"
+
+#: content-none.php:13
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Parece que no encontramos lo que estás buscando. Puede que una búsqueda te ayude."
+
+#: content-none.php:11
+msgid "Sorry, but nothing matched your search terms. Please try again with different keywords."
+msgstr "Lo sentimos, pero no se encuentra nada con estos términos de búsqueda. Por favor, inténtalo de nuevo con diferentes palabras clave."
+
+#: content-none.php:9
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "¿Listo para publicar tu primera entrada? <a href=\"%1$s\">Empieza aquí</a>."
+
+#: comments.php:38
+msgid "Comments are closed."
+msgstr "Comentarios cerrados."
+
+#: comments.php:30
+msgid "Newer Comments &rarr;"
+msgstr "Comentarios Posteriores &rarr;"
+
+#: comments.php:29
+msgid "&larr; Older Comments"
+msgstr "&larr; Comentarios anteriores"
+
+#: comments.php:28
+msgid "Comment navigation"
+msgstr "Comentario de navegación"
+
+#: comments.php:21
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "Un pensamiento sobre &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s pensamientos sobre &ldquo;%2$s&rdquo;"
+
+#: class-tgm-plugin-activation.php:3365
+msgid "The installation of %1$s failed."
+msgstr "La instalación de %1$s fallida."
+
+#: class-tgm-plugin-activation.php:3376
+msgid "%1$s installed successfully."
+msgstr "%1$s instalado correctamente."
+
+#: class-tgm-plugin-activation.php:3377
+msgid "All installations have been completed."
+msgstr "Todas las instalaciones completadas."
+
+#: class-tgm-plugin-activation.php:3378
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalar Plugin %1$s (%2$d/%3$d)"
+
+#: class-tgm-plugin-activation.php:3371
+msgid "All installations and activations have been completed."
+msgstr "Todas las instalaciones y activaciones se han completado."
+
+#: class-tgm-plugin-activation.php:3372
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Instalación y Activación Plugin %1$s (%2$d/%3$d)"
+
+#: class-tgm-plugin-activation.php:3375
+msgid "The installation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "El proceso de instalación ha comenzado. Este proceso puede tardar un poco según el alojamiento, por favor sea paciente."
+
+#: class-tgm-plugin-activation.php:3364
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "A ocurrido un error durante la instalación %1$s: <strong>%2$s</strong>."
+
+#: class-tgm-plugin-activation.php:3370 class-tgm-plugin-activation.php:3376
+msgid "Hide Details"
+msgstr "Ocultar detalles"
+
+#: class-tgm-plugin-activation.php:3369
+msgid "The installation and activation process is starting. This process may take a while on some hosts, so please be patient."
+msgstr "Comienza el proceso de instalación y activación. Este proceso puede tardar un poco en algunos alojamientos, por favor sea paciente."
+
+#: class-tgm-plugin-activation.php:3370
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s Instalado y activado correctamente."
+
+#: class-tgm-plugin-activation.php:3370 class-tgm-plugin-activation.php:3376
+msgid "Show Details"
+msgstr "Mostrar detalles"
+
+#: class-tgm-plugin-activation.php:3028
+msgid "Plugin activation failed."
+msgstr "Fallo en la activación de Plugin."
+
+#: class-tgm-plugin-activation.php:2681
+msgid "No plugins are available to be installed at this time."
+msgstr "No hay plugins disponibles para instalar en este momento."
+
+#: class-tgm-plugin-activation.php:2814
+msgid "No plugins are available to be activated at this time."
+msgstr "No hay plugins disponibles para activar en este momento."
+
+#: class-tgm-plugin-activation.php:2443
+msgid "Status"
+msgstr "Estado"
+
+#: class-tgm-plugin-activation.php:2438
+msgid "Type"
+msgstr "Tipo"
+
+#: class-tgm-plugin-activation.php:2437
+msgid "Source"
+msgstr "Fuente"
+
+#: class-tgm-plugin-activation.php:2436
+msgid "Plugin"
+msgstr "Plugin"
+
+#: class-tgm-plugin-activation.php:2612
+msgid "Activate"
+msgstr "Activar"
+
+#: class-tgm-plugin-activation.php:2603
+msgid "Install"
+msgstr "Instalar"
+
+#: class-tgm-plugin-activation.php:2170
+msgid "Recommended"
+msgstr "RECOMENDADO"
+
+#: class-tgm-plugin-activation.php:2209
+msgid "Not Installed"
+msgstr "No se ha Instalado"
+
+#: class-tgm-plugin-activation.php:2213
+msgid "Installed But Not Activated"
+msgstr "Instalado pero no activado"
+
+#: class-tgm-plugin-activation.php:2186
+msgid "WordPress Repository"
+msgstr "Repositorio WordPress"
+
+#: class-tgm-plugin-activation.php:2167
+msgid "Required"
+msgstr "Necesario"
+
+#: class-tgm-plugin-activation.php:828 class-tgm-plugin-activation.php:3438
+msgid "Return to the Dashboard"
+msgstr "Volver al Escritorio"
+
+#: class-tgm-plugin-activation.php:2192
+msgid "Pre-Packaged"
+msgstr "Pre-empaquetado"
+
+#: class-tgm-plugin-activation.php:400 class-tgm-plugin-activation.php:2832
+msgid "The following plugin was activated successfully:"
+msgstr "El siguiente plugin se ha activado correctamente:"
+
+#: class-tgm-plugin-activation.php:403
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Todos los plugin instalados y activados correctamente. %1$s"
+
+#: class-tgm-plugin-activation.php:404
+msgid "Dismiss this notice"
+msgstr "Ignorar ese aviso"
+
+#: class-tgm-plugin-activation.php:397 functions.php:235
+msgid "Return to Required Plugins Installer"
+msgstr "Volver al instalador de Plugins"
+
+#: class-tgm-plugin-activation.php:398
+msgid "Return to the dashboard"
+msgstr "Volver al Escritorio"
+
+#: class-tgm-plugin-activation.php:399 class-tgm-plugin-activation.php:3029
+#: functions.php:237
+msgid "Plugin activated successfully."
+msgstr "Plugin activado correctamente."
+
+#: class-tgm-plugin-activation.php:352 functions.php:227
+msgid "The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s."
+msgid_plural "The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s."
+msgstr[0] "El siguiente plugin debe actualizarse a la versión más reciente para asegurar la máxima compatibilidad con este tema: %1$s."
+msgstr[1] "Los siguientes plugins necesitan actualizarse a la versión más reciente para asegurar la máxima compatibilidad con este tema: %1$s."
+
+#: functions.php:229
+msgid "Sorry, but you do not have the correct permissions to update the %s plugin. Contact the administrator of this site for help on getting the plugin updated."
+msgid_plural "Sorry, but you do not have the correct permissions to update the %s plugins. Contact the administrator of this site for help on getting the plugins updated."
+msgstr[0] "Lo sentimos, no tienes permisos para actualizar el plugin %s. Contacta con el administrador de la web para recibir asistencia acerca de la actualización de plugins."
+msgstr[1] "Lo sentimos, no tienes permisos para actualizar los plugins %s. Contacta con el administrador de la web para recibir asistencia acerca de la actualización de plugins."
+
+#: class-tgm-plugin-activation.php:382 functions.php:231
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "Comenzar a instalar el plugin"
+msgstr[1] "Comenzar a instalar plugins"
+
+#: class-tgm-plugin-activation.php:392 functions.php:233
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "Comenzar a activar plugin"
+msgstr[1] "Comenzar a activar plugins"
+
+#: functions.php:219
+msgid "Sorry, but you do not have the correct permissions to install the %s plugin. Contact the administrator of this site for help on getting the plugin installed."
+msgid_plural "Sorry, but you do not have the correct permissions to install the %s plugins. Contact the administrator of this site for help on getting the plugins installed."
+msgstr[0] "Lo sentimos, no tienes permisos para instalar el plugin %s. Contacta con el administrador de la web para recibir asistencia acerca de la instalación de plugins."
+msgstr[1] "Lo sentimos, no tienes permisos para instalar los plugins %s. Contacta con el administrador de la web para recibir asistencia acerca de la instalación de plugins."
+
+#: class-tgm-plugin-activation.php:367 functions.php:221
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "El siguiente requiere plugin está actualmente inactiva: %1$s."
+msgstr[1] "El siguiente requiere los plugins son actualmente inactivos: %1$s."
+
+#: class-tgm-plugin-activation.php:372 functions.php:223
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "Recomienda el siguiente plugin está actualmente inactiva: %1$s."
+msgstr[1] "Recomienda lo siguiente los plugins son actualmente inactivos: %1$s."
+
+#: functions.php:225
+msgid "Sorry, but you do not have the correct permissions to activate the %s plugin. Contact the administrator of this site for help on getting the plugin activated."
+msgid_plural "Sorry, but you do not have the correct permissions to activate the %s plugins. Contact the administrator of this site for help on getting the plugins activated."
+msgstr[0] "Lo sentimos, no tienes permisos para activar el plugin %s. Contacta con el administrador de la web para recibir asistencia acerca de la activación de plugins."
+msgstr[1] "Lo sentimos, no tienes permisos para activar los plugins %s. Contacta con el administrador de la web para recibir asistencia acerca de la activación de plugins."
+
+#: class-tgm-plugin-activation.php:337 functions.php:215
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "Este tema requiere el siguiente plugin: %1$s."
+msgstr[1] "Este tema requiere los siguientes plugins: %1$s."
+
+#: class-tgm-plugin-activation.php:342 functions.php:217
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "Este Tema recomienda utilizar el plugin: %1$s."
+msgstr[1] "Este Tema recomienda utilizar los plugins: %1$s."
+
+#: class-tgm-plugin-activation.php:335 functions.php:211
+msgid "Installing Plugin: %s"
+msgstr "Instalando plugin: %s"
+
+#: class-tgm-plugin-activation.php:333 functions.php:207
+msgid "Install Required Plugins"
+msgstr "Requiere instalar plugins"
+
+#: class-tgm-plugin-activation.php:334 functions.php:209
+msgid "Install Plugins"
+msgstr "Instalar plugins"
+
+#: functions.php:572
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "A"
+
+#: functions.php:572
+msgid "Yearly Archives: %s"
+msgstr "Archivos anuales: %s"
+
+#: functions.php:570
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "M A"
+
+#: functions.php:570
+msgid "Monthly Archives: %s"
+msgstr "Archivo por meses: %s"
+
+#: functions.php:568
+msgid "Daily Archives: %s"
+msgstr "Archivo por días: %s"
+
+#. Author URI of the plugin/theme
+msgid "https://themeisle.com"
+msgstr "https://themeisle.com"
+
+#. Theme URI of the plugin/theme
+msgid "https://themeisle.com/themes/metrox/"
+msgstr "https://themeisle.com/themes/metrox/"
+
+#. Author of the plugin/theme
+msgid "themeisle"
+msgstr "themeisle"
