@@ -1,7 +1,7 @@
 <?php
 
 // Make sure that themecheck does not crash
-set_time_limit(0);
+//set_time_limit(0);
 
 // search posts only by title
 function ts_search_by_title_only( $search, &$wp_query )

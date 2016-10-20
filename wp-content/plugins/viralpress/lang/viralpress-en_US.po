@@ -1,0 +1,3352 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-10 19:04+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: viralpress.php:578
+msgid "Edit this post"
+msgstr ""
+
+#: viralpress.php:596
+msgid "Copy this post"
+msgstr ""
+
+#: viralpress.php:615
+msgid "Add your list to this"
+msgstr ""
+
+#: viralpress.php:629 viralpress.php:640
+msgid "Are you sure to delete this?"
+msgstr ""
+
+#: viralpress.php:656
+msgid "Loading editor...."
+msgstr ""
+
+#: viralpress.php:720
+msgid "ViralPress Settings"
+msgstr ""
+
+#: viralpress.php:721
+msgid "Auto Update"
+msgstr ""
+
+#: viralpress.php:722
+msgid "Ad Settings"
+msgstr ""
+
+#: viralpress.php:723 viralpress.php:776 classes/vp_post.class.php:1886
+msgid "Poll Results"
+msgstr ""
+
+#: viralpress.php:724 viralpress.php:800
+msgid "Quiz Shares"
+msgstr ""
+
+#: viralpress.php:767
+msgid "Invalid poll ID"
+msgstr ""
+
+#: viralpress.php:792
+msgid "Invalid quiz ID"
+msgstr ""
+
+#: viralpress.php:808
+msgid "shares"
+msgstr ""
+
+#: viralpress.php:810
+msgid "Platform"
+msgstr ""
+
+#: viralpress.php:810
+msgid "Link"
+msgstr ""
+
+#: viralpress.php:810
+msgid "Date shared"
+msgstr ""
+
+#: viralpress.php:814 viralpress.php:1166 viralpress.php:1185
+#: viralpress.php:1204 viralpress.php:1223 viralpress.php:1242
+#: viralpress.php:1261 viralpress.php:1280 viralpress.php:1299
+#: viralpress.php:1318 libraries/functions.php:2248
+#: libraries/functions.php:2325
+msgid "View"
+msgstr ""
+
+#: viralpress.php:821
+msgid "No shares yet! Did you turn on force quiz share option?"
+msgstr ""
+
+#: viralpress.php:852
+msgid "Home"
+msgstr ""
+
+#: viralpress.php:859
+msgid "Categories"
+msgstr ""
+
+#: viralpress.php:868
+msgid "Recent comments on my posts"
+msgstr ""
+
+#: viralpress.php:875
+msgid "Recent comments by me"
+msgstr ""
+
+#: viralpress.php:882
+msgid "Latest"
+msgstr ""
+
+#: viralpress.php:889 viralpress.php:959 viralpress.php:1157
+#: viralpress.php:1159 viralpress.php:1160 viralpress.php:1685
+#: libraries/functions.php:870 templates/open_list_editor.php:17
+msgid "News"
+msgstr ""
+
+#: viralpress.php:893 viralpress.php:1216 libraries/functions.php:871
+msgid "Lists"
+msgstr ""
+
+#: viralpress.php:897 viralpress.php:967 viralpress.php:1178
+#: viralpress.php:1179 viralpress.php:2014 classes/vp_post.class.php:1114
+#: libraries/functions.php:874
+msgid "Quiz"
+msgstr ""
+
+#: viralpress.php:901 viralpress.php:1197 libraries/functions.php:875
+msgid "Polls"
+msgstr ""
+
+#: viralpress.php:905 viralpress.php:1273 libraries/functions.php:872
+msgid "Videos"
+msgstr ""
+
+#: viralpress.php:909 viralpress.php:979 viralpress.php:1292
+#: viralpress.php:1293 viralpress.php:1709 viralpress.php:2017
+#: templates/editor.php:156 templates/open_list_editor.php:20
+msgid "Audio"
+msgstr ""
+
+#: viralpress.php:913 viralpress.php:983 viralpress.php:1235
+#: viralpress.php:1236 viralpress.php:1717 viralpress.php:2057
+#: templates/editor.php:162 templates/open_list_editor.php:21
+msgid "Gallery"
+msgstr ""
+
+#: viralpress.php:917 viralpress.php:987 viralpress.php:1254
+#: viralpress.php:1255 viralpress.php:1725 viralpress.php:2058
+#: templates/editor.php:159 templates/open_list_editor.php:22
+msgid "Playlist"
+msgstr ""
+
+#: viralpress.php:923 libraries/functions.php:381 libraries/functions.php:422
+msgid "Login"
+msgstr ""
+
+#: viralpress.php:930 viralpress.php:1012 viralpress.php:1057
+msgid "Profile"
+msgstr ""
+
+#: viralpress.php:937 libraries/functions.php:449 libraries/functions.php:518
+msgid "Register"
+msgstr ""
+
+#: viralpress.php:944 viralpress.php:3142
+msgid "Meme generator"
+msgstr ""
+
+#: viralpress.php:951 templates/editor.php:296
+msgid "Submit post"
+msgstr ""
+
+#: viralpress.php:963 viralpress.php:1217 viralpress.php:1693
+msgid "List"
+msgstr ""
+
+#: viralpress.php:971 viralpress.php:1198 viralpress.php:2012
+#: classes/vp_post.class.php:1117 templates/editor.php:163
+msgid "Poll"
+msgstr ""
+
+#: viralpress.php:975 viralpress.php:1274 viralpress.php:1701
+#: viralpress.php:2016 templates/editor.php:153
+#: templates/open_list_editor.php:19
+msgid "Video"
+msgstr ""
+
+#: viralpress.php:993 viralpress.php:1008
+msgid "Dashboard"
+msgstr ""
+
+#: viralpress.php:1001
+msgid "[current-username]"
+msgstr ""
+
+#: viralpress.php:1016
+msgid "My Posts"
+msgstr ""
+
+#: viralpress.php:1020
+msgid "Post comments"
+msgstr ""
+
+#: viralpress.php:1024
+msgid "My comments"
+msgstr ""
+
+#: viralpress.php:1028
+msgid "Logout"
+msgstr ""
+
+#: viralpress.php:1034 libraries/functions.php:538
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: viralpress.php:1041 libraries/functions.php:592
+msgid "Pick a New Password"
+msgstr ""
+
+#: viralpress.php:1067
+msgid "Notification"
+msgstr ""
+
+#: viralpress.php:1075
+msgid "My Open Lists"
+msgstr ""
+
+#: viralpress.php:1161 viralpress.php:1180 viralpress.php:1199
+#: viralpress.php:1218 viralpress.php:1237 viralpress.php:1256
+#: viralpress.php:1275 viralpress.php:1294 viralpress.php:1313
+msgid "Add New"
+msgstr ""
+
+#: viralpress.php:1162
+msgid "Add New News"
+msgstr ""
+
+#: viralpress.php:1163 viralpress.php:1182 viralpress.php:1201
+#: viralpress.php:1220 viralpress.php:1239 viralpress.php:1258
+#: viralpress.php:1277 viralpress.php:1296 viralpress.php:1315
+#: libraries/functions.php:904
+msgid "Edit"
+msgstr ""
+
+#: viralpress.php:1164
+msgid "Edit News"
+msgstr ""
+
+#: viralpress.php:1165
+msgid "New News"
+msgstr ""
+
+#: viralpress.php:1167
+msgid "View All News"
+msgstr ""
+
+#: viralpress.php:1168
+msgid "Search News"
+msgstr ""
+
+#: viralpress.php:1169
+msgid "No News found"
+msgstr ""
+
+#: viralpress.php:1170
+msgid "No News found in Trash"
+msgstr ""
+
+#: viralpress.php:1171
+msgid "Parent News"
+msgstr ""
+
+#: viralpress.php:1181
+msgid "Add New Quiz"
+msgstr ""
+
+#: viralpress.php:1183
+msgid "Edit Quiz"
+msgstr ""
+
+#: viralpress.php:1184
+msgid "New Quiz"
+msgstr ""
+
+#: viralpress.php:1186
+msgid "View All Quiz"
+msgstr ""
+
+#: viralpress.php:1187
+msgid "Search Quiz"
+msgstr ""
+
+#: viralpress.php:1188
+msgid "No Quiz found"
+msgstr ""
+
+#: viralpress.php:1189
+msgid "No Quiz found in Trash"
+msgstr ""
+
+#: viralpress.php:1190
+msgid "Parent Quiz"
+msgstr ""
+
+#: viralpress.php:1200
+msgid "Add New Poll"
+msgstr ""
+
+#: viralpress.php:1202
+msgid "Edit Poll"
+msgstr ""
+
+#: viralpress.php:1203
+msgid "New Poll"
+msgstr ""
+
+#: viralpress.php:1205
+msgid "View All Polls"
+msgstr ""
+
+#: viralpress.php:1206
+msgid "Search Polls"
+msgstr ""
+
+#: viralpress.php:1207
+msgid "No Poll found"
+msgstr ""
+
+#: viralpress.php:1208
+msgid "No Poll found in Trash"
+msgstr ""
+
+#: viralpress.php:1209
+msgid "Parent Poll"
+msgstr ""
+
+#: viralpress.php:1219
+msgid "Add New List"
+msgstr ""
+
+#: viralpress.php:1221 viralpress.php:1278
+msgid "Edit List"
+msgstr ""
+
+#: viralpress.php:1222
+msgid "New List"
+msgstr ""
+
+#: viralpress.php:1224
+msgid "View All Lists"
+msgstr ""
+
+#: viralpress.php:1225
+msgid "Search Lists"
+msgstr ""
+
+#: viralpress.php:1226
+msgid "No List found"
+msgstr ""
+
+#: viralpress.php:1227
+msgid "No List found in Trash"
+msgstr ""
+
+#: viralpress.php:1228
+msgid "Parent List"
+msgstr ""
+
+#: viralpress.php:1238
+msgid "Add New Gallery"
+msgstr ""
+
+#: viralpress.php:1240
+msgid "Edit Gallery"
+msgstr ""
+
+#: viralpress.php:1241
+msgid "New Gallery"
+msgstr ""
+
+#: viralpress.php:1243
+msgid "View All Galleries"
+msgstr ""
+
+#: viralpress.php:1244
+msgid "Search Galleries"
+msgstr ""
+
+#: viralpress.php:1245
+msgid "No Gallery found"
+msgstr ""
+
+#: viralpress.php:1246
+msgid "No Gallery found in Trash"
+msgstr ""
+
+#: viralpress.php:1247
+msgid "Parent Gallery"
+msgstr ""
+
+#: viralpress.php:1257
+msgid "Add New Playlist"
+msgstr ""
+
+#: viralpress.php:1259
+msgid "Edit Playlist"
+msgstr ""
+
+#: viralpress.php:1260
+msgid "New Playlist"
+msgstr ""
+
+#: viralpress.php:1262
+msgid "View All Playlist"
+msgstr ""
+
+#: viralpress.php:1263
+msgid "Search Playlist"
+msgstr ""
+
+#: viralpress.php:1264
+msgid "No Playlist found"
+msgstr ""
+
+#: viralpress.php:1265
+msgid "No Playlist found in Trash"
+msgstr ""
+
+#: viralpress.php:1266
+msgid "Parent Playlist"
+msgstr ""
+
+#: viralpress.php:1276
+msgid "Add New Video"
+msgstr ""
+
+#: viralpress.php:1279
+msgid "New Video"
+msgstr ""
+
+#: viralpress.php:1281
+msgid "View All Videos"
+msgstr ""
+
+#: viralpress.php:1282
+msgid "Search Videos"
+msgstr ""
+
+#: viralpress.php:1283
+msgid "No Video found"
+msgstr ""
+
+#: viralpress.php:1284
+msgid "No Video found in Trash"
+msgstr ""
+
+#: viralpress.php:1285
+msgid "Parent Video"
+msgstr ""
+
+#: viralpress.php:1295
+msgid "Add New Audio"
+msgstr ""
+
+#: viralpress.php:1297
+msgid "Edit Audio"
+msgstr ""
+
+#: viralpress.php:1298
+msgid "New Audio"
+msgstr ""
+
+#: viralpress.php:1300
+msgid "View All Audio"
+msgstr ""
+
+#: viralpress.php:1301
+msgid "Search Audio"
+msgstr ""
+
+#: viralpress.php:1302
+msgid "No Audio found"
+msgstr ""
+
+#: viralpress.php:1303
+msgid "No Audio found in Trash"
+msgstr ""
+
+#: viralpress.php:1304
+msgid "Parent Audio"
+msgstr ""
+
+#: viralpress.php:1311
+msgid "Pin"
+msgstr ""
+
+#: viralpress.php:1312 libraries/functions.php:873
+msgid "Pins"
+msgstr ""
+
+#: viralpress.php:1314
+msgid "Add New Pin"
+msgstr ""
+
+#: viralpress.php:1316
+msgid "Edit Pin"
+msgstr ""
+
+#: viralpress.php:1317
+msgid "New Pin"
+msgstr ""
+
+#: viralpress.php:1319
+msgid "View All Pins"
+msgstr ""
+
+#: viralpress.php:1320
+msgid "Search Pin"
+msgstr ""
+
+#: viralpress.php:1321
+msgid "No Pin found"
+msgstr ""
+
+#: viralpress.php:1322
+msgid "No Pin found in Trash"
+msgstr ""
+
+#: viralpress.php:1323
+msgid "Parent Pin"
+msgstr ""
+
+#: viralpress.php:1388 viralpress.php:1391
+msgid "Posts"
+msgstr ""
+
+#: viralpress.php:1416 viralpress.php:1420
+msgid "Open Lists"
+msgstr ""
+
+#: viralpress.php:1610
+msgid "Edit with ViralPress Editor"
+msgstr ""
+
+#: viralpress.php:1611
+msgid "ViralPress Editor"
+msgstr ""
+
+#: viralpress.php:1616
+msgid "View poll results"
+msgstr ""
+
+#: viralpress.php:1617
+msgid "Poll results"
+msgstr ""
+
+#: viralpress.php:1622
+msgid "View quiz shares"
+msgstr ""
+
+#: viralpress.php:1623
+msgid "Quiz shares"
+msgstr ""
+
+#: viralpress.php:1658 viralpress.php:2081
+msgid "Generate meme"
+msgstr ""
+
+#: viralpress.php:1667
+msgid "Open in ViralPress Editor"
+msgstr ""
+
+#: viralpress.php:1678
+msgid "ViralPress"
+msgstr ""
+
+#: viralpress.php:1964
+msgid "Add tags to your post"
+msgstr ""
+
+#: viralpress.php:1965 templates/editor.php:121
+msgid "Add preface"
+msgstr ""
+
+#: viralpress.php:1966
+msgid "Hide preface"
+msgstr ""
+
+#: viralpress.php:1967
+msgid "Optional"
+msgstr ""
+
+#: viralpress.php:1968
+msgid "Operation successful"
+msgstr ""
+
+#: viralpress.php:1969
+msgid "Saved successfully"
+msgstr ""
+
+#: viralpress.php:1970 templates/dashboard.php:50 templates/dashboard.php:65
+#: templates/dashboard.php:85 templates/meme.php:48
+msgid "Save"
+msgstr ""
+
+#: viralpress.php:1971
+msgid "Source"
+msgstr ""
+
+#: viralpress.php:1972
+msgid "Manage media"
+msgstr ""
+
+#: viralpress.php:1973
+msgid "Upload media"
+msgstr ""
+
+#: viralpress.php:1974
+msgid "Upload from URL"
+msgstr ""
+
+#: viralpress.php:1975
+msgid "Please wait..."
+msgstr ""
+
+#: viralpress.php:1976 libraries/ajax.php:79 libraries/ajax.php:195
+msgid "Login failed"
+msgstr ""
+
+#: viralpress.php:1977
+msgid "Remove this entry"
+msgstr ""
+
+#: viralpress.php:1978 classes/vp_op_list.class.php:76
+#: libraries/functions.php:811 libraries/functions.php:860
+#: templates/editor.php:60 templates/editor.php:105
+msgid "Title"
+msgstr ""
+
+#: viralpress.php:1979
+msgid "Type a title of this entry"
+msgstr ""
+
+#: viralpress.php:1980
+msgid "Add a source URL"
+msgstr ""
+
+#: viralpress.php:1981
+msgid "Type a description of this entry"
+msgstr ""
+
+#: viralpress.php:1982
+msgid "Type a question or add an image"
+msgstr ""
+
+#: viralpress.php:1983
+msgid "Type an answer or add an image"
+msgstr ""
+
+#: viralpress.php:1984 templates/editor.php:66 templates/editor.php:107
+#: templates/editor.php:114
+msgid "(Optional)"
+msgstr ""
+
+#: viralpress.php:1985 templates/editor.php:62
+msgid "(Required)"
+msgstr ""
+
+#: viralpress.php:1986 classes/vp_op_list.class.php:77
+msgid "Description"
+msgstr ""
+
+#: viralpress.php:1987
+msgid "Add a photo"
+msgstr ""
+
+#: viralpress.php:1988
+msgid "Show details"
+msgstr ""
+
+#: viralpress.php:1989 viralpress.php:2011
+msgid "Hide details"
+msgstr ""
+
+#: viralpress.php:1990
+msgid "Toggle editor"
+msgstr ""
+
+#: viralpress.php:1991
+msgid "Upload a photo"
+msgstr ""
+
+#: viralpress.php:1992
+msgid "Insert"
+msgstr ""
+
+#: viralpress.php:1993 templates/admin.php:721 templates/admin.php:761
+#: templates/editor.php:55 templates/editor.php:100
+msgid "Remove"
+msgstr ""
+
+#: viralpress.php:1994
+msgid "Add a thumbnail"
+msgstr ""
+
+#: viralpress.php:1995 templates/editor.php:38 templates/editor.php:51
+#: templates/editor.php:83 templates/editor.php:96
+msgid "Downloading..."
+msgstr ""
+
+#: viralpress.php:1996 templates/editor.php:50 templates/editor.php:95
+msgid "Change photo"
+msgstr ""
+
+#: viralpress.php:1997 viralpress.php:3107
+msgid "Add video"
+msgstr ""
+
+#: viralpress.php:1998 viralpress.php:3111
+msgid "Add audio"
+msgstr ""
+
+#: viralpress.php:1999
+msgid "Embed from websites"
+msgstr ""
+
+#: viralpress.php:2000 viralpress.php:2008
+msgid "Change video"
+msgstr ""
+
+#: viralpress.php:2001
+msgid "Change audio"
+msgstr ""
+
+#: viralpress.php:2002
+msgid "Change item"
+msgstr ""
+
+#: viralpress.php:2003
+msgid "Insert a url"
+msgstr ""
+
+#: viralpress.php:2007
+msgid "Invalid embed code"
+msgstr ""
+
+#: viralpress.php:2009
+msgid "Failed to parse url"
+msgstr ""
+
+#: viralpress.php:2010
+msgid "More details"
+msgstr ""
+
+#: viralpress.php:2013 templates/editor.php:150
+msgid "Text"
+msgstr ""
+
+#: viralpress.php:2015 templates/editor.php:151
+#: templates/open_list_editor.php:16
+msgid "Image"
+msgstr ""
+
+#: viralpress.php:2018 templates/editor.php:161
+#: templates/open_list_editor.php:18
+msgid "Embed"
+msgstr ""
+
+#: viralpress.php:2019 templates/editor.php:141
+msgid "Results"
+msgstr ""
+
+#: viralpress.php:2020
+msgid "Question"
+msgstr ""
+
+#: viralpress.php:2021
+msgid "Answers"
+msgstr ""
+
+#: viralpress.php:2022
+msgid "Answer"
+msgstr ""
+
+#: viralpress.php:2023
+msgid "Correct Answer"
+msgstr ""
+
+#: viralpress.php:2024
+msgid "SCORE"
+msgstr ""
+
+#: viralpress.php:2025
+msgid "You Got"
+msgstr ""
+
+#: viralpress.php:2026
+msgid "out of"
+msgstr ""
+
+#: viralpress.php:2027
+msgid "Add more answer"
+msgstr ""
+
+#: viralpress.php:2028
+msgid "Title of explanation"
+msgstr ""
+
+#: viralpress.php:2029
+msgid "Describe answer in details"
+msgstr ""
+
+#: viralpress.php:2030 viralpress.php:2031 viralpress.php:2032
+#: viralpress.php:2033 viralpress.php:2034
+msgid "Explain correct answer"
+msgstr ""
+
+#: viralpress.php:2035
+msgid ""
+"You already reacted to this post. Withdraw the previous reaction to react "
+"again."
+msgstr ""
+
+#: viralpress.php:2036
+msgid "Scoring"
+msgstr ""
+
+#: viralpress.php:2037
+msgid "From"
+msgstr ""
+
+#: viralpress.php:2038
+msgid "To"
+msgstr ""
+
+#: viralpress.php:2039 libraries/ajax.php:356
+msgid "Please answer all the questions."
+msgstr ""
+
+#: viralpress.php:2040 classes/vp_post.class.php:1872
+msgid "You have submitted your vote. Thank you for your participation."
+msgstr ""
+
+#: viralpress.php:2041
+msgid "votes"
+msgstr ""
+
+#: viralpress.php:2042
+msgid "Please select a mass action"
+msgstr ""
+
+#: viralpress.php:2043
+msgid "Please select at least one post"
+msgstr ""
+
+#: viralpress.php:2044
+msgid "Deleted"
+msgstr ""
+
+#: viralpress.php:2045
+msgid "Select"
+msgstr ""
+
+#: viralpress.php:2046
+msgid "post could not be edited"
+msgstr ""
+
+#: viralpress.php:2047
+msgid "Are you sure to perform this action?"
+msgstr ""
+
+#: viralpress.php:2048
+msgid "Are you sure to delete this item?"
+msgstr ""
+
+#: viralpress.php:2049 libraries/functions.php:411 libraries/functions.php:479
+#: libraries/functions.php:1576 templates/editor.php:40
+#: templates/editor.php:85
+msgid "OR"
+msgstr ""
+
+#: viralpress.php:2050 templates/editor.php:42 templates/editor.php:87
+msgid "Upload from link"
+msgstr ""
+
+#: viralpress.php:2051 templates/editor.php:270
+msgid "Show numbering"
+msgstr ""
+
+#: viralpress.php:2052 classes/vp_post.class.php:2295
+msgid "Edit post"
+msgstr ""
+
+#: viralpress.php:2053
+msgid "Liveleak embed code required. Liveleak video url will not work"
+msgstr ""
+
+#: viralpress.php:2054
+msgid "You must share the quiz before you can see result"
+msgstr ""
+
+#: viralpress.php:2055 libraries/functions.php:1588
+msgid "Are you sure to react with this gif?"
+msgstr ""
+
+#: viralpress.php:2056
+msgid "Submit"
+msgstr ""
+
+#: viralpress.php:2059
+msgid "Select images"
+msgstr ""
+
+#: viralpress.php:2060
+msgid "Select audio or video files"
+msgstr ""
+
+#: viralpress.php:2061
+msgid "Audio and video files cannot be mixed in playlist"
+msgstr ""
+
+#: viralpress.php:2062
+msgid "Add more photo"
+msgstr ""
+
+#: viralpress.php:2063
+msgid "You must login to perform this action"
+msgstr ""
+
+#: viralpress.php:2064
+msgid "Result"
+msgstr ""
+
+#: viralpress.php:2065
+msgid "Select one"
+msgstr ""
+
+#: viralpress.php:2066
+msgid "Gallery column"
+msgstr ""
+
+#: viralpress.php:2067
+msgid "Caraousel autostart"
+msgstr ""
+
+#: viralpress.php:2068
+msgid "Gallery type"
+msgstr ""
+
+#: viralpress.php:2069
+msgid "Thumbnail grid"
+msgstr ""
+
+#: viralpress.php:2070
+msgid "Tiled mosaic"
+msgstr ""
+
+#: viralpress.php:2071
+msgid "Tiled columns"
+msgstr ""
+
+#: viralpress.php:2072
+msgid "Square tiles"
+msgstr ""
+
+#: viralpress.php:2073
+msgid "Circle"
+msgstr ""
+
+#: viralpress.php:2074
+msgid "Slideshow/carousel"
+msgstr ""
+
+#: viralpress.php:2075
+msgid "Yes"
+msgstr ""
+
+#: viralpress.php:2076
+msgid "No"
+msgstr ""
+
+#: viralpress.php:2077
+msgid "Submitting open list..."
+msgstr ""
+
+#: viralpress.php:2078
+msgid "Your list was successfully submitted for review."
+msgstr ""
+
+#: viralpress.php:2079
+msgid "Item deleted successfully."
+msgstr ""
+
+#: viralpress.php:2080
+msgid "URL required for posting reaction."
+msgstr ""
+
+#: viralpress.php:2082
+msgid "Image required"
+msgstr ""
+
+#: viralpress.php:2083
+msgid "required"
+msgstr ""
+
+#: viralpress.php:2084
+msgid "Add more media"
+msgstr ""
+
+#: viralpress.php:2923
+msgid "lol"
+msgstr ""
+
+#: viralpress.php:2927
+msgid "win"
+msgstr ""
+
+#: viralpress.php:2931
+msgid "omg"
+msgstr ""
+
+#: viralpress.php:2935
+msgid "cute"
+msgstr ""
+
+#: viralpress.php:2939
+msgid "fail"
+msgstr ""
+
+#: viralpress.php:2943
+msgid "wtf"
+msgstr ""
+
+#: viralpress.php:2947
+msgid "trending"
+msgstr ""
+
+#: viralpress.php:2951
+msgid "top"
+msgstr ""
+
+#: viralpress.php:2955
+msgid "hot"
+msgstr ""
+
+#: viralpress.php:3083 viralpress.php:3139
+msgid "You must be logged in to create new post!"
+msgstr ""
+
+#: viralpress.php:3086
+msgid "Create a news"
+msgstr ""
+
+#: viralpress.php:3095 templates/admin.php:156
+msgid "Create list"
+msgstr ""
+
+#: viralpress.php:3099 templates/admin.php:157
+msgid "Create poll"
+msgstr ""
+
+#: viralpress.php:3103 templates/admin.php:162
+msgid "Create quiz"
+msgstr ""
+
+#: viralpress.php:3115
+msgid "Add pin"
+msgstr ""
+
+#: viralpress.php:3119 templates/admin.php:164
+msgid "Create gallery"
+msgstr ""
+
+#: viralpress.php:3123
+msgid "Create playlist"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:415
+msgid "%plural% for likes on their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:421 classes/vp_mycred_hooks.class.php:436
+#: classes/vp_mycred_hooks.class.php:451 classes/vp_mycred_hooks.class.php:466
+#: classes/vp_mycred_hooks.class.php:481 classes/vp_mycred_hooks.class.php:497
+#: classes/vp_mycred_hooks.class.php:512 classes/vp_mycred_hooks.class.php:527
+#: classes/vp_mycred_hooks.class.php:542 classes/vp_mycred_hooks.class.php:557
+#: classes/vp_mycred_hooks.class.php:572 classes/vp_mycred_hooks.class.php:587
+#: classes/vp_mycred_hooks.class.php:602
+msgid "Limit"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:425 classes/vp_mycred_hooks.class.php:440
+#: classes/vp_mycred_hooks.class.php:455 classes/vp_mycred_hooks.class.php:470
+#: classes/vp_mycred_hooks.class.php:485 classes/vp_mycred_hooks.class.php:501
+#: classes/vp_mycred_hooks.class.php:516 classes/vp_mycred_hooks.class.php:531
+#: classes/vp_mycred_hooks.class.php:546 classes/vp_mycred_hooks.class.php:561
+#: classes/vp_mycred_hooks.class.php:576 classes/vp_mycred_hooks.class.php:591
+#: classes/vp_mycred_hooks.class.php:606
+msgid "Log template"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:430
+msgid "%plural% for likes withdrawn from their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:445
+msgid "%plural% for dislikes on their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:460
+msgid "%plural% for dislikes withdrawn from their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:475
+msgid "%plural% for upvotes on their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:491
+msgid "%plural% for upvotes withdrawn from their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:506
+msgid "%plural% for downvotes on their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:521
+msgid "%plural% for downvotes withdrawn from their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:536
+msgid "%plural% for reactions on their posts"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:551
+msgid "%plural% for reaction withdrawn from their list items"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:566
+msgid "%plural% for quiz participation (both owner and participant)"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:581
+msgid "%plural% for poll participation (both owner and participant)"
+msgstr ""
+
+#: classes/vp_mycred_hooks.class.php:596
+msgid "%plural% for open list approval (both owner and submitter)"
+msgstr ""
+
+#: classes/vp_op_list.class.php:61 classes/vp_op_list.class.php:104
+msgid "Approve"
+msgstr ""
+
+#: classes/vp_op_list.class.php:62 classes/vp_op_list.class.php:67
+#: classes/vp_op_list.class.php:105 libraries/functions.php:801
+#: libraries/functions.php:914 templates/editor.php:223
+msgid "Delete"
+msgstr ""
+
+#: classes/vp_op_list.class.php:78 libraries/functions.php:817
+msgid "Post type"
+msgstr ""
+
+#: classes/vp_op_list.class.php:79
+msgid "Author"
+msgstr ""
+
+#: classes/vp_op_list.class.php:80
+msgid "Submitted to"
+msgstr ""
+
+#: classes/vp_op_list.class.php:81
+msgid "Parent post author"
+msgstr ""
+
+#: classes/vp_op_list.class.php:82 libraries/functions.php:864
+msgid "Date"
+msgstr ""
+
+#: classes/vp_op_list.class.php:83
+msgid "Actions"
+msgstr ""
+
+#: classes/vp_op_list.class.php:120
+msgid "Request validation failed"
+msgstr ""
+
+#: classes/vp_op_list.class.php:131 classes/vp_op_list.class.php:151
+msgid "No post selected"
+msgstr ""
+
+#: classes/vp_post.class.php:45 libraries/functions.php:1229
+#: templates/admin.php:185 templates/ads.php:13 templates/ads.php:33
+#: templates/update.php:21
+msgid "Failed to validate request. Please try again"
+msgstr ""
+
+#: classes/vp_post.class.php:50
+msgid "Login required before making any post"
+msgstr ""
+
+#: classes/vp_post.class.php:55
+msgid "Sorry, you cannot add or edit post. Please contact admin"
+msgstr ""
+
+#: classes/vp_post.class.php:68 classes/vp_user.class.php:552
+#: libraries/ajax.php:1240 libraries/ajax.php:1617
+msgid "Invalid captcha response"
+msgstr ""
+
+#: classes/vp_post.class.php:108
+msgid "Sorry, you cannot edit this post. Please contact admin"
+msgstr ""
+
+#: classes/vp_post.class.php:115
+msgid "Sorry, you cannot delete this post. Please contact admin"
+msgstr ""
+
+#: classes/vp_post.class.php:122 classes/vp_post.class.php:124
+msgid "Post successfully deleted"
+msgstr ""
+
+#: classes/vp_post.class.php:129
+msgid "Invalid post type"
+msgstr ""
+
+#: classes/vp_post.class.php:134 templates/create.php:60
+msgid "Sorry! List item submission is disabled"
+msgstr ""
+
+#: classes/vp_post.class.php:139 templates/create.php:63
+msgid "Sorry! Quiz submission is disabled"
+msgstr ""
+
+#: classes/vp_post.class.php:144 templates/create.php:66
+msgid "Sorry! Poll submission is disabled"
+msgstr ""
+
+#: classes/vp_post.class.php:151
+msgid "Invalid quiz type"
+msgstr ""
+
+#: classes/vp_post.class.php:161
+msgid "Post title must not be empty"
+msgstr ""
+
+#: classes/vp_post.class.php:167
+msgid "Post thumbnail cannot be a link. Please use image from media library"
+msgstr ""
+
+#: classes/vp_post.class.php:173
+msgid "Invalid or unauthorized preface image id"
+msgstr ""
+
+#: classes/vp_post.class.php:178 classes/vp_post.class.php:186
+msgid "Please choose a valid category"
+msgstr ""
+
+#: classes/vp_post.class.php:207
+msgid "The category for \""
+msgstr ""
+
+#: classes/vp_post.class.php:222
+msgid "At least one entry required"
+msgstr ""
+
+#: classes/vp_post.class.php:242
+msgid "Quiz score sheet missing."
+msgstr ""
+
+#: classes/vp_post.class.php:260
+msgid ""
+"At least a title or a description or an image required for each score sheet."
+msgstr ""
+
+#: classes/vp_post.class.php:261 classes/vp_post.class.php:267
+msgid "Missing values in quiz score sheet. Check errors below."
+msgstr ""
+
+#: classes/vp_post.class.php:266
+msgid "Score must be greater than or equal to zero."
+msgstr ""
+
+#: classes/vp_post.class.php:275
+msgid "Invalid post update request."
+msgstr ""
+
+#: classes/vp_post.class.php:276 classes/vp_post.class.php:285
+#: classes/vp_post.class.php:334 classes/vp_post.class.php:342
+#: classes/vp_post.class.php:377 classes/vp_post.class.php:385
+#: classes/vp_post.class.php:435 classes/vp_post.class.php:442
+#: classes/vp_post.class.php:453 classes/vp_post.class.php:468
+#: classes/vp_post.class.php:509 classes/vp_post.class.php:521
+#: classes/vp_post.class.php:529 classes/vp_post.class.php:538
+#: classes/vp_post.class.php:576 classes/vp_post.class.php:584
+#: classes/vp_post.class.php:596 classes/vp_post.class.php:602
+#: classes/vp_post.class.php:612 classes/vp_post.class.php:648
+#: classes/vp_post.class.php:656 classes/vp_post.class.php:668
+#: classes/vp_post.class.php:674 classes/vp_post.class.php:684
+#: classes/vp_post.class.php:719 classes/vp_post.class.php:726
+#: classes/vp_post.class.php:738 classes/vp_post.class.php:782
+#: classes/vp_post.class.php:795 classes/vp_post.class.php:802
+#: classes/vp_post.class.php:810 classes/vp_post.class.php:818
+#: classes/vp_post.class.php:825 classes/vp_post.class.php:831
+#: classes/vp_post.class.php:849 classes/vp_post.class.php:856
+#: classes/vp_post.class.php:863 classes/vp_post.class.php:871
+#: classes/vp_post.class.php:878 classes/vp_post.class.php:916
+#: classes/vp_post.class.php:986
+msgid ""
+"Please fill up all the required fields for each entries. Check errors marked "
+"below."
+msgstr ""
+
+#: classes/vp_post.class.php:284
+msgid "Image hotlinking is disabled"
+msgstr ""
+
+#: classes/vp_post.class.php:333
+msgid "Description required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:341 classes/vp_post.class.php:384
+#: classes/vp_post.class.php:467 classes/vp_post.class.php:537
+#: classes/vp_post.class.php:611 classes/vp_post.class.php:683
+#: classes/vp_post.class.php:737 classes/vp_post.class.php:809
+msgid "Invalid post update request"
+msgstr ""
+
+#: classes/vp_post.class.php:376 classes/vp_post.class.php:817
+msgid "Image hotlinking is disabled or invalid image"
+msgstr ""
+
+#: classes/vp_post.class.php:434 libraries/ajax.php:1409
+msgid "Invalid gallery type selected"
+msgstr ""
+
+#: classes/vp_post.class.php:441 classes/vp_post.class.php:452
+#: libraries/ajax.php:1414 libraries/ajax.php:1422
+msgid "Valid images required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:508 libraries/ajax.php:1448
+msgid "Valid media required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:520
+msgid "One of the media type is not supported. Check item no "
+msgstr ""
+
+#: classes/vp_post.class.php:528
+msgid "Audio and video cannot be mixed in playlist. Check item no "
+msgstr ""
+
+#: classes/vp_post.class.php:575 classes/vp_post.class.php:583
+#: libraries/ajax.php:1316
+msgid "Valid video required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:595 libraries/ajax.php:1322
+msgid "Self hosted video are not supported currently"
+msgstr ""
+
+#: classes/vp_post.class.php:601 classes/vp_post.class.php:673
+#: libraries/ajax.php:1326 libraries/ajax.php:1357
+msgid "Sorry currently we do not support "
+msgstr ""
+
+#: classes/vp_post.class.php:647 classes/vp_post.class.php:655
+#: libraries/ajax.php:1348
+msgid "Valid audio required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:667 libraries/ajax.php:1353
+msgid "Self hosted audio are not supported currently"
+msgstr ""
+
+#: classes/vp_post.class.php:718 classes/vp_post.class.php:725
+#: libraries/ajax.php:1380 libraries/ajax.php:1385
+msgid "Valid embed required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:781
+msgid ""
+"Explanation image is not valid. Image hotlinking is disabled or invalid image"
+msgstr ""
+
+#: classes/vp_post.class.php:794
+msgid "Valid answers either in text or image required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:801
+msgid "A correct answer required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:824
+msgid "Either an image or a question required for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:830
+msgid "Polls must have text questions"
+msgstr ""
+
+#: classes/vp_post.class.php:848
+msgid "Either an image or a question required for each answer of this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:855
+msgid "Poll options must have textual answers"
+msgstr ""
+
+#: classes/vp_post.class.php:862
+msgid "You must assign a result for each answer in this question"
+msgstr ""
+
+#: classes/vp_post.class.php:870
+msgid ""
+"One or more answer images are not valid in this entry. Image hotlinking is "
+"disabled or invalid image"
+msgstr ""
+
+#: classes/vp_post.class.php:877
+msgid "One or more answer update requests are not valid in this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:915
+msgid "No valid answer found for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:985
+msgid "Failed to add answer for this entry"
+msgstr ""
+
+#: classes/vp_post.class.php:1053 classes/vp_post.class.php:1265
+msgid "Failed to add post"
+msgstr ""
+
+#: classes/vp_post.class.php:1081
+msgid "Failed to add scores"
+msgstr ""
+
+#: classes/vp_post.class.php:1251
+msgid "Your post has been saved as draft."
+msgstr ""
+
+#: classes/vp_post.class.php:1254
+msgid "Your post has been published."
+msgstr ""
+
+#: classes/vp_post.class.php:1257
+msgid ""
+"Your post has been added to queue and will be published after admins review "
+"them."
+msgstr ""
+
+#: classes/vp_post.class.php:1529
+msgid "Choose an answer"
+msgstr ""
+
+#: classes/vp_post.class.php:1700
+msgid "Submitted by"
+msgstr ""
+
+#: classes/vp_post.class.php:1736
+msgid "Loading comments. Please wait..."
+msgstr ""
+
+#: classes/vp_post.class.php:1804
+msgid "Quiz results"
+msgstr ""
+
+#: classes/vp_post.class.php:1816
+msgid "Share on social media"
+msgstr ""
+
+#: classes/vp_post.class.php:1817
+msgid "You must share the quiz before seeing your result"
+msgstr ""
+
+#: classes/vp_post.class.php:1866
+msgid "Submit my votes"
+msgstr ""
+
+#: classes/vp_post.class.php:1868
+msgid "Note: You cannot change vote once submitted"
+msgstr ""
+
+#: classes/vp_post.class.php:1879
+msgid "Voting has been closed"
+msgstr ""
+
+#: classes/vp_post.class.php:1882
+msgid "Voting will close on"
+msgstr ""
+
+#: classes/vp_updater.class.php:114
+msgid "View details"
+msgstr ""
+
+#: classes/vp_updater.class.php:115
+msgid "Documentation"
+msgstr ""
+
+#: classes/vp_updater.class.php:128 templates/editor.php:177
+msgid "Settings"
+msgstr ""
+
+#: classes/vp_updater.class.php:151
+msgid "Download new version from CodeCanyon."
+msgstr ""
+
+#: classes/vp_updater.class.php:154
+msgid "Click here to update ViralPress now."
+msgstr ""
+
+#: classes/vp_updater.class.php:165
+msgid "Downloading package from envato..."
+msgstr ""
+
+#: classes/vp_updater.class.php:172
+msgid "Failed to connect to wordpress file system"
+msgstr ""
+
+#: classes/vp_updater.class.php:204
+msgid "Error on unzipping package"
+msgstr ""
+
+#: classes/vp_user.class.php:69
+msgid "You are already logged in!"
+msgstr ""
+
+#: classes/vp_user.class.php:198 classes/vp_user.class.php:333
+#: classes/vp_user.class.php:344
+msgid "You are already signed in."
+msgstr ""
+
+#: classes/vp_user.class.php:200 classes/vp_user.class.php:580
+#: libraries/ajax.php:72 libraries/ajax.php:188
+msgid "Registering new users is currently not allowed."
+msgstr ""
+
+#: classes/vp_user.class.php:362
+msgid "Invalid password reset link."
+msgstr ""
+
+#: classes/vp_user.class.php:540
+msgid "You are not logged in!"
+msgstr ""
+
+#: classes/vp_user.class.php:555
+msgid "Email address or username required."
+msgstr ""
+
+#: classes/vp_user.class.php:558
+msgid "Password required"
+msgstr ""
+
+#: classes/vp_user.class.php:562 classes/vp_user.class.php:568
+msgid "Invalid login information provided."
+msgstr ""
+
+#: classes/vp_user.class.php:574
+msgid "The email address you entered is not valid."
+msgstr ""
+
+#: classes/vp_user.class.php:577
+msgid "An account exists with this email address."
+msgstr ""
+
+#: classes/vp_user.class.php:583
+msgid "Valid username required."
+msgstr ""
+
+#: classes/vp_user.class.php:586
+msgid "This username is already taken."
+msgstr ""
+
+#: classes/vp_user.class.php:589
+msgid "You need to enter your email address or username to continue."
+msgstr ""
+
+#: classes/vp_user.class.php:593
+msgid "There are no users registered with this email address or username."
+msgstr ""
+
+#: classes/vp_user.class.php:597
+msgid "The password reset link you used is not valid anymore."
+msgstr ""
+
+#: classes/vp_user.class.php:600
+msgid "The two passwords you entered don't match."
+msgstr ""
+
+#: classes/vp_user.class.php:603
+msgid "Sorry, we don't accept empty passwords."
+msgstr ""
+
+#: classes/vp_user.class.php:609
+msgid "An unknown error occurred. Please try again later."
+msgstr ""
+
+#: classes/vp_widgets.class.php:19
+msgid "Most Reacted Posts"
+msgstr ""
+
+#: classes/vp_widgets.class.php:20
+msgid "Display the posts that were reacted most"
+msgstr ""
+
+#: classes/vp_widgets.class.php:63 classes/vp_widgets.class.php:68
+#: classes/vp_widgets.class.php:158 classes/vp_widgets.class.php:163
+#: classes/vp_widgets.class.php:253 classes/vp_widgets.class.php:258
+msgid "No post to display right now"
+msgstr ""
+
+#: classes/vp_widgets.class.php:79
+msgid "Most popular posts"
+msgstr ""
+
+#: classes/vp_widgets.class.php:89 classes/vp_widgets.class.php:184
+#: classes/vp_widgets.class.php:279
+msgid "Title:"
+msgstr ""
+
+#: classes/vp_widgets.class.php:91 classes/vp_widgets.class.php:186
+#: classes/vp_widgets.class.php:281
+msgid "Number of posts to display:"
+msgstr ""
+
+#: classes/vp_widgets.class.php:114
+msgid "Most Voted Polls"
+msgstr ""
+
+#: classes/vp_widgets.class.php:115
+msgid "Display the polls that were most voted"
+msgstr ""
+
+#: classes/vp_widgets.class.php:174
+msgid "Most popular polls"
+msgstr ""
+
+#: classes/vp_widgets.class.php:209
+msgid "Most Taken Quizzes"
+msgstr ""
+
+#: classes/vp_widgets.class.php:210
+msgid "Display the quizzes that were most taken"
+msgstr ""
+
+#: classes/vp_widgets.class.php:269
+msgid "Most popular quizzes"
+msgstr ""
+
+#: libraries/ajax.php:21 libraries/ajax.php:125
+msgid "Failed to validate token"
+msgstr ""
+
+#: libraries/ajax.php:28 libraries/ajax.php:132
+msgid "Email missing"
+msgstr ""
+
+#: libraries/ajax.php:255 libraries/ajax.php:261
+msgid "Invalid image URL"
+msgstr ""
+
+#: libraries/ajax.php:270
+msgid "Download failed"
+msgstr ""
+
+#: libraries/ajax.php:278
+msgid "Failed to save image"
+msgstr ""
+
+#: libraries/ajax.php:307 libraries/ajax.php:727 libraries/ajax.php:799
+#: libraries/ajax.php:871
+msgid "You must login to vote."
+msgstr ""
+
+#: libraries/ajax.php:314 libraries/ajax.php:734 libraries/ajax.php:806
+#: libraries/ajax.php:878 libraries/ajax.php:950 libraries/ajax.php:1024
+msgid "Sorry, something went wrong."
+msgstr ""
+
+#: libraries/ajax.php:324
+msgid "You already submitted your vote for this poll."
+msgstr ""
+
+#: libraries/ajax.php:332
+msgid "Sorry voting has been closed."
+msgstr ""
+
+#: libraries/ajax.php:366
+msgid "Invalid answer provided."
+msgstr ""
+
+#: libraries/ajax.php:373
+msgid "Could not find any poll for selected post."
+msgstr ""
+
+#: libraries/ajax.php:399
+msgid "Failed to load answers for this poll. Please try later."
+msgstr ""
+
+#: libraries/ajax.php:509 libraries/ajax.php:532
+msgid "Invalid image"
+msgstr ""
+
+#: libraries/ajax.php:552
+msgid "First name must be at least one character long"
+msgstr ""
+
+#: libraries/ajax.php:557
+msgid "Last name must be at least one character long"
+msgstr ""
+
+#: libraries/ajax.php:567
+msgid "Invalid email address"
+msgstr ""
+
+#: libraries/ajax.php:573
+msgid "This email address is already registered with another account"
+msgstr ""
+
+#: libraries/ajax.php:604
+msgid "Password must be at least six character long"
+msgstr ""
+
+#: libraries/ajax.php:609
+msgid "Passwords do not match"
+msgstr ""
+
+#: libraries/ajax.php:635
+msgid "Invalid facebook profile url"
+msgstr ""
+
+#: libraries/ajax.php:643
+msgid "Invalid twitter profile url"
+msgstr ""
+
+#: libraries/ajax.php:651
+msgid "Invalid google profile url"
+msgstr ""
+
+#: libraries/ajax.php:695 templates/create.php:87
+msgid "View the preview"
+msgstr ""
+
+#: libraries/ajax.php:695 templates/create.php:87
+msgid "here"
+msgstr ""
+
+#: libraries/ajax.php:743
+msgid "Invalid reaction"
+msgstr ""
+
+#: libraries/ajax.php:814 libraries/ajax.php:886 libraries/ajax.php:958
+#: libraries/ajax.php:1032
+msgid "Post does not exist."
+msgstr ""
+
+#: libraries/ajax.php:943
+msgid "You must login to like."
+msgstr ""
+
+#: libraries/ajax.php:1017
+msgid "You must login to dislike."
+msgstr ""
+
+#: libraries/ajax.php:1153
+msgid "Link required!"
+msgstr ""
+
+#: libraries/ajax.php:1171
+msgid "Sorry! Comments are closed for this post "
+msgstr ""
+
+#: libraries/ajax.php:1178
+msgid "This url is not accessible or not an image."
+msgstr ""
+
+#: libraries/ajax.php:1203 libraries/ajax.php:1210
+msgid "Failed to add comment"
+msgstr ""
+
+#: libraries/ajax.php:1250
+msgid "This post is not published yet!"
+msgstr ""
+
+#: libraries/ajax.php:1258 libraries/ajax.php:1545
+msgid "Sorry, open list is closed for this post!"
+msgstr ""
+
+#: libraries/ajax.php:1275
+msgid "Valid image required for list entry"
+msgstr ""
+
+#: libraries/ajax.php:1296
+msgid "News entries must have a description"
+msgstr ""
+
+#: libraries/ajax.php:1458
+msgid "One or more uploaded file type is not supported"
+msgstr ""
+
+#: libraries/ajax.php:1464
+msgid "Audio and video cannot be mixed in playlist."
+msgstr ""
+
+#: libraries/ajax.php:1516
+msgid "Post submission failed"
+msgstr ""
+
+#: libraries/ajax.php:1521
+msgid "Invalid entry type"
+msgstr ""
+
+#: libraries/ajax.php:1584
+msgid "You are not allowed to delete this item!"
+msgstr ""
+
+#: libraries/ajax.php:1590
+msgid "Failed to delete this item!"
+msgstr ""
+
+#: libraries/ajax.php:1625
+msgid "You cannot edit this media!"
+msgstr ""
+
+#: libraries/ajax.php:1630
+msgid "You cannot add or edit posts!"
+msgstr ""
+
+#: libraries/functions.php:52
+msgid "Email already exists"
+msgstr ""
+
+#: libraries/functions.php:421 libraries/functions.php:544
+msgid "Email or Username"
+msgstr ""
+
+#: libraries/functions.php:430
+msgid "Forgot your password?"
+msgstr ""
+
+#: libraries/functions.php:489 templates/dashboard.php:43
+msgid "Email"
+msgstr ""
+
+#: libraries/functions.php:494 templates/dashboard.php:96
+msgid "Username"
+msgstr ""
+
+#: libraries/functions.php:500
+msgid ""
+"Note: Your password will be generated automatically and sent to your email "
+"address."
+msgstr ""
+
+#: libraries/functions.php:508 libraries/functions.php:563
+msgid "Type the text you see"
+msgstr ""
+
+#: libraries/functions.php:552
+msgid ""
+"Enter your email address and we'll send you a link you can use to pick a new "
+"password."
+msgstr ""
+
+#: libraries/functions.php:573 libraries/functions.php:611
+msgid "Reset Password"
+msgstr ""
+
+#: libraries/functions.php:599 templates/dashboard.php:61
+msgid "New password"
+msgstr ""
+
+#: libraries/functions.php:603
+msgid "Repeat new password"
+msgstr ""
+
+#: libraries/functions.php:798
+msgid "Select action"
+msgstr ""
+
+#: libraries/functions.php:799 libraries/functions.php:827
+#: libraries/functions.php:911
+msgid "Draft"
+msgstr ""
+
+#: libraries/functions.php:800 libraries/functions.php:908
+msgid "Publish"
+msgstr ""
+
+#: libraries/functions.php:804 templates/meme.php:89
+msgid "Apply"
+msgstr ""
+
+#: libraries/functions.php:813
+msgid "Post category"
+msgstr ""
+
+#: libraries/functions.php:825
+msgid "Post status"
+msgstr ""
+
+#: libraries/functions.php:826 templates/open_list_admin_page.php:38
+msgid "Published"
+msgstr ""
+
+#: libraries/functions.php:828 templates/open_list_admin_page.php:39
+msgid "Pending"
+msgstr ""
+
+#: libraries/functions.php:829
+msgid "Future"
+msgstr ""
+
+#: libraries/functions.php:830
+msgid "Private"
+msgstr ""
+
+#: libraries/functions.php:861
+msgid "Type"
+msgstr ""
+
+#: libraries/functions.php:862
+msgid "Status"
+msgstr ""
+
+#: libraries/functions.php:863
+msgid "Comments"
+msgstr ""
+
+#: libraries/functions.php:878
+msgid "None"
+msgstr ""
+
+#: libraries/functions.php:937
+msgid "« Previous Page"
+msgstr ""
+
+#: libraries/functions.php:938
+msgid "Next Page »"
+msgstr ""
+
+#: libraries/functions.php:944 libraries/functions.php:1968
+#: libraries/functions.php:2107
+msgid "No post found."
+msgstr ""
+
+#: libraries/functions.php:1058
+msgid "Recent comments on your posts"
+msgstr ""
+
+#: libraries/functions.php:1070
+msgid "Recent comments by you"
+msgstr ""
+
+#: libraries/functions.php:1121
+msgid "&laquo; Previous"
+msgstr ""
+
+#: libraries/functions.php:1122
+msgid "Next &raquo;"
+msgstr ""
+
+#: libraries/functions.php:1143
+msgid "Posted on "
+msgstr ""
+
+#: libraries/functions.php:1400
+msgid "via"
+msgstr ""
+
+#: libraries/functions.php:1467
+msgid "Your reaction"
+msgstr ""
+
+#: libraries/functions.php:1471
+msgid "NICE"
+msgstr ""
+
+#: libraries/functions.php:1476
+msgid "SAD"
+msgstr ""
+
+#: libraries/functions.php:1481
+msgid "FUNNY"
+msgstr ""
+
+#: libraries/functions.php:1486
+msgid "OMG"
+msgstr ""
+
+#: libraries/functions.php:1491
+msgid "WTF"
+msgstr ""
+
+#: libraries/functions.php:1496
+msgid "WOW"
+msgstr ""
+
+#: libraries/functions.php:1542
+msgid "React with gif"
+msgstr ""
+
+#: libraries/functions.php:1557
+msgid "Add your image"
+msgstr ""
+
+#: libraries/functions.php:1572
+msgid "Submit your own image or gif reaction"
+msgstr ""
+
+#: libraries/functions.php:1573
+msgid "Image URL"
+msgstr ""
+
+#: libraries/functions.php:1577
+msgid "Upload your image"
+msgstr ""
+
+#: libraries/functions.php:1581 libraries/functions.php:1592
+msgid "Comment (Optional)"
+msgstr ""
+
+#: libraries/functions.php:1585 libraries/functions.php:1596
+msgid "Post this reaction!"
+msgstr ""
+
+#: libraries/functions.php:1602
+msgid "Submitting. Please wait..."
+msgstr ""
+
+#: libraries/functions.php:1758 libraries/functions.php:1760
+#: libraries/functions.php:1792 libraries/functions.php:1794
+#: libraries/functions.php:1816 libraries/functions.php:1818
+msgid "Item no longer available."
+msgstr ""
+
+#: libraries/functions.php:1770
+msgid "Your open list submission has been approved."
+msgstr ""
+
+#: libraries/functions.php:1775
+msgid "Your submission has been published."
+msgstr ""
+
+#: libraries/functions.php:1798
+msgid "You received new reply on your comment."
+msgstr ""
+
+#: libraries/functions.php:1822
+msgid "You received new reply on your post."
+msgstr ""
+
+#: libraries/functions.php:1914
+msgid "You are not authorized to view this tab."
+msgstr ""
+
+#: libraries/functions.php:2039
+msgid "Show all"
+msgstr ""
+
+#: libraries/functions.php:2040
+msgid "Show published"
+msgstr ""
+
+#: libraries/functions.php:2041
+msgid "Show pending"
+msgstr ""
+
+#: libraries/functions.php:2256 libraries/functions.php:2333
+msgid "Preview"
+msgstr ""
+
+#: libraries/functions.php:2581
+msgid "ViralPress Interactions"
+msgstr ""
+
+#: libraries/functions.php:2582
+msgid "Awards for likes, dislikes, votes and reactions"
+msgstr ""
+
+#: libraries/functions.php:2623
+msgid "Like this"
+msgstr ""
+
+#: libraries/functions.php:2625
+msgid "Dislike this"
+msgstr ""
+
+#: libraries/functions.php:2653
+msgid "Upvote this"
+msgstr ""
+
+#: libraries/functions.php:2655
+msgid "Downvote this"
+msgstr ""
+
+#: libraries/functions.php:2677 libraries/functions.php:2684
+msgid "Invalid input"
+msgstr ""
+
+#: libraries/functions.php:2678
+msgid "Saving image"
+msgstr ""
+
+#: libraries/functions.php:2679
+msgid "File successfully imported"
+msgstr ""
+
+#: libraries/functions.php:2680
+msgid "Font size must be less than 200px and greater than 1px"
+msgstr ""
+
+#: libraries/functions.php:2681
+msgid "Rotation must be between -180 to 180 degree"
+msgstr ""
+
+#: libraries/functions.php:2682
+msgid "Opacity must be between 0 to 1"
+msgstr ""
+
+#: libraries/functions.php:2683
+msgid "Angled watermark can only be placed on center. Proceed?"
+msgstr ""
+
+#: libraries/functions.php:2685
+msgid "Set Size"
+msgstr ""
+
+#: libraries/functions.php:2686
+msgid "Both text missing"
+msgstr ""
+
+#: libraries/functions.php:2687
+msgid "Text added. You can drag the text to your desired position if you want"
+msgstr ""
+
+#: libraries/functions.php:2688
+msgid "Failed to save media"
+msgstr ""
+
+#: libraries/functions.php:2689
+msgid "Image saved successfully"
+msgstr ""
+
+#: libraries/functions.php:2690
+msgid "View here"
+msgstr ""
+
+#: templates/admin.php:23
+msgid "Menu and categories already installed"
+msgstr ""
+
+#: templates/admin.php:27 templates/admin.php:41 templates/admin.php:54
+#: templates/admin.php:67
+msgid "Failed to validate request. Please try later"
+msgstr ""
+
+#: templates/admin.php:34
+msgid ""
+"Menu and categories successfully installed. Please activate ViralPress login "
+"and menu using the form below."
+msgstr ""
+
+#: templates/admin.php:47
+msgid ""
+"Menu successfully installed. Please activate ViralPress login and menu using "
+"the form below."
+msgstr ""
+
+#: templates/admin.php:60
+msgid "Menu successfully deleted."
+msgstr ""
+
+#: templates/admin.php:72
+msgid "Categories successfully installed."
+msgstr ""
+
+#: templates/admin.php:81
+msgid "Welcome to ViralPress!"
+msgstr ""
+
+#: templates/admin.php:82
+msgid "Turn your website into a viral content sharing platform!"
+msgstr ""
+
+#: templates/admin.php:85
+msgid "Get Started"
+msgstr ""
+
+#: templates/admin.php:89
+msgid "Install Categories & Menu"
+msgstr ""
+
+#: templates/admin.php:95 templates/admin.php:118
+msgid "Configure ViralPress"
+msgstr ""
+
+#: templates/admin.php:101
+msgid "Update permalink structure"
+msgstr ""
+
+#: templates/admin.php:106
+msgid "Update"
+msgstr ""
+
+#: templates/admin.php:107
+msgid "widgets"
+msgstr ""
+
+#: templates/admin.php:108
+msgid "or"
+msgstr ""
+
+#: templates/admin.php:108
+msgid "menus"
+msgstr ""
+
+#: templates/admin.php:115
+msgid "Next Steps"
+msgstr ""
+
+#: templates/admin.php:122 templates/admin.php:138
+msgid "Read the documentation"
+msgstr ""
+
+#: templates/admin.php:128
+msgid "Write your first viral post"
+msgstr ""
+
+#: templates/admin.php:135
+msgid "More Actions"
+msgstr ""
+
+#: templates/admin.php:142
+msgid "Visit the item page"
+msgstr ""
+
+#: templates/admin.php:146
+msgid "View your site"
+msgstr ""
+
+#: templates/admin.php:147
+msgid "Update theme"
+msgstr ""
+
+#: templates/admin.php:151
+msgid "Link to viral editor"
+msgstr ""
+
+#: templates/admin.php:155
+msgid "Create news"
+msgstr ""
+
+#: templates/admin.php:163
+msgid "Create video"
+msgstr ""
+
+#: templates/admin.php:180
+msgid "Viralpress Configurations"
+msgstr ""
+
+#: templates/admin.php:334 templates/update.php:48
+msgid "Settings saved"
+msgstr ""
+
+#: templates/admin.php:342
+msgid "General settings"
+msgstr ""
+
+#: templates/admin.php:343
+msgid "Social settings"
+msgstr ""
+
+#: templates/admin.php:344
+msgid "Captcha settings"
+msgstr ""
+
+#: templates/admin.php:345
+msgid "Editor settings"
+msgstr ""
+
+#: templates/admin.php:346
+msgid "Module settings"
+msgstr ""
+
+#: templates/admin.php:347
+msgid "Manage category & menu"
+msgstr ""
+
+#: templates/admin.php:348 templates/admin.php:708
+msgid "Gif Reactions"
+msgstr ""
+
+#: templates/admin.php:349
+msgid "Embed settings"
+msgstr ""
+
+#: templates/admin.php:357
+msgid "Install menu"
+msgstr ""
+
+#: templates/admin.php:359
+msgid ""
+"WARNING: If you already have menu installed, performing this action will "
+"make duplicate entries on menu. Please proceed with caution. NOTE: This "
+"action will take few minutes to complete."
+msgstr ""
+
+#: templates/admin.php:360
+msgid "Install Menu"
+msgstr ""
+
+#: templates/admin.php:364
+msgid "Install categories"
+msgstr ""
+
+#: templates/admin.php:367
+msgid "Install Categories"
+msgstr ""
+
+#: templates/admin.php:371
+msgid "Delete menu"
+msgstr ""
+
+#: templates/admin.php:373
+msgid ""
+"WARNING: Are you sure to delete ViralPress menu? NOTE: This action will take "
+"few minutes to complete."
+msgstr ""
+
+#: templates/admin.php:374
+msgid "Delete Menu"
+msgstr ""
+
+#: templates/admin.php:379
+msgid "Note: To reinstall the menu, delete first and then install again."
+msgstr ""
+
+#: templates/admin.php:391
+msgid "Publication"
+msgstr ""
+
+#: templates/admin.php:395
+msgid "Auto publish user submitted posts"
+msgstr ""
+
+#: templates/admin.php:400
+msgid "Post Reactions"
+msgstr ""
+
+#: templates/admin.php:404
+msgid "Show reaction buttons under each post"
+msgstr ""
+
+#: templates/admin.php:409
+msgid "Use like/dislike buttons"
+msgstr ""
+
+#: templates/admin.php:413
+msgid ""
+"Show likes/dislikes buttons instead of up/down votes for individual list "
+"items"
+msgstr ""
+
+#: templates/admin.php:418
+msgid "Custom Author Profiles"
+msgstr ""
+
+#: templates/admin.php:422
+msgid "Replace default author page with custom author page of ViralPress"
+msgstr ""
+
+#: templates/admin.php:427
+msgid "Show ViralPress Menu"
+msgstr ""
+
+#: templates/admin.php:431
+msgid "This will replace your wordpress menu with viralpress menu"
+msgstr ""
+
+#: templates/admin.php:436
+msgid "Block Admin Panel Access"
+msgstr ""
+
+#: templates/admin.php:440
+msgid ""
+"Block contributors from admin panel. Highly recommended to keep this option "
+"enabled."
+msgstr ""
+
+#: templates/admin.php:445
+msgid "Disallow approved post edits"
+msgstr ""
+
+#: templates/admin.php:449
+msgid "Block contributors from editing or deleting approved posts"
+msgstr ""
+
+#: templates/admin.php:454
+msgid "Save Viral Posts into Categories"
+msgstr ""
+
+#: templates/admin.php:458
+msgid ""
+"If checked each type of viral posts will be saved into a category with the "
+"same name as their type"
+msgstr ""
+
+#: templates/admin.php:463
+msgid "Show menu on"
+msgstr ""
+
+#: templates/admin.php:471
+msgid ""
+"Choose on which menu viralpress menu will be active. If you choose secondary "
+"menu your theme must support it"
+msgstr ""
+
+#: templates/admin.php:476
+msgid "Allow anonymous poll votes and reactions"
+msgstr ""
+
+#: templates/admin.php:480
+msgid "If checked guests can cast votes on polls and react to posts"
+msgstr ""
+
+#: templates/admin.php:485
+msgid "Share quiz before seeing result"
+msgstr ""
+
+#: templates/admin.php:489
+msgid ""
+"If checked users must share quiz to view their result. Only facebook share "
+"available on this mode"
+msgstr ""
+
+#: templates/admin.php:494
+msgid "Allow hotlinking in editor"
+msgstr ""
+
+#: templates/admin.php:498
+msgid ""
+"If checked external images added from link will be hotlinked directly "
+"without downloading to your server"
+msgstr ""
+
+#: templates/admin.php:506
+msgid "Facebook App Id"
+msgstr ""
+
+#: templates/admin.php:515
+msgid "Google Api Key"
+msgstr ""
+
+#: templates/admin.php:519 templates/admin.php:528
+msgid ""
+"Must be filled to enable google login.<br/>Make sure to enable google plus "
+"api in your app."
+msgstr ""
+
+#: templates/admin.php:524
+msgid "Google OAuth Id"
+msgstr ""
+
+#: templates/admin.php:533
+msgid "Facebook Comments"
+msgstr ""
+
+#: templates/admin.php:537
+msgid "Add facebook comments plugin with each post"
+msgstr ""
+
+#: templates/admin.php:542
+msgid "Display seperate facebook comments per list"
+msgstr ""
+
+#: templates/admin.php:546
+msgid ""
+"If checked each list will display seperate facebook comments box. Exception: "
+"polls and quizzes"
+msgstr ""
+
+#: templates/admin.php:551
+msgid "Share Buttons"
+msgstr ""
+
+#: templates/admin.php:555
+msgid "Show social share buttons under each post"
+msgstr ""
+
+#: templates/admin.php:563
+msgid "Recaptcha Public Key"
+msgstr ""
+
+#: templates/admin.php:567 templates/admin.php:576
+msgid "Must be filled to enable captcha protection."
+msgstr ""
+
+#: templates/admin.php:572
+msgid "Recaptcha Secret"
+msgstr ""
+
+#: templates/admin.php:581
+msgid "Captcha on signup"
+msgstr ""
+
+#: templates/admin.php:585
+msgid "If checked captcha challenge will be shown on signup"
+msgstr ""
+
+#: templates/admin.php:590
+msgid "Captcha on editor"
+msgstr ""
+
+#: templates/admin.php:594
+msgid "If checked user must solve captcha before submitting new post"
+msgstr ""
+
+#: templates/admin.php:603
+msgid "Allow only admins"
+msgstr ""
+
+#: templates/admin.php:607
+msgid "If checked ViralPress editor can only be accessed by admins and editors"
+msgstr ""
+
+#: templates/admin.php:612
+msgid "Allow copying viral posts by other users"
+msgstr ""
+
+#: templates/admin.php:616
+msgid ""
+"If checked any user can copy others list and save on their own name when the "
+"list owner checks the option to allow copy."
+msgstr ""
+
+#: templates/admin.php:621
+msgid "Allow open list"
+msgstr ""
+
+#: templates/admin.php:625
+msgid ""
+"If checked any user can contribute to list that has been submitted as open "
+"list. Submitted lists will be queued for approval from admins. Exception: "
+"polls and quizzes"
+msgstr ""
+
+#: templates/admin.php:633
+msgid "List enabled"
+msgstr ""
+
+#: templates/admin.php:637
+msgid ""
+"Indicates whether list item submission is enabled or disabled. List includes "
+"image, news, audio, video and embed"
+msgstr ""
+
+#: templates/admin.php:642
+msgid "Quiz enabled"
+msgstr ""
+
+#: templates/admin.php:646
+msgid "Indicates whether quiz submission is enabled or disabled"
+msgstr ""
+
+#: templates/admin.php:651
+msgid "Poll enabled"
+msgstr ""
+
+#: templates/admin.php:655
+msgid "Indicates whether poll submission is enabled or disabled"
+msgstr ""
+
+#: templates/admin.php:660
+msgid "ViralPress login system"
+msgstr ""
+
+#: templates/admin.php:664
+msgid ""
+"Disable if you want to use your existing login system. ViralPress login, "
+"logout, registration and recovery pages will not work."
+msgstr ""
+
+#: templates/admin.php:669
+msgid "BuddyPress Integration"
+msgstr ""
+
+#: templates/admin.php:673
+msgid "Uncheck to disable ViralPress notifications, post tabs from BuddyPress."
+msgstr ""
+
+#: templates/admin.php:678
+msgid "myCRED Integration"
+msgstr ""
+
+#: templates/admin.php:682
+msgid "Uncheck to disable ViralPress hooks for myCRED."
+msgstr ""
+
+#: templates/admin.php:687
+msgid "Self hosted video"
+msgstr ""
+
+#: templates/admin.php:691
+msgid "Uncheck to disable self hosted video uploads"
+msgstr ""
+
+#: templates/admin.php:696
+msgid "Self hosted audio"
+msgstr ""
+
+#: templates/admin.php:700
+msgid "Uncheck to disable self hosted audio uploads"
+msgstr ""
+
+#: templates/admin.php:718 templates/admin.php:758
+msgid "GIF URL:"
+msgstr ""
+
+#: templates/admin.php:719 templates/admin.php:759
+msgid "Caption:"
+msgstr ""
+
+#: templates/admin.php:720 templates/admin.php:760
+msgid "Static Image URL:"
+msgstr ""
+
+#: templates/admin.php:729
+msgid "Add new+"
+msgstr ""
+
+#: templates/admin.php:738
+msgid "Allowed external embeds"
+msgstr ""
+
+#: templates/admin.php:743
+msgid ""
+"Put additional domain names you want to allow to be embeded. <br/> Only "
+"domain name. No URL please. Seperate them by comma <br/>Popular sites like "
+"youtube, facebook, bbc, twitter, youtube etc. are already allowed by default."
+msgstr ""
+
+#: templates/admin.php:749 templates/update.php:91
+msgid "Save Changes"
+msgstr ""
+
+#: templates/ads.php:19
+msgid "Selected post is not viralpress ad post"
+msgstr ""
+
+#: templates/ads.php:27
+msgid "Successfully deleted ad code"
+msgstr ""
+
+#: templates/ads.php:44
+msgid "Invalid alignment"
+msgstr ""
+
+#: templates/ads.php:47
+msgid "List no required to show ads after"
+msgstr ""
+
+#: templates/ads.php:63
+msgid "Failed to save data"
+msgstr ""
+
+#: templates/ads.php:71
+msgid "Ads successfully saved"
+msgstr ""
+
+#: templates/ads.php:80
+msgid "Ad settings for viral posts"
+msgstr ""
+
+#: templates/ads.php:88 templates/ads.php:146
+msgid "Ads Code/HTML/Shortcode"
+msgstr ""
+
+#: templates/ads.php:94 templates/ads.php:152
+msgid "Margin"
+msgstr ""
+
+#: templates/ads.php:97 templates/ads.php:155
+msgid "Alignment"
+msgstr ""
+
+#: templates/ads.php:99 templates/ads.php:157
+msgid "Left"
+msgstr ""
+
+#: templates/ads.php:100 templates/ads.php:158
+msgid "Right"
+msgstr ""
+
+#: templates/ads.php:101 templates/ads.php:159
+msgid "Center"
+msgstr ""
+
+#: templates/ads.php:104 templates/ads.php:162
+msgid "Placement"
+msgstr ""
+
+#: templates/ads.php:106 templates/ads.php:164
+msgid "At the beginning"
+msgstr ""
+
+#: templates/ads.php:107 templates/ads.php:165
+msgid "At the end"
+msgstr ""
+
+#: templates/ads.php:108 templates/ads.php:166
+msgid "After specific list number"
+msgstr ""
+
+#: templates/ads.php:110 templates/ads.php:168
+msgid "List no."
+msgstr ""
+
+#: templates/ads.php:114
+msgid "Save this code"
+msgstr ""
+
+#: templates/ads.php:121
+msgid "Existing ad settings"
+msgstr ""
+
+#: templates/ads.php:173
+msgid "Update this code"
+msgstr ""
+
+#: templates/ads.php:176
+msgid "Delete this code"
+msgstr ""
+
+#: templates/create.php:112
+msgid "Are you sure to delete this? "
+msgstr ""
+
+#: templates/create.php:113
+msgid "No "
+msgstr ""
+
+#: templates/create.php:114
+msgid "Yes "
+msgstr ""
+
+#: templates/create.php:118
+msgid "Failed to validate request. Please delete using the form below."
+msgstr ""
+
+#: templates/dashboard.php:27
+msgid "Welcome"
+msgstr ""
+
+#: templates/dashboard.php:37
+msgid "Personal Information"
+msgstr ""
+
+#: templates/dashboard.php:39
+msgid "First name"
+msgstr ""
+
+#: templates/dashboard.php:41
+msgid "Last name"
+msgstr ""
+
+#: templates/dashboard.php:46 templates/dashboard.php:97
+msgid "Display name"
+msgstr ""
+
+#: templates/dashboard.php:59
+msgid "Account Security"
+msgstr ""
+
+#: templates/dashboard.php:63
+msgid "Repeat password"
+msgstr ""
+
+#: templates/dashboard.php:77
+msgid "Social Ids"
+msgstr ""
+
+#: templates/dashboard.php:79
+msgid "Facebook profile"
+msgstr ""
+
+#: templates/dashboard.php:81
+msgid "Twitter Profile"
+msgstr ""
+
+#: templates/dashboard.php:83
+msgid "Google Profile"
+msgstr ""
+
+#: templates/dashboard.php:95
+msgid "Account Information"
+msgstr ""
+
+#: templates/dashboard.php:98
+msgid "Total post"
+msgstr ""
+
+#: templates/dashboard.php:101
+msgid "Manage Data"
+msgstr ""
+
+#: templates/dashboard.php:102
+msgid "My photos"
+msgstr ""
+
+#: templates/dashboard.php:104
+msgid "My posts"
+msgstr ""
+
+#: templates/dashboard.php:106
+msgid "My profile"
+msgstr ""
+
+#: templates/dashboard.php:117 templates/dashboard.php:123
+msgid "View all"
+msgstr ""
+
+#: templates/editor.php:30
+msgid "Basic"
+msgstr ""
+
+#: templates/editor.php:37 templates/editor.php:82
+msgid "Upload a thumbnail"
+msgstr ""
+
+#: templates/editor.php:62 templates/editor.php:107
+msgid "Type a title"
+msgstr ""
+
+#: templates/editor.php:64
+msgid "Subtitle"
+msgstr ""
+
+#: templates/editor.php:66
+msgid "Type a subtitle"
+msgstr ""
+
+#: templates/editor.php:72
+msgid "Post Preface"
+msgstr ""
+
+#: templates/editor.php:74
+msgid "Remove preface"
+msgstr ""
+
+#: templates/editor.php:109
+msgid "Summary"
+msgstr ""
+
+#: templates/editor.php:114
+msgid "Type a summary"
+msgstr ""
+
+#: templates/editor.php:119
+msgid "Post entires"
+msgstr ""
+
+#: templates/editor.php:133 templates/editor.php:166
+msgid "Add More Question"
+msgstr ""
+
+#: templates/editor.php:136 templates/editor.php:169
+msgid "Add More Results"
+msgstr ""
+
+#: templates/editor.php:183
+msgid "Select the quiz type"
+msgstr ""
+
+#: templates/editor.php:187
+msgid "Fixed answer type"
+msgstr ""
+
+#: templates/editor.php:191
+msgid "Trivia Quiz"
+msgstr ""
+
+#: templates/editor.php:192
+msgid "MCQ Quiz"
+msgstr ""
+
+#: templates/editor.php:193
+msgid "Personality Quiz (Type - I)"
+msgstr ""
+
+#: templates/editor.php:194
+msgid "Personality Quiz (Type - II)"
+msgstr ""
+
+#: templates/editor.php:199
+msgid "Category"
+msgstr ""
+
+#: templates/editor.php:214
+msgid "Post tags"
+msgstr ""
+
+#: templates/editor.php:218
+msgid "Publication status"
+msgstr ""
+
+#: templates/editor.php:220
+msgid "Save as draft"
+msgstr ""
+
+#: templates/editor.php:221
+msgid "Publish now"
+msgstr ""
+
+#: templates/editor.php:229
+msgid "Items per page"
+msgstr ""
+
+#: templates/editor.php:232 templates/open_list_admin_page.php:37
+msgid "All"
+msgstr ""
+
+#: templates/editor.php:233
+msgid "1"
+msgstr ""
+
+#: templates/editor.php:234
+msgid "2"
+msgstr ""
+
+#: templates/editor.php:235
+msgid "3"
+msgstr ""
+
+#: templates/editor.php:236
+msgid "4"
+msgstr ""
+
+#: templates/editor.php:237
+msgid "5"
+msgstr ""
+
+#: templates/editor.php:238
+msgid "7"
+msgstr ""
+
+#: templates/editor.php:239
+msgid "10"
+msgstr ""
+
+#: templates/editor.php:240
+msgid "15"
+msgstr ""
+
+#: templates/editor.php:241
+msgid "20"
+msgstr ""
+
+#: templates/editor.php:245
+msgid "List sort order"
+msgstr ""
+
+#: templates/editor.php:247
+msgid "Show in ascending order"
+msgstr ""
+
+#: templates/editor.php:248
+msgid "Show in descending order"
+msgstr ""
+
+#: templates/editor.php:252
+msgid "List style"
+msgstr ""
+
+#: templates/editor.php:254
+msgid "Legend"
+msgstr ""
+
+#: templates/editor.php:255
+msgid "Boxed"
+msgstr ""
+
+#: templates/editor.php:256
+msgid "Inline"
+msgstr ""
+
+#: templates/editor.php:260
+msgid "List disaply"
+msgstr ""
+
+#: templates/editor.php:262
+msgid "One column"
+msgstr ""
+
+#: templates/editor.php:263
+msgid "Two column, picture on left"
+msgstr ""
+
+#: templates/editor.php:264
+msgid "Two column, picture on right"
+msgstr ""
+
+#: templates/editor.php:265
+msgid "Two column, alternating"
+msgstr ""
+
+#: templates/editor.php:275
+msgid "Allow others to copy this list"
+msgstr ""
+
+#: templates/editor.php:280
+msgid "Make this list open"
+msgstr ""
+
+#: templates/editor.php:284
+msgid "Voting Open Till"
+msgstr ""
+
+#: templates/editor.php:300
+msgid "Drag-drop entries to rearrange"
+msgstr ""
+
+#: templates/editor.php:306
+msgid "Notes & Tips"
+msgstr ""
+
+#: templates/editor.php:313
+msgid "Prev"
+msgstr ""
+
+#: templates/editor.php:317
+msgid "Next"
+msgstr ""
+
+#: templates/editor.php:323
+msgid "Drag & drop entries to reposition them."
+msgstr ""
+
+#: templates/editor.php:324
+msgid ""
+"Uncheck or check show numbering checkbox to remove or add numbering from "
+"list."
+msgstr ""
+
+#: templates/editor.php:325
+msgid "Each Text entry must have description. Title is optional"
+msgstr ""
+
+#: templates/editor.php:326
+msgid ""
+"Each Image entry must have an image upload. Title and description are "
+"optional."
+msgstr ""
+
+#: templates/editor.php:327
+msgid ""
+"Video, audio & pins must have and a url embedded. Title and description are "
+"optional."
+msgstr ""
+
+#: templates/editor.php:328
+msgid ""
+"When you add embed url for video, audio or pin, fields to add title and "
+"description will be shown."
+msgstr ""
+
+#: templates/editor.php:329
+msgid ""
+"If you do not add any thumbnail to post, one of the images added to the post "
+"will be set as thumbnail."
+msgstr ""
+
+#: templates/editor.php:330
+msgid ""
+"When you create quiz or poll, each answer & question must have either a "
+"textual or visual presentation or both."
+msgstr ""
+
+#: templates/editor.php:331
+msgid ""
+"If you want to put caption into an image, use the caption text box  for an "
+"image in media gallery."
+msgstr ""
+
+#: templates/editor.php:332
+msgid "Hit SHIFT+ENTER to put a small line break in rich text editor."
+msgstr ""
+
+#: templates/editor.php:342
+msgid "Quiz Rules"
+msgstr ""
+
+#: templates/editor.php:346
+msgid "Scoring rules (MCQ/Trivia)"
+msgstr ""
+
+#: templates/editor.php:348
+msgid "Suitable when one question has only one correct answer"
+msgstr ""
+
+#: templates/editor.php:349
+msgid "One point for correct answer"
+msgstr ""
+
+#: templates/editor.php:350
+msgid "Zero point for wrong answer"
+msgstr ""
+
+#: templates/editor.php:351
+msgid ""
+"Use explanation to explain asnwers if needed. MCQ quizzes will show "
+"explanation at the end of quiz and trivia will show instantly after "
+"answering one question."
+msgstr ""
+
+#: templates/editor.php:354
+msgid "Scoring rules (Personality Type 1)"
+msgstr ""
+
+#: templates/editor.php:356 templates/editor.php:363
+msgid ""
+"Suitable when you want to analyze users habit, behavior or choice based on "
+"their answers i.e analytical type quiz"
+msgstr ""
+
+#: templates/editor.php:357
+msgid "Choose results for each answer"
+msgstr ""
+
+#: templates/editor.php:358
+msgid ""
+"The final results will be made on the count of results the user selected most"
+msgstr ""
+
+#: templates/editor.php:361
+msgid "Scoring rules (Personality Type 2)"
+msgstr ""
+
+#: templates/editor.php:364
+msgid "When user chooses answer 1, they get one point"
+msgstr ""
+
+#: templates/editor.php:365
+msgid "When user chooses answer 2, they get two points"
+msgstr ""
+
+#: templates/editor.php:366
+msgid "Similarly when user chooses answer y, they get y points"
+msgstr ""
+
+#: templates/editor.php:369
+msgid "Score sheet"
+msgstr ""
+
+#: templates/editor.php:371
+msgid "You can set results based on the score user gets"
+msgstr ""
+
+#: templates/editor.php:372
+msgid "For different range of scoring, set different results"
+msgstr ""
+
+#: templates/editor.php:373
+msgid ""
+"If you do not specify results for a specific range, the last score sheet "
+"will be used for that range while scoring"
+msgstr ""
+
+#: templates/editor.php:374
+msgid "Points above are not applicable for personality quiz type 1"
+msgstr ""
+
+#: templates/login.php:13
+msgid "You have been signed out. Would you like to sign in again?"
+msgstr ""
+
+#: templates/login.php:32
+#, php-format
+msgid ""
+"You have successfully registered to %s. We have emailed your password to the "
+"email address you entered."
+msgstr ""
+
+#: templates/login.php:41
+msgid "Check your email for a link to reset your password."
+msgstr ""
+
+#: templates/login.php:47
+msgid "Your password has been changed. You can sign in now."
+msgstr ""
+
+#: templates/meme.php:15
+msgid "You cannot edit this media"
+msgstr ""
+
+#: templates/meme.php:21
+msgid "Failed to load image"
+msgstr ""
+
+#: templates/meme.php:32
+msgid "Drag texts around after adding them"
+msgstr ""
+
+#: templates/meme.php:49
+msgid "Download"
+msgstr ""
+
+#: templates/meme.php:61
+msgid "Text1"
+msgstr ""
+
+#: templates/meme.php:63 templates/meme.php:78
+msgid "Color"
+msgstr ""
+
+#: templates/meme.php:65 templates/meme.php:80
+msgid "Opacity"
+msgstr ""
+
+#: templates/meme.php:66 templates/meme.php:81
+msgid "Size"
+msgstr ""
+
+#: templates/meme.php:69 templates/meme.php:84
+msgid "Font"
+msgstr ""
+
+#: templates/meme.php:70 templates/meme.php:85
+msgid "Rotate"
+msgstr ""
+
+#: templates/meme.php:76
+msgid "Text 2"
+msgstr ""
+
+#: templates/meme.php:90
+msgid "Reset"
+msgstr ""
+
+#: templates/modals.php:11
+msgid "Add a video"
+msgstr ""
+
+#: templates/modals.php:17
+msgid "Insert iframe embed code or URL"
+msgstr ""
+
+#: templates/modals.php:18 templates/modals.php:37 templates/modals.php:55
+#: templates/modals.php:56
+msgid "Enter iframe embed code or URL"
+msgstr ""
+
+#: templates/modals.php:20 templates/modals.php:39 templates/modals.php:58
+msgid "Width"
+msgstr ""
+
+#: templates/modals.php:22 templates/modals.php:41 templates/modals.php:60
+msgid "Height"
+msgstr ""
+
+#: templates/modals.php:24 templates/modals.php:43 templates/modals.php:62
+msgid "Fetch"
+msgstr ""
+
+#: templates/modals.php:30
+msgid "Add an audio"
+msgstr ""
+
+#: templates/modals.php:36
+msgid "Insert iframe embed code or url"
+msgstr ""
+
+#: templates/modals.php:49
+msgid "Add embed"
+msgstr ""
+
+#: templates/open_list_admin_page.php:35
+msgid "Open lists"
+msgstr ""
+
+#: templates/open_list_admin_page.php:68 templates/open_list_admin_page.php:70
+msgid "Search posts from author"
+msgstr ""
+
+#: templates/open_list_editor.php:29
+msgid "Submit an image"
+msgstr ""
+
+#: templates/open_list_editor.php:33
+msgid "Submit a news"
+msgstr ""
+
+#: templates/open_list_editor.php:37
+msgid "Embed from social media"
+msgstr ""
+
+#: templates/open_list_editor.php:41
+msgid "Submit a video"
+msgstr ""
+
+#: templates/open_list_editor.php:45
+msgid "Submit an audio"
+msgstr ""
+
+#: templates/open_list_editor.php:49
+msgid "Submit a gallery"
+msgstr ""
+
+#: templates/open_list_editor.php:53
+msgid "Submit a playlist"
+msgstr ""
+
+#: templates/profile.php:124
+msgid "Posts by "
+msgstr ""
+
+#: templates/share_buttons.php:20
+msgid "Share this post on social media"
+msgstr ""
+
+#: templates/update.php:16
+msgid "Viralpress Auto Update Configurations"
+msgstr ""
+
+#: templates/update.php:37
+msgid ""
+"You need envato username, api key & license code to activate auto updates"
+msgstr ""
+
+#: templates/update.php:56
+msgid "ViralPress license is not activated yet"
+msgstr ""
+
+#: templates/update.php:67
+msgid "Your Envato Username"
+msgstr ""
+
+#: templates/update.php:75
+msgid "Your Envato Api Key"
+msgstr ""
+
+#: templates/update.php:83
+msgid "Your Item Purchase Code"
+msgstr ""

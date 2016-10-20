@@ -1,0 +1,20 @@
+== Changelog ==
+
+= Theme Name: videocraft Theme Pro=
+
+= Version: 1.0.4 =
+1.Terms And Condition Added In Signin Form.
+
+= Version: 1.0.3 =
+1.Mobile Menu Problem fixed.
+
+
+= Version: 1.0.2 =
+1.Slow loding issue fixed.
+
+= Version: 1.0.1 =
+1.ipad and iphone video problem solved.
+2.Upload button problem solved.
+
+= Version: 1.0 =
+* * videocraft Theme is created on 1/09/2012.
