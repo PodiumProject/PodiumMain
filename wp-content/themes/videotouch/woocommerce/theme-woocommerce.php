@@ -33,28 +33,28 @@ add_action('woocommerce_after_main_content', 'videotouch_wrapper_end', 10);
 function videotouch_wrapper_start() {
 ?>
 	<section id="main">
-		
+
 <?php
 }
 
 function videotouch_wrapper_end() {
 ?>
-						
+
 	</section>
 <?php
 
 }
 
 add_filter( 'woocommerce_product_add_to_cart_text' , 'custom_woocommerce_product_add_to_cart_text' );
- 
+
 /**
  * custom_woocommerce_template_loop_add_to_cart
 */
 function custom_woocommerce_product_add_to_cart_text() {
 	global $product;
-	
+
 	$product_type = $product->product_type;
-	
+
 	switch ( $product_type ) {
 		case 'external':
 			return __( 'Buy product', 'woocommerce' );
@@ -71,5 +71,12 @@ function custom_woocommerce_product_add_to_cart_text() {
 		default:
 			return __( 'More', 'woocommerce' );
 	}
-	
+
 }
+
+//Redefine wooCommerce related products
+function woocommerce_output_related_products() {
+	woocommerce_related_products( array( 'posts_per_page' => 3, 'columns' => 3 ) ); // Display 3 products in rows of 3
+}
+
+// END.

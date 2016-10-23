@@ -1,0 +1,213 @@
+.user-hide {
+    display: none
+}
+/*#user-metabox-editor {
+    background: #fff
+}*/
+
+#user-metabox-editor {
+    background: transparent none repeat scroll 0 0;
+    border: 0 none;
+}
+#user-metabox-editor .handlediv {
+    display: none
+}
+#user-metabox-editor .hndle {
+    display: none
+}
+#user-metabox-editor .user-updated {
+    background-color: #fff;
+    border-left: 3px solid #46b450;
+    padding: 1px 12px;
+    margin: 5px 0 15px;
+    font-weight: bold;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+#user-metabox-fields h2 {
+    margin: 0
+}
+#user-metabox-fields .user-form-buttons {
+    margin-bottom: 10px
+}
+#user-metabox-fields button {
+    margin-bottom: 5px
+}
+#user-metabox-fields .user-loading {
+    width: 16px;
+    height: 16px;
+    background: url('../img/wpspin_light.gif') no-repeat;
+}
+#user-metabox-fields .user-loading.hide {
+    display: none
+}
+.user-form-editor {
+    font-size: 12px;
+    margin: 0;
+}
+.user-form-editor li {
+    background: #F9F9F9;
+    margin-bottom: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 3px;
+}
+.user-form-editor li.ui-state-highlight {
+    border: 1px dashed #DDD;
+    min-height: 50px;
+    background: #eee;
+}
+.user-form-editor li .user-legend {
+    background: #f1f1f1;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#ececec), to(#f9f9f9));
+    background-image: -webkit-linear-gradient(bottom, #ececec, #f9f9f9);
+    background-image: -moz-linear-gradient(bottom, #ececec, #f9f9f9);
+    background-image: -o-linear-gradient(bottom, #ececec, #f9f9f9);
+    background-image: linear-gradient(to top, #ececec, #f9f9f9);
+    color: #464646;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    padding: 7px 10px;
+}
+.user-form-editor li .user-legend:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.user-form-editor li .user-legend:hover {
+    cursor: move
+}
+.user-form-editor li .user-legend .user-label {
+    float: left;
+}
+.user-form-editor li .user-legend .user-actions {
+    float: right
+}
+.user-form-editor li .user-legend .user-actions a {
+    font-size: 11px;
+    padding: 2px 5px;
+}
+.user-form-editor li .user-legend .user-actions a.user-remove {
+    background: transparent url(../img/delete.png) no-repeat 70% 50%;
+    color: #f00;
+    width: 16px;
+    text-indent: -9999px;
+    display: inline-block;
+}
+.user-form-editor li .user-legend .user-actions a.user-toggle {
+    background: transparent url(../img/arrows.png) no-repeat 0 2px;
+    width: 10px;
+    text-indent: -9999px;
+    display: inline-block;
+}
+.user-form-editor li .user-form-holder {
+    padding: 10px
+}
+.user-form-editor li .user-form-rows {
+    padding-bottom: 3px
+}
+.user-form-editor li .user-form-rows:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.user-form-editor li .user-form-rows label {
+    float: left;
+    width: 30%;
+    font-size: 12px;
+}
+.user-form-editor li .user-form-rows textarea {
+    width: 60%
+}
+.user-form-editor li .user-form-rows .user-form-sub-fields {
+    width: 65%;
+    float: left;
+}
+.user-form-editor li .user-form-rows .user-form-sub-fields label {
+    float: none;
+    display: inline-block;
+    width: auto;
+}
+.ui-state-highlight {
+    height: 1.5em;
+    line-height: 1.2em;
+}
+#user-metabox-save .hndle,
+#user-metabox-save .handlediv{
+display: none;
+}
+
+
+#user-metabox-fields {
+    z-index: 9999;
+}
+.user-button{
+    width:110px;
+    margin-right:5px !important;
+    margin-left:5px  !important;
+}
+
+.user-button .user-loading {
+    margin-left: 35px;
+}
+
+#message {
+	margin-top: 10px;
+}
+#icon-edit{
+	display: none;
+}
+/*#post-body-content{
+	display: none;
+}*/
+.wrap .add-new-h2, .wrap .add-new-h2:active {
+	background: #21759b;
+	color: #fff;
+	text-shadow: 0 1px 1px #446E81;
+}
+.icon32-posts-user-forms{
+	background: url('<?php echo admin_url( "images/icons32.png" ); ?>') no-repeat 2% 35%;
+}
+/*.add-new-h2{
+	display: none !important;
+}*/
+input#publish {
+    width: 100%;
+}
+#poststuff h2{
+padding:9px 5px 0 0;
+}
+
+#user-metabox-fields h2 {
+    padding: 8px 12px;
+}
+html body .user-form-editor.feup_f_col-1 li {
+    width: 100% !important;
+    vertical-align: top;
+    display: inline-block;
+}
+html body .user-form-editor.feup_f_col-2 li {
+    width: 49% !important;
+    vertical-align: top;
+    display: inline-block;
+}
+html body .user-form-editor.feup_f_col-3 li {
+    width: 32% !important;
+    vertical-align: top;
+    display: inline-block;
+}
+html body .user-form-editor.feup_f_col-4 li {
+    width: 24% !important;
+    vertical-align: top;
+    display: inline-block;
+}
+html body .user-form-editor.feup_f_col-5 li {
+    width: 19% !important;
+    vertical-align: top;
+    display: inline-block;
+}
+html body .user-form-editor li.full_width_r {
+    width: 100% !important;
+    max-width: 100% !important;
+} 
+.hndle.ui-sortable-handle span {
+    padding: 9px 10px;
+}

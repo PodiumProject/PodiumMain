@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 * This class is used for build a layout created in admin panel
 */
@@ -18,18 +18,18 @@ class LayoutCompilator
 		11 => 'col-lg-11 col-md-11',
 		12 => 'col-lg-12 col-md-12',
 	);
-	
+
 	public static function order_direction($order_direction = 'asc')
 	{
 		return ($order_direction === 'asc') ? 'ASC' : 'DESC';
 	}
 
-	public static function order_by($order_by = 'date',$args = array(), $featured = 'n')
+	public static function order_by( $order_by = 'date', $args = array(), $featured = 'n' )
 	{
 		$order_variants = array('date', 'comments', 'views', 'likes');
-		
+
 		$order_by = (in_array($order_by, $order_variants)) ? $order_by : 'date' ;
-		
+
 		if( $order_by === 'comments' ){
 			$args['orderby'] = 'comment_count';
 		}
@@ -37,22 +37,22 @@ class LayoutCompilator
 			$args['meta_key'] = 'ts_article_views';
 			$args['orderby']  = 'meta_value_num';
 		}
-	
+
 		if( $featured === 'y' ){
-			
+
 			$args['meta_query'] = array(
 									array(
 										'key' => 'featured',
 										'value' => 'yes',
 										'compare' => '=',
 									),
-								  );
-			
+								);
+
 		}
 		if( $order_by === 'views' ){
 			$args['meta_key'] = 'ts_article_views';
 			$args['orderby']  = 'meta_value_num';
-		}	
+		}
 		if( $order_by === 'likes' ){
 			$args['meta_key'] = '_touchsize_likes';
 			$args['orderby']  = 'meta_value_num';
@@ -68,7 +68,7 @@ class LayoutCompilator
 	{
 		$single_options = get_option('videotouch_single_post');
 		$criteria = $single_options['related_posts_selection_criteria'];
-		
+
 		if ( $criteria === 'by_tags' ) {
 
 			$post_type = get_post_type($post_id);
@@ -79,7 +79,7 @@ class LayoutCompilator
 			if ( $tags ) {
 				$tag_id = array();
 				foreach($tags as $tag) {
-				    $tag_id[] = $tag->term_id; 
+				    $tag_id[] = $tag->term_id;
 				}
 
 				$args = array(
@@ -88,7 +88,7 @@ class LayoutCompilator
 					'post_type' => 'post',
 					'posts_per_page' => 3,
 				);
-				
+
 				$query = new WP_Query( $args );
 
 				$related = '<footer>
@@ -125,19 +125,19 @@ class LayoutCompilator
 					}
 
 					return str_replace('{{articles}}', implode("\n", $related_posts), $related);
-				
+
 				} else {
 					// wp_reset_postdata();
 					return '';
 				}
-				
+
 				wp_reset_postdata();
 
 			} else {
 				return '';
 			}
 		} else if ( $criteria === 'by_categs' ) {
-			
+
 			$category_id = array();
 			$categories = wp_get_post_categories($post_id);
 
@@ -145,7 +145,7 @@ class LayoutCompilator
 			if( isset($post_type) && $post_type == 'video' ){
 				$term_list = wp_get_post_terms($post_id, 'videos_categories', array("fields" => "ids"));
 				if ( isset($term_list) && is_array($term_list) && !empty($term_list) ) {
-					
+
 					$args['tax_query'] = array('relation' => 'AND',
 											array(
 												'taxonomy' => 'videos_categories',
@@ -218,7 +218,7 @@ class LayoutCompilator
 
 				if ( $query->have_posts() ) {
 					while ( $query->have_posts() ) { $query->the_post();
-						
+
 						if (ts_human_type_date_format()) {
 							$article_date = human_time_diff(strtotime(get_the_time('Y-m-d H:i:s'))).' '.__('ago', 'touchsize');
 						} else {
@@ -293,7 +293,7 @@ class LayoutCompilator
 
 			if ( $tags ) {
 				foreach($tags  as $tag) {
-					$tag_id[] = $tag->term_id; 
+					$tag_id[] = $tag->term_id;
 				}
 			} else {
 				return '';
@@ -314,7 +314,7 @@ class LayoutCompilator
 			} else {
 				return '';
 			}
-			
+
 		} else if ( $criteria === 'by_categs' ) {
 
 			$category_id = array();
@@ -323,7 +323,7 @@ class LayoutCompilator
 			if( isset($post_type) && $post_type == 'video' ){
 				$term_list = wp_get_post_terms($post_id, 'videos_categories', array("fields" => "ids"));
 				if ( isset($term_list) && is_array($term_list) && !empty($term_list) ) {
-					
+
 					$args['tax_query'] = array('relation' => 'AND',
 											array(
 												'taxonomy' => 'videos_categories',
@@ -372,17 +372,17 @@ class LayoutCompilator
 
 		} else {
 			return '';
-		}	
+		}
 	}
 
 	public static function list_products_element($options = array(), $post_id = 0, $tags = array()){
-		
+
  		if( $options['type'] == 'list-products' ){
  		$categories = (isset($options['category']) && is_string($options['category'])) ? esc_attr($options['category']) : '';
 		$args = array(
 			'post_type' => 'product',
 			'tax_query' => array(
-		        array( 
+		        array(
 		            'taxonomy' => 'product_cat',
 		            'field' => 'id',
 		            'terms' => explode(',', $categories)
@@ -392,7 +392,7 @@ class LayoutCompilator
 			'orderby' => $options['order-by'],
 			'order' => $options['order-direction'],
 		);
-			
+
 		$query = new WP_Query( $args );
 
 		if ( $query->have_posts() ) {
@@ -406,8 +406,8 @@ class LayoutCompilator
 			$elements = ob_get_clean();
 
 			wp_reset_postdata();
-			}							
-										
+			}
+
 		// Check if an effect is selected
 		$display_effect = 'no-effect';
 
@@ -435,7 +435,7 @@ class LayoutCompilator
 		if( $options['behavior'] === 'carousel' ){
 		$carousel_wrapper_start = '<div class="carousel-wrapper">';
 		$carousel_wrapper_end = '</div>';
-		
+
 		$carousel_container_start = '<div class="carousel-container">';
 		$carousel_container_end = '</div>';
 
@@ -452,11 +452,11 @@ class LayoutCompilator
 		}
 
 		$elements = (isset($elements)) ? $elements : '';
-		
+
 		return '<div class="woocommerce"><section class="product-view cols-by-' . $options['elements-per-row'] . ' ' . $display_effect . $ts_masonry_class . '">'. $carousel_wrapper_start . $carousel_navigation . $carousel_container_start . $elements . $carousel_container_end . $carousel_wrapper_end .'</section></div>';
 	}
-					
-	
+
+
 	}
 
 	public static function get_splits($split1 = '1-3')
@@ -573,8 +573,8 @@ class LayoutCompilator
 		$template        = get_post_meta( $post->ID, 'ts_template', true);
 		$sidebar_options = get_post_meta( $post->ID, 'ts_sidebar', true);
 
-		extract(self::build_sidebar( $sidebar_options )); 
-		
+		extract(self::build_sidebar( $sidebar_options ));
+
 		$content = self::build_content($template);
 		$content = '<div id="primary" class="'.$content_class.'"><div id="content" role="main">'.$content.'</div></div>';
 
@@ -597,7 +597,7 @@ class LayoutCompilator
 			$content_wrapper_start = '';
 			$content_wrapper_end = '';
 		}
-		
+
 		echo '<section id="main" class="row">' . $content_wrapper_start . $content . $content_wrapper_end . '</section>';
 	}
 
@@ -617,9 +617,9 @@ class LayoutCompilator
 		// 		$view_options = $options['search_layout'][$view_type];
 		// 		$view_options['display-mode'] = $view_type;
 		// 		break;
-			
+
 		// 	case 'archive':
-				
+
 		// 		if ( is_day() ) :
 		// 			$title = __( 'Daily Archives: ', 'touchsize' ) . get_the_date();
 		// 		elseif ( is_month() ) :
@@ -656,7 +656,7 @@ class LayoutCompilator
 		// 	case 'author':
 
 		// 		if ( $wp_query->have_posts() ) {
-					
+
 		// 			$wp_query->the_post();
 
 		// 			$title = __( 'All posts by ', 'touchsize' ) . '<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a>';
@@ -690,7 +690,7 @@ class LayoutCompilator
 		// $footer = self::build_footer($footer_elements);
 
 		// extract(self::build_sidebar( $sidebar_options ));
-		
+
 		// $content = self::last_posts_element($view_options, $wp_query);
 
 		// if ( $file == 'search' && $wp_query->posts == array() ) {
@@ -698,7 +698,7 @@ class LayoutCompilator
 		// 					<h1 class="title-404"><i class="icon-attention"></i>' . __('Ooops!', 'touchsize') . '</h1>
 		// 					<div class="nothing-message"> ' . __('We didn\'t find anything. Try searching!', 'touchsize') . '</div>
 		// 					<div class="search-404">
-		// 					' . self::searchbox_element('searchbox') . ' 
+		// 					' . self::searchbox_element('searchbox') . '
 		// 					</div>
 		// 				</div>';
 		// }
@@ -890,9 +890,9 @@ class LayoutCompilator
 		} else{
 			$page_type = 'archive';
 		}
-		
+
 		$sidebar_option = fields::get_options_value('videotouch_layout', $page_type. '_layout');
-		
+
 		$sidebar_post = get_post_meta($post->ID, 'ts_sidebar', true);
 
 		$sidebar_is_on = false;
@@ -928,7 +928,7 @@ class LayoutCompilator
 
 		if (is_array($rows) && ! empty($rows)) {
 			$tsScripts = array();
-			$elementsWithScripts = array('tab', 'image-carousel', 'featured-area', 'user', 'counters', 'toggle');
+			$elementsWithScripts = array('image-carousel', 'featured-area', 'user', 'counters', 'toggle');
 			foreach ($rows as $row_index => $row) {
 
 				// Add additional row classes if needed
@@ -992,10 +992,10 @@ class LayoutCompilator
 
 				$row_wrapper_start = '<div data-alignment="'. $vertical_align . '" ' . $row_name_id . ' class="site-section ' . $additional_row_class . '" '.self::row_settings($row['settings']).'>'.$div_mask;
 				$row_wrapper_end = '</div>';
-				
+
 				$row_start = '<div class="row">';
 				$row_end   = '</div>';
-				
+
 				if ( is_array( $row['columns'] ) && ! empty( $row['columns'] ) ) {
 					$columns = array();
 
@@ -1137,7 +1137,7 @@ class LayoutCompilator
 			case 'empty':
 				$e = self::empty_element($element);
 				break;
-			
+
 			case 'video':
 				$e = self::video_element($element);
 				break;
@@ -1250,12 +1250,12 @@ class LayoutCompilator
 				$e = '';
 				break;
 		}
-		
+
 		return '<div class="row content-block '.self::special_effect($effect).'">' . $e . '</div>';
 	}
 
 	/**
-	 * This function return the class used for animation effect 
+	 * This function return the class used for animation effect
 	 * @param  array $effect
 	 * @return string
 	 */
@@ -1268,50 +1268,51 @@ class LayoutCompilator
 		}
 	}
 
-	public static function build_header($elements = array())
+	public static function build_header()
 	{
 		global $post;
 
-		$custom_layout = true;
+		$lang = defined( 'ICL_LANGUAGE_CODE' ) ? '_' . ICL_LANGUAGE_CODE : '';
 
-		if ( isset($post->post_type) && $post->post_type === 'page' ) {
-			$h = get_post_meta( $post->ID, 'ts_header_and_footer', true);
-			
-			if ($h) {
-				if ((int)$h['disable_header'] === 1) {
-					$header = '';
-					return $header;
-				}
-			}
+		$header = get_option( 'videotouch_header' . $lang, array() );
+
+		$header = defined( 'ICL_LANGUAGE_CODE' ) && empty( $header ) ? get_option( 'videotouch_header', array() ) : $header;
+
+		if ( isset( $post->post_type ) && $post->post_type === 'page' ) {
+
+			$h = get_post_meta( $post->ID, 'ts_header_and_footer', true );
+
+			if ( $h && $h['disable_header'] == 1 ) return;
+
 		}
 
-		$compiled_elements = self::build_content($elements);
+		$elements = self::build_content( $header );
 
-		return $compiled_elements;
-	} 
-
-	public static function build_footer($elements = array())
-	{
-		global $post;
-
-		$custom_layout = true;
-
-		if ( isset($post->post_type) && $post->post_type === 'page' ) {
-			$f = get_post_meta( $post->ID, 'ts_header_and_footer', true);
-
-			if ($f) {
-				if ((int)$f['disable_footer'] === 1) {
-					$footer = '';
-					return $footer;
-				}
-			}
-		}
-
-		$compiled_elements = self::build_content($elements);
-		
-		return $compiled_elements;
+		return $elements;
 	}
-	
+
+	public static function build_footer()
+	{
+		global $post;
+
+		$lang = defined( 'ICL_LANGUAGE_CODE' ) ? '_' . ICL_LANGUAGE_CODE : '';
+
+		$footer = get_option( 'videotouch_footer' . $lang, array() );
+
+		$footer = defined( 'ICL_LANGUAGE_CODE' ) && empty( $footer ) ? get_option( 'videotouch_footer', array() ) : $footer;
+
+		if ( isset( $post->post_type ) && $post->post_type === 'page' ) {
+
+			$f = get_post_meta( $post->ID, 'ts_header_and_footer', true );
+
+			if ( $f && $f['disable_footer'] == 1 ) return;
+		}
+
+		$elements = self::build_content( $footer );
+
+		return $elements;
+	}
+
 
 	public static function is_expanded_row($settings) {
 
@@ -1320,7 +1321,7 @@ class LayoutCompilator
 				return false;
 			} else {
 				return true;
-			}	
+			}
 		} else {
 			return false;
 		}
@@ -1333,7 +1334,7 @@ class LayoutCompilator
 				return false;
 			} else {
 				return true;
-			}	
+			}
 		} else {
 			return false;
 		}
@@ -1353,7 +1354,7 @@ class LayoutCompilator
 		$css .= ' color: ' . $settings['textColor'] . '; ';
 
 		$gradient = (isset($settings['gradient']) && ($settings['gradient'] === 'n' || $settings['gradient'] === 'y')) ? $settings['gradient'] : 'n';
-		$gradient_color = (isset($settings['gradientColor']) && is_string($settings['gradientColor'])) ? $settings['gradientColor'] : ''; 
+		$gradient_color = (isset($settings['gradientColor']) && is_string($settings['gradientColor'])) ? $settings['gradientColor'] : '';
 		$gradient_mode = (isset($settings['gradientMode']) && is_string($settings['gradientMode'])) ? $settings['gradientMode'] : '';
 
 		if( $gradient == 'y' ) {
@@ -1401,9 +1402,9 @@ class LayoutCompilator
 		}
 
 		if ($settings['bgImage'] !== '') {
-			
+
 			$css .= " background-image:url('" . $settings['bgImage'] . "') " .  '; ';
-		
+
 			if ($settings['bgPosition'] !== '') {
 				$css .= " background-position: ".$settings['bgPosition']." center; ";
 			}
@@ -1416,14 +1417,14 @@ class LayoutCompilator
 				$css .= " background-repeat: ".$settings['bgRepeat']."; ";
 			}
 		}
-		$css .= " margin-top: " . $settings['rowMarginTop'] . "px; "; 
-		$css .= " margin-bottom: " . $settings['rowMarginBottom'] . "px; "; 
-		$css .= " padding-top: " . $settings['rowPaddingTop'] . "px; "; 
+		$css .= " margin-top: " . $settings['rowMarginTop'] . "px; ";
+		$css .= " margin-bottom: " . $settings['rowMarginBottom'] . "px; ";
+		$css .= " padding-top: " . $settings['rowPaddingTop'] . "px; ";
 		$css .= " padding-bottom: " . $settings['rowPaddingBottom'] . "px; ";
 
 		if ( isset($settings['rowTextAlign']) ) {
 			if( $settings['rowTextAlign'] !== 'auto' ){
-				$css .= " text-align: " . $settings['rowTextAlign'] . "; "; 
+				$css .= " text-align: " . $settings['rowTextAlign'] . "; ";
 			}
 		} else {
 			$settings['rowTextAlign'] = 'auto';
@@ -1431,7 +1432,7 @@ class LayoutCompilator
 
 		if ( isset($settings['bgSize']) ) {
 			if( $settings['bgSize'] !== 'auto' ) {
-				$css .= " background-size: " . $settings['bgSize'] . "; "; 
+				$css .= " background-size: " . $settings['bgSize'] . "; ";
 			}
 		} else {
 			$settings['bgSize'] = 'auto';
@@ -1452,13 +1453,16 @@ class LayoutCompilator
 
 	public static function user_element($options = array())
 	{
+		$div_start = isset( $options['widget'] ) ? '' : '<div class="col-lg-12">';
+		$div_end = isset( $options['widget'] ) ? '' : '</div>';
+
 		if( is_user_logged_in() ){
-			
+
 			global $wp_roles;
 			$user = wp_get_current_user();
 
-			$single = get_option('videotouch_single_post');
-			
+			$single = get_option( 'videotouch_single_post' );
+
 			$link_to_profile  = (isset($single, $single['user_profile']) && !empty($single['user_profile'])) ? esc_url($single['user_profile']) : home_url();
 			$link_to_settings = (isset($single, $single['user_settings']) && !empty($single['user_settings'])) ? esc_url($single['user_settings']) : home_url();
 			$link_to_add_post = (isset($single, $single['user_add_post']) && !empty($single['user_add_post'])) ? esc_url($single['user_add_post']) : home_url();
@@ -1467,34 +1471,36 @@ class LayoutCompilator
     			$role = $wp_roles->roles[$user->roles[0]]['name'];
 		    }else{
 		    	$role = get_role('administrator');
-		    	$role = (isset($role->name)) ? $role->name : 'Admin';	
+		    	$role = (isset($role->name)) ? $role->name : 'Admin';
 		    }
-		
-			return 	'<div class="col-lg-12 ">
-						<div class="ts-user-profile-dw align-right">
-							<div class="user-mini-avatar">
-								<a href="' . $link_to_profile . '">' . ts_display_gravatar(50) . '</a>
-							</div>
-							<div class="user-info">
-								<a data-toggle="dropdown" class="user-name" href="#">'. get_the_author_meta('display_name', get_current_user_id()) .' <i class="icon-down"></i></a>
-								<span class="user-role">' . $role . '</span>
-								<div class="dropdown">
-									<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-										<li><a href="' . $link_to_profile . '">' . __('My profile', 'touchsize') . '</a></li>
-										<li><a href="' . $link_to_add_post . '">' . __('New post', 'touchsize') . '</a></li>
-										<li><a href="' . $link_to_settings . '">' . __('Settings', 'touchsize') . '</a></li>
-										<li><a href="' . wp_logout_url(home_url()) . '">' . __('Logout', 'touchsize') . '</a></li>
-									</ul>
+
+			return 	$div_start .
+						'<div class="ts-user-element">
+							 <div class="ts-user-profile-dw align-' . ( isset( $options['align'] ) ? $options['align'] : 'left' ) . '">
+								<div class="user-mini-avatar">
+									<a href="' . $link_to_profile . '">' . ts_display_gravatar(50) . '</a>
+								</div>
+								<div class="user-info">
+									<a data-toggle="dropdown" class="user-name" href="#">'. get_the_author_meta('display_name', get_current_user_id()) .' <i class="icon-down"></i></a>
+									<span class="user-role">' . $role . '</span>
+									<div class="dropdown">
+										<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+											<li><a href="' . $link_to_profile . '">' . __('My profile', 'touchsize') . '</a></li>
+											<li><a href="' . $link_to_add_post . '">' . __('New post', 'touchsize') . '</a></li>
+											<li><a href="' . $link_to_settings . '">' . __('Settings', 'touchsize') . '</a></li>
+											<li><a href="' . wp_logout_url(home_url()) . '">' . __('Logout', 'touchsize') . '</a></li>
+										</ul>
+									</div>
 								</div>
 							</div>
-						</div>
-				    </div>';
+						</div>' .
+					$div_end;
 		}else{
-			return	'<div class="col-lg-12">
-						' . ts_get_login_form() . '
-			    	</div>';
+			return	$div_start .
+						ts_get_login_form() .
+			    	$div_end;
 		}
-		
+
 	}
 
 	public static function cart_element($options = array())
@@ -1574,7 +1580,7 @@ class LayoutCompilator
 		$enable_mega_menu = (isset($mega_menu['enable_mega_menu']) && $mega_menu['enable_mega_menu'] == 'Y') ? new ts_responsive_mega_menu : '';
 		$uppercase = (isset($options['uppercase']) && !empty($options['uppercase']) && ($options['uppercase'] === 'menu-uppercase' || $options['uppercase'] === 'menu-no-uppercase') && $options['uppercase'] === 'menu-uppercase') ? 'text-uppercase' : '';
 		$menu_by_id = (isset($options['name']) && (int)$options['name'] !== 0) ? $options['name'] : NULL;
-		
+
 		$menu_styles = array(
 			'style1' => 'ts-standard-menu',
 			'style2' => 'ts-vertical-menu',
@@ -1604,12 +1610,12 @@ class LayoutCompilator
 	 	}
 
 		if ( isset($menu_by_id) || has_nav_menu('primary') ) {
-			
+
 			$locations = get_theme_mod('nav_menu_locations');
 			$menu_by_id = (isset($menu_by_id)) ? $menu_by_id : $locations['primary'];
-			
+
 			ob_start();
-			wp_nav_menu(array( 
+			wp_nav_menu(array(
 				'theme_location'  => 'primary',
 				'menu'            => $menu_by_id,
 				'container'       => 'nav',
@@ -1632,7 +1638,7 @@ class LayoutCompilator
 			ob_end_clean();
 
 			ob_start();
-			wp_nav_menu(array( 
+			wp_nav_menu(array(
 				'theme_location'  => 'primary',
 				'menu'            => $menu_by_id,
 				'container'       => 'div',
@@ -1733,16 +1739,16 @@ class LayoutCompilator
 		if( @$options['menu-custom'] == 'no' ){
 			$menu_styles = '';
 		}
-		
 
-		return '<div class="col-lg-12 col-md-12 col-sm-12">' . 
-				$menu 
+
+		return '<div class="col-lg-12 col-md-12 col-sm-12">' .
+				$menu
 				.'<div id="ts-mobile-menu" class="ts-mobile-menu '.$mobile_menu_id.' '. $custom_menu_class.' ">
 					<div class="mobile_header nav-header">
 						<a href="#" data-toggle="mobile_menu" class="trigger">
 							<i class="icon-menu"></i>
 						</a>
-					</div>'. 
+					</div>'.
 					$mobile_menu .
 				'</div>
 			   </div>'.$menu_styles;
@@ -1760,7 +1766,7 @@ class LayoutCompilator
 			'iconed icon-close'
 		);
 		$delimiter_style = (in_array($options['delimiter-type'], $delimiters))? $options['delimiter-type'] : 'line';
-		$delimiter_color = (isset($options['delimiter-color']) && is_string($options['delimiter-color'])) ?	$options['delimiter-color'] : '';		
+		$delimiter_color = (isset($options['delimiter-color']) && is_string($options['delimiter-color'])) ?	$options['delimiter-color'] : '';
 
 		// Set styles for each delimiter type
 
@@ -1914,7 +1920,7 @@ class LayoutCompilator
 			if ( trim($social_options['instagram']) !== '' ) {
 				$elements[] = '<li><a href="'. esc_url($social_options['instagram']) .'" class="icon-instagram" target="_blank"></a></li>';
 			}
-		} 
+		}
 
 		$elements = trim(implode("\n", $elements));
 
@@ -1992,30 +1998,30 @@ class LayoutCompilator
 		/* Get the paginated links. */
 		$page_links = paginate_links( $args );
 		/* Remove 'page/1' from the entire output since it's not needed. */
-		$page_links = preg_replace( 
-			array( 
+		$page_links = preg_replace(
+			array(
 				"#(href=['\"].*?){$pagination_base}/1(['\"])#",  // 'page/1'
 				"#(href=['\"].*?){$pagination_base}/1/(['\"])#", // 'page/1/'
 				"#(href=['\"].*?)\?paged=1(['\"])#",             // '?paged=1'
 				"#(href=['\"].*?)&\#038;paged=1(['\"])#"         // '&#038;paged=1'
-			), 
-			'$1$2', 
-			$page_links 
+			),
+			'$1$2',
+			$page_links
 		);
-		
+
 		/* Allow devs to completely overwrite the output. */
 		$page_links = apply_filters( 'loop_pagination', $page_links );
 		/* Return the paginated links for use in themes. */
 		if($page_links){
 			return '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><div class="ts-pagination">' . $page_links . '</div></div>';
 		}
-	
+
 	}
 
 	public static function list_portfolios_element($options = array())
 	{
-		$category = (isset($options['category']) && !empty($options['category']) && is_string($options['category'])) ? explode(',', $options['category']) : NULL; 
-		
+		$category = (isset($options['category']) && !empty($options['category']) && is_string($options['category'])) ? explode(',', $options['category']) : NULL;
+
 		if( !isset($category) ) return false;
 
 		if ( get_query_var('paged') ) {
@@ -2030,7 +2036,7 @@ class LayoutCompilator
 			'post_type' => 'portfolio',
 			'paged' => $current,
 			'tax_query' => array(
-		        array( 
+		        array(
 		            'taxonomy' => 'portfolio_register_post_type',
 		            'field' => 'id',
 		            'terms' => $category
@@ -2051,7 +2057,7 @@ class LayoutCompilator
 		}
 
 		$options['args'] = $args;
-		
+
 		$query = new WP_Query($args);
 
 		return self::last_posts_element($options, $query);
@@ -2067,7 +2073,7 @@ class LayoutCompilator
 								<input type="submit" class="searchbutton" name="search" value="'.__( 'Search', 'touchsize' ).'" />
 								<i class="icon-search"></i>
 							</fieldset>
-						</form>	
+						</form>
 					</div>
 				</div>';
 	}
@@ -2087,10 +2093,10 @@ class LayoutCompilator
 			'orderby' => 'DATE',
 			'order' => 'desc'
 		);
-		 
+
 		if( isset($category) ){
 			$args['tax_query'] = array(
-		        array( 
+		        array(
 		            'taxonomy' => 'teams',
 		            'field' => 'id',
 		            'terms' => $category
@@ -2116,7 +2122,7 @@ class LayoutCompilator
 		} else {
 			return __('No Results', 'touchsize');
 		}
-		
+
 		/* Restore original Post Data */
 		wp_reset_postdata();
 		if( $remove_gutter == 'yes' ){
@@ -2129,7 +2135,7 @@ class LayoutCompilator
 		if( isset($options['enable-carousel']) && $options['enable-carousel'] === 'yes' ){
 			$carousel_wrapper_start = '<div class="carousel-wrapper">';
 			$carousel_wrapper_end = '</div>';
-			
+
 			$carousel_container_start = '<div class="carousel-container">';
 			$carousel_container_end = '</div>';
 
@@ -2162,10 +2168,10 @@ class LayoutCompilator
 			'orderby' => 'DATE',
 			'order' => 'asc'
 		);
-		
+
 		if ( is_array($categories) && !empty($categories) ) {
 			$args['tax_query'] = array(
-		        array( 
+		        array(
 		            'taxonomy' => 'ts_pricing_table_categories',
 		            'field'    => 'id',
 		            'terms'    => $categories
@@ -2174,7 +2180,7 @@ class LayoutCompilator
 		} else {
 			$args['category__in'] = array(0);
 		}
-		
+
 		$query = new WP_Query( $args );
 
 		if ( $query->have_posts() ) {
@@ -2193,7 +2199,7 @@ class LayoutCompilator
 		} else {
 			return __('No Results', 'touchsize');
 		}
-		
+
 		/* Restore original Post Data */
 		wp_reset_postdata();
 		if( $remove_gutter == 'yes' ){
@@ -2206,11 +2212,11 @@ class LayoutCompilator
 
 	public static function testimonials_element($options = array())
 	{
-		
+
 		$elementsperrow = (int)$options['elements-per-row'];
 		$elements_per_row = self::get_column_class($elementsperrow);
 		$enable_carousel = $options['enable-carousel'];
-		
+
 
 		if( isset($options['testimonials']) && $options['testimonials'] != '' ){
 
@@ -2218,7 +2224,7 @@ class LayoutCompilator
 			$arr = json_decode(stripslashes($arr));
 
 			foreach($arr as $option_element){
-				
+
 				if ( $option_element->image != '' ) {
 					$img_url = esc_url(str_replace('--quote--', '"', ts_resize('features', $option_element->image)));
 					$author_img = '<img class="author-img" src="' . $img_url . '" alt="' . esc_attr(str_replace('--quote--', '"', $option_element->name)) . '" />';
@@ -2247,10 +2253,10 @@ class LayoutCompilator
 		}
 
 		if( $enable_carousel == 'Y' ){
-			
+
 			$carousel_wrapper_start   = '<div class="carousel-wrapper">';
 			$carousel_wrapper_end     = '</div>';
-			
+
 			$carousel_container_start = '<div class="carousel-container">';
 			$carousel_container_end   = '</div>';
 
@@ -2261,7 +2267,7 @@ class LayoutCompilator
 			}else{
 				$carousel_wrapper_start   = '';
 				$carousel_wrapper_end 	  = '';
-				
+
 				$carousel_container_start = '';
 				$carousel_container_end   = '';
 
@@ -2272,7 +2278,7 @@ class LayoutCompilator
 				$testimonials = implode("\n", $testimonials);
 				return '<section class="testimonials cols-by-' . $elementsperrow . '"> ' . $carousel_wrapper_start . $carousel_container_start . $testimonials . $carousel_container_end . $carousel_navigation . $carousel_wrapper_end . ' </section>';
 			}
-		
+
 	}
 
 	public static function slider_element($options = array())
@@ -2304,7 +2310,7 @@ class LayoutCompilator
 					$slides_container = '';
 
 					foreach ($meta as $slide) {
-						
+
 						$img_url = ts_resize('slider', $slide['slide_url']);
 						$slides_container .= '<li>';
 						$slides_container .= '<img src="'. esc_url($img_url) .'" alt="' . esc_attr($slide['slide_title']) . '" />';
@@ -2320,7 +2326,7 @@ class LayoutCompilator
 					}
 
 					$slider_content .= $slides_container;
-					$slider_content .= '		
+					$slider_content .= '
 					</ul>
 					</div>';
 
@@ -2350,7 +2356,7 @@ class LayoutCompilator
 					}
 
 					$slider_content .= $slides_container;
-					$slider_content .= '		
+					$slider_content .= '
 					</ul>';
 					$slider_content.= '
 						<div id="nav-arrows" class="nav-arrows">
@@ -2361,7 +2367,7 @@ class LayoutCompilator
 				}
 			}
 		}
-		
+
 		/* Restore original Post Data */
 		wp_reset_postdata();
 
@@ -2369,7 +2375,7 @@ class LayoutCompilator
 	}
 
 	public static function last_posts_element($options = array(), &$original_query = null)
-	{	
+	{
 		$exclude_posts  = ( isset($options['id-exclude']) && $options['id-exclude'] != '' ) ? explode(',',@$options['id-exclude']) : NULL;
 		$exclude_first  = ( isset($options['exclude-first']) ) ? (int)$options['exclude-first'] : '';
 		$exclude_id     = array();
@@ -2405,7 +2411,7 @@ class LayoutCompilator
 			$taxonomy = 'category';
 		}
 
-		// Display elements for grid mode		
+		// Display elements for grid mode
 		if ($options['display-mode'] === 'grid') {
 
 			$ts_masonry_class = (isset($options['behavior']) && $options['behavior'] == 'masonry') ? ' ts-filters-container ' : '';
@@ -2416,7 +2422,7 @@ class LayoutCompilator
 
 			$carousel_wrapper_start = '<div class="carousel-wrapper">';
 			$carousel_wrapper_end = '</div>';
-			
+
 			$carousel_container_start = '<div class="carousel-container">';
 			$carousel_container_end = '</div>';
 
@@ -2436,7 +2442,7 @@ class LayoutCompilator
 				} else {
 				    $current = 1;
 				}
-		
+
 				$args = array(
 					'post_type' => 'post',
 					'order' => $order,
@@ -2448,7 +2454,7 @@ class LayoutCompilator
 				if( $pagination === 'n' || $pagination === 'load-more' ){
 					$args['offset'] = $exclude_first;
 				}
-				
+
 				if ( !empty($categories) && is_array($categories) ) {
 
 					$options['category'] = explode(',', $options['category']);
@@ -2464,15 +2470,15 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
-				
-				
+
+
 			}
-			
+
 			$row = array();
 
 			if ( $query->have_posts() ) {
@@ -2547,7 +2553,7 @@ class LayoutCompilator
 					'post__not_in'   => $exclude_id,
 					'posts_per_page' => (int)$options['posts-limit']
 				);
-				
+
 				if( $pagination === 'n' || $pagination === 'load-more' ){
 					$args['offset'] = $exclude_first;
 				}
@@ -2631,7 +2637,7 @@ class LayoutCompilator
 			if ( isset($options['behavior']) && @$options['behavior'] == 'masonry' ) {
 				$ts_masonry_class = ' ts-filters-container ';
 			}
-			
+
 			$thumbnails_view_start = '<section class="ts-thumbnail-view ' . $display_effect . $use_gutter . $ts_masonry_class . ' ' . self::get_clear_class($options['elements-per-row']) . ' ">';
 			$thumbnails_view_end = '</section>';
 
@@ -2647,11 +2653,11 @@ class LayoutCompilator
 			$carousel_container_end = '</div>';
 
 			$valid_columns = array(1, 2, 3, 4, 6);
-			
+
 			if ( ! in_array($options['elements-per-row'], $valid_columns)) {
 				$options['elements-per-row'] = 3;
 			}
-			
+
 			if ( $original_query === null ) {
 
 				$order    = self::order_direction($options['order-direction']);
@@ -2695,9 +2701,9 @@ class LayoutCompilator
 				} else {
 					$args['category__in'] = array(0);
 				}
-				
+
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
 			} else {
 				$query = &$original_query;
@@ -2732,7 +2738,7 @@ class LayoutCompilator
 			} else {
 				return $thumbnails_view_start . '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">' . __( 'Nothing Found', 'touchsize' ) . '</div>' . $thumbnails_view_end;
 			}
-			
+
 			if ( $original_query === null ) {
 				$next_prev_links = '';
 				/* Restore original Post Data */
@@ -2759,7 +2765,7 @@ class LayoutCompilator
 			}
 
 		} elseif ($options['display-mode'] === 'big-post') {
-			
+
 			$big_post_view_start = '<section class="ts-big-posts ' . $display_effect . ' ">';
 			$big_post_view_end   = '</section>';
 
@@ -2793,7 +2799,7 @@ class LayoutCompilator
 
 					if ($options['category']) {
 
-						$args['category__in'] = $options['category']; 
+						$args['category__in'] = $options['category'];
 
 					} else {
 						$args['category__in'] = array(0);
@@ -2804,9 +2810,9 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -2862,7 +2868,7 @@ class LayoutCompilator
 			$super_post_view_end = '</section>';
 
 			$valid_columns = array(1, 2, 3);
-			
+
 			if ( ! in_array($options['elements-per-row'], $valid_columns) ) {
 				$options['elements-per-row'] = 1;
 			}
@@ -2900,7 +2906,7 @@ class LayoutCompilator
 					if ($options['category']) {
 
 						$args['category__in'] = $options['category'];
-				
+
 					} else {
 						$args['category__in'] = array(0);
 					}
@@ -2910,9 +2916,9 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -2981,7 +2987,7 @@ class LayoutCompilator
 					'post__not_in' => $exclude_id,
 					'posts_per_page' => (int)$options['posts-limit']
 				);
-				
+
 				if( $pagination === 'n' || $pagination === 'load-more' ){
 					$args['offset'] = $exclude_first;
 				}
@@ -3064,7 +3070,7 @@ class LayoutCompilator
 
 			$scroll = (isset($options['scroll']) && !empty($options['scroll']) && $options['scroll'] == 'y') ? '<div data-scroll="true" class="mosaic-view'. $effect_scroll . $gutter_class . ' mosaic-' . $options['layout'] . '">' : '<div data-scroll="false" class="mosaic-view'. $gutter_class .' mosaic-' . $options['layout'] . '">';
 			$img_rows = (isset($options['rows']) && $options['rows'] !== '' && (int)$options['rows'] !== 0) ? (int)$options['rows'] : '3';
-			$layout_mosaic = (isset($options['layout']) && ($options['layout'] == 'rectangles' || $options['layout'] == 'square')) ? $options['layout'] : 'square';		
+			$layout_mosaic = (isset($options['layout']) && ($options['layout'] == 'rectangles' || $options['layout'] == 'square')) ? $options['layout'] : 'square';
 
 			if ( $original_query === null ) {
 
@@ -3076,7 +3082,7 @@ class LayoutCompilator
 					'order' => $order,
 					'post__not_in' => $exclude_id,
 					'offset' => $exclude_first
-					
+
 				);
 
 				if ( isset($options['category']) && (int)$options['category'] !== 0 ) {
@@ -3109,7 +3115,7 @@ class LayoutCompilator
 				ob_clean();
 				global $article_options;
 				$article_options = $options;
-				
+
 				$article_options['i'] = 1;
 				$article_options['j'] = $query->post_count;
 				$article_options['k'] = 1;
@@ -3143,11 +3149,11 @@ class LayoutCompilator
 			} else {
 				$next_prev_links = self::archive_navigation();
 			}
-			
+
 			return $scroll . $elements . $next_prev_links . '</div>';
 
 		}
-		
+
 	}
 
 	public static function callaction_element($options = array())
@@ -3178,14 +3184,14 @@ class LayoutCompilator
 	}
 
 	public static function image_element($options = array())
-	{	
-		
+	{
+
 		$ts_image_element = '';
 		$retina = (isset($options['retina']) && ($options['retina'] === 'y' || $options['retina'] === 'n')) ? $options['retina'] : 'n';
 		$image_url = (isset($options['image-url'])) ? esc_url($options['image-url']) : '';
 		$forward_url = (isset($options['forward-url']) && !empty($options['forward-url'])) ? esc_url($options['forward-url']) : NULL;
 		$align = (isset($options['align']) && ($options['align'] === 'left' || $options['align'] === 'center' || $options['align'] === 'right')) ? $options['align'] : 'center';
-		
+
 		if( !empty($image_url) ){
         	$image_details = getimagesize($image_url);
         	if( isset($image_details[0], $image_details[1]) && is_numeric($image_details[0]) && is_numeric($image_details[1]) ){
@@ -3213,7 +3219,7 @@ class LayoutCompilator
 		get_template_part('includes/layout-builder/templates/image-carousel');
 		$element = ob_get_clean();
 		wp_reset_postdata();
-		return $element;	
+		return $element;
 	}
 
 	public static function filters_element($options = array())
@@ -3225,7 +3231,7 @@ class LayoutCompilator
 		$elements = array();
 
 		if ( $options['categories'] ) {
-			
+
 			$categories_start = '<ul class="ts-filters">';
 			$categories_end   = '</ul>';
 			$category_list    = '<li><a href="#" data-filter="*">'.__('Show all', 'touchsize').'</a></li>';
@@ -3275,7 +3281,7 @@ class LayoutCompilator
 			}
 
 			foreach ($options['categories'] as $id => $category) {
-					
+
 				$category = get_term_by('id', $category, $taxonomy);
 				if ( $category ) {
 					$category_name = esc_attr($category->name);
@@ -3291,7 +3297,7 @@ class LayoutCompilator
 			$args = array(
 				'post_type' => $post_type,
 				'tax_query' => array(
-			        array( 
+			        array(
 			            'taxonomy' => $taxonomy,
 			            'field'    => 'id',
 			            'terms'    => $options['categories']
@@ -3315,7 +3321,7 @@ class LayoutCompilator
 					get_template_part('includes/layout-builder/templates/thumbs-view');
 				}
 			}
-		
+
 			$elements = ob_get_clean();
 
 			wp_reset_postdata();
@@ -3332,7 +3338,7 @@ class LayoutCompilator
 	}
 
 	public static function facebook_block_element($options = array()){
-		
+
 		$facebook_background = ( isset($options['facebook-background']) && $options['facebook-background'] != '' ) ? $options['facebook-background'] : '';
 
 		$facebook_class = ( $facebook_background == 'dark' ) ? 'dark_facebook' : '';
@@ -3345,13 +3351,13 @@ class LayoutCompilator
 							</div>
 						</div>
 					</div>';
-		}	
-						
+		}
+
 	}
 
 	public static function clients_element($options = array())
 	{
-		
+
 		if ( $options['clients'] != '[]' ) {
 
 			$ts_options = json_decode(stripslashes($options['clients']));
@@ -3362,7 +3368,7 @@ class LayoutCompilator
 			if( $options['enable-carousel'] === 'y' ){
 	            $carousel_wrapper_start = '<div class="carousel-wrapper">';
 	            $carousel_wrapper_end = '</div>';
-	            
+
 	            $carousel_container_start = '<div class="carousel-container">';
 	            $carousel_container_end = '</div>';
 
@@ -3410,14 +3416,14 @@ class LayoutCompilator
 			return '<section data-show="' . $options['elements-per-row'] . '" class="ts-clients-view cols-by-' . $options['elements-per-row'] . '"><div class="col-lg-12">'. $carousel_wrapper_start . $carousel_navigation . $carousel_container_start . $img . $carousel_container_end . $carousel_wrapper_end .'</div></section>';
 
 		} else {
-			return __("No clients found", "touchsize");			
+			return __("No clients found", "touchsize");
 		}
 
 	}
 
 	public static function feature_blocks_element($options = array())
 	{
-		
+
 		$elements = array();
 		$style = '';
 		$gutter = (isset($options['gutter']) && $options['gutter'] !== '' && ($options['gutter'] == 'gutter' || $options['gutter'] == 'no-gutter')) ? $options['gutter'] : 'gutter';
@@ -3428,7 +3434,7 @@ class LayoutCompilator
 			$article_options = $options;
 			get_template_part('includes/layout-builder/templates/feature');
 		$elements = ob_get_clean();
-		
+
 		if ( $options['style'] == 'style1' ) {
 			$style = 'ts-features-default';
 		} else {
@@ -3439,7 +3445,7 @@ class LayoutCompilator
 		if ( $elements ) {
 			return '<section class="' . $style . $gutter . '">' . $elements . '</section>';
 		} else {
-			return __("No posts found", "touchsize");			
+			return __("No posts found", "touchsize");
 		}
 
 	}
@@ -3447,7 +3453,7 @@ class LayoutCompilator
 	public static function listed_feature_element($options = array())
 	{
 		if( isset($options) && $options != '' ){
-		
+
 			$elements = array();
 			$style = 'ts-listed-features';
 			ob_start();
@@ -3461,7 +3467,7 @@ class LayoutCompilator
 			if ( $elements ) {
 				return '<section class="' . $style . '">' . $elements . '</section>';
 			} else {
-				return __("No posts found", "touchsize");			
+				return __("No posts found", "touchsize");
 			}
 		}
 
@@ -3490,7 +3496,7 @@ class LayoutCompilator
 		}else{
 			return '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="text-align: '.esc_attr($icon_align).';">' . '<i class="' . $icon_name . '" ' . $icon_styles . '></i>' . '</div>';
 		}
-		
+
 	}
 
 	public static function counter_element($options = array()){
@@ -3507,7 +3513,7 @@ class LayoutCompilator
 					</div>';
 
 		return $counter;
-	
+
 	}
 
 	public static function map_element($options = array()){
@@ -3554,7 +3560,7 @@ class LayoutCompilator
 
 	public static function featured_area_element($options = array())
 	{
-	
+
 		$categories = explode(',', $options['selected-categories']);
 		$exclude_first = ( isset($options['exclude-first']) && (int)$options['exclude-first'] !== 0 ) ? (int)$options['exclude-first'] : NULL;
 		$posts_per_page = (isset($options['number-posts']) && (int)$options['number-posts'] !== 0 && $options['number-posts'] !== '') ? (int)$options['number-posts'] : '4';
@@ -3593,9 +3599,9 @@ class LayoutCompilator
 		if( $custom_post == 'video_post' ){
 			$args['post_type'] = array('post','video');
 		}
-		
+
 		$query = new WP_Query( $args );
-	
+
 		if ( $query->have_posts() ) {
 			ob_start();
 			ob_clean();
@@ -3610,7 +3616,7 @@ class LayoutCompilator
 			wp_reset_postdata();
 			return '';
 		}
-		
+
 		/* Restore original Post Data */
 		wp_reset_postdata();
 
@@ -3626,7 +3632,7 @@ class LayoutCompilator
 
 	public static function buttons_element($options = array())
 	{
-		
+
 		switch ($options['size']) {
 			case 'big':
 				$button_class = 'big';
@@ -3635,20 +3641,20 @@ class LayoutCompilator
 			case 'medium':
 				$button_class = 'medium';
 				break;
-			
+
 			case 'small':
 				$button_class = 'small';
 				break;
-			
+
 			case 'xsmall':
 				$button_class = 'xsmall';
 				break;
-			
+
 			default:
 				$button_class = 'medium';
 				break;
 		}
-		
+
 		$button_align = (isset($options['button-align'])) ? strip_tags($options['button-align']) : '';
 		$class_mode_display = (isset($options['mode-display']) && ($options['mode-display'] === 'background-button' || $options['mode-display'] === 'border-button')) ? $options['mode-display'] : 'background-button';
 		$border_color = (isset($options['border-color']) && !empty($options['border-color']) && is_string($options['border-color'])) ? esc_attr($options['border-color']) : 'inherit';
@@ -3662,7 +3668,7 @@ class LayoutCompilator
 		$options['url'] = esc_url($options['url']);
 
 		$colors = '';
-	
+
 		if ( $options['mode-display'] == 'background-button' ) {
 			$colors = 'style="background-color: ' . $background_color . '; color: '.$text_color.';"';
 			$button_class .= ' bg-button ';
@@ -3670,12 +3676,30 @@ class LayoutCompilator
 			$colors = 'style="border-color: ' . $border_color . '; color: ' . $text_color . ';"';
 			$button_class .= ' outline-button ';
 		}
-	
+
 		if ( ! isset($options['target']) ) {
 			$options['target'] = '_blank';
 		}
-		
-		return '<div class="col-lg-12 col-md-12 col-sm-12 '. $button_align .'"><a href="' . esc_url($options['url']) . '" target="' . esc_attr($options['target']) . '" class="ts-button ' . $button_class . '" ' . $colors . '>' . stripslashes($options['text']) . '</a></div>';
+
+		if ( isset( $options['short'] ) ) {
+
+	       	$start = '';
+
+	       	$end = '';
+
+       	} else {
+
+       		$start = '<div class="col-lg-12 col-md-12 col-sm-12 ' . $button_align . '">';
+
+       		$end = '</div>';
+
+       	}
+
+		return 	$start .
+					'<a href="' . esc_url($options['url']) . '" target="' . esc_attr($options['target']) . '" class="ts-button ' . $button_class . '" ' . $colors . '>' .
+						stripslashes($options['text']) .
+					'</a>' .
+				$end;
 	}
 
 	public static function shortcodes_element($options = array()) {
@@ -3683,16 +3707,16 @@ class LayoutCompilator
 			' . do_shortcode($options['shortcodes']) . '
 		</div></div>';
 	}
-	
+
 	public static function text_element($options = array()) {
-		remove_all_actions('the_content');
-		return '<div class="col-lg-12 col-md-12 col-sm-12">
-			' . apply_filters('the_content', stripslashes(str_replace('--quote--', '"', @$options['text']))) . '
-		</div>';
+
+		return 	'<div class="col-lg-12 col-md-12 col-sm-12">' .
+					do_shortcode( wp_unslash( str_replace( '--quote--', '"', $options['text'] ) ) ) . '
+				</div>';
 	}
 
 	public static function banner_element($options = array()) {
-		
+
 		if( isset($options) && $options != '' ){
 
 			$banner_img = ( isset($options['banner-image']) ) ? esc_url($options['banner-image']) : '';
@@ -3719,18 +3743,18 @@ class LayoutCompilator
 										<h1 class="title">' . $banner_title . '</h1>
 										<div class="subtitle">' . $banner_subtitle . '</div>
 										<a class="banner-btn" href="' . $banner_button_url . '" style="background-color:' . $banner_button_background . ';">' . $banner_button_title . '</a>
-									</article>	
+									</article>
 								</div>
-							</div>	
+							</div>
 			';
 
 			return $banner_box;
-			
+
 		}
 	}
 
 	public static function toggle_element($options = array()) {
-		
+
 		if( isset($options) && $options != '' ){
 
 			$toggle_title = ( isset($options['toggle-title']) ) ? strip_tags($options['toggle-title']) : '';
@@ -3747,55 +3771,76 @@ class LayoutCompilator
 										</div>
 										<div id="'. $id_toggle .'" class="panel-collapse collapse ' . $toggle_collapse . '">
 											<div class="panel-body">
-											' . $toggle_description . '
+											' . do_shortcode( $toggle_description ) . '
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>	
+							</div>
 			';
 
 			return $toggle_box;
 		}
 	}
 
-	public static function tab_element($options = array()) { 
+	public static function tab_element( $options = array() )
+	{
+	    $tabs = isset( $options['tab'] ) && ! empty( $options['tab'] ) && $options['tab'] !== '[]' ? json_decode( stripslashes( $options['tab'] ) ) : NULL;
 
-	    $tab_settings_options = (isset($options['tab']) && !empty($options['tab']) && $options['tab'] !== '[]') ? json_decode(stripslashes($options['tab'])) : NULL;
-	    $mode = (isset($options['mode']) && ($options['mode'] === 'horizontal' || $options['mode'] === 'vertical')) ? $options['mode'] : 'horizontal';
+	    if( ! is_array( $tabs ) || empty( $tabs ) ) return;
 
-	    if( isset($tab_settings_options) && is_array($tab_settings_options) && !empty($tab_settings_options) ) {
-	        $i = 0;
-	        $k = 0;
+	    $mode = isset( $options['mode'] ) ? $options['mode'] : 'horizontal';
 
-	        $tab_element = '<div class="col-lg-12 col-md-12"><div class="ts-tab-container" data-display="'.$mode.'"><ul class="nav nav-tabs" role="tablist">';
-	        foreach($tab_settings_options as $option_tab){
-	            $title = isset($option_tab->title) ? esc_attr($option_tab->title) : '';
-	            $element_active = ($i == 0) ? ' class="active" ':'';
+        $i = 0;
+   		$content = '';
+   		$li = '';
 
-	            $tab_element .= '<li '. $element_active .'><a href="#'. $option_tab->id .'" role="tab" data-toggle="tab">'. str_replace('--quote--', '"', $title) .'</a></li>';
+        foreach ( $tabs as $tab ) {
 
-	            $i++;
-	        }
-	        $tab_element .= '</ul>';
+        	$id = md5( rand() );
+            $active = $i == 0 ? ' active' : '';
 
-	        $tab_element .= '<div class="tab-content">';
-	        foreach($tab_settings_options as $option_tab){
-	            $text_content = isset($option_tab->text) ? nl2br(str_replace('--quote--', '"', $option_tab->text)) : '';
-	            $element_active = ($k == 0) ? ' active ':'';
+            $li .= '<li class="ts-item-tab' . $active . '">
+    					<a href="#' . $id . '">' .
+    						esc_html( str_replace( '--quote--', '"', $tab->title ) ) .
+    					'</a>
+    				</li>';
 
-	            $tab_element .= '<div class="tab-pane '. $element_active .'" id="'. $option_tab->id .'">'. $text_content .'</div>';
+            $desc = isset( $options['short'] ) ? str_replace( '--quote--', '"', $tab->text ) : nl2br( str_replace( '--quote--', '"', $tab->text ) );
 
-	            $k++;
-	        }
-	        $tab_element .= '</div></div></div>';
+            $content .= '<div class="tab-pane' . $active . '" id="' . $id . '">' . do_shortcode( $desc ) . '</div>';
 
-	        return $tab_element;
-	    }
+            $i++;
+        }
+
+        if ( isset( $options['short'] ) ) {
+
+        	$start = '';
+
+        	$end = '';
+
+        } else {
+
+        	$start = '<div class="col-lg-12 col-md-12">';
+
+        	$end = '</div>';
+
+        }
+
+        return 	$start .
+        			'<div class="ts-tab-container" data-display="' . $mode . '">
+						<ul class="nav nav-tabs">' .
+							$li .
+						'</ul>
+						<div class="tab-content">' .
+							$content .
+						'</div>
+					</div>' .
+				$end;
 	}
 
 	public static function list_videos_element($options = array(), &$original_query = null)
-	{	
+	{
 		$exclude_posts = ( isset($options['id-exclude']) && $options['id-exclude'] != '' ) ? explode(',',@$options['id-exclude']) : NULL;
 		$exclude_first = ( isset($options['exclude-first']) ) ? (int)$options['exclude-first'] : '';
 		$exclude_id    = array();
@@ -3830,7 +3875,7 @@ class LayoutCompilator
                                 <h4 class="modal-title" id="myModalLabel"></h4>
                             </div>
                         	<div class="modal-body">
-                        	</div> 
+                        	</div>
                         	<div class="modal-footer">
                                 <a href="#" class="btn medium active" data-dismiss="modal">' . __('Close', 'touchsize') . '</a>
                                 <a href="" class="ts-add-link btn medium">' . __('View post', 'touchsize') . '</a>
@@ -3860,7 +3905,7 @@ class LayoutCompilator
 			$taxonomy = 'category';
 		}
 
-		// Display elements for grid mode		
+		// Display elements for grid mode
 		if ($options['display-mode'] === 'grid') {
 
 			$ts_masonry_class = '';
@@ -3873,7 +3918,7 @@ class LayoutCompilator
 
 			$carousel_wrapper_start = '<div class="carousel-wrapper">';
 			$carousel_wrapper_end = '</div>';
-			
+
 			$carousel_container_start = '<div class="carousel-container">';
 			$carousel_container_end = '</div>';
 
@@ -3893,7 +3938,7 @@ class LayoutCompilator
 				} else {
 				    $current = 1;
 				}
-				
+
 				$args = array(
 					'post_type' => 'video',
 					'order' => $order,
@@ -3905,14 +3950,14 @@ class LayoutCompilator
 				if( $pagination === 'load-more' || $pagination === 'n' ){
 					$args['offset'] = $exclude_first;
 				}
-				
+
 				if ( isset($options['category']) && (int)$options['category'] !== 0 ) {
 
 					$options['category'] = explode(',', $options['category']);
 
 					if ($options['category']) {
 						$args['tax_query'] = array(
-							        array( 
+							        array(
 							            'taxonomy' => 'videos_categories',
 							            'field' => 'id',
 							            'terms' => $options['category']
@@ -3927,9 +3972,9 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-			
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -3944,7 +3989,7 @@ class LayoutCompilator
 				$article_options['j'] = $query->post_count;
 				$article_options['i'] = 1;
 				$article_options['k'] = 1;
-				
+
 				while ( $query->have_posts() ) {
 
 					$query->the_post();
@@ -4008,9 +4053,9 @@ class LayoutCompilator
 					'paged' => $current,
 					'post__not_in' => $exclude_id,
 					'posts_per_page' => (int)$options['posts-limit']
-					
+
 				);
-				
+
 				if( $pagination === 'load-more' || $pagination === 'n' ){
 					$args['offset'] = $exclude_first;
 				}
@@ -4022,7 +4067,7 @@ class LayoutCompilator
 					if ($options['category']) {
 
 						$args['tax_query'] = array(
-							        array( 
+							        array(
 							            'taxonomy' => 'videos_categories',
 							            'field' => 'id',
 							            'terms' => $options['category']
@@ -4086,7 +4131,7 @@ class LayoutCompilator
 			}else{
 				return $list_view_start . $elements . $list_view_end . $load_more . $ts_modal_content . $next_prev_links . $pagination_content;
 			}
-			
+
 
 		} else if ($options['display-mode'] === 'thumbnails') {
 
@@ -4102,7 +4147,7 @@ class LayoutCompilator
 			if ( isset($options['behavior']) && @$options['behavior'] == 'masonry' ) {
 				$ts_masonry_class = ' ts-filters-container ';
 			}
-			
+
 			$thumbnails_view_start = '<section class="ts-thumbnail-view ' . $display_effect . $scroll . $use_gutter . $ts_masonry_class . ' ' . self::get_clear_class($options['elements-per-row']) . ' ">';
 			$thumbnails_view_end = '</section>';
 
@@ -4118,11 +4163,11 @@ class LayoutCompilator
 			$carousel_container_end = '</div>';
 
 			$valid_columns = array(1, 2, 3, 4, 6);
-			
+
 			if ( ! in_array($options['elements-per-row'], $valid_columns)) {
 				$options['elements-per-row'] = 3;
 			}
-			
+
 			if ( $original_query === null ) {
 
 				$order    = self::order_direction($options['order-direction']);
@@ -4154,7 +4199,7 @@ class LayoutCompilator
 					if ($options['category']) {
 
 						$args['tax_query'] = array(
-							        array( 
+							        array(
 							            'taxonomy' => 'videos_categories',
 							            'field' => 'id',
 							            'terms' => $options['category']
@@ -4170,7 +4215,7 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
 			} else {
 				$query = &$original_query;
@@ -4205,7 +4250,7 @@ class LayoutCompilator
 			} else {
 				return $thumbnails_view_start . '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">' . __( 'Nothing Found', 'touchsize' ) . '</div>' . $thumbnails_view_end;
 			}
-			
+
 			if ( $original_query === null ) {
 				$next_prev_links = '';
 				/* Restore original Post Data */
@@ -4218,10 +4263,10 @@ class LayoutCompilator
 				@$options['behavior'] = 'none';
 			}
 
-			
+
 			$args['options'] = $options;
 			$load_more = ($pagination === 'load-more' && $ajax_load_more === false) ? '<div class="ts-pagination-more" data-loop="1" data-args="' . ts_base_64($args, 'encode') . '">' . __('Load More', 'touchsize') . wp_nonce_field('pagination-read-more', 'pagination') . '</div>' : '';
-			
+
 			if (@$options['behavior'] === 'carousel') {
 				return $thumbnails_view_start . $carousel_wrapper_start . $carousel_navigation . $carousel_container_start . $elements . $carousel_container_end. $carousel_wrapper_end . $thumbnails_view_end;
 			} else if( @$options['behavior'] === 'scroll' ) {
@@ -4233,7 +4278,7 @@ class LayoutCompilator
 			}
 
 		} else if ($options['display-mode'] === 'big-post') {
-			
+
 			$big_post_view_start = '<section class="ts-big-posts ' . $display_effect . ' ">';
 			$big_post_view_end = '</section>';
 
@@ -4268,7 +4313,7 @@ class LayoutCompilator
 					if ($options['category']) {
 
 						$args['tax_query'] = array(
-							        array( 
+							        array(
 							            'taxonomy' => 'videos_categories',
 							            'field' => 'id',
 							            'terms' => $options['category']
@@ -4284,9 +4329,9 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -4339,9 +4384,9 @@ class LayoutCompilator
 
 			$super_post_view_start = '<section class="ts-super-posts ' . $display_effect . ' ">';
 			$super_post_view_end = '</section>';
-			
+
 			$valid_columns = array(1, 2, 3);
-			
+
 			if ( ! in_array($options['elements-per-row'], $valid_columns) ) {
 				$options['elements-per-row'] = 1;
 			}
@@ -4379,13 +4424,13 @@ class LayoutCompilator
 					if ($options['category']) {
 
 						$args['tax_query'] = array(
-							        array( 
+							        array(
 							            'taxonomy' => 'videos_categories',
 							            'field' => 'id',
 							            'terms' => $options['category']
 							        )
 							    );
-				
+
 					} else {
 						$args['category__in'] = array(0);
 					}
@@ -4395,9 +4440,9 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -4466,7 +4511,7 @@ class LayoutCompilator
 					'post__not_in' => $exclude_id,
 					'posts_per_page' => (int)$options['posts-limit']
 				);
-				
+
 				if( $pagination === 'load-more' || $pagination === 'n' ){
 					$args['offset'] = $exclude_first;
 				}
@@ -4478,7 +4523,7 @@ class LayoutCompilator
 					if ($options['category']) {
 
 						$args['tax_query'] = array(
-					        array( 
+					        array(
 					            'taxonomy' => 'videos_categories',
 					            'field' => 'id',
 					            'terms' => $options['category']
@@ -4500,10 +4545,10 @@ class LayoutCompilator
 			} else {
 				$query = &$original_query;
 			}
-			
+
 			$articles = array();
 			if ( $query->have_posts() ) {
-				
+
 				ob_start();
 				ob_clean();
 				global $article_options;
@@ -4534,7 +4579,7 @@ class LayoutCompilator
 			} else {
 				$next_prev_links = self::archive_navigation();
 			}
-			
+
 			$args['options'] = $options;
 			$load_more = ($pagination === 'load-more' && $ajax_load_more === false) ? '<div class="ts-pagination-more" data-loop="1" data-args="' . ts_base_64($args, 'encode') . '">' . __('Load More', 'touchsize') . wp_nonce_field('pagination-read-more', 'pagination') . '</div>' : '';
 			if ( $ajax_load_more === true ) {
@@ -4551,7 +4596,7 @@ class LayoutCompilator
 
 			$scroll = (isset($options['scroll']) && !empty($options['scroll']) && $options['scroll'] == 'y') ? '<div data-scroll="true" class="mosaic-view '. $effect_scroll . $gutter_class . ' mosaic-' . $options['layout'] . '">' : '<div data-scroll="false" class="mosaic-view '. $gutter_class .' mosaic-' . $options['layout'] . '">';
 			$img_rows = (isset($options['rows']) && $options['rows'] !== '' && (int)$options['rows'] !== 0) ? (int)$options['rows'] : '3';
-			$layout_mosaic = (isset($options['layout']) && ($options['layout'] == 'rectangles' || $options['layout'] == 'square')) ? $options['layout'] : 'square';		
+			$layout_mosaic = (isset($options['layout']) && ($options['layout'] == 'rectangles' || $options['layout'] == 'square')) ? $options['layout'] : 'square';
 
 			if ( $original_query === null ) {
 
@@ -4563,7 +4608,7 @@ class LayoutCompilator
 					'order' => $order,
 					'post__not_in' => $exclude_id,
 					'offset' => $exclude_first
-					
+
 				);
 
 				if ( isset($options['category']) && (int)$options['category'] !== 0 ) {
@@ -4573,7 +4618,7 @@ class LayoutCompilator
 					if ($options['category']) {
 
 						$args['tax_query'] = array(
-							        array( 
+							        array(
 							            'taxonomy' => 'videos_categories',
 							            'field' => 'id',
 							            'terms' => $options['category']
@@ -4635,11 +4680,11 @@ class LayoutCompilator
 			} else {
 				$next_prev_links = self::archive_navigation();
 			}
-			
+
 			return $scroll . $elements . $next_prev_links . '</div>';
 
-		}  
-		
+		}
+
 	}
 
 	public static function breadcrumbs_element($options = array()){
@@ -4649,7 +4694,7 @@ class LayoutCompilator
 	}
 
 	public static function latest_custom_posts_element($options = array(), &$original_query = null)
-		{	
+		{
 		$exclude_posts  = ( isset($options['id-exclude']) && $options['id-exclude'] != '' ) ? explode(',',@$options['id-exclude']) : NULL;
 		$exclude_first  = ( isset($options['exclude-first']) ) ? (int)$options['exclude-first'] : '';
 		$exclude_id     = array();
@@ -4688,7 +4733,7 @@ class LayoutCompilator
 		    $current = 1;
 		}
 
-		// Display elements for grid mode		
+		// Display elements for grid mode
 		if ($options['display-mode'] === 'grid') {
 
 			$ts_masonry_class = (isset($options['behavior']) && $options['behavior'] == 'masonry') ? ' ts-filters-container ' : '';
@@ -4699,7 +4744,7 @@ class LayoutCompilator
 
 			$carousel_wrapper_start = '<div class="carousel-wrapper">';
 			$carousel_wrapper_end = '</div>';
-			
+
 			$carousel_container_start = '<div class="carousel-container">';
 			$carousel_container_end = '</div>';
 
@@ -4711,7 +4756,7 @@ class LayoutCompilator
 			if ( $original_query === null ) {
 
 				$order    = self::order_direction($options['order-direction']);
-		
+
 				$args = array(
 					'post_type' => $post_types,
 					'order' => $order,
@@ -4719,7 +4764,7 @@ class LayoutCompilator
 					'paged' => $current,
 					'posts_per_page' => (int)$options['posts-limit']
 				);
-				
+
 				if( isset($category) && is_array($category) && count($category) > 0 ){
 					$args['category__and '] = $category;
 				}
@@ -4727,11 +4772,11 @@ class LayoutCompilator
 				if( $pagination === 'n' || $pagination === 'load-more' ){
 					$args['offset'] = $exclude_first;
 				}
-				
+
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -4802,7 +4847,7 @@ class LayoutCompilator
 					'post__not_in'   => $exclude_id,
 					'posts_per_page' => (int)$options['posts-limit']
 				);
-				
+
 				if( $pagination === 'n' || $pagination === 'load-more' ){
 					$args['offset'] = $exclude_first;
 				}
@@ -4871,7 +4916,7 @@ class LayoutCompilator
 			if ( isset($options['behavior']) && @$options['behavior'] == 'masonry' ) {
 				$ts_masonry_class = ' ts-filters-container ';
 			}
-			
+
 			$thumbnails_view_start = '<section class="ts-thumbnail-view ' . $display_effect . $use_gutter . $ts_masonry_class . ' ' . self::get_clear_class($options['elements-per-row']) . ' ">';
 			$thumbnails_view_end = '</section>';
 
@@ -4887,11 +4932,11 @@ class LayoutCompilator
 			$carousel_container_end = '</div>';
 
 			$valid_columns = array(1, 2, 3, 4, 6);
-			
+
 			if ( ! in_array($options['elements-per-row'], $valid_columns)) {
 				$options['elements-per-row'] = 3;
 			}
-			
+
 			if ( $original_query === null ) {
 
 				$order    = self::order_direction($options['order-direction']);
@@ -4911,9 +4956,9 @@ class LayoutCompilator
 				if( $pagination === 'n' || $pagination === 'load-more' ){
 					$args['offset'] = $exclude_first;
 				}
-				
+
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
 			} else {
 				$query = &$original_query;
@@ -4948,7 +4993,7 @@ class LayoutCompilator
 			} else {
 				return $thumbnails_view_start . '<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">' . __( 'Nothing Found', 'touchsize' ) . '</div>' . $thumbnails_view_end;
 			}
-			
+
 			if ( $original_query === null ) {
 				$next_prev_links = '';
 				/* Restore original Post Data */
@@ -4975,7 +5020,7 @@ class LayoutCompilator
 			}
 
 		} else if ($options['display-mode'] === 'big-post') {
-			
+
 			$big_post_view_start = '<section class="ts-big-posts ' . $display_effect . ' ">';
 			$big_post_view_end   = '</section>';
 
@@ -4996,9 +5041,9 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -5054,7 +5099,7 @@ class LayoutCompilator
 			$super_post_view_end = '</section>';
 
 			$valid_columns = array(1, 2, 3);
-			
+
 			if ( ! in_array($options['elements-per-row'], $valid_columns) ) {
 				$options['elements-per-row'] = 1;
 			}
@@ -5078,9 +5123,9 @@ class LayoutCompilator
 				}
 
 				$args = self::order_by($options['order-by'], $args, $featured);
-				
+
 				$query = new WP_Query( $args );
-			
+
 			} else {
 				$query = &$original_query;
 			}
@@ -5141,7 +5186,7 @@ class LayoutCompilator
 					'post__not_in' => $exclude_id,
 					'posts_per_page' => (int)$options['posts-limit']
 				);
-				
+
 				if( $pagination === 'n' || $pagination === 'load-more' ){
 					$args['offset'] = $exclude_first;
 				}
@@ -5204,7 +5249,7 @@ class LayoutCompilator
 
 			$scroll = (isset($options['scroll']) && !empty($options['scroll']) && $options['scroll'] == 'y') ? '<div data-scroll="true" class="mosaic-view'. $effect_scroll . $gutter_class . ' mosaic-' . $options['layout'] . '">' : '<div data-scroll="false" class="mosaic-view'. $gutter_class .' mosaic-' . $options['layout'] . '">';
 			$img_rows = (isset($options['rows']) && $options['rows'] !== '' && (int)$options['rows'] !== 0) ? (int)$options['rows'] : '3';
-			$layout_mosaic = (isset($options['layout']) && ($options['layout'] == 'rectangles' || $options['layout'] == 'square')) ? $options['layout'] : 'square';		
+			$layout_mosaic = (isset($options['layout']) && ($options['layout'] == 'rectangles' || $options['layout'] == 'square')) ? $options['layout'] : 'square';
 
 			if ( $original_query === null ) {
 
@@ -5216,7 +5261,7 @@ class LayoutCompilator
 					'order' => $order,
 					'post__not_in' => $exclude_id,
 					'offset' => $exclude_first
-					
+
 				);
 
 				$args = self::order_by($options['order-by'], $args, $featured);
@@ -5233,7 +5278,7 @@ class LayoutCompilator
 				ob_clean();
 				global $article_options;
 				$article_options = $options;
-				
+
 				$article_options['i'] = 1;
 				$article_options['j'] = $query->post_count;
 				$article_options['k'] = 1;
@@ -5267,15 +5312,15 @@ class LayoutCompilator
 			} else {
 				$next_prev_links = self::archive_navigation();
 			}
-			
+
 			return $scroll . $elements . $next_prev_links . '</div>';
 
-		}  
-		
+		}
+
 	}
 
 	public static function timeline_element($options = array())
-	{	
+	{
 		if( isset($options['type']) && $options['type'] === 'timeline' ){
 			ob_start();
 			ob_clean();
@@ -5297,10 +5342,10 @@ class LayoutCompilator
 			get_template_part('includes/layout-builder/templates/ribbon');
 			$elements = ob_get_clean();
 			return $elements;
-		}	
+		}
 	}
 
-	/*public static function video_carousel_element($options = array()) { 
+	/*public static function video_carousel_element($options = array()) {
 
 	    $video_carousel = ( isset($options['video-carousel']) && !empty($options['video-carousel']) && $options['video-carousel'] !== '[]' ) ? json_decode(stripslashes($options['video-carousel'])) : NULL;
 	    if( isset($video_carousel) && is_array($video_carousel) && !empty($video_carousel) ){
@@ -5321,9 +5366,9 @@ class LayoutCompilator
 							    				<h3 class="carousel-item-title"><a href="'. $url. '">'. $title . '</a></h3>
 							    				<div class="carousel-description">' . $description .'</div>
 							    			</div>
-							    		</li>';	    		
+							    		</li>';
 	    	}
-	    	
+
 	    	$ts_video_carousel .= 	'</ul></div></div>
 									<script>
 										jQuery(document).ready(function(){
@@ -5331,10 +5376,10 @@ class LayoutCompilator
 										});
 									</script>';
 	    	return $ts_video_carousel;
-	    }  
+	    }
 	}*/
 
-	public static function video_carousel_element($options = array()) { 
+	public static function video_carousel_element($options = array()) {
 
 	    $video_carousel = ( isset($options['video-carousel']) && !empty($options['video-carousel']) && $options['video-carousel'] !== '[]' ) ? json_decode(stripslashes($options['video-carousel'])) : NULL;
 	    $source = (isset($options['source']) && ($options['source'] == 'latest-posts' || $options['source'] == 'latest-galleries' || $options['source'] == 'latest-videos' || $options['source'] == 'latest-featured-posts' || $options['source'] == 'latest-featured-galleries' || $options['source'] == 'latest-featured-videos' || $options['source'] == 'custom-slides')) ? $options['source'] : 'custom-slides';
@@ -5362,21 +5407,21 @@ class LayoutCompilator
 								    				<h3 class="carousel-item-title"><a href="'. $url. '">'. $title . '</a></h3>
 								    				<div class="carousel-description">' . $description .'</div>
 								    			</div>
-								    		</li>';	    		
+								    		</li>';
 		    	}
-		    	
+
 		    }else{
 		    	return;
 		    }
 		} else {
 
-			$post_type = ($source == 'latest-posts' ? 'post' : 
-							($source == 'latest-videos' ? 'video' : 
-								($source == 'latest-galleries' ? 'ts-gallery' : 
-									($source == 'latest-featured-posts' ? 'post' : 
-										($source == 'latest-featured-videos' ? 'video' : 
+			$post_type = ($source == 'latest-posts' ? 'post' :
+							($source == 'latest-videos' ? 'video' :
+								($source == 'latest-galleries' ? 'ts-gallery' :
+									($source == 'latest-featured-posts' ? 'post' :
+										($source == 'latest-featured-videos' ? 'video' :
 											($source == 'latest-featured-galleries' ? 'ts-gallery' : 'post'))))));
-			
+
 			$postsPerPage = (isset($options['nr-of-posts']) && is_numeric($options['nr-of-posts'])) ? $options['nr-of-posts'] : 5;
 
 			$category = isset( $options['category'] ) && ! empty( $options['category'] ) ? explode( ',', $options['category'] ) : array();
@@ -5386,7 +5431,7 @@ class LayoutCompilator
 				'post_type'      => $post_type,
 				'posts_per_page' => $postsPerPage,
 				'tax_query' => array(
-			        array( 
+			        array(
 			            'taxonomy' => $tax,
 			            'field'    => 'id',
 			            'terms'     => $category
@@ -5440,7 +5485,7 @@ class LayoutCompilator
 							if ( has_post_thumbnail(get_the_ID()) ) $embed_image = '<img src="'. aq_resize(wp_get_attachment_url( get_post_thumbnail_id(get_the_ID())), 800, 650, true) .'">';
 							else $embed_image = '<img src="'. get_template_directory_uri() . '/images/noimage.jpg">';
 						}
-						
+
 					}else{
 						if ( has_post_thumbnail(get_the_ID()) ) $embed_image = '<img src="'. aq_resize(wp_get_attachment_url( get_post_thumbnail_id(get_the_ID())), 800, 650, true) .'">';
 						else $embed_image = '<img src="'. get_template_directory_uri() . '/images/noimage.jpg">';
@@ -5514,7 +5559,7 @@ class LayoutCompilator
 								</div>
 			';
 			return $ts_blockquote;
-		}	
+		}
 	}
 
 }

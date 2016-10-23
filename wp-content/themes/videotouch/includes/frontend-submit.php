@@ -30,25 +30,25 @@ function ts_get_register_form_callback()
     <form enctype="multipart/form-data" class="ts-form-horizontal">
         <p class="ts-form-group">
             <label for="ts-name"><?php _e('Your Name', 'touchsize'); ?></label>
-            <input type="text" name="ts-name" id="ts-name" value="" placeholder="<?php _e('Your Name',
+            <input type="text" name="ts-name" class="ts-name" value="" placeholder="<?php _e('Your Name',
 'touchsize'); ?>"/>
         </p>
 
         <p class="ts-form-group">
             <label for="ts-email"><?php _e('Your Email', 'touchsize'); ?></label>
-            <input type="email" name="ts-email" id="ts-email" value="" placeholder="<?php _e('Your Email',
+            <input type="email" name="ts-email" class="ts-email" value="" placeholder="<?php _e('Your Email',
 'touchsize'); ?>"/>
         </p>
 
         <p class="ts-form-group">
             <label for="ts-nick"><?php _e('Your Nickname', 'touchsize'); ?></label>
-            <input type="text" name="ts-nick" id="ts-nick" value="" placeholder="<?php _e('Your Nickname',
+            <input type="text" name="ts-nick" class="ts-nick" value="" placeholder="<?php _e('Your Nickname',
 'touchsize'); ?>"/>
         </p>
 
         <p class="ts-form-group">
             <label for="ts-username"><?php _e('Choose Username', 'touchsize'); ?></label>
-            <input type="text" name="ts-username" id="ts-username" value="" placeholder="<?php _e('Choose Username',
+            <input type="text" name="ts-username" class="ts-username" value="" placeholder="<?php _e('Choose Username',
 'touchsize'); ?>"/>
             <span class="ts-help-block"><?php _e('Please use only a-z,A-Z,0-9,dash and underscores, minimum 5 characters',
 'touchsize'); ?></span>
@@ -56,7 +56,7 @@ function ts_get_register_form_callback()
 
         <p class="ts-form-group">
             <label for="ts-pass"><?php _e('Choose Password', 'touchsize'); ?></label>
-            <input type="password" name="ts-pass" id="ts-pass" value="" placeholder="<?php _e('Choose Password',
+            <input type="password" name="ts-pass" class="ts-pass" value="" placeholder="<?php _e('Choose Password',
 'touchsize'); ?>"/>
             <span class="ts-help-block"><?php _e('Minimum 5 characters',
 'touchsize'); ?></span>
@@ -65,30 +65,28 @@ function ts_get_register_form_callback()
         <p class="ts-form-group">
             <label for="ts-description"><?php _e('Add your description',
 'touchsize'); ?></label>
-            <textarea name="ts-description" id="ts-description" value="" placeholder="<?php _e('Choose Description',
-'touchsize'); ?>"></textarea>
+            <textarea name="ts-description" class="ts-description" value="" placeholder="<?php _e('Choose Description', 'touchsize'); ?>"></textarea>
             <span class="ts-help-block"><?php _e('Minimum 5 characters',
 'touchsize'); ?></span>
         </p>
 
         <p class="ts-form-group">
             <label for="ts-url"><?php _e('Add your site url', 'touchsize'); ?></label>
-            <input type="text" name="ts-url" id="ts-url" value="" placeholder="<?php _e('Add your site url here',
-'touchsize'); ?>"></textarea>
+            <input type="text" name="ts-url" class="ts-url" value="" placeholder="<?php _e('Add your site url here','touchsize'); ?>">
             <span class="ts-help-block"><?php _e('Add your site here',
 'touchsize'); ?></span>
         </p>
-        <?php wp_nonce_field('ts_new_user', 'ts_new_user_nonce', true, true); ?>
+        <input type="hidden" name="ts-nonce" class="ts-nonce" value="<?php echo wp_create_nonce( 'ts_new_user' ); ?>">
+
         <p class="login-submit">
-            <input type="submit" class="btn btn-primary" id="ts-btn-new-user" value="<?php _e('Register',
-'touchsize') ?>" />
+            <input type="submit" class="btn btn-primary ts-btn-new-user" value="<?php _e('Register', 'touchsize') ?>" />
         </p>
         <?php echo $facebook_link_register; ?>
     </form>
     <div class="indicator"><?php _e('Please wait...', 'touchsize'); ?></div>
     <div style="display: none;" class="alert ts-error-message"><?php _e('The Name, Email, Nickname, Username, Password is required', 'touchsize'); ?></div>
     <div class="alert ts-result-message"></div>
-<?php
+    <?php
     die();
 } //end function ts_get_register_form_callback()
 
@@ -130,6 +128,7 @@ function ts_register_user_callback()
                     'description' => $description);
 
                 $user_id = wp_insert_user($userdata);
+
             }else{
                 $user_id = '';
                 echo __('The requeired fields is Username, Nickname, Name, Email, Password', 'touchsize');
@@ -158,7 +157,7 @@ function ts_save_post_user()
 
     $user = wp_get_current_user();
     if( !is_user_logged_in() ) return;
-    
+
     if (isset($_POST['ts_save_post']) && wp_verify_nonce($_POST['ts_save_post'],
         'ts_save_post') && isset($_POST['save-posts'])) {
         $single = get_option('videotouch_single_post', array('user_profile' => ''));
@@ -287,7 +286,7 @@ function ts_get_login_form()
         );
 
         $form = wp_login_form($args);
-    
+
         $facebook = get_option('videotouch_general', array('login_register_by_facebook' => 'n', 'facebook_app_id' => ''));
         $appid = $facebook['facebook_app_id'];
         if( $facebook['login_register_by_facebook'] == 'y' ){
@@ -296,12 +295,12 @@ function ts_get_login_form()
                     window.fbAsyncInit = function() {
                         FB.init({
                         appId      : "' . $appid . '",
-                        status     : true, 
-                        cookie     : true, 
-                        xfbml      : true  
+                        status     : true,
+                        cookie     : true,
+                        xfbml      : true
                         });
                     };
-                    
+
                     (function(d){
                         var js, id = "facebook-jssdk", ref = d.getElementsByTagName("script")[0];
                         if (d.getElementById(id)) {return;}
@@ -320,7 +319,7 @@ function ts_get_login_form()
                 </script>';
 
             $facebook_link_login = '<a href="javascript:void(0)" onClick="FBLogin();">' . __('Login With Facebook', 'touchsize') . '</a>';
-            
+
         }else{
             $facebook_javascript = '';
             $facebook_link_login = '';
@@ -332,46 +331,43 @@ function ts_get_login_form()
                     <a href="#"><img src="' . get_template_directory_uri() . '/images/user_profile_60.png" alt="image-user"/></a>
                 </div>
                 <div class="user-info">
-                    <div><a id="ts-show-login-modal" href="#">' . __("Login",
-            "touchsize") . '</a></div>
-                    <div><a id="ts-show-register-modal" href="#">' . __("or",
-            "touchsize") . ' <span>' . __("register", "touchsize") . '</span></a></div>
+                    <div><a class="ts-show-login-modal" href="#">' . __("Login", "touchsize") . '</a></div>
+                    <div><a class="ts-show-register-modal" href="#">' . __("or", "touchsize") . ' <span>' . __("register", "touchsize") . '</span></a></div>
                 </div>
-            </div>
 
-            <div class="modal fade ts-user-login-modal" id="ts-login-modal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content text-center">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">' . __('Close', 'touchsize') . '</span></button>
-                            <h4 class="modal-title" id="videoModalLabel">' . __("Login/Register",
-            "touchsize") . '</h4>
-                        </div>
-                        <div class="modal-body">
-                            
-                            <div class="modal-mini-avatar"><i class="icon-user"></i></div>
-                            <div class="preloader"><img src="' .
-            get_template_directory_uri() . '/images/ajax-loader.gif" alt="Loader"/></div>
-                            <div class="ts-login">
-                            ' . $facebook_javascript . '
-                                <div class="ts-form-login">
-                                    ' . $form . $facebook_link_login . '
+                <div class="modal fade ts-user-login-modal" tabindex="-1" role="dialog" aria-labelledby="videoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content text-center">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">' . __('Close', 'touchsize') . '</span></button>
+                                <h4 class="modal-title" id="videoModalLabel">' . __("Login/Register", "touchsize") . '</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="modal-mini-avatar"><i class="icon-user"></i></div>
+                                <div class="preloader"><img src="' .
+                        get_template_directory_uri() . '/images/ajax-loader.gif" alt="Loader"/></div>
+                                <div class="ts-login">
+                                ' . $facebook_javascript . '
+                                    <div class="ts-form-login">
+                                        ' . $form . $facebook_link_login . '
+                                    </div>
+                                    <div class="ts-form-register"></div>
+                                    <div class="clearfix"></div>
                                 </div>
-                                <div class="ts-form-register"></div>
-                                <div class="clearfix"></div>
+                                <div style="height: 20px"></div>
+                                <div class="ts-register">
+
+                                    <a href="#" class="ts-show-register-modal-slide">
+                                       ' . __("Register", "touchsize") . '
+                                    </a>
+                                    <a href="#" class="ts-show-login-modal-slide hidden">
+                                       ' . __("Login", "touchsize") . '
+                                    </a>
+                                </div>
                             </div>
-                            <div style="height: 20px"></div>
-                            <div class="ts-register">
-                                
-                                <a href="#" class="ts-show-register-modal">
-                                   ' . __("Register", "touchsize") . '
-                                </a>
-                                <a href="#" class="ts-show-login-modal hidden">
-                                   ' . __("Login", "touchsize") . '
-                                </a>
-                            </div>
+                            <div style="height: 50px"></div>
                         </div>
-                        <div style="height: 50px"></div>
                     </div>
                 </div>
             </div>';
@@ -380,9 +376,11 @@ function ts_get_login_form()
 } //end function ts_get_login_form()
 
 function ts_fb_login_validate(){
-    
+
     if(isset($_REQUEST['option']) and $_REQUEST['option'] == "tsfblogin"){
+
         include_once get_template_directory() . '/includes/ts-facebook/facebook.php';
+
         $app = get_option('videotouch_general', array('login_register_by_facebook' => 'n', 'facebook_app_id' => '', 'facebook_app_secret' => ''));
 
         if( $app['login_register_by_facebook'] == 'y' && $app['facebook_app_secret'] !== '' && $app['facebook_app_id'] !== '' ){
@@ -402,18 +400,21 @@ function ts_fb_login_validate(){
 
         if ($fbuser) {
             try {
+
                 $user_profile = $facebook->api('/me');
-            }
-            catch (Exception $e) {
+
+            } catch (Exception $e) {
+
                 echo $e->getMessage();
                 exit();
             }
+
             $user_fbid  = $fbuser;
-            $user_email = $user_profile["email"];
-            $user_fnmae = $user_profile["first_name"];
+            $user_email = $user_profile['email'];
+            $user_fnmae = $user_profile['first_name'];
             $last_name  = $user_profile['last_name'];
 
-            if( email_exists($user_email ) ) {
+            if( email_exists( $user_email ) ) {
                 $user = get_user_by('email', $user_email);
                 $user_id = $user->ID;
                 wp_set_auth_cookie($user_id, true);
@@ -436,10 +437,10 @@ function ts_fb_login_validate(){
                 $user_id = wp_insert_user($userdata);
                 wp_set_auth_cookie($user_id, true);
             }
-           
+
             wp_redirect(site_url());
             exit;
-        }       
+        }
     }
 }
 
@@ -476,7 +477,7 @@ function ts_update_user()
         }
 
         $user_id = wp_update_user($userdata);
-      
+
         if (is_wp_error($user_id)) {
             echo '<div class="ts-error">' . __('Error update data', 'touchsize') . '</div>';
         } else {

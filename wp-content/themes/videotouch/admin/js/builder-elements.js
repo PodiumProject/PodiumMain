@@ -3,7 +3,7 @@ jQuery(document).ready(function($) {
     var builderElements       = $("#builder-elements>div.builder-element"),
     elementType               = $("#ts-element-type"),
     firstBuilderElement       = elementType.find("option:first").val(),
-    
+
     lastPostsDisplayMode      = $('#last-posts-display-mode-options>div'),
     lastPostsFirstDisplayMode = $("#last-posts-display-mode").find('option:first').val(),
 
@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
 
     listVideosDisplayMode      = $('#list-videos-display-mode-options>div'),
     listVideosFirstDisplayMode = $("#list-videos-display-mode").find('option:first').val(),
-    
+
     listPortfoliosDisplayMode = $('#list-portfolios-display-mode-options>div'),
     listPortfoliosFirstDisplayMode = $("#list-portfolios-display-mode").find('option:first').val();
 
@@ -29,7 +29,7 @@ jQuery(document).ready(function($) {
     // Select first filter category
     var filterCategories = builderElements.find('td.filters-categories>div');
     makeSelected(filterCategories, 'wp-post-categories');
-    
+
     // read element settings and open editor settings for selected element
     readElementProperties(window.currentEditedElement);
 
@@ -54,7 +54,7 @@ jQuery(document).ready(function($) {
     $(document).on("change", "#filters-post-type", function(event) {
         var tab = $(this).closest('table').find('td.filters-categories>div'),
             selected;
-        
+
         if ( $(this).val() === 'posts' ) {
             selected = 'wp-post-categories';
         }else if ( $(this).val() === 'video' ) {
@@ -97,21 +97,21 @@ jQuery(document).ready(function($) {
 
     // read "data-*" properties and transform them to object
     function readElementProperties (element) {
-        
+
         var elementType = element.attr('data-element-type'),
             listOfElements = $('#ts-element-type'),
             elementsOptions = $('.builder-elements');
 
-        // slider 
+        // slider
         var sliderID = function (element) {
             return (element.attr('data-slider-id') > 0) ? element.attr('data-slider-id') : 0 ;
         };
 
         // ------- Funtions for parsing element display mode options ------------------------------
-        
+
         // Enable carousel mode
         var enableCarousel = function (element) {
-        
+
             var validValues     = ['y', 'n'],
                 enableCarousel  = element.attr('data-enable-carousel');
 
@@ -123,7 +123,7 @@ jQuery(document).ready(function($) {
         var displayTitle = function (element) {
             // Display title variants
             var displayTitleVariants = ['title-above-image', 'title-above-excerpt'];
-            
+
             // How to display Title
             var displayTitle = element.attr('data-display-title');
 
@@ -295,13 +295,13 @@ jQuery(document).ready(function($) {
         };
 
         // ---------------------------- Advertising --------------------------------------
-        
+
         var advertising = function (element) {
             return element.attr('data-advertising');
         };
-        
+
         // ---------------------------- Delimiter ---------------------------------------
-        
+
         var delimiterType = function (element) {
             var delimiterType = element.attr('data-delimiter-type'),
                 delimiterVariants = [
@@ -349,13 +349,13 @@ jQuery(document).ready(function($) {
 
 
         // ---------------------------- Page -----------------------------------------------
-        
+
         var pageID = function (element) {
             return element.attr('data-page-id');
         };
 
         // ---------------------------- Post ------------------------------------------------
-             
+
         var postID = function (element) {
             return element.attr('data-post-id');
         };
@@ -375,7 +375,7 @@ jQuery(document).ready(function($) {
             dataAttr['element-type'] = 'logo';
 
             listOfElements.find('option[value="logo"]').attr("selected", "selected");
-            
+
             var logoOptions = builderElements.filter(function(index){
                 return $(this).hasClass('logo');
             });
@@ -407,8 +407,10 @@ jQuery(document).ready(function($) {
             var userOptions = builderElements.filter(function(index){
                 return $(this).hasClass('user');
             });
-           
+
             makeSelected(builderElements, 'user');
+
+            userOptions.find('#user-align').val(element.attr('data-align'));
 
         } else if (elementType === 'cart') {
 
@@ -435,7 +437,7 @@ jQuery(document).ready(function($) {
             var breadcrumbsOptions = builderElements.filter(function(index){
                 return $(this).hasClass('breadcrumbs');
             });
-           
+
             makeSelected(builderElements, 'breadcrumbs');
 
         } else if (elementType === 'searchbox') {
@@ -447,7 +449,7 @@ jQuery(document).ready(function($) {
 
             listOfElements.find('option[value="menu"]').attr("selected", "selected");
             makeSelected(builderElements, 'menu');
-            
+
             var menuOptions = builderElements.filter(function(index){
                 return $(this).hasClass('menu');
             }), menuID = menuStyle(element);
@@ -468,7 +470,7 @@ jQuery(document).ready(function($) {
             menuOptions.find("#menu-uppercase").val(element.attr('data-uppercase'));
             menuOptions.find("#menu-name").val(element.attr('data-name'));
 
-            if (jQuery('.colors-section-picker-div').length){               
+            if (jQuery('.colors-section-picker-div').length){
                 if ( element.attr('data-menu-custom') == 'yes' ) {
                     jQuery('.menu-custom-colors').removeClass('hidden');
                 } else{
@@ -480,7 +482,7 @@ jQuery(document).ready(function($) {
 
             listOfElements.find('option[value="sidebar"]').attr("selected", "selected");
             makeSelected(builderElements, 'sidebar');
-            
+
             var sidebarOptions = builderElements.filter(function(index){
                 return $(this).hasClass('sidebar');
             }), sidebarID = getSidebarID(element);
@@ -496,14 +498,14 @@ jQuery(document).ready(function($) {
             var sliderOptions = builderElements.filter(function(index){
                 return $(this).hasClass('slider');
             }), slider_id = sliderID(element);
-            
+
             sliderOptions.find('#slider-name option[value="' + slider_id + '"]').attr("selected", "selected");
             sliderOptions.find("#slider-admin-label").val(element.attr('data-admin-label'));
 
         } else if (elementType === 'image-carousel') {
 
             listOfElements.find('option[value="image-carousel"]').attr("selected", "selected");
-            
+
             var carouselOptions = builderElements.filter(function(index){
                 return $(this).hasClass('image-carousel');
             });
@@ -515,7 +517,7 @@ jQuery(document).ready(function($) {
             makeSelected(builderElements, 'image-carousel');
 
         } else if (elementType === 'list-portfolios') {
-            
+
             var listPortfoliosOptions = builderElements.filter(function(index){
                 return $(this).hasClass('list-portfolios');
             }), category;
@@ -526,7 +528,7 @@ jQuery(document).ready(function($) {
             listPortfoliosOptions.find("#list-portfolios-admin-label").val(element.attr('data-admin-label'));
 
             category = element.attr('data-category') ? element.attr('data-category').split(',') : [];
-            
+
             listPortfoliosOptions.find('#list-portfolios-category option').each(function(index, el) {
                 var element = $(el);
 
@@ -538,7 +540,7 @@ jQuery(document).ready(function($) {
             // How to display last posts
             var displayModeVariants = ['grid', 'list', 'thumbnails', 'big-post', 'super-post', 'timeline'],
                 displayMode = element.attr('data-display-mode');
-            
+
             displayMode = ($.inArray(displayMode, displayModeVariants) > -1) ? displayMode : 'grid';
             listPortfoliosOptions.find('#list-portfolios-display-mode option[value="' +  displayMode + '"]').attr("selected", "selected");
             makeSelected(listPortfoliosDisplayMode, 'list-portfolios-' + displayMode);
@@ -572,7 +574,7 @@ jQuery(document).ready(function($) {
                 listPortfoliosOptions.find('#list-portfolios-thumbnail-gutter option[value="'+gutter(element)+'"]').attr("selected", "selected");
 
             } else if (displayMode === 'big-post') {
-                
+
                 listPortfoliosOptions.find('#list-portfolios-big-post-title option[value="' +  displayTitle(element) + '"]').attr("selected", "selected");
                 listPortfoliosOptions.find('#list-portfolios-big-post-show-meta-' + showMeta(element)).attr("checked", "checked");
                 listPortfoliosOptions.find('#list-portfolios-big-post-nr-of-posts').val(postsLimit(element));
@@ -618,7 +620,7 @@ jQuery(document).ready(function($) {
 
             dataAttr = {};
             dataAttr['element-type'] = 'tab';
-            
+
             var TabOptions = builderElements.filter(function(index){
                 return $(this).hasClass('tab');
             });
@@ -634,7 +636,7 @@ jQuery(document).ready(function($) {
 
             dataAttr = {};
             dataAttr['element-type'] = 'video-carousel';
-            
+
             var videoCarousel = builderElements.filter(function(index){
                 return $(this).hasClass('video-carousel');
             });
@@ -648,7 +650,7 @@ jQuery(document).ready(function($) {
             }
 
             videoCarousel.find('option').each(function(index, el) {
-                
+
                 var element = $(el);
 
                 if ( $.inArray( element.val(), categories ) > -1 ) {
@@ -668,7 +670,7 @@ jQuery(document).ready(function($) {
 
             dataAttr = {};
             dataAttr['element-type'] = 'testimonials';
-            
+
             var TestimonialsOptions = builderElements.filter(function(index){
                 return $(this).hasClass('testimonials');
             });
@@ -683,7 +685,7 @@ jQuery(document).ready(function($) {
             TestimonialsOptions.find("#testimonials-admin-label").val(element.attr('data-admin-label'));
 
         } else if (elementType === 'list-products') {
-            
+
             var listProductsOptions = builderElements.filter(function(index){
                 return $(this).hasClass('list-products');
             }), category;
@@ -694,7 +696,7 @@ jQuery(document).ready(function($) {
 
             listProductsOptions.find("#list-products-admin-label").val(element.attr('data-admin-label'));
             category = element.attr('data-category') ? element.attr('data-category').split(',') : [];
-            
+
             listProductsOptions.find('#list-products-category option').each(function(index, el) {
                 var element = $(el);
 
@@ -702,7 +704,7 @@ jQuery(document).ready(function($) {
                     element.attr("selected", "selected");
                 }
             });
-            
+
             listProductsOptions.find('#list-products-behavior option[value="'+element.attr('data-behavior')+'"]' ).attr("selected", "selected");
             listProductsOptions.find('#list-products-el-per-row option[value="'+elementsPerRow(element)+'"]').attr("selected", "selected");
             listProductsOptions.find('#list-products-nr-of-posts').val(postsLimit(element));
@@ -711,9 +713,9 @@ jQuery(document).ready(function($) {
             listProductsOptions.find('#list-products-special-effects option[value="'+specialEffects(element)+'"]').attr("selected", "selected");
             listProductsOptions.find("#list-products-admin-label").val(element.attr('data-admin-label'));
 
-            
+
         } else if (elementType === 'last-posts') {
-            
+
             var lastPostsOptions = builderElements.filter(function(index){
                 return $(this).hasClass('last-posts');
             }), category;
@@ -727,10 +729,10 @@ jQuery(document).ready(function($) {
             lastPostsOptions.find("#last-posts-featured").val(element.attr('data-featured'));
 
             category = element.attr('data-category') ? element.attr('data-category').split(',') : [];
-            
+
             lastPostsOptions.find('#last-posts-category option').each(function(index, el) {
                 var elem = $(el);
-        
+
                 if ($.inArray(elem.val(), category) > -1) {
                     elem.attr("selected", "selected");
                 }
@@ -781,7 +783,7 @@ jQuery(document).ready(function($) {
                 ts_show_post_exclude_first('last-posts', 'thumbnails');
 
             } else if (displayMode === 'big-post') {
-                
+
                 lastPostsOptions.find('#last-posts-big-post-title option[value="' +  displayTitle(element) + '"]').attr("selected", "selected");
                 lastPostsOptions.find('#last-posts-big-post-show-meta-' + showMeta(element)).attr("checked", "checked");
                 lastPostsOptions.find('#last-posts-big-post-nr-of-posts').val(postsLimit(element));
@@ -850,7 +852,7 @@ jQuery(document).ready(function($) {
             makeSelected(builderElements, 'last-posts');
 
         }  else if (elementType === 'latest-custom-posts') {
-            
+
             var latestCustomPostsOptions = builderElements.filter(function(index){
                 return $(this).hasClass('latest-custom-posts');
             }), posts_type, category;
@@ -864,21 +866,21 @@ jQuery(document).ready(function($) {
             latestCustomPostsOptions.find("#latest-custom-posts-featured").val(element.attr('data-featured'));
 
             posts_type = element.attr('data-post-type') ? element.attr('data-post-type').split(',') : [];
-            
+
             latestCustomPostsOptions.find('#latest-custom-posts-type option').each(function(index, el) {
                 var elem = $(el);
-        
+
                 if ($.inArray(elem.val(), posts_type) > -1) {
                     elem.attr("selected", "selected");
                 }
             });
 
             category = element.attr('data-category') ? element.attr('data-category').split(',') : [];
-            
+
             jQuery(posts_type).each(function(i, value){
                 jQuery('#latest-custom-posts-category-' + value + ' option').each(function(index, el) {
                     var elem = $(el);
-            
+
                     if ($.inArray(elem.val(), category) > -1) {
                         elem.attr("selected", "selected");
                     }
@@ -930,7 +932,7 @@ jQuery(document).ready(function($) {
                 ts_show_post_exclude_first('latest-custom-posts', 'thumbnails');
 
             } else if (displayMode === 'big-post') {
-                
+
                 latestCustomPostsOptions.find('#latest-custom-posts-big-post-title option[value="' +  displayTitle(element) + '"]').attr("selected", "selected");
                 latestCustomPostsOptions.find('#latest-custom-posts-big-post-show-meta-' + showMeta(element)).attr("checked", "checked");
                 latestCustomPostsOptions.find('#latest-custom-posts-big-post-nr-of-posts').val(postsLimit(element));
@@ -999,7 +1001,7 @@ jQuery(document).ready(function($) {
             makeSelected(builderElements, 'latest-custom-posts');
 
         } else if (elementType === 'callaction') {
-            
+
             var callactionOptions = builderElements.filter(function(index){
                 return $(this).hasClass('callaction');
             });
@@ -1021,7 +1023,7 @@ jQuery(document).ready(function($) {
 
              teamsOptions.find('#teams-category option').each(function(index, el) {
                 var elem = $(el);
-        
+
                 if ($.inArray(elem.val(), category) > -1) {
                     elem.attr("selected", "selected");
                 }
@@ -1029,7 +1031,7 @@ jQuery(document).ready(function($) {
 
             listOfElements.find('option[value="teams"]').attr("selected", "selected");
             makeSelected(builderElements, 'teams');
-            
+
             teamsOptions.find('#teams-elements-per-row option[value="' + elementsPerRow(element) + '"]').attr("selected", "selected");
             teamsOptions.find('#teams-post-limit').val(postsLimit(element));
             teamsOptions.find('#teams-remove-gutter option[value="' +  element.attr('data-remove-gutter') + '"]').attr("selected", "selected");
@@ -1049,7 +1051,7 @@ jQuery(document).ready(function($) {
 
              pricingTablesOptions.find('#pricing-tables-category option').each(function(index, el) {
                 var elem = $(el);
-            
+
                 if ($.inArray(elem.val(), category) > -1) {
                     elem.attr("selected", "selected");
                 }
@@ -1077,20 +1079,20 @@ jQuery(document).ready(function($) {
             makeSelected(builderElements, 'empty');
 
         } else if (elementType === 'delimiter') {
-            
+
             var delimiterOptions = builderElements.filter(function(index){
                 return $(this).hasClass('delimiter');
             });
 
             listOfElements.find('option[value="delimiter"]').attr("selected", "selected");
             makeSelected(builderElements, 'delimiter');
-            
+
             delimiterOptions.find('#delimiter-color').val(element.attr('data-delimiter-color'));
             delimiterOptions.find('#delimiter-type option[value="'+delimiterType(element)+'"]').attr("selected", "selected");
             delimiterOptions.find("#delimiter-admin-label").val(element.attr('data-admin-label'));
 
         } else if (elementType === 'title') {
-            
+
             var titleOptions = builderElements.filter(function(index){
                 return $(this).hasClass('title');
             });
@@ -1106,7 +1108,7 @@ jQuery(document).ready(function($) {
             titleOptions.find("#title-admin-label").val(element.attr('data-admin-label'));
 
         } else if (elementType === 'video') {
-            
+
             var videoOptions = builderElements.filter(function(index){
                 return $(this).hasClass('video');
             });
@@ -1118,7 +1120,7 @@ jQuery(document).ready(function($) {
             videoOptions.find("#video-admin-label").val(element.attr('data-admin-label'));
 
         } else if (elementType === 'facebook-block') {
-            
+
             var facebookOptions = builderElements.filter(function(index){
                 return $(this).hasClass('facebook-block');
             });
@@ -1128,9 +1130,9 @@ jQuery(document).ready(function($) {
 
             listOfElements.find('option[value="facebook-block"]').attr("selected", "selected");
             makeSelected(builderElements, 'facebook-block');
-        
+
         } else if (elementType === 'image') {
-            
+
             var imageOptions = builderElements.filter(function(index){
                 return $(this).hasClass('image');
             });
@@ -1145,9 +1147,9 @@ jQuery(document).ready(function($) {
 
             listOfElements.find('option[value="image"]').attr("selected", "selected");
             makeSelected(builderElements, 'image');
-        
+
         } else if (elementType === 'filters') {
-            
+
             var filtersOptions = builderElements.filter(function(index){
                 return $(this).hasClass('filters');
             });
@@ -1157,7 +1159,7 @@ jQuery(document).ready(function($) {
                 wpVideoCategories = filtersOptions.find('#video-categories');
 
             filtersOptions.find('#filters-post-type option[value="' + element.attr('data-post-type')+ '"]').attr("selected", "selected");
-            
+
             var selectedCategories = element.attr('data-categories').split(",");
 
             if (element.attr('data-post-type') === 'posts') {
@@ -1183,7 +1185,7 @@ jQuery(document).ready(function($) {
 
                 if ( ! $.isEmptyObject(selectedCategories) && $.isArray(selectedCategories)  ) {
                     var categories = wpPorfolioCategories.find('option');
-                    
+
                     $.each(categories, function(index, category) {
 
                         if ($.inArray($(category).val() + '', selectedCategories) !== -1) {
@@ -1199,7 +1201,7 @@ jQuery(document).ready(function($) {
 
                 if ( ! $.isEmptyObject(selectedCategories) && $.isArray(selectedCategories)  ) {
                     var categories = wpVideoCategories.find('option');
-                    
+
                     $.each(categories, function(index, category) {
 
                         if ($.inArray($(category).val() + '', selectedCategories) !== -1) {
@@ -1218,7 +1220,7 @@ jQuery(document).ready(function($) {
             filtersOptions.find("#filters-admin-label").val(element.attr('data-admin-label'));
             makeSelected(builderElements, 'filters');
             listOfElements.find('option[value="filters"]').attr("selected", "selected");
-            
+
         } else if (elementType === 'feature-blocks') {
 
             var featureBlocksOptions = builderElements.filter(function(index){
@@ -1267,7 +1269,7 @@ jQuery(document).ready(function($) {
             toggleOptions.find('#toggle-description').val(element.attr('data-toggle-description'));
             toggleOptions.find('#toggle-state').val(element.attr('data-toggle-state'));
             toggleOptions.find("#toggle-admin-label").val(element.attr('data-admin-label'));
-        
+
 
         } else if (elementType === 'timeline') {
 
@@ -1367,7 +1369,7 @@ jQuery(document).ready(function($) {
 
             dataAttr = {};
             dataAttr['element-type'] = 'clients';
-            
+
             var ClientsBlockOptions = builderElements.filter(function(index){
                 return $(this).hasClass('clients');
             });
@@ -1383,7 +1385,7 @@ jQuery(document).ready(function($) {
 
             dataAttr = {};
             dataAttr['element-type'] = 'features-block';
-            
+
             var FeaturesOptions = builderElements.filter(function(index){
                 return $(this).hasClass('features-block');
             });
@@ -1410,7 +1412,7 @@ jQuery(document).ready(function($) {
             pageOptions.find('#search-page-criteria option[value="'+element.attr('data-criteria')+'"]').attr("selected", "selected");
             pageOptions.find('#search-page-order-by option[value="'+element.attr('data-order-by')+'"]').attr("selected", "selected");
             pageOptions.find('#search-page-direction option[value="'+element.attr('data-direction')+'"]').attr("selected", "selected");
-            
+
             listOfElements.find('option[value="page"]').attr("selected", "selected");
             makeSelected(builderElements, 'page');
 
@@ -1496,7 +1498,7 @@ jQuery(document).ready(function($) {
 
             contactFormOptions.find("#contact-form-admin-label").val(element.attr('data-admin-label'));
             contactFormOptions.find('#contact-form_content').val(element.attr('data-contact-form'));
-            
+
             if (element.attr('data-hide-icon') === '1') {
                 contactFormOptions.find('#contact-form-hide-icon').attr("checked", "checked");
             } else {
@@ -1521,7 +1523,7 @@ jQuery(document).ready(function($) {
 
             listOfElements.find('option[value="featured-area"]').attr("selected", "selected");
             makeSelected(builderElements, 'featured-area');
-        
+
             featuredAreaOptions.find('#featured-area-custom-post option[value="'+element.attr('data-custom-post')+'"]').attr("selected", "selected");
             featuredAreaOptions.find("#featured-area-number-posts").val(element.attr('data-number-posts'));
             featuredAreaOptions.find("#featured-area-exclude-first").val(element.attr('data-exclude-first'));
@@ -1536,7 +1538,7 @@ jQuery(document).ready(function($) {
             }
 
             featuredAreaOptions.find('#featured-area-categories-video option').each(function(index, el) {
-                
+
                 var element = $(el);
                 if ( $.inArray( element.val(), featuredAreaCategories ) > -1 ) {
                     element.attr("selected", "selected");
@@ -1544,7 +1546,7 @@ jQuery(document).ready(function($) {
             });
 
             featuredAreaOptions.find('#featured-area-categories-posts option').each(function(index, el) {
-                
+
                 var element = $(el);
                 if ( $.inArray( element.val(), featuredAreaCategories ) > -1 ) {
                     element.attr("selected", "selected");
@@ -1552,7 +1554,7 @@ jQuery(document).ready(function($) {
             });
 
             featuredAreaOptions.find('#featured-area-categories-posts_video option').each(function(index, el) {
-                
+
                 var element = $(el);
                 if ( $.inArray( element.val(), featuredAreaCategories ) > -1 ) {
                     element.attr("selected", "selected");
@@ -1582,12 +1584,15 @@ jQuery(document).ready(function($) {
             listOfElements.find('option[value="text"]').attr("selected", "selected");
 
             makeSelected(builderElements, 'text');
+
             var content_editor = element.attr('data-text').replace(/--quote--/g, '"');
+
+            tinymce.get("ts_editor_id").execCommand( 'mceInsertContent', false, content_editor );
+
             window.tinymce.execCommand('mceAddControl', true,'ts_editor_id');
-            tinymce.get("ts_editor_id").execCommand('mceInsertContent', false, content_editor);
 
         } else if (elementType === 'list-videos') {
-           
+
             var listVideosOptions = builderElements.filter(function(index){
                return $(this).hasClass('list-videos');
             }), category;
@@ -1602,10 +1607,10 @@ jQuery(document).ready(function($) {
             listVideosOptions.find("#list-videos-modal").val(element.attr('data-modal'));
 
             category = element.attr('data-category') ? element.attr('data-category').split(',') : [];
-           
+
             listVideosOptions.find('#list-videos-category option').each(function(index, el) {
                 var elem = $(el);
-       
+
                 if ($.inArray(elem.val(), category) > -1) {
                     elem.attr("selected", "selected");
                 }
@@ -1655,7 +1660,7 @@ jQuery(document).ready(function($) {
                 ts_show_post_exclude_first('list-videos', 'thumbnails');
 
             } else if (displayMode === 'big-post') {
-               
+
                 listVideosOptions.find('#list-videos-big-post-title option[value="' +  displayTitle(element) + '"]').attr("selected", "selected");
                 listVideosOptions.find('#list-videos-big-post-show-meta-' + showMeta(element)).attr("checked", "checked");
                 listVideosOptions.find('#list-videos-big-post-nr-of-posts').val(postsLimit(element));
@@ -1722,7 +1727,7 @@ jQuery(document).ready(function($) {
             }
             makeSelected(builderElements, 'list-videos');
 
-       } 
+       }
     }
 
     /**
@@ -1736,29 +1741,31 @@ jQuery(document).ready(function($) {
 
     $(document).on('click', 'input#builder-save', function(event) {
         event.preventDefault();
+
         setTimeout(function(){
             jQuery('#ts-builder-elements-modal').css('opacity',1);
         },500);
-        
+
         var elementType, elements, dataAttr;
         var gridMode, listMode, thumbnailsMode, galleryMode, superPostMode, timelineMode;
         var et = $('#ts-element-type');
 
         elementType = et.val();
         elementName = et.find(":selected").text();
-        
+
         if (elementType === 'logo') {
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'logo';
             elements = $("#builder-elements> .logo");
             dataAttr['logo-align'] = elements.find("#logo-align").val();
 
         } else if (elementType === 'user') {
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'user';
             elements = $("#builder-elements>.user");
+            dataAttr['align'] = elements.find("#user-align").val();
 
         } else if (elementType === 'cart') {
 
@@ -1769,7 +1776,7 @@ jQuery(document).ready(function($) {
 
 
         } else if (elementType === 'breadcrumbs') {
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'breadcrumbs';
             elements = $("#builder-elements>.breadcrumbs");
@@ -1780,7 +1787,7 @@ jQuery(document).ready(function($) {
             dataAttr['element-type'] = 'social-buttons';
             elements = $("#builder-elements>.social-buttons");
             items_array = '[';
-            
+
            jQuery('#social_items > li').each(function(){
 
                 if ( jQuery(this).index() + 1 < jQuery('#social_items > li').length ) { var comma = ','}else{var comma = ''};
@@ -1789,7 +1796,7 @@ jQuery(document).ready(function($) {
                 item_url = jQuery(this).find('[data-builder-name="url"]').val().replace(/"/g, '--quote--');
                 item_color = jQuery(this).find('[data-builder-name="color"]').val().replace(/"/g, '--quote--');
                 items_array = items_array + '{"id":' + '"' +  item_id + '"' + ',"image":' + '"' + item_image + '"' + ',"color":' + '"' + item_color + '"' + ',"url":' + '"' + item_url + '"' + '}' + comma;
-                
+
             });
             items_array = items_array + ']';
             jQuery('#social_content').val(items_array);
@@ -1799,11 +1806,11 @@ jQuery(document).ready(function($) {
             dataAttr['social-align'] = elements.find('#social-align').val();
 
             if( elements.find('#social-buttons-admin-label').val().length > 0 ){
-               elementName = elements.find('#social-buttons-admin-label').val(); 
+               elementName = elements.find('#social-buttons-admin-label').val();
             }
-        
+
         } else if (elementType === 'searchbox') {
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'searchbox';
 
@@ -1828,7 +1835,7 @@ jQuery(document).ready(function($) {
             dataAttr['name'] = elements.find("#menu-name").val();
 
             if( elements.find('#menu-admin-label').val().length > 0 ){
-               elementName = elements.find('#menu-admin-label').val(); 
+               elementName = elements.find('#menu-admin-label').val();
             }
 
         } else if (elementType === 'image-carousel') {
@@ -1840,7 +1847,7 @@ jQuery(document).ready(function($) {
             dataAttr['images'] = elements.find("#carousel_image_gallery").val();
             dataAttr['admin-label'] = elements.find("#image-carousel-admin-label").val();
 
-           
+
 
         } else if (elementType === 'sidebar') {
 
@@ -1851,25 +1858,25 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#sidebar-admin-label").val();
 
             if( elements.find('#sidebar-admin-label').val().length > 0 ){
-               elementName = elements.find('#sidebar-admin-label').val(); 
-            } 
+               elementName = elements.find('#sidebar-admin-label').val();
+            }
 
         } else if (elementType === 'slider') {
-            
+
             elements = $("#builder-elements>.slider");
             dataAttr = {};
 
             dataAttr['element-type'] = 'slider';
             dataAttr['slider-id'] = elements.find("#slider-name option:selected").val();
             dataAttr['admin-label'] = elements.find("#slider-admin-label").val();
-            
+
             if( elements.find('#slider-admin-label').val().length > 0 ){
-               elementName = elements.find('#slider-admin-label').val(); 
-            } 
+               elementName = elements.find('#slider-admin-label').val();
+            }
 
 
         } else if (elementType === 'list-portfolios') {
-            
+
             elements = $("#builder-elements>.list-portfolios");
             dataAttr = {};
 
@@ -1877,10 +1884,10 @@ jQuery(document).ready(function($) {
             dataAttr['category'] = elements.find('select#list-portfolios-category').val();
             dataAttr['display-mode'] = elements.find('select#list-portfolios-display-mode').val();
             dataAttr['admin-label'] = elements.find("#list-portfolios-admin-label").val();
-            
+
             if( elements.find('#list-portfolios-admin-label').val().length > 0 ){
-               elementName = elements.find('#list-portfolios-admin-label').val(); 
-            } 
+               elementName = elements.find('#list-portfolios-admin-label').val();
+            }
 
             if (dataAttr['display-mode'] === 'grid') {
 
@@ -1956,7 +1963,7 @@ jQuery(document).ready(function($) {
             }
 
         } else if (elementType === 'testimonials') {
-            
+
             elements = $("#builder-elements>.testimonials");
 
             items_array = '[';
@@ -1969,15 +1976,15 @@ jQuery(document).ready(function($) {
                 item_name = jQuery(this).find('[data-builder-name="name"]').val().replace(/"/g, '--quote--');
                 item_company = jQuery(this).find('[data-builder-name="company"]').val().replace(/"/g, '--quote--');
                 item_url = jQuery(this).find('[data-builder-name="url"]').val().replace(/"/g, '--quote--');
-                
+
                 items_array = items_array +  '{"id":' + '"' + item_id + '"' + ',"image":' + '"' + item_image + '"' + ',"text":' + '"' + item_text + '"' + ',"name":' + '"' + item_name + '"' + ',"company":' + '"' + item_company + '"' + ',"url":' + '"' + item_url + '"' + '}' + comma;
-                
+
             });
 
             items_array = items_array + ']';
             jQuery('#testimonials_content').val(items_array);
             dataAttr = {};
-        
+
             dataAttr['elements-per-row'] = isNaN(parseInt(elements.find('#testimonials-row').val(), 10)) ? 3 : parseInt(elements.find('#testimonials-row').val(), 10);
             dataAttr['enable-carousel'] = elements.find('#testimonials-enable-carousel').val();
             dataAttr['element-type'] = 'testimonials';
@@ -1985,11 +1992,11 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#testimonials-admin-label").val();
 
             if( elements.find('#testimonials-admin-label').val().length > 0 ){
-                elementName = elements.find('#testimonials-admin-label').val(); 
+                elementName = elements.find('#testimonials-admin-label').val();
             }
 
         } else if (elementType === 'tab') {
-            
+
             elements = $("#builder-elements>.tab");
 
             items_array = '[';
@@ -1999,26 +2006,26 @@ jQuery(document).ready(function($) {
                 item_id = jQuery(this).find('[data-builder-name="item_id"]').val();
                 item_title = jQuery(this).find('[data-builder-name="title"]').val().replace(/"/g, '--quote--');
                 item_text = jQuery(this).find('[data-builder-name="text"]').val().replace(/"/g, '--quote--').replace(/\r?\n/g, '<br />');
-                
+
                 items_array = items_array +  '{"id":' + '"' + item_id + '"' + ',"title":' + '"' + item_title + '"' + ',"text":' + '"' + item_text + '"' + '}' + comma;
-                
+
             });
 
             items_array = items_array + ']';
             jQuery('#tab_content').val(items_array);
             dataAttr = {};
-        
+
             dataAttr['element-type'] = 'tab';
             dataAttr['tab'] = elements.find('#tab_content').val();
             dataAttr['admin-label'] = elements.find("#tab-admin-label").val();
             dataAttr['mode'] = elements.find("#tab-mode").val();
 
             if( elements.find('#tab-admin-label').val().length > 0 ){
-                elementName = elements.find('#tab-admin-label').val(); 
+                elementName = elements.find('#tab-admin-label').val();
             }
 
         } else if (elementType === 'video-carousel') {
-            
+
             elements = $("#builder-elements>.video-carousel");
 
             items_array = '[';
@@ -2030,15 +2037,15 @@ jQuery(document).ready(function($) {
                 item_url = jQuery(this).find('[data-builder-name="url"]').val().replace(/"/g, '--quote--');
                 item_embed = jQuery(this).find('[data-builder-name="embed"]').val().replace(/"/g, '--quote--');
                 item_text = jQuery(this).find('[data-builder-name="text"]').val().replace(/"/g, '--quote--').replace(/\r?\n/g, '<br />');
-                
+
                 items_array = items_array +  '{"id":' + '"' + item_id + '"' + ',"title":' + '"' + item_title + '"' + ',"text":' + '"' + item_text + '"' + ',"url":' + '"' + item_url + '"' + ',"embed":' + '"' + item_embed + '"' + '}' + comma;
-                
+
             });
 
             items_array = items_array + ']';
             jQuery('#video-carousel_content').val(items_array);
             dataAttr = {};
-            
+
             dataAttr['source'] = elements.find("#video-carousel-source").val();
 
             if ( dataAttr['source'] == 'latest-posts' || dataAttr['source'] == 'latest-featured-posts' ) {
@@ -2054,15 +2061,15 @@ jQuery(document).ready(function($) {
             dataAttr['element-type'] = 'video-carousel';
             dataAttr['video-carousel'] = elements.find('#video-carousel_content').val();
             dataAttr['admin-label'] = elements.find("#video-carousel-admin-label").val();
-            
+
             dataAttr['nr-of-posts'] = elements.find("#video-carousel-nr-of-posts").val();
 
             if( elements.find('#video-carousel-admin-label').val().length > 0 ){
-                elementName = elements.find('#video-carousel-admin-label').val(); 
+                elementName = elements.find('#video-carousel-admin-label').val();
             }
 
         } else if (elementType === 'list-products') {
-            
+
             elements = $("#builder-elements>.list-products");
             dataAttr = {};
 
@@ -2071,9 +2078,9 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#list-products-admin-label").val();
 
             if( elements.find('#list-products-admin-label').val().length > 0 ){
-                elementName = elements.find('#list-products-admin-label').val(); 
+                elementName = elements.find('#list-products-admin-label').val();
             }
-            
+
             gridMode = elements.find("#list-products-options>.list-products");
             dataAttr['behavior'] = gridMode.find('#list-products-behavior').val();
             dataAttr['elements-per-row'] = gridMode.find('#list-products-el-per-row').val();
@@ -2085,7 +2092,7 @@ jQuery(document).ready(function($) {
             dataAttr['special-effects'] = gridMode.find('#list-products-special-effects').val();
 
         } else if (elementType === 'last-posts') {
-            
+
             elements = $("#builder-elements>.last-posts");
             dataAttr = {};
 
@@ -2098,7 +2105,7 @@ jQuery(document).ready(function($) {
             dataAttr['featured'] = elements.find("#last-posts-featured").val();
 
             if( elements.find('#last-posts-admin-label').val().length > 0 ){
-                elementName = elements.find('#last-posts-admin-label').val(); 
+                elementName = elements.find('#last-posts-admin-label').val();
             }
 
             if (dataAttr['display-mode'] === 'grid') {
@@ -2200,7 +2207,7 @@ jQuery(document).ready(function($) {
             }
 
         }  else if (elementType === 'latest-custom-posts') {
-            
+
             elements = $("#builder-elements>.latest-custom-posts");
             dataAttr = {};
 
@@ -2218,12 +2225,12 @@ jQuery(document).ready(function($) {
                 if( typeof(arrayCategories) !== 'undefined' ){
                     for(index in arrayCategories){
                         dataAttr['category'] =  dataAttr['category'] + arrayCategories[index] + ',';
-                    } 
+                    }
                 }
             }
 
             if( elements.find('#latest-custom-posts-admin-label').val().length > 0 ){
-                elementName = elements.find('#latest-custom-posts-admin-label').val(); 
+                elementName = elements.find('#latest-custom-posts-admin-label').val();
             }
 
             if (dataAttr['display-mode'] === 'grid') {
@@ -2336,12 +2343,12 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#callaction-admin-label").val();
 
             if( elements.find('#callaction-admin-label').val().length > 0 ){
-                elementName = elements.find('#callaction-admin-label').val(); 
+                elementName = elements.find('#callaction-admin-label').val();
             }
 
 
         } else if (elementType === 'teams') {
-        
+
             elements = $("#builder-elements>.teams");
             dataAttr = {};
 
@@ -2356,11 +2363,11 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#teams-admin-label").val();
 
             if( elements.find('#teams-admin-label').val().length > 0 ){
-                elementName = elements.find('#teams-admin-label').val(); 
+                elementName = elements.find('#teams-admin-label').val();
             }
 
         }else if (elementType === 'pricing-tables') {
-        
+
             elements = $("#builder-elements>.pricing-tables");
             dataAttr = {};
 
@@ -2374,11 +2381,11 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#pricing-tables-admin-label").val();
 
             if( elements.find('#pricing-tables-admin-label').val().length > 0 ){
-                elementName = elements.find('#pricing-tables-admin-label').val(); 
+                elementName = elements.find('#pricing-tables-admin-label').val();
             }
 
         } else if (elementType === 'advertising') {
-            
+
             elements = $("#builder-elements>.advertising");
             dataAttr = {};
 
@@ -2387,7 +2394,7 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#advertising-admin-label").val();
 
             if( elements.find('#advertising-admin-label').val().length > 0 ){
-                elementName = elements.find('#advertising-admin-label').val(); 
+                elementName = elements.find('#advertising-admin-label').val();
             }
 
         } else if (elementType === 'empty') {
@@ -2398,7 +2405,7 @@ jQuery(document).ready(function($) {
         } else if (elementType === 'delimiter') {
 
             elements = $("#builder-elements>.delimiter");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'delimiter';
             dataAttr['delimiter-type'] = elements.find('#delimiter-type').val();
@@ -2406,13 +2413,13 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#delimiter-admin-label").val();
 
             if( elements.find('#delimiter-admin-label').val().length > 0 ){
-                elementName = elements.find('#delimiter-admin-label').val(); 
+                elementName = elements.find('#delimiter-admin-label').val();
             }
 
         } else if (elementType === 'title') {
 
             elements = $("#builder-elements>.title");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'title';
             dataAttr['title'] = elements.find('#title-title').val();
@@ -2425,26 +2432,26 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#title-admin-label").val();
 
             if( elements.find('#title-admin-label').val().length > 0 ){
-                elementName = elements.find('#title-admin-label').val(); 
+                elementName = elements.find('#title-admin-label').val();
             }
 
         } else if (elementType === 'video') {
 
             elements = $("#builder-elements>.video");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'video';
             dataAttr['embed'] = elements.find('#video-embed').val();
             dataAttr['admin-label'] = elements.find("#video-admin-label").val();
 
             if( elements.find('#video-admin-label').val().length > 0 ){
-                elementName = elements.find('#video-admin-label').val(); 
+                elementName = elements.find('#video-admin-label').val();
             }
 
         } else if (elementType === 'facebook-block') {
 
             elements = $("#builder-elements>.facebook-block");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'facebook-block';
             dataAttr['facebook-url'] = elements.find('#facebook-url').val();
@@ -2453,7 +2460,7 @@ jQuery(document).ready(function($) {
         }  else if (elementType === 'image') {
 
             elements = $("#builder-elements>.image");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'image';
             dataAttr['image-url'] = elements.find('#image_url').val();
@@ -2464,13 +2471,13 @@ jQuery(document).ready(function($) {
             dataAttr['align'] = elements.find("#image-align").val();
 
             if( elements.find('#image-admin-label').val().length > 0 ){
-                elementName = elements.find('#image-admin-label').val(); 
+                elementName = elements.find('#image-admin-label').val();
             }
 
         } else if (elementType === 'filters') {
-            
+
             var getFilterCategories = function (elements) {
-                
+
                 var elementsID = [];
 
                 $.each(elements, function(index, element) {
@@ -2481,15 +2488,15 @@ jQuery(document).ready(function($) {
 
                 return elementsID.join(',');
             };
-            
+
             elements = $("#builder-elements>.filters");
-            
+
             var categs;
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'filters';
             dataAttr['post-type'] = elements.find('#filters-post-type').val();
-            
+
             if (dataAttr['post-type'] === 'posts') {
                 categs = elements.find('#wp-post-categories option');
             } else if( dataAttr['post-type'] === 'video' ) {
@@ -2508,13 +2515,13 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#filters-admin-label").val();
 
             if( elements.find('#filters-admin-label').val().length > 0 ){
-                elementName = elements.find('#filters-admin-label').val(); 
+                elementName = elements.find('#filters-admin-label').val();
             }
 
         } else if (elementType === 'toggle') {
 
             elements = $("#builder-elements>.toggle");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'toggle';
             dataAttr['toggle-title'] = elements.find('#toggle-title').val();
@@ -2523,10 +2530,10 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#toggle-admin-label").val();
 
             if( elements.find('#toggle-admin-label').val().length > 0 ){
-                elementName = elements.find('#toggle-admin-label').val(); 
+                elementName = elements.find('#toggle-admin-label').val();
             }
-           
-            
+
+
         } else if (elementType === 'timeline') {
 
             elements = $("#builder-elements>.timeline");
@@ -2542,25 +2549,25 @@ jQuery(document).ready(function($) {
                 item_align = jQuery(this).find('[data-builder-name="align"]').val();
 
                 items_array = items_array +  '{"id":' + '"' + item_id + '"' + ',"image":' + '"' + item_image + '"' + ',"text":' + '"' + item_text + '"' + ',"title":' + '"' + item_title + '"' + ',"align":' + '"' + item_align + '"' + '}' + comma;
-                
+
             });
             items_array = items_array + ']';
             jQuery('#timeline_content').val(items_array);
             dataAttr = {};
             dataAttr['timeline'] = elements.find('#timeline_content').val();
-            
+
             dataAttr['element-type'] = 'timeline';
             dataAttr['admin-label'] = elements.find("#timeline-admin-label").val();
 
             if( elements.find('#timeline-admin-label').val().length > 0 ){
-                elementName = elements.find('#timeline-admin-label').val(); 
+                elementName = elements.find('#timeline-admin-label').val();
             }
-           
-            
+
+
         } else if (elementType === 'banner') {
 
             elements = $("#builder-elements>.banner");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'banner';
             dataAttr['banner-image'] = elements.find('#image-banner-url').val();
@@ -2575,26 +2582,26 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#banner-admin-label").val();
 
             if( elements.find('#banner-admin-label').val().length > 0 ){
-                elementName = elements.find('#banner-admin-label').val(); 
+                elementName = elements.find('#banner-admin-label').val();
             }
-            
+
         } else if (elementType === 'map') {
 
             elements = $("#builder-elements>.map");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'map';
             dataAttr['map-code'] = elements.find('#map-code').val();
             dataAttr['admin-label'] = elements.find("#map-admin-label").val();
 
             if( elements.find('#map-admin-label').val().length > 0 ){
-                elementName = elements.find('#map-admin-label').val(); 
+                elementName = elements.find('#map-admin-label').val();
             }
-            
+
         } else if (elementType === 'counters') {
 
             elements = $("#builder-elements>.counters");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'counters';
             dataAttr['counters-text'] = elements.find('#counters-text').val();
@@ -2605,13 +2612,13 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#counters-admin-label").val();
 
             if( elements.find('#counters-admin-label').val().length > 0 ){
-                elementName = elements.find('#counters-admin-label').val(); 
+                elementName = elements.find('#counters-admin-label').val();
             }
-            
+
         } else if (elementType === 'spacer') {
 
             elements = $("#builder-elements>.spacer");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'spacer';
             dataAttr['admin-label'] = elements.find("#spacer-admin-label").val();
@@ -2619,13 +2626,13 @@ jQuery(document).ready(function($) {
             dataAttr['mobile'] = elements.find('#spacer-mobile').val();
 
             if( elements.find('#spacer-admin-label').val().length > 0 ){
-                elementName = elements.find('#spacer-admin-label').val(); 
+                elementName = elements.find('#spacer-admin-label').val();
             }
 
         } else if (elementType === 'icon') {
 
             elements = $("#builder-elements>.icon");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'icon';
             dataAttr['icon'] = elements.find('#builder-element-icon').val();
@@ -2635,13 +2642,13 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#icon-admin-label").val();
 
             if( elements.find('#icon-admin-label').val().length > 0 ){
-                elementName = elements.find('#icon-admin-label').val(); 
+                elementName = elements.find('#icon-admin-label').val();
             }
 
         } else if (elementType === 'quote') {
 
             elements = $("#builder-elements>.quote");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'quote';
             dataAttr['admin-label'] = elements.find("#quote-admin-label").val();
@@ -2650,7 +2657,7 @@ jQuery(document).ready(function($) {
             dataAttr['author'] = elements.find('#quote-author').val();
 
             if( elements.find('#quote-admin-label').val().length > 0 ){
-                elementName = elements.find('#quote-admin-label').val(); 
+                elementName = elements.find('#quote-admin-label').val();
             }
 
         } else if (elementType === 'clients') {
@@ -2667,7 +2674,7 @@ jQuery(document).ready(function($) {
                 item_title = jQuery(this).find('[data-builder-name="title"]').val().replace(/"/g, '--quote--');
                 item_url = jQuery(this).find('[data-builder-name="url"]').val().replace(/"/g, '--quote--');
                 items_array = items_array + '{"id":' + '"' +  item_id + '"' + ',"image":' + '"' + item_image + '"' + ',"title":' + '"' + item_title + '"' + ',"url":' + '"' + item_url + '"' + '}' + comma;
-                
+
             });
             items_array = items_array + ']';
             jQuery('#clients_content').val(items_array);
@@ -2676,12 +2683,12 @@ jQuery(document).ready(function($) {
             dataAttr['element-type'] = 'clients';
             dataAttr['enable-carousel'] = elements.find('#clients-enable-carousel-y').attr('checked') ? 'y' : 'n';
             dataAttr['elements-per-row'] = isNaN(parseInt(elements.find('#clients-row').val(), 10)) ? 3 : parseInt(elements.find('#clients-row').val(), 10);
-            
+
             dataAttr['clients'] = elements.find('#clients_content').val();
             dataAttr['admin-label'] = elements.find("#clients-admin-label").val();
 
             if( elements.find('#clients-admin-label').val().length > 0 ){
-                elementName = elements.find('#clients-admin-label').val(); 
+                elementName = elements.find('#clients-admin-label').val();
             }
 
         } else if (elementType === 'features-block') {
@@ -2700,7 +2707,7 @@ jQuery(document).ready(function($) {
                 item_background = jQuery(this).find('[data-builder-name="background"]').val().replace(/"/g, '--quote--');
                 item_font = jQuery(this).find('[data-builder-name="font"]').val().replace(/"/g, '--quote--');
                 items_array = items_array +  '{"id":' + '"' + item_id + '"' + ',"icon":' + '"' + item_icon + '"' + ',"title":' + '"' + item_title + '"' + ',"text":' + '"' + item_text + '"' + ',"url":' + '"' + item_url + '"' + ',"background":' + '"' + item_background + '"' + ',"font":' + '"' + item_font + '"' + '}' + comma;
-                
+
             });
             items_array = items_array + ']';
             jQuery('#features-block_content').val(items_array);
@@ -2714,7 +2721,7 @@ jQuery(document).ready(function($) {
             dataAttr['gutter'] = elements.find("#features-block-gutter").val();
 
             if( elements.find('#features-block-admin-label').val().length > 0 ){
-                elementName = elements.find('#features-block-admin-label').val(); 
+                elementName = elements.find('#features-block-admin-label').val();
             }
 
         } else if (elementType === 'listed-features') {
@@ -2742,7 +2749,7 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = elements.find("#listed-features-admin-label").val();
 
             if( elements.find('#listed-features-admin-label').val().length > 0 ){
-                elementName = elements.find('#listed-features-admin-label').val(); 
+                elementName = elements.find('#listed-features-admin-label').val();
             }
 
         } else if (elementType === 'page') {
@@ -2758,9 +2765,9 @@ jQuery(document).ready(function($) {
             dataAttr['direction'] = elements.find('#search-page-direction').val();
 
         } else if (elementType === 'post') {
-            
+
             elements = $("#builder-elements>.post");
-            
+
             dataAttr = {};
             dataAttr['element-type'] = 'post';
             dataAttr['post-id'] = elements.find('input[name=postID]:checked').val();
@@ -2770,7 +2777,7 @@ jQuery(document).ready(function($) {
             dataAttr['direction'] = elements.find('#search-post-direction').val();
 
         } else if (elementType === 'buttons') {
-            
+
             var buttons = $("#builder-elements>.buttons");
 
             dataAttr = {};
@@ -2789,11 +2796,11 @@ jQuery(document).ready(function($) {
             dataAttr['border-color'] = buttons.find('#button-border-color').val();
 
             if( buttons.find('#buttons-admin-label').val().length > 0 ){
-                elementName = buttons.find('#buttons-admin-label').val(); 
+                elementName = buttons.find('#buttons-admin-label').val();
             }
 
         } else if (elementType === 'ribbon') {
-            
+
             var ribbon = $("#builder-elements>.ribbon");
 
             dataAttr = {};
@@ -2817,7 +2824,7 @@ jQuery(document).ready(function($) {
             dataAttr['button-text-color'] = ribbon.find('#ribbon-button-text-color').val();
 
             if( ribbon.find('#ribbon-admin-label').val().length > 0 ){
-                elementName = ribbon.find('#ribbon-admin-label').val(); 
+                elementName = ribbon.find('#ribbon-admin-label').val();
             }
 
         } else if (elementType === 'contact-form') {
@@ -2838,9 +2845,9 @@ jQuery(document).ready(function($) {
                 item_type = jQuery(this).find('[data-builder-name="type"]').val().replace(/"/g, '--quote--');
                 item_require = jQuery(this).find('[data-builder-name="require"]').val().replace(/"/g, '--quote--');
                 item_options = jQuery(this).find('[data-builder-name="options"]').val().replace(/"/g, '--quote--');
-                
+
                 items_array = items_array +  '{"id":' + '"' + item_id + '"' + ',"title":' + '"' + item_title + '"' + ',"type":' + '"' + item_type + '"' + ',"require":' + '"' + item_require + '"' + ',"options":' + '"' + item_options + '"' + '}' + comma;
-                
+
             });
 
             items_array = items_array + ']';
@@ -2848,7 +2855,7 @@ jQuery(document).ready(function($) {
 
             dataAttr['contact-form'] = form.find('#contact-form_content').val();
             if( form.find('#contact-form-admin-label').val().length > 0 ){
-                elementName = form.find('#contact-form-admin-label').val(); 
+                elementName = form.find('#contact-form-admin-label').val();
             }
 
         } else if (elementType === 'featured-area') {
@@ -2863,10 +2870,10 @@ jQuery(document).ready(function($) {
                dataAttr['selected-categories'] = featuredArea.find('#featured-area-categories-video').val();
             }
             if( dataAttr['custom-post'] == 'post' ){
-               dataAttr['selected-categories'] = featuredArea.find('#featured-area-categories-posts').val(); 
+               dataAttr['selected-categories'] = featuredArea.find('#featured-area-categories-posts').val();
             }
             if( dataAttr['custom-post'] == 'video_post' ){
-               dataAttr['selected-categories'] = featuredArea.find('#featured-area-categories-posts_video').val(); 
+               dataAttr['selected-categories'] = featuredArea.find('#featured-area-categories-posts_video').val();
             }
 
             dataAttr['admin-label'] = featuredArea.find("#featured-area-admin-label").val();
@@ -2875,7 +2882,7 @@ jQuery(document).ready(function($) {
             dataAttr['scroll'] = featuredArea.find("#featured-area-scroll").val();
 
             if( featuredArea.find('#featured-area-admin-label').val().length > 0 ){
-                elementName = featuredArea.find('#featured-area-admin-label').val(); 
+                elementName = featuredArea.find('#featured-area-admin-label').val();
             }
 
         } else if (elementType === 'shortcodes') {
@@ -2888,7 +2895,7 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = shortcodes.find("#shortcodes-admin-label").val();
 
             if( shortcodes.find('#shortcodes-admin-label').val().length > 0 ){
-                elementName = shortcodes.find('#shortcodes-admin-label').val(); 
+                elementName = shortcodes.find('#shortcodes-admin-label').val();
             }
 
         } else if (elementType === 'text') {
@@ -2900,18 +2907,19 @@ jQuery(document).ready(function($) {
             dataAttr['admin-label'] = text.find("#text-admin-label").val();
 
             if( text.find('#text-admin-label').val().length > 0 ){
-                elementName = text.find('#text-admin-label').val(); 
+                elementName = text.find('#text-admin-label').val();
             }
 
-            jQuery('#wp-ts_editor_id-wrap').find('#ts_editor_id-tmce').trigger('click');
+            jQuery('#ts_editor_id-tmce').trigger('click');
+
             dataAttr['text'] = tinymce.get('ts_editor_id').getContent().replace(/"/g, '--quote--');
-            
+
             setTimeout(function(){
                 tinymce.get('ts_editor_id').setContent('');
             },500);
 
         } else if (elementType === 'list-videos') {
-           
+
             elements = $("#builder-elements>.list-videos");
             dataAttr = {};
 
@@ -2925,7 +2933,7 @@ jQuery(document).ready(function($) {
             dataAttr['modal'] = elements.find("#list-videos-modal").val();
 
             if( elements.find('#list-videos-admin-label').val().length > 0 ){
-                elementName = elements.find('#list-videos-admin-label').val(); 
+                elementName = elements.find('#list-videos-admin-label').val();
             }
 
             if (dataAttr['display-mode'] === 'grid') {
@@ -3030,7 +3038,7 @@ jQuery(document).ready(function($) {
         }
 
         removePreviousOptions(currentEditedElement);
-        
+
         $.each(dataAttr, function(attr, value) {
             currentEditedElement.attr('data-' + attr, value);
         });
@@ -3040,7 +3048,7 @@ jQuery(document).ready(function($) {
 
         jQuery('#ts-builder-elements-modal button.close').trigger('click');
     });
-    
+
 
     // search post and pages
     $(document).on('click', '.search-posts-buttons', function(event) {
@@ -3056,7 +3064,7 @@ jQuery(document).ready(function($) {
             responseRadioElementName;
 
         if (searchType === 'search-type-page' ) {
-            
+
             postType  = 'page';
             search    = $('#search-page').val();
             criteria  = $('#search-page-criteria').val();
@@ -3092,7 +3100,7 @@ jQuery(document).ready(function($) {
             criteria: criteria,
             order_by: order_by,
             direction: direction
-            
+
         }).done(function(data) {
             if (data.length) {
 
@@ -3132,11 +3140,11 @@ jQuery(document).ready(function($) {
         } else if (elementType === 'social-buttons') {
 
             attributes = ['element-type', 'social-settings', 'social-align', 'admin-label'];
-        
+
         } else if (elementType === 'user') {
 
-            attributes = ['element-type'];
-        
+            attributes = ['element-type', 'align'];
+
         } else if (elementType === 'cart') {
 
             attributes = ['element-type', 'cart-align'];
@@ -3144,15 +3152,15 @@ jQuery(document).ready(function($) {
         } else if (elementType === 'breadcrumbs') {
 
             attributes = ['element-type'];
-        
+
         } else if (elementType === 'searchbox') {
 
             attributes = ['element-type'];
-        
+
         } else if (elementType === 'menu') {
 
             attributes = ['element-type', 'element-style', 'name', 'menu-custom', 'menu-bg-color', 'menu-bg-color-hover', 'menu-text-color', 'menu-text-color-hover', 'submenu-bg-color', 'submenu-text-color-hover', 'submenu-bg-color-hover', 'submenu-text-color', 'menu-text-align', 'admin-label', 'uppercase'];
-        
+
         } else if (elementType === 'sidebar') {
 
             attributes = ['element-type', 'sidebar-id'];
@@ -3258,59 +3266,59 @@ jQuery(document).ready(function($) {
             attributes = ['element-type', 'post-id', 'search', 'criteria', 'order-by', 'direction'];
 
         } else if (elementType === 'post') {
- 
+
             attributes = ['element-type', 'post-id', 'search', 'criteria', 'order-by', 'direction'];
 
         } else if (elementType === 'timeline') {
- 
+
             attributes = ['element-type', 'admin-label', 'timeline'];
 
         } else if (elementType === 'toggle') {
- 
+
             attributes = ['element-type', 'admin-label', 'toggle-title', 'toggle-description', 'toggle-state', 'align-image'];
 
         } else if (elementType === 'buttons') {
-               
+
             attributes = ['element-type', 'button-icon', 'text', 'size', 'target', 'text-color', 'bg-color', 'url', 'button-align', 'admin-label', 'mode-display', 'border-color'];
 
         } else if (elementType === 'ribbon') {
-               
+
             attributes = ['element-type', 'text', 'title', 'background', 'align', 'button-icon', 'button-text', 'button-size', 'button-target', 'text-color', 'button-background-color', 'button-url', 'button-button-align', 'admin-label', 'button-mode-display', 'button-border-color', 'image', 'button-text-color'];
 
         } else if (elementType === 'contact-form') {
- 
+
             attributes = ['element-type', 'hide-icon', 'hide-subject', 'admin-label', 'contact-form'];
 
         } else if (elementType === 'featured-area') {
- 
+
             attributes = ['element-type', 'selected-categories', 'exclude-first', 'admin-label', 'custom-post', 'number-posts', 'scroll'];
 
         } else if (elementType === 'shortcodes') {
- 
+
             attributes = ['element-type', 'shortcodes', 'admin-label'];
 
         } else if (elementType === 'tab') {
- 
+
             attributes = ['element-type', 'admin-label', 'tab', 'mode'];
 
         } else if (elementType === 'video-carousel') {
- 
+
             attributes = ['element-type', 'admin-label', 'video-carousel', 'source', 'nr-of-posts', 'category'];
 
         } else if (elementType === 'testimonials') {
- 
+
             attributes = ['element-type', 'testimonials', 'elements-per-row', 'enable-carousel', 'admin-label'];
 
         } else if (elementType === 'map') {
- 
+
             attributes = ['element-type', 'map-code', 'admin-label'];
 
         } else if (elementType === 'banner') {
- 
+
             attributes = ['element-type', 'banner-image', 'banner-title', 'banner-subtitle', 'banner-button-title', 'banner-button-url', 'banner-button-background', 'banner-font-color', 'banner-text-align', 'banner-height', 'admin-label'];
 
         } else if (elementType === 'text') {
- 
+
             attributes = ['element-type', 'text', 'admin-label'];
 
         } else if (elementType === 'list-videos') {
@@ -3331,7 +3339,7 @@ jQuery(document).ready(function($) {
     function element_icon (element) {
 
         var icon_class = 'icon-empty';
-        
+
         switch (element) {
 
             case 'logo':
@@ -3408,7 +3416,7 @@ jQuery(document).ready(function($) {
 
             case 'facebook-block':
                 icon_class = 'icon-facebook';
-                break;    
+                break;
 
             case 'last-posts':
                 icon_class = 'icon-page';
@@ -3493,11 +3501,11 @@ jQuery(document).ready(function($) {
             case 'shortcodes':
                 icon_class = 'icon-code';
                 break;
-            
+
             case 'listed-features':
                 icon_class = 'icon-list';
                 break;
-            
+
             case 'text':
                 icon_class = 'icon-text';
                 break;
@@ -3520,7 +3528,7 @@ jQuery(document).ready(function($) {
 
             case 'banner':
                 icon_class = 'icon-link-ext';
-                break;  
+                break;
 
             case 'toggle':
                 icon_class = 'icon-resize-full';
@@ -3532,7 +3540,7 @@ jQuery(document).ready(function($) {
 
             case 'list-videos':
                 icon_class = 'icon-movie';
-                break;    
+                break;
 
             default:
                 icon_class = 'icon-empty';
@@ -3552,7 +3560,7 @@ jQuery(document).ready(function($) {
             e.stopPropagation();
             $('#ts-button-text-color-picker').show();
         });
-        
+
         $('html').click(function() {
             $('#ts-button-text-color-picker').hide();
         });
@@ -3566,7 +3574,7 @@ jQuery(document).ready(function($) {
             e.stopPropagation();
             $('#ts-button-bg-color-picker').show();
         });
-        
+
         $('html, #button-text-color').click(function() {
             $('#ts-button-bg-color-picker').hide();
         });
@@ -3588,21 +3596,21 @@ jQuery(document).ready(function($) {
             if( jQuery(this).val() === 'carousel' || jQuery(this).val() === 'scroll' ){
                 jQuery('.' + name_element + '-' + mode_display_name + '-pagination').css('display','none');
             }else{
-                jQuery('.' + name_element + '-' + mode_display_name + '-pagination').css('display',''); 
+                jQuery('.' + name_element + '-' + mode_display_name + '-pagination').css('display','');
             }
         });
 
         if( jQuery('#' + name_element + '-' + mode_display_name + '-behavior').val() === 'carousel' || jQuery('#' + name_element + '-' + mode_display_name + '-behavior').val() === 'scroll' ){
              jQuery('.' + name_element + '-' + mode_display_name + '-pagination').css('display','none');
         }else{
-           jQuery('.' + name_element + '-' + mode_display_name + '-pagination').css('display',''); 
+           jQuery('.' + name_element + '-' + mode_display_name + '-pagination').css('display','');
         }
 
         jQuery('#' + name_element + '-' + mode_display_name + '-pagination').change(function(){
             if( jQuery(this).val() === 'y' ){
                 jQuery('.' + name_element + '-exclude').css('display','none');
             }else{
-                jQuery('.' + name_element + '-exclude').css('display',''); 
+                jQuery('.' + name_element + '-exclude').css('display','');
             }
         });
 
@@ -3611,7 +3619,7 @@ jQuery(document).ready(function($) {
         }else{
            jQuery('.' + name_element + '-exclude').css('display','');
         }
-        
+
 
     }
 
@@ -3619,18 +3627,18 @@ jQuery(document).ready(function($) {
         var mode_display = jQuery(this).attr('data-option');
         ts_show_post_exclude_first('last-posts', mode_display);
         jQuery('#last-posts-' + mode_display + '-order-direction option[value=desc]').attr({'selected':'selected'});
-    }); 
+    });
 
     jQuery('#latest-custom-posts-display-mode-selector li img').click(function(){
         var mode_display = jQuery(this).attr('data-option');
         ts_show_post_exclude_first('latest-custom-posts', mode_display);
         jQuery('#latest-custom-posts-' + mode_display + '-order-direction option[value=desc]').attr({'selected':'selected'});
-    }); 
+    });
 
     jQuery('[data-value="list-videos"]').click(function(){
         display_mode = jQuery('#list-videos-display-mode-selector').find('li.selected img').attr('data-option');
         ts_show_post_exclude_first('list-videos', display_mode);
-    }); 
+    });
 
     jQuery('[data-value="last-posts"]').click(function(){
         display_mode = jQuery('#last-posts-display-mode-selector').find('li.selected img').attr('data-option');
@@ -3647,6 +3655,6 @@ jQuery(document).ready(function($) {
         ts_show_post_exclude_first('list-videos', mode_display);
         jQuery('#list-videos-' + mode_display + '-order-direction option[value=desc]').attr({'selected':'selected'});
     });
-    
+
     jQuery('#wp-ts_editor_id-wrap').find('.mce-i-fullscreen').hide();
 });

@@ -1,5 +1,5 @@
-<?php   include_once( ABSPATH . 'wp-admin/includes/plugin.php' ); 
-        $list_products_ul = ''; 
+<?php   include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        $list_products_ul = '';
         $list_products_select = '';
         $cart_li = '';
         $cart_select = '';
@@ -8,7 +8,7 @@
             $list_products_select = '<option value="list-products">' . __( "List products", "touchsize" ) . '</option>';
             $cart_li = '<li class="icon-basket" data-value="cart"><span>Shopping cart</span></li>';
             $cart_select = '<option value="cart">' . __( "Shopping cart", "touchsize" ) . '</option>';
-        } 
+        }
         $touchsize_com = '<a href="http://touchsize.com/videotouch-doc">' . __('here','touchsize') . '</a>.';
         $icons_array = get_option('videotouch_typography',array());
         $icons_li = '';
@@ -123,8 +123,8 @@
                             <option value="ribbon"><?php _e( 'Ribbon banner', 'touchsize' ) ?></option>
                             <option value="timeline"><?php _e( 'Timeline features', 'touchsize' ) ?></option>
                             <?php echo $cart_select; ?>
-                            <option value="video-carousel"><?php _e( 'Video carousel', 'touchsize' ) ?></option>                            
-                            <option value="quote"><?php _e( 'Quote', 'touchsize' ) ?></option>                            
+                            <option value="video-carousel"><?php _e( 'Video carousel', 'touchsize' ) ?></option>
+                            <option value="quote"><?php _e( 'Quote', 'touchsize' ) ?></option>
                         </select>
                     </td>
                 </tr>
@@ -150,7 +150,7 @@
                     </tr>
                 </table>
             </div>
-            
+
             <div class="social-buttons builder-element hidden">
                 <h3 class="element-title"><?php _e('Social icons element','touchsize'); ?></h3>
                 <table cellpadding="10">
@@ -182,8 +182,8 @@
                 <h3 class="element-title"><?php _e('Searchbar element', 'touchsize'); ?></h3>
                <p><?php _e("This element doesn't have options.", 'touchsize'); ?></p>
             </div>
-         
-                     
+
+
         <div class="clients builder-element hidden">
             <h3 class="element-title"><?php _e('Clients block', 'touchsize'); ?></h3>
             <table cellpadding="10">
@@ -213,7 +213,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -221,18 +221,18 @@
                             <label><?php _e( 'Enable carousel:', 'touchsize' ); ?></label>
                         </td>
                         <td>
-                            <input type="radio" name="clients-enable-carousel" id="clients-enable-carousel-y" value="y"/> 
+                            <input type="radio" name="clients-enable-carousel" id="clients-enable-carousel-y" value="y"/>
                             <label for="clients-enable-carousel-y"><?php _e( 'Yes', 'touchsize' ); ?></label>
                             <input type="radio" name="clients-enable-carousel" id="clients-enable-carousel-n" value="n"  checked = "checked" />
                             <label for="clients-enable-carousel-n"><?php _e( 'No', 'touchsize' ); ?></label>
                         </td>
                     </tr>
                 </table>
-                
+
                 <ul id="clients_items">
-                   
+
                 </ul>
-                   
+
                 <input type="hidden" id="clients_content" value="" />
                 <input type="button" class="button ts-multiple-add-button" data-element-name="clients" id="clients_add_item" value=" <?php _e('Add New Client', 'touchsize'); ?>" />
                 <?php
@@ -275,11 +275,11 @@
                             </li>
                         </script>';
                ?>
-        </div> 
+        </div>
 
 
             <div class="features-block builder-element hidden">
-    
+
                 <table cellpadding="10">
                     <tr>
                         <td>
@@ -307,7 +307,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -318,7 +318,7 @@
                             <select name="features-block-gutter" id="features-block-gutter">
                                 <option value="gutter">Yes</option>
                                 <option value="no-gutter">No</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -329,7 +329,7 @@
                             <select name="features-block-style" id="features-block-style">
                                 <option value="style1"><?php _e('Feature blocks with icon top edge', 'touchsize') ?></option>
                                 <option value="style2"><?php _e('Feature blocks with icon inner', 'touchsize') ?></option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                 </table>
@@ -337,9 +337,9 @@
                 <h3 class="element-title">Feature blocks</h3>
                 <p><?php _e("Please select your icon, add your title and content below.", 'touchsize'); ?></p>
                 <ul id="features-block_items">
-                   
+
                 </ul>
-                   
+
                 <input type="hidden" id="features-block_content" value="" />
                 <input type="button" class="button ts-multiple-add-button" data-element-name="features-block" id="features-block_add_item" value=" <?php _e('Add New Item', 'touchsize'); ?>" />
                 <?php
@@ -350,13 +350,13 @@
                        <label for="features-block-icon">Choose your icon:</label>
                         <div class="builder-element-icon-toggle">
                             <a href="#" class="red-ui-button builder-element-icon-trigger-btn" data-toggle="#features-block-icon-id-{{item-id}}-selector">'.__('Show icons', 'touchsize').'</a>
-                        </div> 
+                        </div>
                         <ul id="features-block-icon-id-{{item-id}}-selector" data-selector="#features-block-{{item-id}}-icon" class="builder-icon-list ts-custom-selector">'
                             . $icons_li .
                         '</ul>
                         <select data-builder-name="icon" name="features-block[{{item-id}}][icon]" id="features-block-{{item-id}}-icon" class="hidden">'
                            . $icons_options .
-                        '</select>  
+                        '</select>
                        <table>
                             <tr>
                                <td>
@@ -390,7 +390,7 @@
                                  <input data-builder-name="background" type="text" value="#777" id="features-block-{{item-id}}-background" class="colors-section-picker" name="features-block[{{item-id}}][background]" />
                                  <div class="colors-section-picker-div" id="features-block-{{item-id}}-background-picker"></div>
                               </td>
-                            </tr> 
+                            </tr>
                            <tr>
                               <td>
                                   <label for="features-block-font">Font color:</label>
@@ -409,7 +409,7 @@
                    ';
                     echo '</script>';
                 ?>
-            </div>        
+            </div>
 
             <div class="listed-features builder-element hidden">
                 <h3 class="element-title">Listed features</h3>
@@ -448,7 +448,7 @@
                 </table>
                <p><?php _e("Please select your icon, add your title and content below.", 'touchsize'); ?></p>
                <ul id="listed-features_items">
-                   
+
                </ul>
                <input type="hidden" id="listed-features_content" value="" />
                <input type="button" class="button ts-multiple-add-button" data-element-name="listed-features" id="listed-features_add_item" value=" <?php _e('Add New Item', 'touchsize'); ?>" />
@@ -460,11 +460,11 @@
                        <label for="listed-features-icon">' . __('Choose your icon:', 'touchsize') . '</label>
                         <div class="builder-element-icon-toggle">
                             <a href="#" class="red-ui-button builder-element-icon-trigger-btn" data-toggle="#listed-features-icon-id-{{item-id}}-selector">' . __('Show icons', 'touchsize') . '</a>
-                        </div> 
+                        </div>
                         <ul id="listed-features-icon-id-{{item-id}}-selector" data-selector="#listed-features-{{item-id}}-icon" class="builder-icon-list ts-custom-selector">';
                             echo $icons_li;
                     echo '</ul>
-                        <select data-builder-name="icon" name="listed-features[{{item-id}}][icon]" id="listed-features-{{item-id}}-icon" class="hidden">'; 
+                        <select data-builder-name="icon" name="listed-features[{{item-id}}][icon]" id="listed-features-{{item-id}}-icon" class="hidden">';
                             echo $icons_options;
                     echo '</select>
                         <table>
@@ -501,7 +501,7 @@
                                     <input data-builder-name="bordercolor" type="text" value="#777" id="listed-features-{{item-id}}-bordercolor" class="colors-section-picker" name="listed-features-{{item-id}}-border-color" />
                                     <div class="colors-section-picker-div" id="listed-features-{{item-id}}-border-color-picker"></div>
                                 </td>
-                            </tr>  
+                            </tr>
                             <tr class="ts-background-color">
                                 <td>
                                     <label for="listed-features-{{item-id}}-background-color">' . __('Background color:', 'touchsize') . '</label>
@@ -510,7 +510,7 @@
                                     <input data-builder-name="backgroundcolor" type="text" value="#777" id="listed-features-{{item-id}}-backgroundcolor" class="colors-section-picker" name="listed-features-{{item-id}}-background-color" />
                                     <div class="colors-section-picker-div" id="listed-features-{{item-id}}-background-color-picker"></div>
                                 </td>
-                            </tr>  
+                            </tr>
                         </table>
                         <input type="hidden" data-builder-name="item_id" value="{{item-id}}" name="listed-features[{{item-id}}][id]" />
                         <input type="button" class="button button-primary remove-item" value="'.__('Remove', 'touchsize').'" />
@@ -520,7 +520,7 @@
                     echo '</script>';
                ?>
             </div>
-            
+
             <div class="icon builder-element hidden">
                 <h3 class="element-title"><?php _e('Icon element', 'touchsize'); ?></h3>
                 <table cellpadding="10">
@@ -536,15 +536,15 @@
                 <p><?php _e("Choose your icon from the library below:", 'touchsize'); ?></p>
                 <div class="builder-element-icon-toggle">
                     <a href="#" class="red-ui-button builder-element-icon-trigger-btn" data-toggle="#builder-element-icon-selector"><?php _e('Show icons','touchsize') ?></a>
-                </div>    
+                </div>
                 <ul id="builder-element-icon-selector" data-selector="#builder-element-icon" class="builder-icon-list ts-custom-selector">
                     <?php  echo $icons_li; ?>
                 </ul>
                 <select name="builder-element-icon" id="builder-element-icon" class="hidden">
-                    <?php echo $icons_options; ?> 
+                    <?php echo $icons_options; ?>
                 </select>
-                
-                <h3>Icon options</h3>               
+
+                <h3>Icon options</h3>
                 <table>
                     <tr>
                         <td>
@@ -594,7 +594,7 @@
                             <?php _e('Choose your menu','touchsize'); ?>
                         </td>
                         <td>
-                            <?php 
+                            <?php
                                 $menus = wp_get_nav_menus();
                                 if( isset($menus) && is_array($menus) && !empty($menus) ) : ?>
                                     <select name="menu-name" id="menu-name">
@@ -716,7 +716,7 @@
                                 e.stopPropagation();
                                 jQuery(jQuery(this).next()).show();
                             });
-                            
+
                             // jQuery('body').click(function() {
                             //  jQuery('.colors-section-picker-div').hide();
                             // });
@@ -744,7 +744,7 @@
                     });
                 </script>
             </div>
-            
+
             <div class="sidebar builder-element hidden">
                 <h3 class="element-title">Sidebar element</h3>
                 <table cellpadding="10">
@@ -786,7 +786,7 @@
                         </td>
                         <td>
                             <select name="slider-name" id="slider-name">
-                            <?php 
+                            <?php
                                 echo '<option value="0">-- ' . __( 'Select slider', 'touchsize' ) . ' --</option>';
                                 $show_where_user_can_add_sliders = false;
                                 $args = array(
@@ -794,7 +794,7 @@
                                     'posts_per_page' => -1,
                                     'post_status' =>'publish'
                                 );
-                                
+
                                 $sliders = new WP_Query( $args );
 
                                 if ($sliders->have_posts()) {
@@ -817,7 +817,7 @@
                     </tr>
                 </table>
             </div>
-            
+
             <div class="list-portfolios builder-element hidden">
                 <h3 class="element-title"><?php _e('List portfolios element','touchsize'); ?></h3>
                 <table cellpadding="10">
@@ -834,14 +834,14 @@
                             <label for="list-portfolios-category"><?php _e( 'Category:', 'touchsize' ) ?></label>
                         </td>
                         <td>
-                            <?php 
+                            <?php
                                 $categories = get_categories(array( 'hide_empty' => 0, 'taxonomy' => 'portfolio_register_post_type', 'pad_counts' => true ));
                                 if( isset($categories) && !is_wp_error($categories) && !empty($categories) ) : ?>
-                                    <select class="ts-custom-select-input" data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" name="list-portfolios-category" id="list-portfolios-category" multiple>   
+                                    <select class="ts-custom-select-input" data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" name="list-portfolios-category" id="list-portfolios-category" multiple>
                                         <option value="0"><?php _e('All', 'touchsize') ?></option>
                                         <?php foreach ($categories as $index => $category): ?>
                                             <option value="<?php echo $category->term_id ?>"><?php echo $category->cat_name ?></option>
-                                        <?php endforeach ?>                                    
+                                        <?php endforeach ?>
                                     </select>
                                 <?php endif; ?>
                             <div class="ts-option-description">
@@ -924,7 +924,7 @@
                                     <label for="list-portfolios-grid-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-portfolios-grid-show-meta" id="list-portfolios-grid-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-portfolios-grid-show-meta" id="list-portfolios-grid-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-portfolios-grid-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-portfolios-grid-show-meta" id="list-portfolios-grid-show-meta-n" value="n" />
                                     <label for="list-portfolios-grid-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -1026,7 +1026,7 @@
                                     <label for="list-portfolios-list-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-portfolios-list-show-meta" id="list-portfolios-list-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-portfolios-list-show-meta" id="list-portfolios-list-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-portfolios-list-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-portfolios-list-show-meta" id="list-portfolios-list-show-meta-n" value="n" />
                                     <label for="list-portfolios-list-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -1106,7 +1106,7 @@
                                     <label><?php _e( 'Enable carousel', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-portfolios-thumbnail-enable-carousel" id="list-portfolios-thumbnail-enable-carousel-y" value="y" /> 
+                                    <input type="radio" name="list-portfolios-thumbnail-enable-carousel" id="list-portfolios-thumbnail-enable-carousel-y" value="y" />
                                     <label for="list-portfolios-thumbnail-enable-carousel-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-portfolios-thumbnail-enable-carousel" id="list-portfolios-thumbnail-enable-carousel-n" value="n"  checked = "checked"  />
                                     <label for="list-portfolios-thumbnail-enable-carousel-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -1214,7 +1214,7 @@
                                     <label for="list-portfolios-big-post-show-meta"><?php _e( 'Show meta:', 'touchsize' ) ?></label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-portfolios-big-post-show-meta" id="list-portfolios-big-post-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-portfolios-big-post-show-meta" id="list-portfolios-big-post-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-portfolios-big-post-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-portfolios-big-post-show-meta" id="list-portfolios-big-post-show-meta-n" value="n" />
                                     <label for="list-portfolios-big-post-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -1273,7 +1273,7 @@
                                     <label for="list-portfolios-big-post-show-related"><?php _e( 'Show related posts', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-portfolios-big-post-show-related" id="list-portfolios-big-post-show-related-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-portfolios-big-post-show-related" id="list-portfolios-big-post-show-related-y" value="y"  checked = "checked"  />
                                     <label for="list-portfolios-big-post-show-related-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-portfolios-big-post-show-related" id="list-portfolios-big-post-show-related-n" value="n" />
                                     <label for="list-portfolios-big-post-show-related-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -1371,7 +1371,7 @@
                                     <label for="list-portfolios-timeline-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-portfolios-timeline-show-meta" id="list-portfolios-timeline-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-portfolios-timeline-show-meta" id="list-portfolios-timeline-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-portfolios-timeline-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-portfolios-timeline-show-meta" id="list-portfolios-timeline-show-meta-n" value="n" />
                                     <label for="list-portfolios-timeline-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -1455,7 +1455,7 @@
                             </tr>
                         </table>
                     </div>
-                
+
                 </div>
             </div>
 
@@ -1488,7 +1488,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -1499,14 +1499,14 @@
                             <select name="testimonials-enable-carousel" id="testimonials-enable-carousel">
                                 <option value="N">No</option>
                                 <option value="Y">Yes</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                 </table>
                 <ul id="testimonials_items">
-                   
+
                 </ul>
-                   
+
                 <input type="hidden" id="testimonials_content" value="" />
                 <input type="button" class="button ts-multiple-add-button" data-element-name="testimonials" id="testimonials_add_item" value=" <?php _e('Add New Testimonial', 'touchsize'); ?>" />
                 <?php
@@ -1564,7 +1564,7 @@
                         </li>';
                     echo '</script>';
                ?>
-              
+
             </div>
 
             <div class="last-posts builder-element hidden">
@@ -1583,7 +1583,7 @@
                         <td valign="top">
                             <label for="last-posts-category"><?php _e( 'Category', 'touchsize' ) ?>:</label>
                         </td>
-                        <td>                           
+                        <td>
                             <select data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" class="ts-custom-select-input" name="last-posts-category" id="last-posts-category" multiple>
                                 <?php $categories = get_categories(array( 'hide_empty' => 0, 'show_option_all' => '' )); ?>
                                 <?php if ( isset($categories) && is_array($categories) && !empty($categories) ) : ?>
@@ -1592,7 +1592,7 @@
                                             <?php if( $i === 1 ) echo '<option value="0">' . __('All', 'touchsize') . '</option>'; ?>
                                             <option value="<?php echo $category->cat_ID ?>"><?php echo $category->cat_name ?></option>
                                         <?php endif; $i++; ?>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 <?php endif ?>
                             </select>
                             <div class="ts-option-description">
@@ -1633,7 +1633,7 @@
                         <td>
                             <input type="text" value="" name="last-posts-exclude-first" id="last-posts-exclude-first" size="4"/>
                             <div class="ts-option-description">
-                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?> 
+                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?>
                             </div>
                         </td>
                     </tr>
@@ -1717,7 +1717,7 @@
                                     <label for="last-posts-grid-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="last-posts-grid-show-meta" id="last-posts-grid-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="last-posts-grid-show-meta" id="last-posts-grid-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="last-posts-grid-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="last-posts-grid-show-meta" id="last-posts-grid-show-meta-n" value="n" />
                                     <label for="last-posts-grid-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -1860,7 +1860,7 @@
                                     <label for="last-posts-list-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="last-posts-list-show-meta" id="last-posts-list-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="last-posts-list-show-meta" id="last-posts-list-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="last-posts-list-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="last-posts-list-show-meta" id="last-posts-list-show-meta-n" value="n" />
                                     <label for="last-posts-list-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -2033,7 +2033,7 @@
                                     <label for="last-posts-thumbnail-show-meta"><?php _e( 'Show meta:', 'touchsize' ) ?></label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="last-posts-thumbnail-show-meta" id="last-posts-thumbnail-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="last-posts-thumbnail-show-meta" id="last-posts-thumbnail-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="last-posts-thumbnail-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="last-posts-thumbnail-show-meta" id="last-posts-thumbnail-show-meta-n" value="n" />
                                     <label for="last-posts-thumbnail-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -2160,7 +2160,7 @@
                                     <label for="last-posts-big-post-show-meta"><?php _e( 'Show meta:', 'touchsize' ) ?></label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="last-posts-big-post-show-meta" id="last-posts-big-post-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="last-posts-big-post-show-meta" id="last-posts-big-post-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="last-posts-big-post-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="last-posts-big-post-show-meta" id="last-posts-big-post-show-meta-n" value="n" />
                                     <label for="last-posts-big-post-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -2385,7 +2385,7 @@
                                     <label for="last-posts-timeline-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="last-posts-timeline-show-meta" id="last-posts-timeline-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="last-posts-timeline-show-meta" id="last-posts-timeline-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="last-posts-timeline-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="last-posts-timeline-show-meta" id="last-posts-timeline-show-meta-n" value="n" />
                                     <label for="last-posts-timeline-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -2605,10 +2605,10 @@
                             </tr>
                         </table>
                     </div>
-                
+
                 </div>
             </div>
-      
+
             <div class="callaction builder-element hidden">
                 <h3 class="element-title"><?php _e('Call to action element','touchsize'); ?></h3>
                 <table cellpadding="10">
@@ -2669,7 +2669,7 @@
                                     <option value="0"><?php _e('All', 'touchsize'); ?></option>
                                     <?php foreach ($categories as $index => $category): ?>
                                         <option value="<?php echo $category->term_id ?>"><?php echo $category->cat_name ?><span>  (<?php echo $category->count; ?>)</span></option>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 </select>
                             <?php endif ?>
                         </td>
@@ -2692,7 +2692,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -2711,7 +2711,7 @@
                             <select name="teams-remove-gutter" id="teams-remove-gutter">
                                 <option value="no"><?php _e('No', 'touchsize'); ?></option>
                                 <option value="yes"><?php _e('Yes', 'touchsize'); ?></option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -2722,7 +2722,7 @@
                             <select name="teams-enable-carousel" id="teams-enable-carousel">
                                 <option value="no"><?php _e('No', 'touchsize'); ?></option>
                                 <option value="yes"><?php _e('Yes', 'touchsize'); ?></option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                 </table>
@@ -2745,11 +2745,11 @@
                         <td>
                             <?php $categories = get_categories(array( 'hide_empty' => 0, 'taxonomy' => 'ts_pricing_table_categories', 'pad_counts' => true ));
                             if( isset($categories) && !is_wp_error($categories) && !empty($categories) ) : ?>
-                                <select class="ts-custom-select-input" data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" name="pricing-tables-category" id="pricing-tables-category" multiple>   
+                                <select class="ts-custom-select-input" data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" name="pricing-tables-category" id="pricing-tables-category" multiple>
                                     <option value="0"><?php _e('All', 'touchsize') ?></option>
                                     <?php foreach ($categories as $index => $category): ?>
                                         <option value="<?php echo $category->term_id ?>"><?php echo $category->cat_name ?></option>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 </select>
                             <?php endif; ?>
                         </td>
@@ -2772,7 +2772,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -2791,7 +2791,7 @@
                             <select name="pricing-tables-remove-gutter" id="pricing-tables-remove-gutter">
                                 <option value="no">No</option>
                                 <option value="yes">Yes</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                 </table>
@@ -2876,7 +2876,7 @@
                 <p><?php _e("Add icon for title from the library below:", 'touchsize'); ?></p>
                 <div class="builder-element-icon-toggle">
                     <a href="#" class="red-ui-button builder-element-icon-trigger-btn" data-toggle="#builder-element-title-icon-selector"><?php _e('Show icons','touchsize') ?></a>
-                </div> 
+                </div>
                 <ul id="builder-element-title-icon-selector" data-selector="#builder-element-title-icon" class="builder-icon-list ts-custom-selector">
                     <?php echo $icons_li; ?>
                 </ul>
@@ -2894,7 +2894,7 @@
                             <input type="text" id="builder-element-title-color" class="colors-section-picker" value="<?php echo ts_get_color('general_text_color'); ?>" name="builder-element-title-color" />
                             <div class="colors-section-picker-div" id="builder-element-title-color"></div>
                         </td>
-                    </tr> 
+                    </tr>
                     <tr>
                         <td><label for="title-subtitle"><?php _e( 'Subtitle', 'touchsize' ) ?>:</label></td>
                         <td><input type="text" value="" name="title-subtitle"  id="title-subtitle" style="width:400px" /></td>
@@ -3022,7 +3022,7 @@
                 </table>
             </div>
 
-            <!-- List products element --> 
+            <!-- List products element -->
 
              <div class="list-products builder-element hidden">
                 <h3 class="element-title">List products element</h3>
@@ -3040,14 +3040,14 @@
                         <td valign="top">
                             <label for="list-products-category"><?php _e( 'Category', 'touchsize' ) ?>:</label>
                         </td>
-                        <td>                            
+                        <td>
                             <select data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" class="ts-custom-select-input"  name="list-products-category" id="list-products-category" multiple>
                                 <?php $categories = get_categories(array( 'hide_empty' => 0, 'show_option_all' => '','taxonomy'=>'product_cat' )); ?>
                                 <?php if ($categories): ?>
                                     <option value="0">All</option>
                                     <?php foreach ($categories as $index => $category): ?>
                                         <option value="<?php echo $category->term_id ?>"><?php echo $category->cat_name ?></option>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 <?php endif ?>
                             </select>
                             <div class="ts-option-description">
@@ -3164,7 +3164,7 @@
                         </table>
                     </div>
                 </div>
-            </div>        
+            </div>
 
             <!-- Filters element -->
             <div class="filters builder-element hidden">
@@ -3200,7 +3200,7 @@
                                                 <?php if( $s === 1 ) echo '<option value="0">All</option>'; ?>
                                                 <option value="<?php echo $category->term_id ?>"><?php echo $category->cat_name ?></option>
                                             <?php endif; $s++; ?>
-                                        <?php endforeach ?>                                 
+                                        <?php endforeach ?>
                                     <?php endif ?>
                                 </select>
                             </div>
@@ -3213,10 +3213,10 @@
                                                 <?php if( $j === 1 ) echo '<option value="0">All</option>'; ?>
                                                 <option value="<?php echo $category->term_id ?>"><?php echo $category->cat_name ?></option>
                                             <?php endif; $j++; ?>
-                                        <?php endforeach ?>                                    
+                                        <?php endforeach ?>
                                     <?php endif ?>
                                 </select>
-                            </div> 
+                            </div>
                             <div id="video-categories" class="hidden video-categories">
                                 <select class="ts-custom-select-input" data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" name="filters-video-category" id="filters-video-category" multiple>
                                     <?php $categories = get_categories(array( 'hide_empty' => 1, 'taxonomy' => 'videos_categories' )); ?>
@@ -3226,7 +3226,7 @@
                                                 <?php if( $j === 1 ) echo '<option value="0">All</option>'; ?>
                                                 <option value="<?php echo $category->term_id ?>"><?php echo $category->cat_name ?></option>
                                             <?php endif; $j++; ?>
-                                        <?php endforeach ?>                                    
+                                        <?php endforeach ?>
                                     <?php endif ?>
                                 </select>
                             </div>
@@ -3334,7 +3334,7 @@
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="6">6</option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -3345,15 +3345,15 @@
                             <select name="feature-blocks-style" id="feature-blocks-style">
                                 <option value="style1"><?php _e('Feature blocks with background', 'touchsize') ?></option>
                                 <option value="style2"><?php _e('Feature blocks with border', 'touchsize') ?></option>
-                            </select>   
+                            </select>
                         </td>
                     </tr>
                 </table>
             </div>
-                
+
             <div class="spacer builder-element hidden">
                 <h3 class="element-title"><?php _e('Spacer element', 'touchsize'); ?></h3>
-                <table cellpadding="10">           
+                <table cellpadding="10">
                     <tr>
                         <td>
                             <label for="spacer-admin-label"><?php _e('Admin label','touchsize');?>:</label>
@@ -3447,7 +3447,7 @@
                             <input type="text" id="counters-text-color" class="colors-section-picker" value="#000" name="counters-text-color" />
                             <div class="colors-section-picker-div" id="counters-text-color"></div>
                         </td>
-                    </tr>                    
+                    </tr>
                 </table>
             </div>
 
@@ -3710,9 +3710,9 @@
                 </table>
                 <table cellpadding="10">
                      <ul id="contact-form_items">
-                    
+
                      </ul>
-                    
+
                  <input type="hidden" id="contact-form_content" value="" />
                  <input type="button" class="button ts-multiple-add-button" data-element-name="contact-form" id="contact-form_add_item" value=" <?php _e('Add New Field', 'touchsize'); ?>" />
                 <?php
@@ -3819,7 +3819,7 @@
                                             <?php if( $i == 0 ) echo '<option value="0">All</option>'; ?>
                                             <option value="<?php if( is_object($category) ) echo $category->term_id; ?>"><?php if( is_object($category) ) echo $category->cat_name; ?></option>
                                         <?php $i++; endif; ?>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 <?php endif ?>
                             </select>
                         </td>
@@ -3830,7 +3830,7 @@
                         </td>
                         <td>
                             <select data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" class="ts-custom-select-input"  name="featured-area-categories-video" id="featured-area-categories-posts" multiple>
-                                <?php 
+                                <?php
                                 $categories = get_categories(array( 'hide_empty' => 0 )); ?>
                                 <?php if ( isset($categories) && is_array($categories) && $categories !== '' ): ?>
                                     <?php $i = 0; foreach ($categories as $index => $category): ?>
@@ -3838,7 +3838,7 @@
                                             <?php if( $i == 0 ) echo '<option value="0">All</option>'; ?>
                                             <option value="<?php echo $category->term_id; ?>"><?php echo $category->cat_name; ?></option>
                                         <?php $i++; endif; ?>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 <?php endif ?>
                             </select>
                         </td>
@@ -3856,7 +3856,7 @@
                                                 <?php if( $i == 0 ) echo '<option value="0">All</option>';  ?>
                                                 <option value="<?php echo $category->term_id; ?>"><?php echo $category->cat_name; ?></option>
                                             <?php $i++; endif; ?>
-                                        <?php endforeach; ?>                                    
+                                        <?php endforeach; ?>
                                     <?php endif; ?>
                             </select>
                         </td>
@@ -3886,7 +3886,7 @@
                         <td>
                             <input type="text" value="" name="featured-area-exclude-first" id="featured-area-exclude-first" size="4"/>
                             <div class="ts-option-description">
-                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?> 
+                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?>
                             </div>
                         </td>
                     </tr>
@@ -3911,7 +3911,7 @@
                     </tr>
                 </table>
             </div>
-            
+
             <div class="text builder-element hidden">
                 <h3 class="element-title">Text element</h3>
             </div>
@@ -3940,7 +3940,7 @@
 
                             <div id="image-carousel">
                                 <ul class="carousel_images">
-                                    
+
                                 </ul>
                                 <script>
                                     jQuery(document).ready(function($){
@@ -3953,20 +3953,25 @@
                                             image_gallery_ids = image_gallery_ids.split(',');
 
                                             jQuery(image_gallery_ids).each(function(index, value){
-                                                image_url = value.split(/:(.*)/);
-                                                if( image_url != '' ){
-                                                    image_url_path = image_url[1].split('.');
-                                                    carousel_images.append('\
-                                                        <li class="image" data-attachment_id="' + image_url[0] + '" data-attachment_url="' + image_url_path[0] + '.' +image_url_path[1] + '">\
-                                                            <img src="' + image_url_path[0] + '-<?php echo get_option( "thumbnail_size_w" ); ?>x<?php echo get_option( "thumbnail_size_h" ); ?>.' + image_url_path[1] + '" />\
-                                                            <ul class="actions">\
-                                                                <li><a href="#" class=" icon-close" title="<?php _e( 'Delete image', 'touchsize' ); ?>"><?php //_e( 'Delete', 'touchsize' ); ?></a></li>\
-                                                            </ul>\
-                                                        </li>');
-                                                }
-                                            });
+                                               image_url = value.split(/:(.*)/);
+                                               var attachmentId = image_url[0];
 
-                                        },200);
+                                               if( image_url != '' ){
+                                                   image_url_path = image_url[1].split('.');
+                                                   var imageFormat = image_url_path[image_url_path.length - 1];
+                                                   var imageUrl = image_url_path.splice(0, image_url_path.length - 1).join('.');
+
+                                                       carousel_images.append('\
+                                                           <li class="image" data-attachment_id="' + attachmentId + '" data-attachment_url="' + imageUrl + '.' + imageFormat + '">\
+                                                               <img src="' + imageUrl + '-<?php echo get_option( "thumbnail_size_w" ); ?>x<?php echo get_option( "thumbnail_size_h" ); ?>.' + imageFormat + '" />\
+                                                               <ul class="actions">\
+                                                                   <li><a href="#" class=" icon-close" title="<?php esc_html_e( 'Delete image', 'giselle' ); ?>"><?php //esc_html_e( 'Delete', 'giselle' ); ?></a></li>\
+                                                               </ul>\
+                                                           </li>');
+                                               }
+                                           });
+
+                                        }, 200 );
                                     });
                                 </script>
                                 <input type="hidden" id="carousel_image_gallery" name="carousel_image_gallery" value="" />
@@ -4007,7 +4012,7 @@
 
                                         // When an image is selected, run a callback.
                                         image_frame.on( 'select', function() {
-                                            
+
                                             var selection = image_frame.state().get('selection');
 
                                             selection.map( function( attachment ) {
@@ -4255,7 +4260,7 @@
                         <td>
                            <input type="text" id="tab-admin-label" name="tab-admin-label" />
                         </td>
-                    </tr> 
+                    </tr>
                     <tr>
                         <td>
                             <?php _e('Choose mode tab:','touchsize'); ?>
@@ -4269,9 +4274,9 @@
                     </tr>
                 </table>
                 <ul id="tab_items">
-               
+
                 </ul>
-                   
+
                 <input type="hidden" id="tab_content" value="" />
                 <input type="button" class="button ts-multiple-add-button" data-element-name="tab" id="tab_add_item" value=" <?php _e('Add New Tab', 'touchsize'); ?>" />
                   <?php
@@ -4305,7 +4310,7 @@
                     echo '</script>';
                ?></table>
             </div>
-          
+
             <!-- List videos element -->
 
             <div class="list-videos builder-element hidden">
@@ -4324,7 +4329,7 @@
                         <td valign="top">
                             <label for="list-videos-category"><?php _e( 'Category', 'touchsize' ) ?>:</label>
                         </td>
-                        <td>                           
+                        <td>
                             <select data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" class="ts-custom-select-input" name="list-videos-category" id="list-videos-category" multiple>
                                 <?php $categories = get_categories(array( 'hide_empty' => 0, 'taxonomy' => 'videos_categories' )); ?>
                                 <?php if ( isset($categories) && is_array($categories) && !empty($categories) ): ?>
@@ -4333,7 +4338,7 @@
                                             <?php if( $i == 0 ) echo '<option value="0">All</option>'; ?>
                                             <option value="<?php if( is_object($category) ) echo $category->term_id; ?>"><?php if( is_object($category) ) echo $category->cat_name; ?></option>
                                         <?php $i++; endif; ?>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 <?php endif ?>
                             </select>
                             <div class="ts-option-description">
@@ -4392,7 +4397,7 @@
                         <td>
                             <input type="text" value="" name="list-videos-exclude-first" id="list-videos-exclude-first" size="4"/>
                             <div class="ts-option-description">
-                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?> 
+                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?>
                             </div>
                         </td>
                     </tr>
@@ -4476,7 +4481,7 @@
                                     <label for="list-videos-grid-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-videos-grid-show-meta" id="list-videos-grid-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-videos-grid-show-meta" id="list-videos-grid-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-videos-grid-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-videos-grid-show-meta" id="list-videos-grid-show-meta-n" value="n" />
                                     <label for="list-videos-grid-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -4608,7 +4613,7 @@
                                     <label for="list-videos-list-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-videos-list-show-meta" id="list-videos-list-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-videos-list-show-meta" id="list-videos-list-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-videos-list-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-videos-list-show-meta" id="list-videos-list-show-meta-n" value="n" />
                                     <label for="list-videos-list-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -4781,7 +4786,7 @@
                                     <label for="list-videos-thumbnail-show-meta"><?php _e( 'Show meta:', 'touchsize' ) ?></label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-videos-thumbnail-show-meta" id="list-videos-thumbnail-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-videos-thumbnail-show-meta" id="list-videos-thumbnail-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-videos-thumbnail-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-videos-thumbnail-show-meta" id="list-videos-thumbnail-show-meta-n" value="n" />
                                     <label for="list-videos-thumbnail-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -4908,7 +4913,7 @@
                                     <label for="list-videos-big-post-show-meta"><?php _e( 'Show meta:', 'touchsize' ) ?></label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-videos-big-post-show-meta" id="list-videos-big-post-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-videos-big-post-show-meta" id="list-videos-big-post-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-videos-big-post-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-videos-big-post-show-meta" id="list-videos-big-post-show-meta-n" value="n" />
                                     <label for="list-videos-big-post-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -5133,7 +5138,7 @@
                                     <label for="list-videos-timeline-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="list-videos-timeline-show-meta" id="list-videos-timeline-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="list-videos-timeline-show-meta" id="list-videos-timeline-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="list-videos-timeline-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="list-videos-timeline-show-meta" id="list-videos-timeline-show-meta-n" value="n" />
                                     <label for="list-videos-timeline-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -5353,13 +5358,27 @@
                             </tr>
                         </table>
                     </div>
-                
+
                 </div>
             </div>
 
             <div class="user builder-element hidden">
                 <h3 class="element-title"><?php _e('User element', 'touchsize'); ?></h3>
                 <p><?php _e( 'You can add login form to page', 'touchsize' ); ?></p>
+                <table cellpadding="10">
+                    <tr>
+                        <td width="70px">
+                            <?php _e( 'Align', 'touchsize' ); ?>
+                        </td>
+                        <td>
+                            <select name="user-align" id="user-align">
+                                <option value="left"><?php _e('Left', 'touchsize'); ?></option>
+                                <option value="right"><?php _e('Right', 'touchsize'); ?></option>
+                                <option value="center"><?php _e('Center', 'touchsize'); ?></option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <div class="cart builder-element hidden">
@@ -5404,31 +5423,31 @@
                             <label for="latest-custom-posts-type"><?php _e( 'Select post type', 'touchsize' ); ?>:</label>
                         </td>
                         <td>
-                            <?php 
+                            <?php
                                 $args=array(
                                   'public'   => true,
                                   '_builtin' => false
                                 );
                                 $post_types = get_post_types($args, 'objects', 'or');
-                                
+
                                 $post_types_default = array('post', 'page', 'video', 'ts_teams', 'ts_slider', 'portfolio', 'ts_pricing_table', 'attachment', 'product', 'product_variation', 'shop_order', 'shop_order_refund', 'shop_coupon', 'shop_webhook');
                                 $no_custom = false;
                                 $registred_post_type = array();
-                               
+
                                 if( isset($post_types['post']) && !empty($post_types) ) : ?>
                                     <select data-placeholder="<?php _e('Select your custom post type', 'touchsize'); ?>" class="ts-custom-select-input" multiple name="latest-custom-posts-type" id="latest-custom-posts-type">
-                                        <?php foreach($post_types as $register_name=>$post_type) : 
+                                        <?php foreach($post_types as $register_name=>$post_type) :
                                             if( !in_array($register_name, $post_types_default) ) : ?>
                                                 <?php if( !in_array($register_name, $registred_post_type) ) : ?>
-                                                    <?php if( $no_custom === false ) echo '<option value="0">' . __('All', 'touchsize') . '</option>'; $no_custom = true; 
-                                                       $registred_post_type[] = $register_name; 
+                                                    <?php if( $no_custom === false ) echo '<option value="0">' . __('All', 'touchsize') . '</option>'; $no_custom = true;
+                                                       $registred_post_type[] = $register_name;
                                                     ?>
                                                 <?php endif; ?>
                                                 <option value="<?php echo $register_name; ?>"><?php echo $post_type->labels->name; ?></option>
                                             <?php endif; ?>
                                         <?php endforeach; ?>
                                         <?php if( $no_custom === false ) echo '<option value="no-custom-posts">' . __('No new custom posts', 'touchsize') . '</option>'; ?>
-                                    </select>  
+                                    </select>
                                 <?php endif; ?>
                             <div class="ts-option-description">
                                 <?php _e('Choose your order criteria. You can sort your articles either by date by the number or comments.', 'touchsize'); ?>
@@ -5446,7 +5465,7 @@
                                                     <td>' . __('Select category by custom post type ', 'touchsize') . $name_post_type . '</td>
                                                         <td>';
                                             if( isset($categories) && is_array($categories) && !empty($categories) ){
-                                                
+
                                                 echo '<select data-placeholder="' . __('Select your category', 'touchsize') . '" class="ts-custom-select-input" name="latest-custom-category-' . $name_post_type . '" multiple id="latest-custom-posts-category-' . $name_post_type . '">';
                                                 $i = 0;
                                                     foreach($categories as $category){
@@ -5456,14 +5475,14 @@
                                                     }
                                             }else{
                                                 echo '<select data-placeholder="' . __('Select your category', 'touchsize') . '" class="ts-custom-select-input" name="latest-custom-posts-type-no-categories" multiple id="latest-custom-posts-type-no-categories">
-                                                       <option value="no-custom-posts">' . __('No categories', 'touchsize') . '</option> 
+                                                       <option value="no-custom-posts">' . __('No categories', 'touchsize') . '</option>
                                                     </select>';
                                             }
                                             echo '</td></tr>';
                                         }
-                                    } 
+                                    }
                                 }
-                            }   
+                            }
                     ?>
                     <tr>
                         <td>
@@ -5498,7 +5517,7 @@
                         <td>
                             <input type="text" value="" name="latest-custom-posts-exclude-first" id="latest-custom-posts-exclude-first" size="4"/>
                             <div class="ts-option-description">
-                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?> 
+                                <?php _e('Insert the number of the posts you want to exclude from showing.', 'touchsize'); ?>
                             </div>
                         </td>
                     </tr>
@@ -5582,7 +5601,7 @@
                                     <label for="latest-custom-posts-grid-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="latest-custom-posts-grid-show-meta" id="latest-custom-posts-grid-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="latest-custom-posts-grid-show-meta" id="latest-custom-posts-grid-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="latest-custom-posts-grid-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="latest-custom-posts-grid-show-meta" id="latest-custom-posts-grid-show-meta-n" value="n" />
                                     <label for="latest-custom-posts-grid-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -5725,7 +5744,7 @@
                                     <label for="latest-custom-posts-list-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="latest-custom-posts-list-show-meta" id="latest-custom-posts-list-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="latest-custom-posts-list-show-meta" id="latest-custom-posts-list-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="latest-custom-posts-list-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="latest-custom-posts-list-show-meta" id="latest-custom-posts-list-show-meta-n" value="n" />
                                     <label for="latest-custom-posts-list-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -5898,7 +5917,7 @@
                                     <label for="latest-custom-posts-thumbnail-show-meta"><?php _e( 'Show meta:', 'touchsize' ) ?></label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="latest-custom-posts-thumbnail-show-meta" id="latest-custom-posts-thumbnail-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="latest-custom-posts-thumbnail-show-meta" id="latest-custom-posts-thumbnail-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="latest-custom-posts-thumbnail-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="latest-custom-posts-thumbnail-show-meta" id="latest-custom-posts-thumbnail-show-meta-n" value="n" />
                                     <label for="latest-custom-posts-thumbnail-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -6025,7 +6044,7 @@
                                     <label for="latest-custom-posts-big-post-show-meta"><?php _e( 'Show meta:', 'touchsize' ) ?></label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="latest-custom-posts-big-post-show-meta" id="latest-custom-posts-big-post-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="latest-custom-posts-big-post-show-meta" id="latest-custom-posts-big-post-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="latest-custom-posts-big-post-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="latest-custom-posts-big-post-show-meta" id="latest-custom-posts-big-post-show-meta-n" value="n" />
                                     <label for="latest-custom-posts-big-post-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -6250,7 +6269,7 @@
                                     <label for="latest-custom-posts-timeline-show-meta"><?php _e( 'Show meta', 'touchsize' ) ?>:</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="latest-custom-posts-timeline-show-meta" id="latest-custom-posts-timeline-show-meta-y" value="y"  checked = "checked"  /> 
+                                    <input type="radio" name="latest-custom-posts-timeline-show-meta" id="latest-custom-posts-timeline-show-meta-y" value="y"  checked = "checked"  />
                                     <label for="latest-custom-posts-timeline-show-meta-y"><?php _e( 'Yes', 'touchsize' ) ?></label>
                                     <input type="radio" name="latest-custom-posts-timeline-show-meta" id="latest-custom-posts-timeline-show-meta-n" value="n" />
                                     <label for="latest-custom-posts-timeline-show-meta-n"><?php _e( 'No', 'touchsize' ) ?></label>
@@ -6470,10 +6489,10 @@
                             </tr>
                         </table>
                     </div>
-                
+
                 </div>
             </div>
-   
+
             <div class="timeline builder-element hidden">
                 <h3 class="element-title"><?php _e('Timeline features', 'touchsize'); ?></h3>
                 <p><?php _e( 'You can add timeline features form to page', 'touchsize' ) ?></p>
@@ -6489,9 +6508,9 @@
                 </table>
 
                 <ul id="timeline_items">
-                    
+
                 </ul>
-                    
+
                 <input type="hidden" id="timeline_content" value="" />
                 <input type="button" class="button ts-multiple-add-button" data-element-name="timeline" id="timeline_add_item" value=" <?php _e('Add New Timeline', 'touchsize'); ?>"/>
                 <?php
@@ -6524,7 +6543,7 @@
                                                 <input type="text" name="timeline-{{item-id}}-image" id="timeline-{{item-id}}-image" value="" data-role="media-url" />
                                                 <input type="hidden" id="slide_media_id-{{item-id}}" name="timeline_media_id-{{item-id}}" value=""  data-role="media-id" />
                                                 <input type="button" id="uploader_{{item-id}}"  class="button button-primary" value="' . __( "Upload", "touchsize" ) . '" />
-                                                <div id="image-preview-{{item-id}}"></div> 
+                                                <div id="image-preview-{{item-id}}"></div>
                                             </td>
                                         </tr>
                                         <tr>
@@ -6759,7 +6778,7 @@
                                             <?php if( $i == 0 ) echo '<option value="0">All</option>'; ?>
                                             <option value="<?php if( is_object($category) ) echo $category->term_id; ?>"><?php if( is_object($category) ) echo $category->cat_name; ?></option>
                                         <?php $i++; endif; ?>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 <?php endif ?>
                             </select>
                         </td>
@@ -6770,7 +6789,7 @@
                         </td>
                         <td>
                             <select data-placeholder="<?php _e('Select your category', 'touchsize'); ?>" class="ts-custom-select-input"  name="video-carousel-categories-video" id="video-carousel-categories-posts" multiple>
-                                <?php 
+                                <?php
                                 $categories = get_categories(array( 'hide_empty' => 0 )); ?>
                                 <?php if ( isset($categories) && is_array($categories) && $categories !== '' ): ?>
                                     <?php $i = 0; foreach ($categories as $index => $category): ?>
@@ -6778,7 +6797,7 @@
                                             <?php if( $i == 0 ) echo '<option value="0">All</option>'; ?>
                                             <option value="<?php echo $category->term_id; ?>"><?php echo $category->cat_name; ?></option>
                                         <?php $i++; endif; ?>
-                                    <?php endforeach ?>                                    
+                                    <?php endforeach ?>
                                 <?php endif ?>
                             </select>
                         </td>
@@ -6862,15 +6881,15 @@
                 <p><?php _e("Choose your icon from the library below:", 'touchsize'); ?></p>
                 <div class="builder-element-icon-toggle">
                     <a href="#" class="red-ui-button builder-element-icon-trigger-btn" data-toggle="#quote-selector"><?php _e('Show icons','touchsize') ?></a>
-                </div>    
+                </div>
                 <ul id="quote-selector" data-selector="#quote-icon" class="builder-icon-list ts-custom-selector">
                     <?php  echo $icons_li; ?>
                 </ul>
                 <select name="quote-icon" id="quote-icon" class="hidden">
-                    <?php echo $icons_options; ?> 
+                    <?php echo $icons_options; ?>
                 </select>
-                
-                <h3>Icon options</h3>               
+
+                <h3>Icon options</h3>
                 <table>
                     <tr>
                         <td>
@@ -6889,7 +6908,7 @@
                         </td>
                     </tr>
                 </table>
-            </div> 
+            </div>
 
             <input type="button" class="button-primary save-element" value="<?php _e( 'Save changes', 'touchsize' ) ?>" id="builder-save"/>
 
@@ -6926,7 +6945,7 @@
             }
         });
     }
-    
+
     function custom_selectors_toggle_run(){
         jQuery('.builder-element-icon-toggle').each(function(){
             var selectedOptionVal = jQuery(this).next().next().find('option:selected').attr('value');
@@ -6971,7 +6990,7 @@
             jQuery(this).find('option').attr("selected","selected");
             jQuery(this).trigger("change");
             jQuery(this).append('<option value="0">All</option>');
-           
+
         }else{
             if( jQuery(this).val() != null && jQuery(this).val().indexOf('0') >= 0){
                 jQuery(this).find('option[value="0"]').remove();
@@ -7012,13 +7031,13 @@
     }
     ts_listed_features_style_color();
 
-    //function for display or hidden the categories in builder element featured area       
+    //function for display or hidden the categories in builder element featured area
     function ts_display_categories(){
 
         var costum_post = jQuery('#featured-area-custom-post').val();
-        
+
         jQuery('#featured-area-custom-post').change(function(){
-        
+
             if( jQuery(this).val() == 'video' ){
                 jQuery('.select2-choices li:not(.select2-search-field)').remove();
                 jQuery('.featured-area-posts_video').css('display','none').find('option').removeAttr('selected');
@@ -7077,9 +7096,9 @@
             name_blocks_template = jQuery('#' + element_name + '_items_template').html();
 
             var json_to_array = '';
-            
+
             jQuery(list_items).each(function(index, value){
-    
+
                 li_content = '';
                 var li_appended = false;
 
@@ -7098,14 +7117,14 @@
                         }
 
                         if( i == 'icon' ){
-                            var elemIcon = value[i]; 
+                            var elemIcon = value[i];
                         }
 
                         if( i == 'title' ){
 
                             var title = value[i].replace(/--quote--/g, '"');
                             jQuery('#' + element_name + '_items li:last-child').find('.ts-multiple-item-tab').html('Item: ' + title);
-                           
+
                             if( elemIcon ){
                                 jQuery('#' + element_name + '-' + elemId + '-icon').find('option[value="' + elemIcon + '"]').attr('selected','selected');
                             }
@@ -7146,7 +7165,7 @@
                     if(element_name == 'listed-features'){
                         ts_listed_features_style_color();
                     }
-                    
+
                     ts_contact_form_type_options();
 
                 };
@@ -7171,11 +7190,11 @@
     function ts_list_videos_play_in_modal(){
         var option_modal = jQuery('.list-videos-modal');
         var display_val = jQuery('#list-videos-display-mode').val();
-        
+
         if( display_val === 'mosaic' || display_val === 'timeline' || display_val === 'super-post' || display_val === 'thumbnails' ){
             jQuery(option_modal).css('display', 'none');
         }else{
-           jQuery(option_modal).css('display', ''); 
+           jQuery(option_modal).css('display', '');
         }
         jQuery('#list-videos-display-mode').change(function(){
 
@@ -7185,7 +7204,7 @@
                 jQuery(option_modal).css('display', '');
             }
         });
-      
+
     }
     ts_list_videos_play_in_modal();
 
@@ -7261,7 +7280,7 @@
                 jQuery(this).closest('table').find('.ts-mosaic-post-limit-rows-2').css('display', 'none');
             }
         });
-        
+
         jQuery('.ts-mosaic-layout').each(function(){
             if( jQuery(this).val() == 'rectangles' ){
 
@@ -7292,7 +7311,7 @@
                 jQuery(this).closest('table').find('.ts-mosaic-post-limit-rows-2').css('display', 'none');
             }
         });
-        
+
     }
     ts_mosaic_post_limit();
 
@@ -7331,14 +7350,14 @@
 
                 jQuery('.video-carousel-video').css('display', '');
             }
-            
+
             jQuery('.video-carousel-nr-of-posts').css('display', '');
 
             jQuery(".ts-video-carousel-custom").css("display", "none");
         }
 
     });
-    
+
     jQuery('#video-carousel-source').trigger('change');
 
 </script>

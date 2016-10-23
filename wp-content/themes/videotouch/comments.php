@@ -2,7 +2,7 @@
 	<?php if (ts_comment_system() === 'facebook' && comments_open(get_the_ID())): ?>
 		<h3 class="comments-title"><?php _e('Recent comments', 'touchsize'); ?></h3>
 		<div class="fb-comments" data-href="<?php echo get_permalink( get_the_ID() ); ?>" data-numposts="5"></div>
-	<?php else: ?>	
+	<?php else: ?>
 
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'touchsize' ); ?></p>

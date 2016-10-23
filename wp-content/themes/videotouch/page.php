@@ -15,7 +15,20 @@ if( isset($breadcrumbs['breadcrumbs']) && $breadcrumbs['breadcrumbs'] === 0 ) :
 <?php
 if ( have_posts() ) :
 	if ( LayoutCompilator::builder_is_enabled() ):
-		LayoutCompilator::run();
+
+		// Simple WP Membership plugin integration
+		if( !function_exists( 'is_plugin_active') ) {
+			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+		}
+		if( ( 
+			is_plugin_active( 'simple-membership/simple-wp-membership.php' ) && ( $access_ctrl = SwpmAccessControl::get_instance() ) && $access_ctrl->can_i_read_post( get_the_ID() ) 
+			) || 
+			! is_plugin_active( 'simple-membership/simple-wp-membership.php' ) ) :
+			LayoutCompilator::run();
+		else:
+			?> <center> <?php the_content(); ?> </center> <?php
+		endif;
+
 	else:
 		$page_options = get_option('videotouch_page');
 		

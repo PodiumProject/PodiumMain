@@ -1,5 +1,5 @@
 jQuery(document).ready(function($) {
-	$.getJSON( "http://www.touchsize.com/red-area/lastnews.php", function( data ) {
+	$.getJSON( "https://touchsize.com/red-area/lastnews.php", function( data ) {
 		var items = [];
 		data['action'] = 'save_touchsize_news';
 		data['token'] = RedArea.token;

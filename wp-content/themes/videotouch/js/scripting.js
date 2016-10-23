@@ -46,17 +46,17 @@ function ts_set_like(){
 
         link = jQuery(this);
         if(link.hasClass('active')) return false;
-    
+
         id = jQuery(this).attr('data-id'),
         postfix = link.find('.touchsize-likes-postfix').text();
-        
+
         jQuery.post(VideoTouch.ajaxurl, { action:'touchsize-likes', likes_id:id, postfix:postfix }, function(data){
             link.html(data).addClass('active').attr('title','You already like this');
         });
-    
+
         return false;
     });
-    
+
     if( jQuery('body.touchsize-likes').length ) {
         jQuery('.touchsize-likes').each(function(){
             var id = jQuery(this).attr('id');
@@ -255,7 +255,7 @@ function visibleBeforeAnimation(){
             thisElem.animate({opacity: 1},800);
         }
     });
-    
+
     jQuery('.ts-counters').each(function(index){
         var thisElem = jQuery(this);
         if ( thisElem.isOnScreen() ) {
@@ -282,22 +282,22 @@ function animateArticlesOnLoad(){
 }
 
 jQuery.fn.isOnScreen = function(){
-     
+
     var win = jQuery(window);
-     
+
     var viewport = {
         top : win.scrollTop(),
         left : win.scrollLeft()
     };
     viewport.right = viewport.left + win.width();
     viewport.bottom = viewport.top + win.height();
-     
+
     var bounds = this.offset();
     bounds.right = bounds.left + this.outerWidth();
     bounds.bottom = bounds.top + this.outerHeight();
-     
+
     return (!(viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-     
+
 };
 
 function animateBlocksOnScroll(){
@@ -323,42 +323,42 @@ function animateBlocksOnScroll(){
             }
         });
     });
-    
+
 }
 
 function activateStickyMenu(){
-    var menu = jQuery('#header .ts-header-menu').last(),
-        sticky_height = 0,
+    var menu = jQuery('#header .ts-header-menu').not('.ts-sidebar-menu').last(),
+        // sticky_height = 0,
         offset = 0;
 
     // there are no menu on the page
     if ( menu.length < 1 ) {
-        offset = 100;
-        sticky_height = 80;
+        offset = 200;
+        // sticky_height = 80;
         menu = jQuery('#header');
     }
-    else
-        sticky_height = jQuery('.ts-sticky-menu .sf-menu').height();
+    // else
+    //     sticky_height = jQuery('.ts-sticky-menu ul').height();
 
     if( jQuery(window).scrollTop() > offset && !jQuery('.ts-sticky-menu').hasClass('active') ){
-        jQuery('.ts-sticky-menu').outerHeight(sticky_height);
+        // jQuery('.ts-sticky-menu').outerHeight(sticky_height);
         jQuery('.ts-sticky-menu').addClass('active');
     }
-    
+
     jQuery(window).on('scroll',function(){
-        
+
         // check if the offset of the menu has changed
         if(menu.length > 0 && offset !== menu.offset().top )
             offset = menu.offset().top;
 
         if( jQuery(window).scrollTop() > offset && !jQuery('.ts-sticky-menu').hasClass('active') ){
-            jQuery('.ts-sticky-menu').outerHeight(sticky_height);
+            // jQuery('.ts-sticky-menu').outerHeight(sticky_height);
             jQuery('.ts-sticky-menu').addClass('active');
         }
 
-        if( jQuery(window).scrollTop() < offset && jQuery('.ts-sticky-menu').hasClass('active') ) {
+        if( jQuery(window).scrollTop() <= offset && jQuery('.ts-sticky-menu').hasClass('active') ) {
             jQuery('.ts-sticky-menu').removeClass('active');
-            jQuery('.ts-sticky-menu').outerHeight(0);
+            // jQuery('.ts-sticky-menu').outerHeight(0);
         }
     });
 }
@@ -377,11 +377,11 @@ function startOnePageNav(){
 function filterButtonsRegister(){
     // Adds active class to "all" button
     jQuery('.ts-filters > li:first').find('a').addClass('active');
-    
+
     // Code to change the .active class on click
     jQuery('.ts-filters > li a').click(function(e){
         e.preventDefault();
-        
+
         var thisElem = jQuery(this);
         jQuery('.ts-filters > li').find('.active').removeClass('active');
         thisElem.addClass('active');
@@ -408,7 +408,7 @@ function resizeVideo(iframe_width, iframe_height){
             if ( iframe_height > iframe_width){
                 iframe_proportion = jQuery(this).attr('width')/jQuery(this).attr('height');
             }
-            
+
             var iframe_parent_width = jQuery(this).parents('.embedded_videos').parent().width();
             jQuery(this).attr('width',iframe_parent_width);
             jQuery(this).attr('height',iframe_parent_width/iframe_proportion);
@@ -419,7 +419,7 @@ function resizeVideo(iframe_width, iframe_height){
             var iframe_width = jQuery(this).width();
             var iframe_height = iframe_width/1.777;
             var iframe_proportion = iframe_width/iframe_height;
-            
+
             var iframe_parent_width = jQuery(this).parents('.embedded_videos').parent().width();
             console.log(iframe_parent_width);
             jQuery(iframe).css('width',iframe_parent_width);
@@ -438,7 +438,7 @@ function resizeVideo(iframe_width, iframe_height){
 function twitterWidgetAnimated(){
     /*Tweets widget*/
     var delay = 4000; //millisecond delay between cycles
-    
+
     function cycleThru(variable, j){
         var jmax = jQuery(variable + " li").length;
         jQuery(variable + " li:eq(" + j + ")")
@@ -477,7 +477,7 @@ function addLogoToMenu(logoContent){
 jQuery(document).on('click', '#ts-mobile-menu .trigger', function(event){
     event.preventDefault();
     jQuery(this).parent().next().slideToggle();
-}); 
+});
 
 jQuery(document).on('click', '#ts-mobile-menu .menu-item-has-children > a', function(event){
     event.preventDefault();
@@ -532,7 +532,7 @@ function alignElementVerticalyCenter(){
             jQuery(this).css({'padding-top':insertPadding,'padding-bottom':insertPadding});
         });
     }
-        
+
 }
 
 function alignMegaMenu(){
@@ -576,7 +576,7 @@ function startCounters(){
         onStep: function(from, to, percent) {
             jQuery(this.el).find('.percent').text(Math.round(percent)).css({
                 "line-height": $cnvSize+'px',
-                width: $cnvSize 
+                width: $cnvSize
             })
         }
     })
@@ -599,7 +599,7 @@ function showMosaic(){
                     var thisElem = jQuery(this);
                     var parentOffset = thisElem.parent().parent().parent().parent().offset().left;
                     var parentWidth = thisElem.parent().parent().parent().parent().outerWidth();
-                    
+
                     if( !thisElem.hasClass('shown') && thisElem.offset().left < parentOffset+parentWidth ){
                         thisElem.delay(index*2).animate({opacity:1},1000).addClass('shown');
                     }
@@ -639,7 +639,7 @@ function autoPlayVideo(){
     if( typeof(option) == 'undefined' ){
         return;
     }
-   
+
     if( option.iframe.attr('src').indexOf('?autoplay=1') > 0 ) return;
 
     if( typeof(option) !== 'undefined' ){
@@ -656,7 +656,7 @@ function autoPlayVideo(){
         }else{
             // alert('No valid video url!');
         };
-        
+
         jQuery('#post-video .video-container').css("display","block");
         jQuery('.overimg').css("display","none");
         option.iframe.css('display','block').attr("src",option.videourl+'?autoplay=1');
@@ -716,7 +716,7 @@ function getVideoThumb(){
 
                 jQuery('.over-image').append('<img src="'+videoThumbURL+'" />');
             })
-        }  
+        }
     }
 }
 
@@ -734,7 +734,7 @@ function videoPostShow(){
 
         // Hide the details button if content is smaller
 
-        
+
 
         // If show less
         if ( jQuery(element).hasClass('opened') ){
@@ -798,9 +798,9 @@ function singleVideoResize(){
                 jQuery(element).find('i:first-child').removeClass('icon-left').addClass('icon-right');
                 jQuery(element).find('i:last-child').removeClass('icon-right').addClass('icon-left');
             }
-        
+
             var iframe_parent_width = jQuery(iframe).parents('.embedded_videos').parent().width();
-            
+
             if( VideoTouch.jwplayer == 'y' ){
                 jQuery('#videoframe_wrapper').removeAttr('style');
                 jwplayer().resize(iframe_parent_width, iframe_parent_width/iframe_proportion);
@@ -832,7 +832,7 @@ function ts_get_video_modal_ajax(){
         };
 
         jQuery.post(VideoTouch.ajaxurl, data, function(response){
-         
+
             var iframe_video = jQuery("[data-video-id='" + post_id + "']").html();
             var url_to_post = jQuery("a[data-id='" + post_id + "']").attr('data-href');
 
@@ -844,8 +844,8 @@ function ts_get_video_modal_ajax(){
                 jQuery('#modal_video').find('.ts-add-link').attr('href', url_to_post);
                 jQuery('#modal_video .modal-body').append(response);
             }
-            
-            jQuery('#modal_video').modal('show');            
+
+            jQuery('#modal_video').modal('show');
             ts_set_like();
             jQuery('#modal_video').on('hidden.bs.modal', function () {
                 jQuery('#modal_video .modal-body').html('');
@@ -881,41 +881,41 @@ function ts_get_video_modal_ajax(){
         $(window).load(function(){
             if ( $nav_arrows !== null){
                 $nav_arrows.css({ 'height': $slide.find('.thumb').height() });
-            } 
+            }
         });
 
-        $(window).resize(function(){               
+        $(window).resize(function(){
             // delay the calculation of the viewport on resize
             if ( ts_delay !== null ){
                 clearTimeout(ts_delay);
             }
-            
+
             ts_delay = setTimeout(function(){
-                viewport = $(window).width();                    
+                viewport = $(window).width();
                 if ( $nav_arrows !== null){
                     $nav_arrows.css({ 'height': $slide.find('.thumb').height() });
-                } 
-                ts_setWidths();                
+                }
+                ts_setWidths();
             }, 400);
         });
 
         // create navigations
         (function ts_createElements(){
             var navigations =  '<div class="nav-arrow prev"><span class="nav-icon icon-left"></span></div>\
-                                <div class="nav-arrow next"><span class="nav-icon icon-right"></span></div>';            
+                                <div class="nav-arrow next"><span class="nav-icon icon-right"></span></div>';
             $slides.after(navigations);
         })();
 
         // set initial states for slider elements
         (function ts_video_slider_init(){
             $slides.width( slide_width * $slide.size() );
-            $slide.eq(0).addClass('current-active');            
+            $slide.eq(0).addClass('current-active');
             $nav_arrows = $context.find('.nav-arrow');
-            $nav_arrows.eq(0).addClass('fade-me');              
+            $nav_arrows.eq(0).addClass('fade-me');
             ts_setWidths();
         })();
 
-        function ts_setWidths(){                
+        function ts_setWidths(){
             if ( viewport < slide_width ) {
                 $slide.width( viewport );
                 slide_width = viewport;
@@ -923,13 +923,13 @@ function ts_get_video_modal_ajax(){
                 $slide.css( {
                     'left': slide_width * current * -1
                 });
-            } else {                    
+            } else {
                 $slide.removeAttr('style');
                 slide_width = $slide.width();
-                
+
                 $slide.css( {
                     'left': slide_width * current * -1
-                });    
+                });
             }
 
             if ( viewport < $context.parent('.ts-video-slider-wrap').width() ) {
@@ -941,13 +941,13 @@ function ts_get_video_modal_ajax(){
 
         $slide.on( 'click', function(){
             if ( $(this).index() < current ){
-                $slide.eq(current).removeClass('current-active'); 
-                prevSlide = current;                    
+                $slide.eq(current).removeClass('current-active');
+                prevSlide = current;
                 current--;
 
             } else if( $(this).index() > current) {
-                $slide.eq(current).removeClass('current-active');       
-                prevSlide = current;                                                    
+                $slide.eq(current).removeClass('current-active');
+                prevSlide = current;
                 current++;
             }
             ts_changeSlide()
@@ -956,8 +956,8 @@ function ts_get_video_modal_ajax(){
         $nav_arrows.on('click', function(){
             if ( $(this).hasClass('next') ) {
                 if ( current !== $slide.size() - 1) {
-                    $slide.eq(current).removeClass('current-active');     
-                    prevSlide = current;                    
+                    $slide.eq(current).removeClass('current-active');
+                    prevSlide = current;
 
                     current++;
                     $nav_arrows.eq(0).removeClass('fade-me');
@@ -967,10 +967,10 @@ function ts_get_video_modal_ajax(){
                     $nav_arrows.eq(0).removeClass('fade-me');
                 }
             }
-            else if( $(this).hasClass('prev') ){                
-                if ( parseFloat($slide.eq(0).css('left').replace( 'px', '')) < 0 && current > 0 ) { 
-                    $slide.eq(current).removeClass('current-active');     
-                    prevSlide = current;  
+            else if( $(this).hasClass('prev') ){
+                if ( parseFloat($slide.eq(0).css('left').replace( 'px', '')) < 0 && current > 0 ) {
+                    $slide.eq(current).removeClass('current-active');
+                    prevSlide = current;
                     current--;
                     ts_changeSlide();
                 }
@@ -1003,7 +1003,7 @@ function ts_get_video_modal_ajax(){
             else if( current === $slide.size() - 1){
                 $nav_arrows.eq(1).addClass('fade-me');
             }
-        }        
+        }
     }
 })(jQuery);
 
@@ -1017,6 +1017,27 @@ jQuery(document).ready(function($){
     }
 
     ts_set_like();
+
+    jQuery("a[data-rel^='prettyPhoto']").click(function(e){
+        e.preventDefault();        
+    });
+    if( jQuery("a[data-rel^='prettyPhoto']").length ) {
+        jQuery("a[data-rel^='prettyPhoto']").prettyPhoto();
+    }
+
+    jQuery(document).on('click', '.ts-item-tab', function (e) {
+        e.preventDefault();
+
+        var id = jQuery(this).find('a').attr('href'),
+            parent = jQuery(this).closest('.ts-tab-container');
+
+        parent.find('.active').removeClass('active');
+
+        jQuery(this).addClass('active');
+
+        jQuery(id).addClass('active');
+
+    });
 
     /* Widget Tabs */
 
@@ -1083,21 +1104,162 @@ jQuery(document).ready(function($){
         event.preventDefault();
         setTimeout(function(){
             autoPlayVideo();
-        },500)
+        },500);
     });
 
-    $('#ts-show-login-modal').click(function(e){
+    $('.ts-show-login-modal').click(function(e){
         e.preventDefault();
-       $('#ts-login-modal').modal('show');
-        if( $('.ts-user-login-modal .modal-body .ts-login').hasClass('slideX') ){
-            $('.ts-show-login-modal').trigger('click');
+
+        $(this).closest('.ts-user-header-profile').find('.ts-user-login-modal').modal('show');
+
+        if ( $(this).closest('.ts-user-header-profile').find('.ts-user-login-modal .modal-body .ts-login').hasClass('slideX') ) {
+
+            $('.ts-show-login-modal-slide').trigger('click');
         }
     });
-    $('#ts-show-register-modal').click(function(e){
+
+    $('.ts-show-register-modal').click(function(e){
         e.preventDefault();
-        $('#ts-login-modal').modal('show');
-        if( !$('.ts-user-login-modal .modal-body .ts-login').hasClass('slideX') ){
-            $('.ts-show-register-modal').trigger('click');
+
+        $(this).closest('.ts-user-header-profile').find('.ts-user-login-modal').modal('show');
+
+        if ( ! $(this).closest('.ts-user-header-profile').find('.ts-user-login-modal .modal-body .ts-login').hasClass('slideX') ) {
+
+            $('.ts-show-register-modal-slide').trigger('click');
+        }
+    });
+
+    $('.ts-show-register-modal-slide, .ts-show-login-modal-slide').click(function(e){
+        e.preventDefault();
+
+        var data = {},
+            container = $(this).closest('.ts-user-header-profile');
+
+        container.find('.ts-user-login-modal .modal-body .ts-login').toggleClass('slideX');
+
+        if ( container.find('.ts-user-login-modal .modal-body .ts-login').hasClass('slideX') ) {
+
+            $('.ts-user-login-modal .preloader').fadeIn();
+
+            $(this).addClass('hidden').next().removeClass('hidden');
+
+            data = {
+                action: 'ts_get_register_form',
+                nonce: VideoTouch.video_nonce
+            };
+
+            $.post( VideoTouch.ajaxurl, data, function(response) {
+
+                $('.ts-user-login-modal .preloader').fadeOut();
+                container.find('.ts-user-login-modal .modal-body .ts-form-register').append(response).find('.indicator').hide();
+
+                container.find('.ts-user-login-modal').find('form > .ts-form-group').each(function(){
+
+                    var inputResult = $(this).children('label').html();
+                    $(this).children('input').attr('placeholder',inputResult);
+                })
+
+                container.find('.ts-user-login-modal').find('.login-submit input[type="submit"]').addClass('btn medium active');
+
+            });
+
+        } else {
+
+            $(this).addClass('hidden').prev().removeClass('hidden');
+            container.find('.ts-user-login-modal .modal-body .ts-form-register').empty();
+        }
+    });
+
+    $(document).on( 'click', '.ts-btn-new-user', function( event ) {
+
+        if ( event.preventDefault ) {
+
+            event.preventDefault();
+
+        } else {
+
+            event.returnValue = false;
+        }
+
+        var such = $(this);
+
+        $('.ts-error-message').css('display', 'none');
+
+        $('.ts-result-message').hide();
+
+        var nonce        = such.closest('.ts-form-horizontal').find('.ts-nonce').val();
+        var user         = such.closest('.ts-form-horizontal').find('.ts-username').val();
+        var pass         = such.closest('.ts-form-horizontal').find('.ts-pass').val();
+        var mail         = such.closest('.ts-form-horizontal').find('.ts-email').val();
+        var name         = such.closest('.ts-form-horizontal').find('.ts-name').val();
+        var nick         = such.closest('.ts-form-horizontal').find('.ts-nick').val();
+        var url          = such.closest('.ts-form-horizontal').find('.ts-url').val();
+        var description  = such.closest('.ts-form-horizontal').find('.ts-description').val();
+        var img          = such.closest('.ts-form-horizontal').find('.ts-img-file').val();
+        var data         = {};
+        var emailRegEx   = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        var errors       = 0;
+
+        String.prototype.trim = function() {
+
+            return this.replace(/^\s+|\s+$/g,"");
+        };
+
+        if ( !emailRegEx.test(mail) )errors = errors + 1;
+
+        if ( pass.trim() == '' || pass.length < 5 ) errors = errors + 1;
+
+        if ( user.trim() == '' || user.length < 5 ) errors = errors + 1;
+
+        if ( name.trim() == '' ) errors = errors + 1;
+
+        if ( nick.trim() == '' ) errors = errors + 1;
+
+        if( errors == 0 ){
+
+            $('.indicator').show();
+
+            data = {
+                action      : 'ts_register_user',
+                nonce       : nonce,
+                user        : user,
+                pass        : pass,
+                mail        : mail,
+                name        : name,
+                nick        : nick,
+                url         : url,
+                description : description,
+            };
+
+            $.post(VideoTouch.ajaxurl, data, function(response) {
+
+                if( response ) {
+
+                    $('.indicator').hide();
+                    $('.ts-error-message').css('display', 'none');
+
+                    if( response === '1' ) {
+
+                        $('#ts-success').css('display', '');
+
+                        setTimeout(function() {
+
+                            location.reload();
+
+                        }, 1500);
+
+                    } else {
+
+                        $('.ts-result-message').html( response );
+                        $('.ts-result-message').addClass('ts-alert-danger');
+                        $('.ts-result-message').show();
+                    }
+                }
+            });
+
+        } else {
+
+            such.closest('.ts-form-register').find('.ts-error-message').css('display', '');
         }
     });
 
@@ -1113,37 +1275,6 @@ jQuery(document).ready(function($){
             $('.ts-category-post').hide();
             $('.ts-category-video').show();
             $('#ts-upload-video').show();
-        }
-    })
-
-    $('.ts-show-register-modal, .ts-show-login-modal').click(function(e){
-        e.preventDefault();
-        $('.ts-user-login-modal .modal-body .ts-login').toggleClass('slideX');
-        var data = {};
-        if( $('.ts-user-login-modal .modal-body .ts-login').hasClass('slideX') ){
-            $('.ts-user-login-modal .preloader').fadeIn();
-            $(this).addClass('hidden').next().removeClass('hidden');
-            data = {
-                action: 'ts_get_register_form',
-                nonce: VideoTouch.video_nonce
-            };
-            $.post( VideoTouch.ajaxurl, data, function(response) {
-                if( response ) {
-                    $('.ts-user-login-modal .preloader').fadeOut();
-                    $('.ts-user-login-modal .modal-body .ts-form-register').append(response).find('.indicator').hide();
-                    ts_ajax_request_new_user();
-
-                    $('.ts-user-login-modal').find('form > .ts-form-group').each(function(){
-                        var inputResult = $(this).children('label').html();
-                        $(this).children('input').attr('placeholder',inputResult);
-                    })
-                    $('.ts-user-login-modal').find('.login-submit input[type="submit"]').attr('class','btn medium active');
-                }
-
-            });
-        }else{
-            $(this).addClass('hidden').prev().removeClass('hidden');
-            $('.ts-user-login-modal .modal-body .ts-form-register').empty()
         }
     });
 
@@ -1224,7 +1355,7 @@ jQuery(document).ready(function($){
         var timePreroll = jQuery(this).closest('.ts-preroll').attr('data-time');
         var prerollId = jQuery(this).closest('.ts-preroll').attr('data-id');
         jQuery('.mejs-overlay.mejs-layer.mejs-overlay-play').remove();
-        
+
         jQuery.post(VideoTouch.ajaxurl, {
                 action     : 'tsSetViewClickPreroll',
                 ts_security: VideoTouch.video_nonce,
@@ -1251,7 +1382,7 @@ jQuery(document).ready(function($){
             }
         }, timePreroll * 1000);
 
-        var myCounter = new Countdown({  
+        var myCounter = new Countdown({
             seconds: timePreroll-1,  // number of seconds to count down
             onUpdateStatus: function(sec){
                 jQuery('#pre-roll-counter span').text(sec);
@@ -1266,90 +1397,8 @@ jQuery(document).ready(function($){
 
     });
 
-    function ts_ajax_request_new_user(){
-        var client = new XMLHttpRequest();
-
-        $('#ts-btn-new-user').click( function(event) {
-                
-            if (event.preventDefault) {
-                event.preventDefault();
-            } else {
-                event.returnValue = false;
-            }
-         
-            jQuery('.ts-error-message').css('display', 'none');
-            $('.ts-result-message').hide();
-         
-            var nonce        = $('#ts_new_user_nonce').val();
-            var user         = $('#ts-username').val();
-            var pass         = $('#ts-pass').val();
-            var mail         = $('#ts-email').val();
-            var name         = $('#ts-name').val();
-            var nick         = $('#ts-nick').val();
-            var url          = $('#ts-url').val();
-            var description  = $('#ts-description').val();
-            var img          = $('#ts-img-file').val();
-            var data         = {};
-            var emailRegEx   = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            var errors       = 0;
-            
-            String.prototype.trim = function() {
-                return this.replace(/^\s+|\s+$/g,"");
-            };
-
-            if ( !emailRegEx.test(mail) )errors = errors + 1;
-
-            if ( pass.trim() == '' || pass.length < 5 ) errors = errors + 1;
-                
-            if ( user.trim() == '' || user.length < 5 ) errors = errors + 1;
-            
-            if ( name.trim() == '' ) errors = errors + 1;
-
-            if ( nick.trim() == '' ) errors = errors + 1;
-            
-            if( errors == 0 ){
-                $('.indicator').show();
-
-                data = {
-                    action      : 'ts_register_user',
-                    nonce       : nonce,
-                    user        : user,
-                    pass        : pass,
-                    mail        : mail,
-                    name        : name,
-                    nick        : nick,
-                    url         : url,
-                    description : description,
-                };
-
-                $.post(VideoTouch.ajaxurl, data, function(response) {
-             
-                    if( response ) {
-             
-                        $('.indicator').hide();
-                 
-                        if( response === '1' ) {
-                            jQuery('.ts-error-message').css('display', 'none');
-                            $('#ts-success').css('display', '');
-                            setTimeout(function(){
-                                location.reload();
-                            }, 1500);
-                        } else {
-                            jQuery('.ts-error-message').css('display', 'none');
-                            $('.ts-result-message').html( response );
-                            $('.ts-result-message').addClass('ts-alert-danger');
-                            $('.ts-result-message').show();
-                        }
-                    }
-                });
-            }else{
-                jQuery('.ts-error-message').css('display', '');
-            } 
-        });
-    }
-
     if( jQuery('#ts-pass-confirme').length > 0 ){
-        
+
         jQuery('#ts-pass-confirme').keyup(function(){
             if( jQuery('#ts-pass').val() !== jQuery(this).val() ){
                 jQuery('#ts-notconfirm').removeClass('hidden');
@@ -1409,6 +1458,7 @@ jQuery(document).ready(function($){
         var inputResult = $(this).children('label').html();
         $(this).children('input').attr('placeholder',inputResult);
     })
+
     $('.ts-user-login-modal').find('.login-submit input[type="submit"]').attr('class','btn medium active');
 
     $('a[data-toggle="tab"]').on('shown.bs.tab', function(e){
@@ -1430,12 +1480,12 @@ jQuery(document).ready(function($){
 
             // Show preloader
             $('#ts-loading-preload').show();
-            
+
             jQuery.post(VideoTouch.ajaxurl, {
                     action         : 'ts_pagination',
                     args           : args,
                     paginationNonce: paginationNonce,
-                    loop           : loop 
+                    loop           : loop
                 },  function(data){
                         if( data !== '0' ){
                             if( $container.hasClass('ts-filters-container') ){
@@ -1483,7 +1533,7 @@ jQuery(document).ready(function($){
 
         $(document).on('click', '.contact-form-submit', function(event) {
             event.preventDefault();
-            
+
             var form         = $(this).closest('form'),
                 name         = form.find('.contact-form-name'),
                 email        = form.find('.contact-form-email'),
@@ -1540,7 +1590,7 @@ jQuery(document).ready(function($){
                 message.addClass('invalid');
                 errors = errors + 1;
             }
-            
+
             if ( errors === 0 ) {
 
                 data['action']  = 'videotouch_contact_me';
@@ -1588,7 +1638,7 @@ jQuery(document).ready(function($){
 
 });
 
-   
+
 jQuery(window).load(function() {
 
     echo.init({
@@ -1605,7 +1655,13 @@ jQuery(window).load(function() {
             }
         }
     });
-
+    if (  jQuery('.mosaic-view[data-scroll="true"]').length > 0 ) {
+        jQuery('.mosaic-view[data-scroll="true"]').each(function(){
+            jQuery(this).css({"max-height":"9999px"});
+            jQuery(this).mCustomScrollbar("update");
+            // mscr
+        });
+    }
     initCarousel();
     animateArticlesOnLoad();
     animateBlocksOnScroll();
@@ -1642,7 +1698,7 @@ jQuery(window).load(function() {
             prevText: "",
             nextText: "",
             smoothHeight: true
-            
+
         });
     });
 
@@ -1678,14 +1734,15 @@ jQuery(window).load(function() {
 jQuery(document).on('click', '#ts_videotouch_form_submit', function(e){
     e.preventDefault();
 
-    var username = jQuery('#ts_videotouch_username_id').val(),
-        password = jQuery('#ts_videotouch_username_pass').val(),
-        remember = jQuery('#ts_videotouch_username_remember:checked').val(),
+    var wrapp = jQuery(this).closest('.ts-form-login'),
+        username = wrapp.find('[name="log"]').val(),
+        password = wrapp.find('[name="pwd"]').val(),
+        remember = jQuery('.login-remember input:checked').val(),
         such = jQuery(this);
 
     jQuery.post(
-        VideoTouch.ajaxurl, 
-        { 
+        VideoTouch.ajaxurl,
+        {
             action:'ts_login', username: username, password: password, nonce: VideoTouch.video_nonce, remember : remember
         },
         function(data){
@@ -1699,5 +1756,5 @@ jQuery(document).on('click', '#ts_videotouch_form_submit', function(e){
                 }
             }
         }
-    );    
+    );
 });

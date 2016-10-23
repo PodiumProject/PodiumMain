@@ -210,7 +210,8 @@ function ts_button_shortcode($atts) {
         'text'         => ''
     ), $atts) );
     
-    $ts_button_options = array('button-icon' => $icon, 'size' => $size, 'mode-display' => $mode_display, 'text-color' => $text_color, 'bg-color' => $bg_color, 'url' => $url, 'button-align' =>'', 'border-color' => $border_color, 'text' => $text, 'target' => $target);
+    $ts_button_options = array('button-icon' => $icon, 'size' => $size, 'mode-display' => $mode_display, 'text-color' => $text_color, 'bg-color' => $bg_color, 'url' => $url, 'button-align' =>'', 'border-color' => $border_color, 'text' => $text, 'target' => $target, 'short' => true);
+    
     return LayoutCompilator::buttons_element($ts_button_options);
 }
 add_shortcode( 'button', 'ts_button_shortcode' );
@@ -547,10 +548,16 @@ die();
 }//end function tab_callback
 add_action('wp_ajax_tab', 'tab_callback');
 
-function ts_tabs_shortcode($atts, $option_text = null){
-    $ts_tab_options = '[' . str_replace('}{', '},{', do_shortcode( $option_text )) . ']';
-    $masiv['tab'] = $ts_tab_options;
-    return LayoutCompilator::tab_element($masiv);
+function ts_tabs_shortcode( $atts, $option_text = null )
+{
+    $ts_tab_options = '[' . str_replace( '}{', '},{', do_shortcode( $option_text ) ) . ']';
+
+    $options['tab'] = $ts_tab_options;
+    $options['short'] = true;
+    
+    $content = LayoutCompilator::tab_element( $options );
+    
+    return $content;
 }
 add_shortcode( 'ts_tabs', 'ts_tabs_shortcode' );
 
@@ -559,8 +566,8 @@ function ts_tab_shortcode($atts, $content = null){
         'id'     => '',
         'title'  => ''
     ), $atts));
-
-    $json_encode = '{"id":"'. $id . '","title":"' . str_replace('"', '--quote--', $title) . '","text":"' . str_replace('"', '--quote--', $content). '"}';
+   
+    $json_encode = '{"id":"'. $id . '","title":"' . str_replace( '"', '--quote--', $title ) . '","text":"' . str_replace( '"', '--quote--', $content ) . '"}';
 
     return $json_encode;
 }

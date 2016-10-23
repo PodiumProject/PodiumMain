@@ -50,13 +50,14 @@ while ( $posts_query->have_posts() ) { $posts_query->the_post();
 	$store_image_thumbnail[$post_number]['image'] = $featimage_thumbnail;
 	$store_image_thumbnail[$post_number]['date'] = $article_date;
 	$store_image_thumbnail[$post_number]['title'] = esc_attr($post->post_title);
+	$store_image_thumbnail[$post_number]['img-url'] = $src;
 	$the_permalink[$post_number] = get_permalink();
 	$single_id[$post_number] = substr(str_shuffle("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"), 0, 10);
 	$store_post_type[$post_number] = $post->post_type;
 	$post_number++;
 }
 
-if( $custom_post == 'post' ){	
+if( $custom_post == 'post' ){
 ?>
 	<div class="col-lg-12 ts-tab-subnav">
 		<div class="tab-content">
@@ -81,6 +82,7 @@ if( $custom_post == 'post' ){
 					<?php echo $url_img_thumbnail['image']; ?>
 					<?php
 						if ( ts_overlay_effect_is_enabled() ) {
+
 							echo '<div class="' . ts_overlay_effect_type() . '"></div>';
 						}
 					?>
@@ -93,8 +95,8 @@ if( $custom_post == 'post' ){
 		<?php endforeach; ?>
 		</ul>
 	</div>
-	
-<?php }else if( $custom_post == 'video' ){ ?>
+
+<?php } elseif ( $custom_post == 'video' ) { ?>
 
 	<div class="col-lg-12 ts-tab-subnav">
 		<div class="tab-content">
@@ -103,25 +105,28 @@ if( $custom_post == 'post' ){
 					<?php $url_video = (isset($video['extern_url']) && !empty( $video['extern_url'])) ? esc_url($video['extern_url']) : NULL; ?>
 					<?php if( isset($url_video) ) : ?>
 						<div class="tab-pane <?php if( $key == 0 ) echo 'active'; ?>" id="<?php echo $single_id[$key]; ?>">
-							<?php echo apply_filters('the_content',$url_video); ?>
+							<?php echo apply_filters('the_content', $url_video); ?>
 						</div>
 					<?php endif; ?>
-					<?php $your_url = (isset($video['your_url']) && !empty( $video['your_url'])) ? esc_url($video['your_url']) : NULL; ?>
+					<?php $your_url = (isset($video['your_url']) && !empty( $video['your_url'] )) ? esc_url($video['your_url']) : NULL; ?>
 					<?php if( isset($your_url) ) : ?>
 						<div class="tab-pane <?php if( $key == 0 ) echo 'active'; ?>" id="<?php echo $single_id[$key]; ?>">
 							<div class="embedded_videos">
-							<?php
-							$atts = array(
-								'src'      => $your_url,
-								'poster'   => '',
-								'loop'     => '',
-								'autoplay' => '',
-								'preload'  => 'metadata',
-								'height'   => 640,
-								'width'    => 1380,
-							);
-							 echo wp_video_shortcode($atts); ?>
-							 </div>
+								<?php
+
+									$atts = array(
+										'src'      => $your_url,
+										'poster'   => $store_image_thumbnail[$key]['img-url'],
+										'loop'     => '',
+										'autoplay' => '',
+										'preload'  => 'metadata',
+										'height'   => 640,
+										'width'    => 1380,
+									);
+
+									echo wp_video_shortcode($atts);
+								?>
+							</div>
 						</div>
 					<?php endif; ?>
 					<?php if( isset($video['embed']) && !empty($video['embed']) ) : ?>

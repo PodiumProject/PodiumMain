@@ -4,7 +4,7 @@ function videotouch_admin_enqueue_scripts($hook) {
 	if ( 'upload.php' === $hook ) {
 	        return;
 	}
-	
+
 	global $wp_scripts;
 
 	$page_get = '';
@@ -33,7 +33,7 @@ function videotouch_admin_enqueue_scripts($hook) {
 			VIDEOTOUCH_VERSION,
 			true
 		);
-			
+
 		$data = array('token' => wp_create_nonce("save_touchsize_news"));
 		wp_localize_script( 'red-area', 'RedArea', $data );
 	}
@@ -57,15 +57,15 @@ function videotouch_admin_enqueue_scripts($hook) {
 		wp_enqueue_media();
 	//}
 
-	
+
 	if (@$page_get == 'videotouch' || @$page_get == 'templates') {
-	
+
 		// color picker
 		wp_enqueue_style( 'farbtastic' );
 	}
-	
+
 	if ( @$page_get === 'videotouch' && ( @$page_tab === 'typography' || @$page_tab === 'styles' ) ) {
-		
+
 		wp_enqueue_script(
 			'videotouch-google-fonts',
 			get_template_directory_uri() . '/admin/js/google-fonts.js',
@@ -105,14 +105,14 @@ function videotouch_admin_enqueue_scripts($hook) {
 		VIDEOTOUCH_VERSION,
 		false
 	);
-	
+
 	wp_enqueue_style(
 		'select2-css',
 		get_template_directory_uri() . '/admin/css/select2.css',
 		array(),
 		VIDEOTOUCH_VERSION
 	);
-	
+
 	wp_enqueue_script(
 		'bootstrap-admin-js',
 		get_template_directory_uri() . '/js/bootstrap.js',
@@ -135,7 +135,7 @@ function videotouch_admin_enqueue_scripts($hook) {
 		array(),
 		VIDEOTOUCH_VERSION
 	);
-	
+
 	// Theme settings
 	wp_enqueue_style(
 		'videotouch-admin-css',
@@ -222,7 +222,18 @@ function videotouch_enqueue_scripts()
 		VIDEOTOUCH_VERSION,
 		true
 	);
-	
+
+	if ( is_page_template( 'add-post.php' ) ) {
+
+		wp_enqueue_script(
+			'bootstrap',
+			get_template_directory_uri() . '/js/bootstrap.js',
+			false,
+			VIDEOTOUCH_VERSION,
+			true
+		);
+	}
+
 	wp_enqueue_script(
 		'echo',
 		get_template_directory_uri() . '/js/echo.js',
@@ -376,7 +387,6 @@ function tsIncludeScripts($tsScripts = array()){
 
 	foreach($tsScripts as $style => $registerScript){
 
-		if( $registerScript == 'tab' ) $registerScript = 'bootstrap';
 		if( $registerScript == 'image-carousel' ) $registerScript = 'sly';
 		if( $registerScript == 'accordion' ) $registerScript = 'bootstrap';
 		if( $registerScript == 'featured-area' ) $registerScript = 'mCustomScrollbar';

@@ -1,16 +1,12 @@
-<?php
-	$footer_elements = get_option('videotouch_footer', array());
-	$footer = layoutCompilator::build_footer($footer_elements);
-?>
 
 		<footer class="" role="contentinfo" data-role="footer" data-fullscreen="true">
-			<?php echo $footer; ?>
+			<?php echo LayoutCompilator::build_footer(); ?>
 		</footer>
 	</div>
 <?php 	$videotouch_general = get_option('videotouch_general');
 		if( isset($videotouch_general['enable_facebook_box']) && $videotouch_general['enable_facebook_box'] == 'Y' ){
 			tsIncludeScripts(array('bootstrap'));
-?>		
+?>
 			<div class="ts-fb-modal modal fade" id="fbpageModal" tabindex="-1" role="dialog" aria-labelledby="fbpageModalLabel" aria-hidden="true">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -43,7 +39,7 @@
 						js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
 						fjs.parentNode.insertBefore(js, fjs);
 					}(document, 'script', 'facebook-jssdk'));
-			
+
 				});
 				jQuery(window).load(function() {
     				fb_likeus_modal(5);

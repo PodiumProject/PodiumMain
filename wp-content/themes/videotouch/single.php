@@ -18,7 +18,9 @@
 global $wp_query;
 tsIncludeScripts(array('prettyphoto'));
 if ( have_posts() ) :
+	
 	while ( have_posts() ) : the_post();
+
 	if (LayoutCompilator::sidebar_exists()) {
 		
 		$options = LayoutCompilator::get_sidebar_options();
@@ -187,9 +189,10 @@ if ( have_posts() ) :
 										<?php endif; ?>
 									<?php endif; ?>
 									<div class="<?php echo $tags_columns; ?>">
+										<?php if( ts_single_social_sharing() && !fields::logic($post->ID, 'post_settings', 'hide_social_sharing')): ?>
 										<h6 class="post-details-title"><?php _e('Share','touchsize'); ?></h6>
-										<?php if(ts_single_social_sharing()):
-											get_template_part('social-sharing');
+											
+										<?php	get_template_part('social-sharing');
 										endif; ?>
 									</div>
 								</div>

@@ -1,0 +1,5827 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: videopro-\n"
+"POT-Creation-Date: 2016-10-05 09:53+0700\n"
+"PO-Revision-Date: 2016-09-22 11:19+0700\n"
+"Last-Translator: \n"
+"Language-Team: CactusThemes <hi@cactusthemes.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.9\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: esc_html__;__;esc_html_e;_e;esc_attr__;esc_attr_e\n"
+"X-Poedit-SearchPath-0: themes/videopro\n"
+"X-Poedit-SearchPath-1: plugins/cactus-video\n"
+"X-Poedit-SearchPath-2: plugins/videopro-shortcodes\n"
+"X-Poedit-SearchPath-3: plugins/cactus-rating\n"
+"X-Poedit-SearchPath-4: plugins/cactus-ads\n"
+"X-Poedit-SearchPath-5: plugins/cactus-badges\n"
+"X-Poedit-SearchPath-6: plugins/cactus-converter\n"
+"X-Poedit-SearchPath-7: plugins/cactus-converter\n"
+"X-Poedit-SearchPathExcluded-0: plugins/cactus-video/includes/Custom-Meta-"
+"Boxes-master\n"
+"X-Poedit-SearchPathExcluded-1: plugins/cactus-video/includes/options-page\n"
+"X-Poedit-SearchPathExcluded-2: plugins/cactus-ads/includes/custom-meta-box\n"
+"X-Poedit-SearchPathExcluded-3: plugins/cactus-ads/includes/options-page\n"
+"X-Poedit-SearchPathExcluded-4: plugins/cactus-actor/includes/Custom-Meta-"
+"Boxes-master\n"
+"X-Poedit-SearchPathExcluded-5: plugins/cactus-ads/includes/options-page\n"
+"X-Poedit-SearchPathExcluded-6: plugins/cactus-rating/option-tree\n"
+"X-Poedit-SearchPathExcluded-7: plugins/advance-search-form\n"
+
+#: plugins/cactus-ads/cactus-ads.php:22 plugins/cactus-ads/cactus-ads.php:626
+#: plugins/cactus-video/cactus-video.php:20
+#: themes/videopro/inc/theme-options.php:49
+msgid "General"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Enable Ads"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+#: plugins/cactus-video/cactus-video.php:20
+#: plugins/cactus-video/cactus-video.php:678
+#: plugins/cactus-video/widgets/top-channel.php:192
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:113
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:279
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:288
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:297
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:306
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:324
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:334
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:343
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:353
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:484
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:493
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:502
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:511
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:520
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:529
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:538
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:547
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:580
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:590
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:599
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:607
+msgid "Yes"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+#: plugins/cactus-video/cactus-video.php:20
+#: plugins/cactus-video/widgets/top-channel.php:193
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:112
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:280
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:289
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:298
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:307
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:325
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:333
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:342
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:352
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:485
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:494
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:503
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:512
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:521
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:530
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:539
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:548
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:581
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:589
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:598
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:608
+msgid "No"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Show close button after (seconds)"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Ads play again after (seconds)"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Close Button Position"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+#: plugins/cactus-video/video-channels.php:339
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:160
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:84
+#: themes/videopro/inc/category-metadata.php:20
+#: themes/videopro/inc/metadata.php:116 themes/videopro/inc/metadata.php:234
+#: themes/videopro/inc/theme-options.php:696
+#: themes/videopro/inc/theme-options.php:743
+#: themes/videopro/inc/theme-options.php:1023
+msgid "Left"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+#: plugins/cactus-video/video-channels.php:339
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:162
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:86
+#: themes/videopro/inc/category-metadata.php:19
+#: themes/videopro/inc/metadata.php:121 themes/videopro/inc/metadata.php:239
+#: themes/videopro/inc/theme-options.php:691
+#: themes/videopro/inc/theme-options.php:738
+#: themes/videopro/inc/theme-options.php:1018
+msgid "Right"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Brand"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Enable Brand"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Brand Logo"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Brand Text"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Brand Text will be used when Brand Logo is empty"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:113
+msgid "Position"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Top right"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Top left"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Bottom right"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Bottom left"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Opacity"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:22
+msgid "Text color"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:109
+msgid "Cactus - Video Ads"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:110
+msgid "Cactus-Video Ads"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:111
+msgid "Cactus - Video Ads 3.2.5"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:114
+#: plugins/cactus-video/cactus-video.php:191
+#: plugins/cactus-video/cactus-video.php:194
+#: plugins/cactus-video/cactus-video.php:197
+msgid "Save"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:115
+msgid "Video Ads - Settings"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:155
+msgid "SKIP ADS >>"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:532
+msgid "Cactus Ads"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:533
+msgid "Ad"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:538
+msgid "Post type about video advs management"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:574
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:89
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:98
+#: themes/videopro/inc/functions-admin.php:23
+#: themes/videopro/inc/functions-admin.php:30
+msgid "ID"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:575
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:504
+msgid "Description"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:576
+msgid "Expiry Date"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:577
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:97
+#: themes/videopro/inc/theme-options.php:1243
+msgid "Date"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:578
+#: themes/videopro/inc/functions-admin.php:24
+msgid "Thumbnail"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:579
+msgid "Statistic"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:627
+msgid "Bulk Set Ads ID"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:635
+msgid "I'm sorry, "
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:635
+msgid " I'm afraid I can't do that."
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:670
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:11
+msgid "Submit"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:737
+msgid "Video Ads"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:744
+msgid "Ads ID"
+msgstr ""
+
+#: plugins/cactus-ads/cactus-ads.php:748
+msgid "Enter Ads ID or 0 to get random active ads"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:34
+msgid "Upload Fields"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:42
+msgid "Ads type"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:47
+msgid "Image"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:48
+msgid "Video"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:49
+msgid "HTML"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:54
+msgid "Select an Item"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:59
+msgid "File Advanced Upload"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:68
+msgid "Video url"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:72
+msgid ""
+"Video url from Youtube or Vimeo. <br/>Ex: https://www.youtube.com/watch?"
+"v=CevxZvSJLk8"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:78
+msgid "HTML Ad"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:89
+#: plugins/cactus-video/video-channels.php:472
+#: plugins/videopro-shortcodes/shortcodes/button.php:94
+#: plugins/videopro-shortcodes/shortcodes/divider.php:109
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:127
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:467
+#: themes/videopro/inc/theme-options.php:1530
+msgid "URL"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:93
+msgid "Navigating URL when you click on Ads"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:98
+msgid "URL Target"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:103
+msgid "Open link in new window"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:104
+msgid "Open link in current window"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:118
+msgid "Full"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:119
+msgid "Top"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:120
+msgid "Bottom"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:125
+msgid "Select position"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:130
+msgid "Expiry date"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:136
+msgid " (yyyy-mm-dd)"
+msgstr ""
+
+#: plugins/cactus-ads/includes/advs-meta-boxes.php:137
+msgid "yy-mm-dd"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:57
+#: plugins/cactus-badges/cactus-badges.php:58
+#: plugins/cactus-badges/cactus-badges.php:66
+msgid "Badges"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:59
+#: plugins/cactus-video/video-series.php:236
+#: themes/videopro/inc/theme-options.php:73 themes/videopro/sidebar-left.php:23
+#: themes/videopro/sidebar.php:19
+msgid "Search"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:60
+msgid "All Badges"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:61
+msgid "Parent Badges"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:62
+msgid "Parent Badges:"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:63
+msgid "Edit Badge"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:64
+msgid "Update Badge"
+msgstr ""
+
+#: plugins/cactus-badges/cactus-badges.php:65
+msgid "Add New Badge"
+msgstr ""
+
+#: plugins/cactus-badges/function.php:21
+msgid "Url Image"
+msgstr ""
+
+#: plugins/cactus-converter/main.php:43 plugins/cactus-converter/main.php:44
+msgid "VideoPro Converter"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:13
+msgid "Review Criterias"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:14
+msgid "Review Position"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:15
+msgid "Review Float"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:16
+msgid "Default Review Title"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:20
+msgid "Turn off Font Awesome"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:21
+msgid "User rate option"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:22
+#: plugins/cactus-rating/cactus-rating.php:432
+msgid "Rate type"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:171
+msgid "All"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:172
+msgid "Only User"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:173
+msgid "Turn off"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:189
+#: plugins/cactus-rating/cactus-rating.php:402
+#: plugins/cactus-rating/cactus-rating.php:445
+msgid "Point"
+msgstr ""
+
+#: plugins/cactus-rating/admin/plugin-options.php:190
+#: plugins/cactus-rating/cactus-rating.php:450
+msgid "Star"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:208
+#: plugins/cactus-rating/cactus-rating.php:254
+msgid "Reader Rating"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:210
+#: plugins/cactus-rating/cactus-rating.php:254
+msgid "votes"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:210
+#: plugins/cactus-rating/cactus-rating.php:254
+msgid "vote"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:228
+msgid "User Rating"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:254
+msgid "Your Rating"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:254
+msgid "You have already voted"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:361
+msgid "Review"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:368
+msgid "Review Title"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:372
+msgid "Review title for this post"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:385
+msgid "Point (Ex: 95)"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:394
+msgid "Custom Review Criterias"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:398
+msgid "Add custom reviews"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:415
+msgid "Final Review Summary"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:416
+msgid "Ex: This is must-watch movie of this year"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:424
+msgid "User Rate Option"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:425
+msgid "Enable user rate option"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:433
+msgid "Choose default to use setting in Rating Config"
+msgstr ""
+
+#: plugins/cactus-rating/cactus-rating.php:440
+#: plugins/cactus-video/video-channels.php:339
+#: themes/videopro/inc/category-metadata.php:18
+#: themes/videopro/inc/category-metadata.php:34
+#: themes/videopro/inc/metadata.php:28 themes/videopro/inc/metadata.php:53
+#: themes/videopro/inc/metadata.php:77 themes/videopro/inc/metadata.php:106
+#: themes/videopro/inc/metadata.php:140 themes/videopro/inc/metadata.php:164
+#: themes/videopro/inc/metadata.php:229 themes/videopro/inc/metadata.php:336
+#: themes/videopro/inc/theme-options.php:897
+#: themes/videopro/inc/theme-options.php:1364
+msgid "Default"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Player for Video File"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "JWPlayer"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "FlowPlayer"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "VideoJS - HTML5 Video Player"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "WordPress Native Player: MediaElement"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Force Using VideoJS for external videos"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Auto Play Video"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Auto Load Next Video"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Auto Load Next Video after"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Enter number in seconds. Ex: 5 (seconds)"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Choose Next Video for Auto Load"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Newer Video"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Older Video"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Youtube Settings"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Force Using JWPlayer"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Related videos"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Display related videos at the end of the video"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+#: themes/videopro/profile-form.php:186
+msgid "Hide"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Show"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Use HTML5 player"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Use HTML5 player to play YouTube videos"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Show Video Info on player"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Remove annotations on video"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Force using Embed Code"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Allow Full Screen"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Allow Networking"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Allow Interactive Videos"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Disable"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Enable"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Playlist settings"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Playlist slug"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid ""
+"Change single playlist slug. Remember to save the permalink settings again "
+"in Settings > Permalinks"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid "Playlists Listing page"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:20
+msgid ""
+"Assign Playlists Listing page to a page. Remember to save the permalink "
+"settings again in Settings > Permalinks"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:66
+msgid "Watch Later"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:71
+#: plugins/cactus-video/cactus-video.php:78
+#: plugins/cactus-video/cactus-video.php:84
+#: plugins/cactus-video/cactus-video.php:89
+msgid "Video Series Listing Page"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:72
+#: plugins/cactus-video/cactus-video.php:79
+msgid "Subscribed Channels Page"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:73
+#: plugins/cactus-video/cactus-video.php:80
+msgid "Channel Listing Page"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:74
+#: plugins/cactus-video/cactus-video.php:85
+msgid "Playlist Listing Page"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:191
+msgid "Video Extensions"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:191
+msgid "Video Extensions - Settings"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:194
+msgid "Video Channels"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:197
+#: plugins/cactus-video/video-playlists.php:96
+msgid "Video Playlist"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:236
+msgid ""
+"This Ads appears on the Left Side of Video Player (full-width layout only). "
+"Enter Google AdSense Ad Slot ID here. If left empty, \"Video Player Side-Ads "
+"Left - Custom Code\" will be used."
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:245
+msgid "Custom Code for Video Player Side-Ads Left"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:254
+msgid ""
+"This Ads appears on the Right Side of Video Player (full-width layout only). "
+"If left empty, \"Single Post Ads 2 - Custom Code\" will be used."
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:263
+msgid "Custom Code for Video Player Side-Ads Right"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:312
+#, php-format
+msgid "<a href=\"%s\">Sign in</a> to add this to Watch Later"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:440
+msgid "Video Extension"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:583
+#: plugins/cactus-video/video-channels.php:314
+msgid "Add"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:616
+msgid "Most Used"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:640
+#, php-format
+msgid "+ %s"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:665
+msgid "Video URL"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:665
+msgid ""
+"Paste the url from popular video sites like YouTube or Vimeo. For example: "
+"<br/><code>http://www.youtube.com/watch?v=nTDNLUzjkpg</code><br/>or<br/"
+"><code>http://vimeo.com/23079092</code>"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:666
+msgid "Video File"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:666
+msgid ""
+"Paste your video file url to here. Supported Video Formats: mp4, m4v, webmv, "
+"webm, ogv and flv.<br/><b>About Cross-platform and Cross-browser Support</"
+"b><br/>If you want your video works in all platforms and browsers(HTML5 and "
+"Flash), you should provide various video formats for same video, if the "
+"video files are ready, enter one url per line.<br/> For Example:<br/> "
+"<code>http://yousite.com/sample-video.m4v</code><br/><code>http://yousite."
+"com/sample-video.ogv</code><br/> <b>Recommended Format Solution:</b> webmv + "
+"m4v + ogv. "
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:667
+msgid "Upload/Choose Video File"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:668
+msgid "Video Embeded Code"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:668
+msgid ""
+"Paste the raw video code to here, such as <code>&lt;</code><code>object</"
+"code><code>&gt;</code>,<code>&lt;</code><code>embed</code><code>&gt;</code> "
+"or <code>&lt;</code><code>iframe</code><code>&gt;</code> code."
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:669
+msgid "Duration"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:669
+msgid ""
+"Human-read time value, ex. mm:ss. Leave empty to fetch data again or enter "
+"your own value here"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:670
+msgid "Download Link"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:670
+msgid ""
+"If this video can be downloaded, provide the download link here. In fact, "
+"you can add any link here"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:671
+msgid "Download Button Text"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:671
+msgid "Change the Download Button text"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:672
+msgid "External Link"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:672
+msgid ""
+"If this video has external link then instead of playing video, users will be "
+"redirected to this URL when they click on thumbnail image"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:675
+msgid "Has Single Page"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:676
+msgid ""
+"Choose to disable single page for this video. It means that users will be "
+"redirected to External Link when clicking on thumbnail image of this video "
+"in archives page"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:679
+msgid "No (use External Link)"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:683
+msgid "Video Header"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:684
+msgid ""
+"Choose to display Thumbnail Image in Single Post, or display Video Player"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:686
+msgid "Default (use setting in Video Extension"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:687
+msgid "Thumbnail Image"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:688
+msgid "Video Player"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:693
+msgid "Video settings"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:699
+msgid "Player logic"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:699
+msgid ""
+"Enter shortcode (ex: [my_shortcode][player][/my_shortcode], "
+"<strong>[player]</strong> is required)<br>or condition function (ex: "
+"<b>is_user_logged_in() && is_sticky()</b> ) to control video player "
+"visiblitily"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:700
+msgid "Alternative Content"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:700
+msgid "Content to display when Condition is false (Not work with Shortcodes)"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:703
+msgid "Player Logic"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:711
+msgid "Do Not Fetch"
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:711
+msgid ""
+"Check bellow checkbox if you do not want to auto-fetch video data after save/"
+"edit. To chose which fields to fetch, go to Video Setting > "
+msgstr ""
+
+#: plugins/cactus-video/cactus-video.php:714
+msgid "Videos Auto Fetch Data"
+msgstr ""
+
+#: plugins/cactus-video/includes/page-templates/channel-listing.php:40
+msgid "Channels"
+msgstr ""
+
+#: plugins/cactus-video/includes/page-templates/playlist-listing.php:36
+#: plugins/cactus-video/templates/single-channel.php:70
+#: themes/videopro/cactus-video/single-channel.php:73
+msgid "Playlists"
+msgstr ""
+
+#: plugins/cactus-video/includes/page-templates/subscribed-channels.php:80
+#: plugins/cactus-video/includes/page-templates/subscribed-channels.php:85
+msgid "Browse Channels"
+msgstr ""
+
+#: plugins/cactus-video/includes/page-templates/watch-later.php:91
+#: plugins/cactus-video/templates/single-playlist.php:85
+#: themes/videopro/cactus-video/single-playlist.php:85
+msgid "Play All Videos"
+msgstr ""
+
+#: plugins/cactus-video/includes/page-templates/watch-later.php:118
+#: plugins/cactus-video/includes/page-templates/watch-later.php:121
+#: plugins/cactus-video/templates/single-playlist.php:108
+#: themes/videopro/cactus-video/single-playlist.php:108
+msgid "There is'nt any videos in this playlist yet!"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:116
+#: plugins/cactus-video/templates/video-series.php:90
+#: plugins/cactus-video/templates/video-series.php:148
+#, php-format
+msgid "%d Videos"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:142
+msgid "VideoPro Channel Listing"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:146
+#: plugins/cactus-video/shortcode/series-listing.php:165
+#: plugins/videopro-shortcodes/shortcodes/authors.php:137
+#: plugins/videopro-shortcodes/shortcodes/button.php:83
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:87
+#: plugins/videopro-shortcodes/shortcodes/divider.php:86
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:76
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:160
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:93
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:337
+msgid "VideoPro"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:150
+#: plugins/cactus-video/shortcode/series-listing.php:170
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:205
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:413
+msgid "Condition"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:153
+#: plugins/cactus-video/shortcode/series-listing.php:173
+#: themes/videopro/inc/widgets/popular_posts.php:100
+msgid "Latest"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:154
+#: plugins/cactus-video/shortcode/series-listing.php:174
+#: themes/videopro/inc/widgets/popular_posts.php:101
+msgid "Most viewed"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:156
+#: plugins/cactus-video/shortcode/series-listing.php:176
+msgid "choose condition to query series. Default is latest"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:160
+#: plugins/cactus-video/shortcode/series-listing.php:180
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:78
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:262
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:467
+msgid "IDs"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:163
+#: plugins/cactus-video/shortcode/series-listing.php:183
+msgid ""
+"(optional) specify list of series IDs, separated by a comma. If it is used, "
+"condition is ignored"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:167
+#: plugins/cactus-video/shortcode/series-listing.php:187
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:85
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:197
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:390
+msgid "Count"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:170
+#: plugins/cactus-video/shortcode/series-listing.php:190
+msgid "number of items to query. Default is 6"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:174
+#: plugins/cactus-video/shortcode/series-listing.php:194
+msgid "Columns"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:177
+#: plugins/cactus-video/shortcode/series-listing.php:198
+msgid "1 Column"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:178
+#: plugins/cactus-video/shortcode/series-listing.php:199
+msgid "2 Columns"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:179
+#: plugins/cactus-video/shortcode/series-listing.php:200
+msgid "3 Columns"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:181
+#: plugins/cactus-video/shortcode/series-listing.php:202
+msgid "number of columns."
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:185
+#: plugins/cactus-video/shortcode/series-listing.php:206
+#: plugins/cactus-video/templates/ct-channel-video.php:46
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:144
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:100
+#: plugins/videopro-shortcodes/shortcodes/divider.php:91
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:92
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:100
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:165
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:98
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:342
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:656
+#: themes/videopro/cactus-video/ct-channel-video.php:46
+#: themes/videopro/inc/author-metadata.php:68
+#: themes/videopro/inc/author-metadata.php:89
+#: themes/videopro/inc/widgets/popular_posts.php:39
+#: themes/videopro/index.php:122
+msgid "Title"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:188
+#: plugins/cactus-video/shortcode/series-listing.php:209
+msgid "title of the group"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:192
+#: plugins/cactus-video/shortcode/series-listing.php:213
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:172
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:553
+msgid "Button text"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:195
+#: plugins/cactus-video/shortcode/series-listing.php:216
+msgid "button text"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:199
+#: plugins/cactus-video/shortcode/series-listing.php:220
+msgid "Button Url"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:202
+#: plugins/cactus-video/shortcode/series-listing.php:223
+msgid "URL of button"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:207
+#: plugins/cactus-video/shortcode/series-listing.php:228
+msgid "Button target"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:210
+#: plugins/cactus-video/shortcode/series-listing.php:231
+#: plugins/videopro-shortcodes/shortcodes/button.php:141
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:190
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:571
+msgid "open URL in current tab"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:211
+#: plugins/cactus-video/shortcode/series-listing.php:232
+#: plugins/videopro-shortcodes/shortcodes/button.php:142
+#: plugins/videopro-shortcodes/shortcodes/divider.php:122
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:158
+msgid "Open link in new windows"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/channel-listing.php:213
+#: plugins/cactus-video/shortcode/series-listing.php:234
+msgid "target of button URL"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/series-listing.php:137
+#: plugins/cactus-video/templates/loop/content-playlist.php:40
+#: themes/videopro/cactus-video/content-playlist.php:40
+msgid " Videos"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/series-listing.php:161
+msgid "VideoPro Series Listing"
+msgstr ""
+
+#: plugins/cactus-video/shortcode/user-frontend-submit-button.php:31
+#, php-format
+msgid "Please enter less than or equal to %s tags"
+msgstr ""
+
+#: plugins/cactus-video/templates/content-channel-listing.php:71
+#: plugins/cactus-video/templates/loop/content-channel-listing.php:53
+#: plugins/cactus-video/video-channels.php:170
+#: plugins/cactus-video/widgets/top-channel.php:122
+#, php-format
+msgid "%d videos"
+msgstr ""
+
+#: plugins/cactus-video/templates/content-channel-listing.php:73
+#: plugins/cactus-video/templates/loop/content-channel-listing.php:55
+#: plugins/cactus-video/widgets/top-channel.php:125
+#, php-format
+msgid "%d views"
+msgstr ""
+
+#: plugins/cactus-video/templates/content.php:53
+msgid "<i class=\"fa fa-angle-right\"></i>"
+msgstr ""
+
+#: plugins/cactus-video/templates/content.php:54
+msgid "<i class=\"fa fa-angle-left\"></i>"
+msgstr ""
+
+#: plugins/cactus-video/templates/content.php:77
+msgid "View as one page"
+msgstr ""
+
+#: plugins/cactus-video/templates/content.php:91
+msgid "tags:"
+msgstr ""
+
+#: plugins/cactus-video/templates/content.php:112
+msgid "previous"
+msgstr ""
+
+#: plugins/cactus-video/templates/content.php:121
+msgid "next"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-about.php:53
+#: themes/videopro/cactus-video/ct-channel-about.php:53
+#: themes/videopro/html/loop/content-channel-at.php:76
+msgid " videos"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-about.php:54
+#: themes/videopro/cactus-video/ct-channel-about.php:54
+msgid " subscribers "
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-about.php:55
+#: themes/videopro/cactus-video/ct-channel-about.php:55
+#: themes/videopro/html/loop/content-channel-at.php:77
+msgid " views"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-playlist.php:42
+#: themes/videopro/cactus-video/ct-channel-playlist.php:41
+msgid "There isn't any playlist in this channel"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-playlist.php:45
+#: themes/videopro/cactus-video/ct-channel-playlist.php:44
+msgid "Load More Playlists"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:13
+#: themes/videopro/cactus-video/ct-channel-video.php:13
+#: themes/videopro/index.php:84
+msgid "Order By: &nbsp; Published date"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:15
+#: themes/videopro/cactus-video/ct-channel-video.php:15
+#: themes/videopro/index.php:86
+msgid "Order By: &nbsp; Views"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:17
+#: themes/videopro/cactus-video/ct-channel-video.php:17
+#: themes/videopro/index.php:88
+msgid "Order By: &nbsp; Like"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:19
+#: themes/videopro/cactus-video/ct-channel-video.php:19
+#: themes/videopro/index.php:90
+msgid "Order By: &nbsp; Comments"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:21
+#: themes/videopro/cactus-video/ct-channel-video.php:21
+#: themes/videopro/index.php:94
+msgid "Order By: &nbsp; Title"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:23
+#: themes/videopro/cactus-video/ct-channel-video.php:23
+#: themes/videopro/index.php:96
+msgid "Order By"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:26
+#: themes/videopro/cactus-video/ct-channel-video.php:26
+#: themes/videopro/index.php:99
+msgid "Published date"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:39
+#: themes/videopro/cactus-video/ct-channel-video.php:39
+#: themes/videopro/index.php:112
+msgid "Views"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:43
+#: themes/videopro/cactus-video/ct-channel-video.php:43
+#: themes/videopro/index.php:116
+msgid "Like"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:45
+#: themes/videopro/cactus-video/ct-channel-video.php:45
+#: themes/videopro/index.php:118
+msgid "Comments"
+msgstr ""
+
+#: plugins/cactus-video/templates/ct-channel-video.php:189
+#: themes/videopro/cactus-video/ct-channel-video.php:187
+msgid "There isn't any video in this channel"
+msgstr ""
+
+#: plugins/cactus-video/templates/loop/video-series-item.php:29
+#, php-format
+msgid "%d VIDEOS"
+msgstr ""
+
+#: plugins/cactus-video/templates/loop/video-series-item.php:29
+#, php-format
+msgid "%d VIDEO"
+msgstr ""
+
+#: plugins/cactus-video/templates/loop/video-series-item.php:54
+msgid "VIDEOS"
+msgstr ""
+
+#: plugins/cactus-video/templates/loop/video-series-item.php:54
+msgid "VIDEO"
+msgstr ""
+
+#: plugins/cactus-video/templates/single-channel.php:67
+#: plugins/cactus-video/video-functions.php:839
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:18
+#: themes/videopro/author.php:99
+#: themes/videopro/cactus-actor/single-actor.php:132
+#: themes/videopro/cactus-video/single-channel.php:70
+#: themes/videopro/index.php:49
+msgid "Videos"
+msgstr ""
+
+#: plugins/cactus-video/templates/single-channel.php:73
+#: themes/videopro/cactus-video/single-channel.php:76
+msgid "Discussion"
+msgstr ""
+
+#: plugins/cactus-video/templates/single-channel.php:76
+#: themes/videopro/cactus-video/single-channel.php:79
+msgid "About"
+msgstr ""
+
+#: plugins/cactus-video/templates/video-series.php:96
+msgid "Creator: "
+msgstr ""
+
+#: plugins/cactus-video/templates/video-series.php:109
+#: plugins/cactus-video/video-series.php:225
+msgid "Stars"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:134
+msgid "Login Require"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:144
+msgid "SUBSCRIBE"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:145
+msgid "SUBSCRIBED"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:248
+#: plugins/cactus-video/video-channels.php:249
+#: plugins/cactus-video/video-channels.php:328
+#: plugins/cactus-video/video-functions.php:12
+#: plugins/cactus-video/video-playlists.php:132
+msgid "Channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:250
+#: plugins/cactus-video/video-channels.php:251
+msgid "Add New Channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:252
+msgid "Edit Channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:253
+msgid "New Channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:254
+msgid "All Channels"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:255
+msgid "View Channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:256
+msgid "Search Channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:257
+msgid "No Channel found"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:258
+msgid "No Channel found in Trash"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:260
+#: plugins/cactus-video/video-channels.php:332
+#: plugins/cactus-video/video-playlists.php:135
+msgid "Video Channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:328
+msgid "Add this video to a channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:339
+#: themes/videopro/inc/category-metadata.php:14
+#: themes/videopro/inc/metadata.php:99 themes/videopro/inc/metadata.php:221
+#: themes/videopro/inc/theme-options.php:677
+#: themes/videopro/inc/theme-options.php:730
+#: themes/videopro/inc/theme-options.php:999
+msgid "Sidebar"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:339
+#: themes/videopro/inc/category-metadata.php:21
+#: themes/videopro/inc/metadata.php:244
+#: themes/videopro/inc/theme-options.php:701
+#: themes/videopro/inc/theme-options.php:748
+msgid "Left & Right"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:339
+#: themes/videopro/inc/category-metadata.php:22
+#: themes/videopro/inc/metadata.php:126 themes/videopro/inc/metadata.php:249
+#: themes/videopro/inc/theme-options.php:706
+#: themes/videopro/inc/theme-options.php:753
+#: themes/videopro/inc/theme-options.php:1028
+msgid "Hidden"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:339
+msgid "Choose sidebar for this channel"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:342
+msgid "Channel Settings"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:355
+msgid "Social Account Settings"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:363
+#: plugins/videopro-shortcodes/shortcodes/authors.php:72
+#: themes/videopro/author.php:65
+#: themes/videopro/cactus-actor/single-actor.php:65
+#: themes/videopro/inc/theme-options.php:1562
+#: themes/videopro/page-templates/authors-listing.php:131
+msgid "Facebook"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:364
+msgid "Enter link to channel Facebook page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:372
+#: plugins/videopro-shortcodes/shortcodes/authors.php:75
+#: themes/videopro/author.php:68
+#: themes/videopro/cactus-actor/single-actor.php:68
+#: themes/videopro/inc/theme-options.php:1572
+#: themes/videopro/page-templates/authors-listing.php:134
+msgid "Twitter"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:373
+msgid "Enter link to channel Twitter page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:381
+msgid "YouTube"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:382
+msgid "Enter link to channel YouTube page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:390
+#: themes/videopro/inc/theme-options.php:1582
+msgid "LinkedIn"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:391
+msgid "Enter link to channel LinkedIn page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:399
+#: plugins/videopro-shortcodes/shortcodes/authors.php:81
+#: themes/videopro/author.php:74
+#: themes/videopro/cactus-actor/single-actor.php:74
+#: themes/videopro/inc/theme-options.php:1592
+#: themes/videopro/page-templates/authors-listing.php:140
+msgid "Tumblr"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:400
+msgid "Enter link to channel Tumblr page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:408
+#: plugins/videopro-shortcodes/shortcodes/authors.php:84
+#: themes/videopro/author.php:77
+#: themes/videopro/cactus-actor/single-actor.php:77
+#: themes/videopro/page-templates/authors-listing.php:143
+msgid "Google Plus"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:409
+msgid "Enter link to channel Google Plus page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:417
+#: plugins/videopro-shortcodes/shortcodes/authors.php:87
+#: themes/videopro/author.php:80
+#: themes/videopro/cactus-actor/single-actor.php:80
+#: themes/videopro/inc/theme-options.php:1612
+#: themes/videopro/page-templates/authors-listing.php:146
+msgid "Pinterest"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:418
+msgid "Enter link to channel Pinterest page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:426
+#: themes/videopro/cactus-actor/single-actor.php:86
+msgid "Flickr"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:427
+msgid "Enter link to channel Flickr page"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:435
+#: plugins/videopro-shortcodes/shortcodes/authors.php:67
+#: themes/videopro/author.php:60
+#: themes/videopro/cactus-actor/single-actor.php:61
+#: themes/videopro/inc/theme-options.php:1632
+#: themes/videopro/page-templates/authors-listing.php:126
+msgid "Email"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:436
+msgid "Enter channel email contact"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:444
+msgid "RSS"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:445
+msgid "Enter channel site's RSS URL"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:454
+#: themes/videopro/inc/theme-options.php:1502
+msgid "Custom Social Account"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:458
+msgid "Add more social accounts using Font Awesome Icons"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:462
+#: themes/videopro/inc/theme-options.php:1517
+msgid "Font Awesome Icons"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:465
+#: themes/videopro/inc/theme-options.php:1518
+msgid "Enter Font Awesome class (ex: fa-instagram)"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:475
+msgid "Enter full link to channel social account (including http)"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:485
+#: themes/videopro/inc/theme-options.php:1545
+msgid "Open Social Link in new tab"
+msgstr ""
+
+#: plugins/cactus-video/video-channels.php:486
+#: themes/videopro/inc/theme-options.php:1546
+msgid "Open link in new tab?"
+msgstr ""
+
+#: plugins/cactus-video/video-data-functions.php:16
+msgid "Multi Links"
+msgstr ""
+
+#: plugins/cactus-video/video-data-functions.php:29
+msgid "Group Title"
+msgstr ""
+
+#: plugins/cactus-video/video-data-functions.php:30
+msgid "Links"
+msgstr ""
+
+#: plugins/cactus-video/video-data-functions.php:41
+#: plugins/cactus-video/video-data-functions.php:68
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:541
+msgid "Remove"
+msgstr ""
+
+#: plugins/cactus-video/video-data-functions.php:48
+msgid "<i>Click Add Group to start</i>"
+msgstr ""
+
+#: plugins/cactus-video/video-data-functions.php:57
+msgid "Add Group"
+msgstr ""
+
+#: plugins/cactus-video/video-data-functions.php:58
+msgid ""
+"<i>Paste your videos link (and title) here. Enter one per line.<br/> For "
+"Example:<br/> <code>Trailer 1</code><br/><code>http://www.youtube.com/watch?"
+"v=nTDNLUzjkpg</code><br/><code>Trailer 2</code><br/><code>http://www.youtube."
+"com/watch?v=nTDNLUzjkpg</code><br> You could enter links without title</i>"
+msgstr ""
+
+#: plugins/cactus-video/video-functions.php:13
+#: plugins/cactus-video/video-playlists.php:84
+#: plugins/cactus-video/video-playlists.php:85
+#: plugins/cactus-video/video-playlists.php:142
+msgid "Playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-functions.php:592
+msgid "Link "
+msgstr ""
+
+#: plugins/cactus-video/video-functions.php:661
+msgid "Channel ID"
+msgstr ""
+
+#: plugins/cactus-video/video-functions.php:665
+msgid "The Channel ID, Ex: 1, 2, 3"
+msgstr ""
+
+#: plugins/cactus-video/video-functions.php:792
+#: plugins/cactus-video/video-functions.php:796
+#: plugins/cactus-video/video-functions.php:806
+msgid "subscribed"
+msgstr ""
+
+#: plugins/cactus-video/video-functions.php:806
+msgid "subscribe"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:8
+msgid "Reports"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:9
+msgid "Report"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:171
+msgid " reported a post"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:172
+msgid " reported a post has inappropriate content with message:"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:174
+msgid "You could review it here"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:241
+msgid "Your post submission has been approved"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:247
+#, php-format
+msgid ""
+"Congratulation! Your submission has been approved. You can see it here: %s"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:309
+msgid "Please choose a channel"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:377
+msgid "Please choose a playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:434
+msgid "Please choose a category"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:458
+#: plugins/cactus-video/video-hook-functions.php:522
+msgid "Submit Video"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:465
+msgid ""
+"Please go to Appearance > Sidebars and drag a widget into User Submit "
+"Sidebar. A Contact Form 7 is recommended!"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:485
+msgid "Report This"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:497
+msgid ""
+"Please specify an ID for the Contact Form in Video Settings > Video Post > "
+"Spam Flag-Contact Form 7 ID or Spam Flag-Gravity Form ID"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:630
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-5.php:77
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-9.php:78
+msgid "like"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:630
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-5.php:77
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-9.php:78
+msgid "dislike"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:641
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-5.php:88
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-9.php:90
+msgid "Please Signin"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:644
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-5.php:91
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-9.php:93
+msgid "Sign In"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:794
+msgid "PREV VIDEO"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:801
+msgid "NEXT VIDEO"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:831
+msgid "MORE VIDEOS"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:987
+#: plugins/cactus-video/video-hook-functions.php:1305
+#: themes/videopro/inc/template-tags.php:1069
+#, php-format
+msgid "%s Views"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:990
+#: plugins/cactus-video/video-hook-functions.php:1308
+#: themes/videopro/inc/template-tags.php:1073
+#, php-format
+msgid "%s Likes"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:1042
+#: themes/videopro/inc/template-tags.php:1062
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:1047
+#: plugins/cactus-video/video-hook-functions.php:1056
+#: plugins/cactus-video/video-hook-functions.php:1310
+#: themes/videopro/inc/template-tags.php:1077
+#, php-format
+msgid "%s Comments"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:1086
+msgid "<i class=\"fa fa-cloud-download\"></i> Download Video"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:1105
+msgid "Screenshots"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-functions.php:1183
+msgid "AUTO NEXT"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:14
+msgid "Upload Video"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:23
+msgid ""
+"Please go to Theme Options > Membership > Upload Videos Form to specify a "
+"Contact Form ID"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:74
+msgid "Create a new channel"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:79
+msgid "Name your channel"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:81
+msgid "Please enter a name"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:83
+msgid "Category"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:84
+msgid "Select a Category"
+msgstr ""
+
+#: plugins/cactus-video/video-hook-membership.php:101
+msgid "You are required to agree the terms"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:86
+#: plugins/cactus-video/video-playlists.php:87
+msgid "Add New Playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:88
+msgid "Edit Playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:89
+msgid "New Playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:90
+msgid "All Playlists"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:91
+msgid "View Playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:92
+msgid "Search Playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:93
+msgid "No Playlist found"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:94
+msgid "No Playlist found in Trash"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:132
+msgid "Add this playlist to a channel"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:142
+msgid "Add this video to a playlist"
+msgstr ""
+
+#: plugins/cactus-video/video-playlists.php:146
+msgid "Video PlayList"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:219
+msgid "Release Year"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:220
+msgid "Year of release. Date String appears as you enter"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:222
+msgid "Creators"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:223
+msgid "List of creators, separated by a comma"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:226
+msgid "List of stars, separated by a comma"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:234
+#: plugins/cactus-video/video-series.php:235
+#: plugins/cactus-video/video-series.php:244
+msgid "Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:237
+msgid "All Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:238
+msgid "Parent Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:239
+msgid "Parent Series:"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:240
+msgid "Edit Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:241
+msgid "Update Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:242
+msgid "Add New Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:243
+msgid "New Genre Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:264
+#: plugins/cactus-video/video-series.php:265
+#: plugins/cactus-video/video-series.php:276
+msgid "Video Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:266
+#: plugins/cactus-video/video-series.php:267
+msgid "Add New Video Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:268
+msgid "Edit Video Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:269
+msgid "New Video Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:270
+msgid "All Video Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:271
+msgid "View Video Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:272
+msgid "Search Video Series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:273
+msgid "No Video Series found"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:274
+msgid "No Video Series found in Trash"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:302
+msgid "Alternative Title in series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:302
+msgid ""
+"Enter alternative title for this video in series. For example: Episode 1"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:303
+msgid "Order in series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:303
+msgid "Enter order of this video in series"
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:307
+msgid "Video Series settings "
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:369
+msgid "SELECT EPISODES: "
+msgstr ""
+
+#: plugins/cactus-video/video-series.php:393
+msgid "EPISODES"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:7
+#: plugins/cactus-video/widgets/top-channel.php:9
+msgid "VideoPro - Top Channels"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:161
+#: plugins/cactus-video/widgets/widget-recommended-series.php:217
+#: themes/videopro/inc/widgets/widget-categories.php:130
+#: themes/videopro/inc/widgets/widget-recent-comment.php:101
+#: themes/videopro/inc/widgets/widget-social-accounts.php:64
+msgid "Title:"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:164
+msgid "IDs (List of Channels IDs or Slugs, separated by a comma):"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:168
+msgid "Number of Items:"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:172
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:94
+#: themes/videopro/inc/widgets/popular_posts.php:97
+#: themes/videopro/widget-views/shortcode-asf.view.php:76
+msgid "Order by"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:174
+msgid "Most Viewed "
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:175
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:104
+#: themes/videopro/inc/theme-options.php:1248
+msgid "Random"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:181
+msgid "Images display"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:183
+msgid "Show avatar of author"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:184
+msgid "Show cover photo"
+msgstr ""
+
+#: plugins/cactus-video/widgets/top-channel.php:190
+msgid "Show Channel Information"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:6
+msgid "A list of Video Series."
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:9
+msgid "VideoPro - Recommended Series"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:23
+msgid "Recommended Series"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:158
+msgid "Episodes"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:219
+msgid "Video Series slugs/ids:"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:221
+msgid "List of video series, separated by a comma"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:223
+msgid "List by:"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:225
+msgid "Latest Updated"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:226
+msgid "Most Viewed (all time)"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:228
+msgid "How to order Video Series"
+msgstr ""
+
+#: plugins/cactus-video/widgets/widget-recommended-series.php:230
+msgid "Count:"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:61
+#: themes/videopro/page-templates/authors-listing.php:120
+#, php-format
+msgid "%d post"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:61
+#: themes/videopro/page-templates/authors-listing.php:120
+#, php-format
+msgid "%d posts"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:78
+#: themes/videopro/author.php:71
+#: themes/videopro/cactus-actor/single-actor.php:71
+#: themes/videopro/page-templates/authors-listing.php:137
+msgid "Linkedin"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:117
+msgid "See All Authors..."
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:132
+msgid "VideoPro Authors"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:141
+msgid "Number of Authors"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:148
+msgid "View All URL"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:151
+msgid "An URL to View All link"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:156
+msgid "Column Width"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:166
+msgid "Choose column width"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:171
+msgid "Author IDs"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/authors.php:174
+msgid ""
+"Enter list of Author IDs (separated by a comma) if you want to list only "
+"those authors"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:78
+msgid "VideoPro Button"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:87
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:182
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:168
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:115
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:60
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:164
+msgid "Content"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:97
+msgid "link URL"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:103
+msgid "Background Color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:106
+msgid "RGB - Hexa color of background color, default #222222"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:112
+msgid "Background Color Hover"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:115
+msgid ""
+"RGB - Hexa color of background color when button is hovered, default #555555"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:121
+msgid "Text Color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:124
+msgid "RGB - hexa color of text, default #FFFFFF"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:130
+msgid "Text Color Hover"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:133
+msgid "RGB - hexa color of text when button is hovered, default is #FFFFFF"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:138
+msgid "Target"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/button.php:144
+msgid "empty or \"_blank\" (open new tab)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:71
+msgid "Compare Table"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:78
+msgid "Cactus Shortcodes"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:83
+msgid "Class"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:85
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:109
+msgid "Custom CSS class"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:91
+msgid "Custom ID. If not provided, random ID is generated"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:97
+msgid "Compare Table Column"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:116
+msgid "Special Column"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:119
+msgid "False"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:120
+msgid "True"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:127
+msgid "Column Size"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:130
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:71
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:378
+msgid "3"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:131
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:72
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:379
+msgid "4"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:132
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:380
+msgid "6"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:134
+msgid ""
+"Select between 2, 3, 4, 6. Total column_size values of all columns should "
+"equal to 12"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:146
+msgid "Title of this column (plan)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:150
+msgid "Currency"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:155
+msgid "Price (Main Currency)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:157
+msgid "Price of this plan"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:161
+msgid "Price (Fractional Currency)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:166
+msgid "Price Description"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:168
+msgid "Price description of this column"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/compare-table.php:174
+msgid "Compare Table Row"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:82
+msgid "Content Box"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:91
+msgid "ID|URL"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:94
+msgid "ID of image attachment or full URL of the image"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:103
+msgid "Title of the box"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:108
+msgid "Title Url"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:110
+msgid "(optional) enable clickable title"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:120
+msgid "Title url target"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:122
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:146
+msgid "target of URL on title (empty or \"_blank\")"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:124
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:148
+msgid "Curent Tab"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:125
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:149
+msgid "New Tab"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:131
+msgid "Button Text"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:137
+msgid "Button URL"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:144
+msgid "Button url target"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:156
+msgid "Button alignment"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:158
+msgid "left or right, center"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-box.php:161
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:85
+msgid "Center"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-5.php:113
+#: plugins/videopro-shortcodes/shortcodes/content-slider/content-layout-9.php:115
+msgid "Share this video"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:81
+msgid "VideoPro Divider"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:100
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:118
+msgid "Button title"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:104
+msgid "Text on the button"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:113
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:182
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:131
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:563
+msgid "URL of the button"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:118
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:154
+msgid "Button Target"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:121
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:157
+msgid "Open link in current windows"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:130
+msgid "Divider color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:133
+msgid "RGB - hexa color of divider"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:139
+msgid "Title Color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/divider.php:142
+msgid "RGB - hexa color of title"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:71
+msgid "VideoPro Iconbox"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:81
+msgid "Alignment"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:88
+msgid "choose box layout. Possible values:"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:96
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:122
+msgid "title of the box"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:100
+msgid "Icon"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:104
+msgid ""
+"enter CSS class of icon. Font Awesome Icons are supported (https://"
+"fortawesome.github.io/Font-Awesome/icons/)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:108
+msgid "Icon Color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/icon-box.php:111
+msgid "RGB - Hexa color of icon color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:56
+msgid "VideoPro Playlist listing"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:65
+msgid "Column"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:69
+msgid "1"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:70
+msgid "2"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:74
+msgid "choose column. Possible values:"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:81
+msgid ""
+"list of post IDs to query, separated by a comma. If this value is not empty, "
+"cats, tags and featured are omitted"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:88
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:200
+msgid "number of items to query"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:99
+msgid "Author"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:101
+#: themes/videopro/profile-form.php:48
+msgid "Name"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:102
+msgid "Modified"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:103
+msgid "Parent"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:105
+msgid "Comment count"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:106
+msgid "Menu order"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:107
+msgid "Meta value"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:108
+msgid "Meta value num"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:109
+msgid "Post__in"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:110
+msgid "None"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:116
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:235
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:440
+#: themes/videopro/widget-views/shortcode-asf.view.php:85
+msgid "Order"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:119
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:238
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:443
+msgid "Descending"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:120
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:239
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:444
+msgid "Ascending"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/playlist.php:121
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:240
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:445
+msgid ""
+"Designates the ascending or descending order. More at <a href=\"http://codex."
+"wordpress.org/Class_Reference/WP_Query#Order_.26_Orderby_Parameters\" target="
+"\"_blank\">WordPress codex page</a>."
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:156
+msgid "VideoPro Posts Slider"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:175
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:556
+msgid "Text for a custom button. If empty, button is hidden"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:179
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:560
+msgid "Button url"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:187
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:568
+msgid "URL target of the button"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:191
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:572
+msgid "open URL in new tab"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:208
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:416
+msgid "Latest - order by published date"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:209
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:417
+msgid "View - order by most viewed posts"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:210
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:418
+msgid "Like - order by most liked posts"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:211
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:419
+msgid "Comment - order by most commented posts"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:212
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:421
+msgid "Title - order by title alphabetically"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:213
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:422
+msgid "Input - order by input ID (only available when using ids parameter)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:214
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:423
+msgid "condition to query items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:219
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:107
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:350
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:636
+#: themes/videopro/inc/category-metadata.php:30
+#: themes/videopro/inc/metadata.php:70
+#: themes/videopro/inc/widgets/widget-categories.php:140
+msgid "Layout"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:222
+msgid "Style 1 - Metro Grid"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:223
+msgid "Style 2 - Classic Slider, Small Items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:224
+msgid "Style 3 - Classic Slider, Big Items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:225
+msgid "Style 4 - Full-width Slider"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:226
+msgid "Style 5 - ThumbSlider with thumbnails at bottom"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:227
+msgid "Style 6 - ThumbSlider with thumbnails at  bottom, full-width main item"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:228
+msgid "Style 7 - ThumbSlider with thumbnails on the right"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:229
+msgid "Style 8 - ThumbSlider with overlay thumbnails"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:230
+msgid "Style 9 - Single Item Slider"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:246
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:451
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:687
+#: themes/videopro/inc/theme-options.php:1207
+#: themes/videopro/inc/widgets/widget-categories.php:32
+msgid "Categories"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:248
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:453
+msgid ""
+"List of categories (ID) to query items from, separated by a comma. For "
+"example: 1, 2, 3"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:254
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:459
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:705
+#: themes/videopro/inc/theme-options.php:1212
+#: themes/videopro/inc/widgets/popular_posts.php:62
+msgid "Tags"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:257
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:462
+msgid ""
+"List of tags to query items from, separated by a comma. For example: tag-1, "
+"tag-2, tag-3"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:265
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:470
+msgid ""
+"List of post IDs to query, separated by a comma. If this value is not empty, "
+"cats, tags and featured are omitted"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:269
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:474
+msgid "Post Format"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:272
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:477
+msgid "Select Post Formats"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:276
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:481
+msgid "Show datetime"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:281
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:486
+msgid "Show post published datetime"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:285
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:490
+msgid "Show author"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:290
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:495
+msgid "Show post author name"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:294
+msgid "Show comment count"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:299
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:504
+msgid "Show post comment count number"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:303
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:517
+msgid "Show like"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:308
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:522
+msgid "Show post Like button, require WTI Like Post plugin installed"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:321
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:535
+msgid "Show duration"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:326
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:540
+msgid "Show video duration, if it is Video Post"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:330
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:586
+msgid "Video player lightbox"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:335
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:591
+msgid "Enable lightbox for video player if item is video post."
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:339
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:595
+msgid "Video player inline"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:344
+msgid "Enable Video Player for video items. Applied for layout 5, 6, 7, 8, 9"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:349
+msgid "Autoplay"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/posts-slider.php:354
+msgid "Autoplay or not"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:88
+msgid "VideoPro Promobox"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:110
+msgid "Default layout"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:111
+msgid "Button is on the side"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:113
+msgid "select layout of the box"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:137
+msgid "Button Text Color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:140
+msgid "RGB - hexa color of button's text"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:146
+msgid "Button Background Color"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/promobox.php:149
+msgid "RGB - hexa color of button's background"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:331
+msgid "VideoPro Smart Content Box"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:353
+msgid "Style 1 - Simple Grid, 3 Columns"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:354
+msgid "Style 2 - Simple Grid, 4 Columns"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:355
+msgid "Style 3 - Big Leading Item, 2 Columns"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:356
+msgid "Style 4 - Grid Preview, One Big Left Item"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:357
+msgid "Style 5 - Big Leading Item, 1 column"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:358
+msgid "Style 6 - Two Big Leading Item, 2 columns"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:359
+msgid "Style 7 - Big Leading Item, 1 Column, Metadata Inside"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:360
+msgid "Style 8 - One Big Leading Item, 2 Columns, Metadata Inside"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:361
+msgid "Style 9 - Grid Preview, One Big Left Item, Metadata Inside"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:362
+msgid "Style 10 - Grid Preview, Fullwidth Items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:363
+msgid "Style 11 - Grid Preview, 2 Columns"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:364
+msgid "Style 12 - Simple List, Big Thumbnails"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:365
+msgid "Style 13 - Simple List, Small Thumbnails"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:366
+msgid "Style 14 - Simple List, Medium Thumbnails"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:367
+msgid "Style 15 - Grid Preview, 3 items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:369
+msgid "Choose one of pre-defined layouts"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:374
+msgid "Parent column size"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:381
+msgid "8"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:382
+msgid "9"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:383
+msgid "12"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:385
+msgid ""
+"specify size of the parent column so that the SCB can choose the most "
+"appropriate thumbnail size for items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:393
+#: themes/videopro/inc/widgets/popular_posts.php:72
+msgid "Number of items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:397
+msgid "Offset"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:400
+msgid ""
+"Number of first items to ignore when querying. Warning: Setting the offset "
+"parameter overrides/ignores the paged parameter and breaks pagination. The "
+"offset parameter is ignored when items_per_page = count (show all posts) is "
+"used."
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:405
+msgid "Items per page"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:408
+msgid ""
+"Number of items per page, default is count's value. If items_per_page is "
+"smaller than count value, the pagination buttons/arrows will appear"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:420
+msgid "Rating - order by most reated posts"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:428
+msgid "Time Range"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:431
+msgid "All Time"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:432
+msgid "A Day"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:433
+msgid "A Week"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:434
+msgid "A Month"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:435
+msgid "A Year"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:436
+msgid ""
+"Choose Time Range to query posts. Time Range does not work when 'Condition' "
+"is 'Title' or 'Input'. This setting only works if 'Use Network Data' is set "
+"to off ('Use Network Data' is a global setting of Video Extensions plugin)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:499
+msgid "Show Comment Count"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:508
+msgid "Show View Count"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:513
+msgid "Show post View Count number"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:526
+msgid "Show rating"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:531
+msgid "Show post rating value, require Cactus-Rating plugin installed"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:544
+msgid "Show excerpt"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:577
+msgid "Border bottom"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:582
+msgid "Show a border at bottom of the box"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:600
+msgid "Enable Video Player for video items. Applied for layout 7, 8, 9, 10, 11"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:604
+msgid "Screenshots preview"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:609
+msgid "Enable Video Screenshots preview when hovering on items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:616
+msgid "Filters"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:628
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:659
+msgid "Title of the item"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:631
+msgid "Title for the filter tab or default text for the select box"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:639
+msgid "Tab"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:640
+msgid "Select"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:641
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:672
+msgid "select layout for the filter"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:647
+msgid "Filter"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:664
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2641
+msgid "Type"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:667
+msgid "List all filter"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:668
+msgid "Filter by latest items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:669
+msgid "Filter by top rated items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:670
+msgid "Filter by top viewed items"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:678
+msgid "Filter categories"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:690
+msgid ""
+"used to specify category items for filtering. This parameter is optional. If "
+"not specified, category items will be retrieved automatically from SCB's "
+"items (however, it costs performance)"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:696
+msgid "Filter tags"
+msgstr ""
+
+#: plugins/videopro-shortcodes/shortcodes/smart-contentbox.php:708
+msgid ""
+"used to specify tag items for filtering. This parameter is optional. If not "
+"specified, tag items will be retrieved automatically from SCB's items "
+"(however, it costs performance) "
+msgstr ""
+
+#: themes/videopro/404.php:33
+msgid "BACK TO HOMEPAGE"
+msgstr ""
+
+#: themes/videopro/cactus-actor/single-actor.php:83
+msgid "Instagram"
+msgstr ""
+
+#: themes/videopro/cactus-actor/single-actor.php:89
+msgid "Youtube"
+msgstr ""
+
+#: themes/videopro/cactus-actor/single-actor.php:92
+msgid "Github"
+msgstr ""
+
+#: themes/videopro/cactus-actor/single-actor.php:95
+msgid "Dribbble"
+msgstr ""
+
+#: themes/videopro/cactus-actor/single-actor.php:98
+msgid "vk"
+msgstr ""
+
+#: themes/videopro/cactus-actor/single-actor.php:163
+msgid "No videos found"
+msgstr ""
+
+#: themes/videopro/cactus-video/content-video.php:40
+msgid " Views"
+msgstr ""
+
+#: themes/videopro/comments.php:31 themes/videopro/live-comments.php:37
+msgid "Comment"
+msgstr ""
+
+#: themes/videopro/comments.php:37 themes/videopro/comments.php:55
+msgid "Comment navigation"
+msgstr ""
+
+#: themes/videopro/comments.php:38 themes/videopro/comments.php:56
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: themes/videopro/comments.php:39 themes/videopro/comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: themes/videopro/comments.php:67 themes/videopro/live-comments.php:106
+msgid "Comments are closed."
+msgstr ""
+
+#: themes/videopro/comments.php:72
+msgid "Your comment *"
+msgstr ""
+
+#: themes/videopro/comments.php:73
+msgid "LEAVE YOUR COMMENT"
+msgstr ""
+
+#: themes/videopro/comments.php:74 themes/videopro/live-comments.php:27
+#, php-format
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: themes/videopro/footer.php:116
+msgid "CLOSE"
+msgstr ""
+
+#: themes/videopro/footer.php:127
+#: themes/videopro/html/header/header-navigation.php:198
+#: themes/videopro/html/header/header-navigation.php:243
+#: themes/videopro/inc/template-tags.php:802
+msgid "Home"
+msgstr ""
+
+#: themes/videopro/footer.php:142
+msgid "To Top"
+msgstr ""
+
+#: themes/videopro/functions.php:93
+msgid "Primary Menu"
+msgstr ""
+
+#: themes/videopro/functions.php:94
+msgid "Footer Menu"
+msgstr ""
+
+#: themes/videopro/functions.php:95
+msgid "Logged In User Menu"
+msgstr ""
+
+#: themes/videopro/functions.php:151
+msgid "Right Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:153
+msgid "Appears in right column"
+msgstr ""
+
+#: themes/videopro/functions.php:161
+msgid "Left Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:163
+msgid "Appears in left column"
+msgstr ""
+
+#: themes/videopro/functions.php:171
+msgid "Search Box Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:173
+msgid "To replace theme's default Search Box"
+msgstr ""
+
+#: themes/videopro/functions.php:181
+msgid "Breadcrumbs Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:183
+msgid "To replace theme's default breadcrumbs"
+msgstr ""
+
+#: themes/videopro/functions.php:191
+msgid "Main Menu Sidebar "
+msgstr ""
+
+#: themes/videopro/functions.php:193
+msgid "To replace default main navigation"
+msgstr ""
+
+#: themes/videopro/functions.php:201
+msgid "Main Top Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:203
+msgid "Top of page (Under Header)"
+msgstr ""
+
+#: themes/videopro/functions.php:211
+msgid "Content Top sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:213
+msgid "Top of content"
+msgstr ""
+
+#: themes/videopro/functions.php:221
+msgid "Content Bottom sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:223
+msgid "Bottom of content"
+msgstr ""
+
+#: themes/videopro/functions.php:231
+msgid "Main Bottom Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:233
+msgid "Bottom of page (Above Footer)"
+msgstr ""
+
+#: themes/videopro/functions.php:241
+msgid "Footer Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:243
+msgid "Appears in Footer"
+msgstr ""
+
+#: themes/videopro/functions.php:251
+msgid "User Submit Video Sidebar"
+msgstr ""
+
+#: themes/videopro/functions.php:253
+msgid "Will be appeared in User Submit Video popup"
+msgstr ""
+
+#: themes/videopro/functions.php:648 themes/videopro/inc/template-tags.php:125
+msgid "Load More"
+msgstr ""
+
+#: themes/videopro/html/header/header-navigation.php:93
+msgid "Search for videos..."
+msgstr ""
+
+#: themes/videopro/html/header/header-navigation.php:95
+#: themes/videopro/inc/hook_filters.php:158
+msgid "SEARCH"
+msgstr ""
+
+#: themes/videopro/html/header/header-navigation.php:106
+msgid "MENU"
+msgstr ""
+
+#: themes/videopro/html/header/header-navigation.php:127
+msgid "login"
+msgstr ""
+
+#: themes/videopro/html/header/header-navigation.php:151
+#: themes/videopro/html/header/header-navigation.php:166
+msgid "Logout"
+msgstr ""
+
+#: themes/videopro/html/header/header-navigation.php:165
+msgid "Edit Profile"
+msgstr ""
+
+#: themes/videopro/html/loop/content-none.php:15
+msgid "Ready to publish your first post? "
+msgstr ""
+
+#: themes/videopro/html/loop/content-none.php:15
+msgid "Get started here"
+msgstr ""
+
+#: themes/videopro/html/loop/content-none.php:19
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: themes/videopro/html/loop/content-none.php:23
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: themes/videopro/html/single/content-about-author.php:2
+msgid "About The Author"
+msgstr ""
+
+#: themes/videopro/html/single/content-page.php:16
+#: themes/videopro/html/single/content-video.php:51
+#: themes/videopro/html/single/content.php:42
+msgid "Pages:"
+msgstr ""
+
+#: themes/videopro/html/single/content-page.php:22
+#: themes/videopro/html/single/content-video.php:57
+#: themes/videopro/html/single/content.php:48
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:458
+msgid "Edit"
+msgstr ""
+
+#: themes/videopro/html/single/content-video.php:63
+msgid "Show more"
+msgstr ""
+
+#: themes/videopro/html/single/single-related.php:43
+msgid "You might be interested in"
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:6
+#: themes/videopro/inc/theme-options.php:85
+msgid "Social Accounts"
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:12
+msgid "Enter your Twitter profile url."
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:19
+msgid "Enter your Facebook profile url."
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:26
+msgid "Enter your linkedin profile url."
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:33
+msgid "Enter your Google+ profile url."
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:40
+msgid "Enter your Tumblr profile url."
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:47
+msgid "Enter your Pinterest profile url."
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:54
+msgid "Enter your Email profile url."
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:60
+msgid "Custom Social Accounts"
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:69
+#: themes/videopro/inc/author-metadata.php:90
+msgid "Icon Class (Ex: fa-facebook)"
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:70
+#: themes/videopro/inc/author-metadata.php:91
+msgid "URL (include http://)"
+msgstr ""
+
+#: themes/videopro/inc/author-metadata.php:97
+msgid "Add Custom Account"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:24
+msgid "Choose \"Default\" to use setting in Theme Options > Archives > Sidebar"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:35
+msgid "One Column, Big Thumbnail"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:36
+msgid "One Column, Small Thumbnail"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:37
+#: themes/videopro/inc/theme-options.php:778
+#: themes/videopro/inc/theme-options.php:1313
+msgid "Multiple Columns"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:39
+msgid "Choose \"Default\" to use setting in Theme Options > Archives > Layout"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:44
+msgid "Icon Class"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:48
+msgid "Enter CSS Class for this category's icon"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:53
+msgid "Name for Item"
+msgstr ""
+
+#: themes/videopro/inc/category-metadata.php:57
+msgid ""
+"By default, each item in category is called \"video\". You can change this "
+"word for each category"
+msgstr ""
+
+#: themes/videopro/inc/classes/class.content-html.php:76
+msgid "Watch Now"
+msgstr ""
+
+#: themes/videopro/inc/classes/class.content-html.php:78
+msgid "Read more"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:123
+msgid "Install Required &amp; Recommended Plugins"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:124
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:125
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:126
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:137
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:138
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:394
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3251
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:139
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:220
+msgid "Title Icon Class "
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:220
+msgid "Enter Font Awesome Class for the icon"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:275
+msgid "Badge Text"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:275
+msgid "Enter badge text"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:334
+msgid "Badge Text Color "
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:335
+msgid "choose text color for the badge"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:396
+msgid "Badge Background Color"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:397
+msgid "choose background color for the Badge "
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:468
+msgid "Widget Styles"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:470
+msgid "Simple"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:471
+msgid "Simple border top"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:472
+msgid "Boxed"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:473
+msgid "Bordered"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:474
+msgid "Simple No Border"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:545
+msgid "Widget width"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:617
+msgid "Widget Custom Variation "
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:618
+msgid "enter your own custom css class"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:732
+msgid "Your Name *"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:733
+msgid "Your Email *"
+msgstr ""
+
+#: themes/videopro/inc/core/cactus-core.php:734
+msgid "Your Website"
+msgstr ""
+
+#: themes/videopro/inc/hook_filters.php:157
+msgid "Search..."
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:409
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:413
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:426
+msgid "sub item"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:441
+msgid "Move up"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:454
+msgid "Move down"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:458
+msgid "Edit menu item"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:474
+msgid "Navigation Label"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:480
+msgid "Title Attribute"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:487
+msgid "Open link in a new tab"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:492
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:498
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:506
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:512
+msgid "Move"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:513
+msgid "Up one"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:514
+msgid "Down one"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:517
+msgid "To the top"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:528
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/core/MegaMenuWalker.class.php:542
+#: themes/videopro/profile-form.php:189
+msgid "Cancel"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:528
+msgid "Select style for Menu"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:529
+msgid "Menu Style"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:532
+msgid "List Style"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:532
+msgid "Columns Style"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:532
+msgid "Preview Mode"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:549
+msgid "Select the widget area to display"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:550
+msgid "Display widgets area "
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:565
+msgid "Logic to display this menu item"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:566
+msgid "Display Logic"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:569
+msgid "Always visible"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:569
+msgid "Only Visible to Guests"
+msgstr ""
+
+#: themes/videopro/inc/megamenu/megamenu.php:569
+msgid "Only Visible to Members"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:13
+msgid "Post Layout"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:21 themes/videopro/inc/metadata.php:380
+#: themes/videopro/inc/theme-options.php:563
+msgid "Main Navigation Layout"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:22
+msgid ""
+"Choose layout for Main Navigation of this post. Select \"Default\" to use "
+"settings in Theme Options > Theme Layout > Main Navigation Layout"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:33 themes/videopro/inc/metadata.php:387
+#: themes/videopro/inc/theme-options.php:571
+msgid "Separated"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:38 themes/videopro/inc/metadata.php:392
+#: themes/videopro/inc/theme-options.php:576
+msgid "Inline"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:45 themes/videopro/inc/metadata.php:399
+#: themes/videopro/inc/theme-options.php:499
+msgid "Main Navigation Width"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:46
+msgid ""
+"Choose Main Navigation Width.  Select \"Default\" to use settings in Theme "
+"Options > Theme Layout > Main Navigation Width"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:58 themes/videopro/inc/metadata.php:407
+#: themes/videopro/inc/theme-options.php:508
+msgid "Full-width "
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:63 themes/videopro/inc/metadata.php:87
+#: themes/videopro/inc/metadata.php:316 themes/videopro/inc/metadata.php:412
+#: themes/videopro/inc/theme-options.php:466
+#: themes/videopro/inc/theme-options.php:513
+msgid "Inbox"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:71
+msgid ""
+"Choose layout for this post. Select \"Default\" to use settings in Theme "
+"Options > Theme Layout > Theme Layout"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:82 themes/videopro/inc/metadata.php:311
+#: themes/videopro/inc/theme-options.php:461
+msgid "Full-width"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:92 themes/videopro/inc/metadata.php:321
+#: themes/videopro/inc/theme-options.php:471
+msgid "Wide"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:100 themes/videopro/inc/metadata.php:222
+msgid "Select \"Default\" to use settings in Theme Options"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:111
+#: themes/videopro/inc/theme-options.php:1013
+msgid "Both sidebar"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:133
+msgid "Feature Image-Gallery Position"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:134
+msgid ""
+"Select \"Default\" to use settings in Theme Options > Single Post > Default "
+"Feature Image Position"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:145
+msgid "In body"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:150 themes/videopro/inc/metadata.php:174
+#: themes/videopro/inc/theme-options.php:965
+#: themes/videopro/inc/theme-options.php:992
+msgid "In header"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:157
+msgid "Video Player Position"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:158
+msgid ""
+"Select \"Default\" to use settings in Theme Options > Single Post > Default "
+"Video Player Position"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:169
+#: themes/videopro/inc/theme-options.php:960
+#: themes/videopro/inc/theme-options.php:987
+msgid "In body "
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:181
+msgid "Live Video"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:182
+msgid "Turn on Live Video layout."
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:192
+msgid "Player Background"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:213
+msgid "Layout settings"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:260
+msgid "Front Page Settings"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:261
+msgid "These settings apply for Front Page template"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:268
+#: themes/videopro/inc/theme-options.php:423
+msgid "Site Logo"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:269
+#: themes/videopro/inc/theme-options.php:424
+msgid "Upload your logo image"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:277
+#: themes/videopro/inc/theme-options.php:433
+msgid "Site Logo (Retina)"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:278
+#: themes/videopro/inc/theme-options.php:434
+msgid ""
+"Retina logo should be two time bigger than the custom logo. Retina Logo is "
+"optional, use this setting if you want to strictly support retina devices."
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:286
+#: themes/videopro/inc/theme-options.php:443
+msgid "Logo Image For Sticky Menu"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:287
+#: themes/videopro/inc/theme-options.php:444
+msgid "Upload your logo image for sticky menu"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:295
+msgid "Site Background"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:296
+msgid "Set background for this page"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:304
+#: themes/videopro/inc/theme-options.php:57
+#: themes/videopro/inc/theme-options.php:453
+msgid "Theme Layout"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:305
+#: themes/videopro/inc/theme-options.php:454
+msgid "Select Theme Layout"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:329
+msgid "Body Background Schema"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:330
+msgid "Select Body Background Schema"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:339 themes/videopro/inc/metadata.php:359
+#: themes/videopro/inc/metadata.php:427
+#: themes/videopro/inc/theme-options.php:487
+#: themes/videopro/inc/theme-options.php:543
+#: themes/videopro/inc/theme-options.php:596
+msgid "Dark"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:344 themes/videopro/inc/metadata.php:364
+#: themes/videopro/inc/metadata.php:432
+#: themes/videopro/inc/theme-options.php:548
+#: themes/videopro/inc/theme-options.php:601
+msgid "Light"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:352
+#: themes/videopro/inc/theme-options.php:535
+msgid "Top Header Background Schema"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:353
+#: themes/videopro/inc/theme-options.php:536
+msgid "Select Top Header Background Schema"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:371
+#: themes/videopro/inc/theme-options.php:555
+msgid "Header Background"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:372
+#: themes/videopro/inc/theme-options.php:556
+msgid "Set header background"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:381
+#: themes/videopro/inc/theme-options.php:564
+msgid "Select Navigation Layout"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:400
+#: themes/videopro/inc/theme-options.php:500
+msgid "Choose Main Navigation Width."
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:419
+#: themes/videopro/inc/theme-options.php:583
+msgid "Main Navigation Schema"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:420
+#: themes/videopro/inc/theme-options.php:584
+msgid "Select background schema for Main Navigation"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:443
+msgid "Authors Page Settings"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:444
+msgid "These settings apply for Authors Page template"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:451
+msgid "Number of Items Per Page"
+msgstr ""
+
+#: themes/videopro/inc/metadata.php:452
+msgid ""
+"Enter number of Items Per Page. Leave empty or use 0 to list all authors"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:393
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:917
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2625
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3672
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:607
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:608
+msgid "Update Required"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:726
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1024
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1024
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1027
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:1027
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2074
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2365
+msgid "Required"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2368
+msgid "Recommended"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2384
+msgid "WordPress Repository"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2387
+msgid "External Source"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2390
+msgid "Pre-Packaged"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2407
+msgid "Not Installed"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2411
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2413
+msgid "Active"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2419
+msgid "Required Update not Available"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2422
+msgid "Requires Update"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2425
+msgid "Update recommended"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2582
+msgid "Installed version:"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2590
+msgid "Minimum required version:"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2602
+msgid "Available version:"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2625
+msgid "No plugins to install, update or activate."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2639
+msgid "Plugin"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2640
+msgid "Source"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2645
+msgid "Version"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2646
+msgid "Status"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2695
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2700
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2706
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2776
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2809
+msgid "Install"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2815
+msgid "Update"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2818
+msgid "Activate"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2849
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2851
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2892
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:2894
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3000
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3026
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3250
+msgid "Plugin activation failed."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3590
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3593
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3595
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3599
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3601
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3601
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3609
+msgid "Show Details"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3601
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3609
+msgid "Hide Details"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3604
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3607
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3609
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3610
+msgid "All installations have been completed."
+msgstr ""
+
+#: themes/videopro/inc/plugins/tgm-plugin-activation/class-tgm-plugin-activation.php:3612
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:80
+msgid "Posts navigation"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:84
+msgid " Previous"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:88
+msgid "Next "
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:183
+msgid "PREV"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:240
+msgid "NEXT"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:351
+msgid "Posted on "
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:351
+msgid "by"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:411
+#, php-format
+msgid "Search results for \"%s\""
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:419
+msgid "Author: "
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:421
+#: themes/videopro/inc/template-tags.php:423
+#: themes/videopro/inc/template-tags.php:425
+msgid "Archives for "
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:432
+#: themes/videopro/inc/theme-options.php:81
+msgid "404 - Page Not Found"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:615
+msgid "Share on Facebook"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:622
+msgid "Share on Twitter"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:629
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:636
+msgid "Share on Tumblr"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:643
+msgid "Share on Google Plus"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:650
+msgid "Pin this"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:657
+msgid "Share on VK"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:664
+msgid "Email this"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:804
+msgid "Search Results for"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:805
+msgid "Tag"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:807
+msgid "404"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:836
+msgid "Blog"
+msgstr ""
+
+#: themes/videopro/inc/template-tags.php:1208
+msgid "View all posts in "
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:35
+#: themes/videopro/inc/theme-options.php:101
+msgid "Misc"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:36
+#: themes/videopro/inc/theme-options.php:41
+msgid "Help content goes here!"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:40
+msgid "Main Layout"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:44
+msgid "Sidebar content goes here!"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:53
+msgid "Color and Fonts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:61
+msgid "Archives"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:65
+msgid "Single Post"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:69
+msgid "Single page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:77
+msgid "Author Page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:89
+msgid "Social Sharing"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:93
+msgid "Membership"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:97
+msgid "Advertising"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:107
+msgid "SEO - Echo Meta Tags"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:108
+msgid ""
+"By default, The theme generates its own SEO meta tags (for example: Facebook "
+"Meta Tags). If you are using another SEO plugin like YOAST or a Facebook "
+"plugin, you can turn off this option"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:116
+msgid "Breadcrumbs"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:117
+msgid "Enable Breadcrumbs (Pathway)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:125
+msgid "Turn on/off Link on Date Time"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:134
+msgid "Scroll Effect"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:135
+msgid "Enable Page Scroll effect"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:143
+msgid "Go To Top Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:144
+msgid "Enable Go To Top Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:152
+msgid "Custom CSS"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:153
+msgid "Enter CSS code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:160
+msgid "RTL Mode"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:161
+msgid "Support Right-to-Left language"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:169
+msgid "LazyLoad Images"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:177
+msgid "Copyright Text"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:178
+msgid "Enter copyright text"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:188
+msgid "Main Color 1"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:189
+msgid "Choose main color 1 of theme"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:203
+msgid "Main Color 2"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:204
+msgid "Choose main color 2 of theme"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:212
+msgid "Main Color 3"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:213
+msgid "Choose main color 3 of theme"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:221
+msgid "Google Font"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:222
+msgid "Use Google Fonts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:230
+msgid "Main Font Family"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:231
+#: themes/videopro/inc/theme-options.php:256
+#: themes/videopro/inc/theme-options.php:286
+#: themes/videopro/inc/theme-options.php:316
+msgid ""
+"Enter font-family name here. Google Fonts are supported. For example, if you "
+"choose \"Source Code Pro\" <a href=\"http://www.google.com/fonts/\">Google "
+"Font</a> with font-weight 400,500,600, enter Source Code Pro: 400,500,600"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:239
+msgid "Main Font Size"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:240
+#: themes/videopro/inc/theme-options.php:271
+#: themes/videopro/inc/theme-options.php:301
+#: themes/videopro/inc/theme-options.php:331
+msgid "Select base font size"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:255
+msgid "Navigation Font Family"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:270
+msgid "Navigation Font Size"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:285
+msgid "Meta Font Family"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:300
+msgid "Meta Font Size"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:315
+msgid "Heading Font Family"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:330
+msgid "Heading Font Size"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:346
+msgid "Custom Font 1 (woff)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:347
+msgid ""
+"Upload your own font and enter name \"custom-font-1\" in \"Main Font Family"
+"\", \"Navigation Font Family\" or \"Heading Font Family\" setting above."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:355
+msgid "Custom Font 1 (woff2)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:365
+msgid "Custom Font 2 (woff)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:366
+msgid ""
+"Upload your own font and enter name \"custom-font-2\" in \"Main Font Family"
+"\", \"Navigation Font Family\" or \"Heading Font Family\" setting above."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:374
+msgid "Custom Font 2 (woff2)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:384
+msgid "Custom Font 3 (woff)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:385
+msgid ""
+"Upload your own font and enter name \"custom-font-3\" in \"Main Font Family"
+"\", \"Navigation Font Family\" or \"Heading Font Family\" setting above."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:393
+msgid "Custom Font 3 (woff2)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:403
+msgid "Custom Font 4 (woff)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:404
+msgid ""
+"Upload your own font and enter name \"custom-font-4\" in \"Main Font Family"
+"\", \"Navigation Font Family\" or \"Heading Font Family\" setting above."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:412
+msgid "Custom Font 4 (woff2)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:479
+msgid "Body Schema"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:480
+msgid "Select Body Schema"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:492
+msgid "White"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:520
+msgid "Max Width"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:521
+msgid ""
+"Select  theme's max width. Max Width is applied for Full-Width Layout. "
+"Examples: 75%, 95%, 100%, 1920px, 1600px, 90vw, 70vw ... - If Blank, default "
+"= 100% - Only customize for PC)."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:608
+msgid "Mega Menu"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:609
+msgid "Enable Mega Menu"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:623
+msgid "Search Box on Header "
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:624
+msgid ""
+"Enable search box on header. Custom Search Box can be set in Appearance > "
+"Sidebar > Search Box Sidebar"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:638
+msgid "Sticky Menu"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:639
+msgid "Enable Sticky Menu"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:653
+msgid "Select Sticky Menu Behavior"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:665
+msgid "Only appears when page is Scrolled Up"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:669
+msgid "Always Sticky"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:678
+msgid ""
+"Select global sidebar setting. This setting can be overriden in Theme "
+"Options > Archives, Theme Options > Single Post, and in each page, post."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:713
+msgid "Background"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:714
+msgid "Set theme background"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:722
+msgid "Blog Heading"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:723
+msgid "Show/hide Blog Heading"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:731
+msgid ""
+"This setting is applied for all archives pages such as Blog, Category, Tag, "
+"Author, Search, etc.... It will override global setting in Theme Options > "
+"Theme Layout."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:760
+msgid "Default Layout"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:761
+msgid "Select default layout for archives page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:768
+#: themes/videopro/inc/theme-options.php:1303
+msgid "One Column, Big Thumbnail "
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:773
+#: themes/videopro/inc/theme-options.php:1308
+msgid "One Column, Small Thumbnail "
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:785
+msgid "Layout Switcher Toolbar"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:786
+msgid "Show/hide \"Layout Switcher Toolbar\""
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:794
+msgid "Posts Order Select Box"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:795
+msgid "Show/hide \"Posts Order Select Box\""
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:809
+msgid "Item's excerpt"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:810
+msgid "Show/hide post excerpt"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:824
+msgid "Item's author"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:825
+msgid "Show/hide post author"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:839
+msgid "Item's published date"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:840
+msgid "Show/hide post published date"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:854
+msgid "Item's view count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:855
+msgid "Show/hide post view count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:869
+msgid "Item's comment count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:870
+msgid "Show/hide post comment count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:885
+#: themes/videopro/inc/theme-options.php:1356
+msgid "Pagination"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:886
+#: themes/videopro/inc/theme-options.php:1357
+msgid ""
+"Choose type of navigation for blog and any listing page. For WP PageNavi, "
+"you will need to install WP PageNavi plugin"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:902
+#: themes/videopro/inc/theme-options.php:1369
+msgid "Ajax"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:907
+#: themes/videopro/inc/theme-options.php:1374
+msgid "WP PageNavi"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:914
+msgid "Enable Author Page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:915
+msgid ""
+"By enabling Author Page, it will enable link on author name in each post"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:922
+msgid "Author Base Slug"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:923
+msgid ""
+"Change Author' base slug. By default, it is \"author\". Remember to save the "
+"permalink structure again in Settings > Permalinks"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:929
+msgid "Enable Email Contact"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:930
+msgid "Enable Email Contact button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:937
+msgid "Enable Social Accounts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:938
+msgid "Enable author' social account buttons"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:946
+msgid "Default Feature Image Position"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:947
+msgid "Select default feature image position for standard posts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:973
+msgid "Default Video Player Position"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:974
+msgid "Select default Video Player Position for video posts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1037
+msgid "Page Title"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1038
+msgid "Title of Page Not Found - 404 page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1052
+msgid "Page Content"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1053
+msgid "Content of Page Not Found - 404 page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1068
+msgid "Back to home button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1069
+msgid "Enable Back To Home button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1076
+msgid "&quot;Back to home&quot; button&rsquo;s text"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1077
+msgid "Text for \"Back to Home\" button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1092
+msgid "Show Published Date"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1093
+msgid "Show/hide Published Date"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1100
+msgid "Show Post Categories"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1101
+msgid "Show/hide Post Categories"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1109
+msgid "Show Post Author"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1110
+msgid "Show/hide Post Author"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1118
+msgid "Show Post Comments Count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1119
+msgid "Show/hide Comment Count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1128
+msgid "Show Post Views Count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1129
+msgid ""
+"Require Top10 - Popular posts plugin for WordPress installed. If VideoPro-"
+"Video Extension plugin is installed, Post View is enabled for video post "
+"format regardless of this setting"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1137
+msgid "Show Post Likes Count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1138
+msgid ""
+"Require WTI Like Post plugin installed. If VideoPro-Video Extension plugin "
+"is installed, Post Like is enabled for video post format regardless of this "
+"setting"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1147
+msgid "Show Post Tags"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1148
+msgid "Show/hide Post Tags"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1156
+msgid "Show Social Sharing Buttons"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1157
+msgid "Show/hide Social Sharing Buttons"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1165
+msgid "Show Post Navigation"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1166
+msgid "Show/hide Post Navigation Buttons (Prev-Next buttons)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1173
+msgid "Show About the Author"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1174
+msgid "Show/hide \"About the Author\" section in Single Post"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1182
+msgid "Show Related Posts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1183
+msgid "Show/hide Related Posts section in single post page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1191
+msgid "Related Post Title"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1192
+msgid "Enter Title for Related Posts section"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1199
+msgid "Related Posts - Select"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1200
+msgid ""
+"Get Related Posts by Categories or Tags, or using YARPP (Yet Another Related "
+"Post Plugin)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1217
+msgid "YARPP"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1226
+msgid "Related Posts - Count"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1227
+msgid "Number of related posts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1235
+msgid "Related Posts - Order By"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1236
+msgid "Order related posts by Published Date or Randomly"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1257
+msgid "Show Comment"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1258
+msgid "Show/Hide Comment Section"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1274
+msgid "Page Comments"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1275
+msgid "Enable/Disable Page Comments"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1291
+msgid "Search Results Layout"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1292
+msgid "Search layout for search results page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1320
+msgid "Thumbnails in Search Results"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1321
+msgid "Hide post thumbnails in Search Results page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1329
+msgid "Strip shortcodes"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1330
+msgid "Strip all content inside shortcodes"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1338
+msgid "Exclude pages"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1339
+msgid "Exclude pages from search results"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1347
+msgid "Search Video Posts only"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1348
+msgid ""
+"Only search Video Posts. This option will filter main search query so you "
+"should not use if there are other custom post types you want to search"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1383
+#: themes/videopro/inc/theme-options.php:1392
+#: themes/videopro/inc/theme-options.php:1402
+#: themes/videopro/inc/theme-options.php:1411
+#: themes/videopro/inc/theme-options.php:1420
+#: themes/videopro/inc/theme-options.php:1429
+#: themes/videopro/inc/theme-options.php:1438
+#: themes/videopro/inc/theme-options.php:1447
+#: themes/videopro/inc/theme-options.php:1456
+#: themes/videopro/inc/theme-options.php:1493
+msgid "Enter full link to your profile page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1465
+msgid "Enter RSS Feed URL"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1474
+msgid "Enter your email"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1483
+msgid "Enter your Twitch"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1503
+msgid "Add more social account using Font Awesome Icons"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1531
+msgid "Enter full link to your social account (including http)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1554
+msgid "Facebook App ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1555
+msgid "Enter your Facebook App ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1563
+msgid "Enable Facebook Share Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1573
+msgid "Enable Twitter Tweet Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1583
+msgid "Enable LinkedIn Share Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1593
+msgid "Enable Tumblr Share Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1602
+msgid "Google+"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1603
+msgid "Enable Google+ Plus Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1613
+msgid "Enable Pinterest Share Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1622
+msgid "VK"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1623
+msgid "Enable VK Share Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1633
+msgid "Enable Email Share Button"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1642
+msgid "Login Link"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1643
+msgid "Show/hide Login Link on top of the page"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1657
+msgid "Login Link - Text"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1658
+msgid "Enter title of the Login Link"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1665
+msgid "Login Link - Custom URL"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1666
+msgid ""
+"If you want to use a custom login/register URL, enter it here. Leave it "
+"blank to use default WordPress Login URL"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1673
+msgid "Logged-In Menu displays"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1674
+msgid ""
+"Choose what to display on the Logged-in Menu. Go to Appearance > Menus to "
+"manage \"Logged In User Menu\" items"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1681
+#: themes/videopro/profile-form.php:67
+msgid "Nickname"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1686
+#: themes/videopro/profile-form.php:57
+msgid "First Name"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1691
+msgid "First Name + Last Name"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1698
+msgid "Add Log Out menu item"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1699
+msgid "Auto-add Log out menu item to the \"Logged In User Menu\""
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1715
+msgid "Google AdSense Publisher ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1716
+msgid "Enter your Google AdSense Publisher ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1723
+msgid "Top Page Ads - AdSense Ads Slot ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1724
+msgid ""
+"If you want to display Adsense in Top, enter Google AdSense Ad Slot ID here. "
+"If left empty, \"Top Page Ads - Custom Code\" will be used."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1731
+msgid "Top Page Ads - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1732
+msgid "Enter custom code for Top Page Ads"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1739
+msgid "Top Content Ads - AdSense Ads Slot ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1740
+msgid ""
+"If you want to display Adsense in Top, enter Google AdSense Ad Slot ID here. "
+"If left empty, \"Top Content Ads - Custom Code\" will be used."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1747
+msgid "Top Content Ads - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1748
+msgid "Enter custom code for Top Content Ads"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1755
+msgid "Archives Page Ads - AdSense Ads Slot ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1756
+msgid ""
+"If you want to display Adsense in Top, enter Google AdSense Ad Slot ID here. "
+"If left empty, \"Archives Page Ads - Custom Code\" will be used."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1763
+msgid "Archives Page Ads - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1764
+msgid "Enter custom code for Archives Page Ads"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1772
+msgid ""
+"If you want to display Adsense in Top, enter Google AdSense Ad Slot ID here. "
+"If left empty, \"Single Post Ads 1 - Custom Code\" will be used."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1779
+msgid "Single Post Ads 1 - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1780
+msgid "Enter custom code for Single Post Ads 1"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1788
+msgid ""
+"If you want to display Adsense in Top, enter Google AdSense Ad Slot ID here. "
+"If left empty, \"Single Post Ads 2 - Custom Code\" will be used."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1795
+msgid "Single Post Ads 2 - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1796
+msgid "Enter custom code for Single Post Ads 2"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1805
+msgid ""
+"If you want to display Adsense in Top, enter Google AdSense Ad Slot ID here. "
+"If left empty, \"Bottom Content Ads - Custom Code\" will be used."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1812
+msgid "Bottom Content Ads - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1813
+#: themes/videopro/inc/theme-options.php:1830
+msgid "Enter custom code for Bottom Content Ads"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1821
+msgid "Bottom Page Ads - AdSense Ads Slot ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1822
+msgid ""
+"If you want to display Adsense in Bottom, enter Google AdSense Ad Slot ID "
+"here. If left empty, \"Bottom Page Ads - Custom Code\" will be used."
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1829
+msgid "Bottom Page Ads - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1839
+msgid ""
+"If you want to display Adsense at Bottom of Single Post, enter Google "
+"AdSense Ad Slot ID here. If left empty, \"Wall Ads Left - Custom Code\" will "
+"be used. Wall Ads should only be used in boxed layout"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1846
+msgid "Wall Ads Left - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1847
+msgid "Enter custom code for Wall Ads Left"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1855
+msgid "Wall Ads Right - AdSense Ads Slot ID"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1856
+msgid ""
+"If you want to display Adsense at Bottom of Single Post, enter Google "
+"AdSense Ad Slot ID here. If left empty, \"Wall Ads Right - Custom Code\" "
+"will be used. Wall Ads should only be used in boxed layout"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1863
+msgid "Wall Ads Right - Custom Code"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1864
+msgid "Enter custom code for Wall Ads Right"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1872
+msgid "SoundCloud Player Layout"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1873
+msgid "Choose layout for SoundCloud Player"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1879
+msgid "Classic Embed"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1882
+msgid "Visual Embed"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1889
+msgid "SoundCloud Player - Width"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1890
+msgid ""
+"Specify width for SoundCloud Player. Use percentage (ex. 100%) or number "
+"(ex. 160)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1897
+msgid "SoundCloud Player - Height"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1898
+msgid "Specify width for SoundCloud Player. Use number (ex. 160)"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1905
+msgid "SoundCloud Player - Autoplay"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1906
+msgid "Enable autoplay for SoundCloud Player"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1913
+msgid "SoundCloud Player - Hide Related"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1914
+msgid "Hide related Audios on the player"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1921
+msgid "SoundCloud Player - Show Comments"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1922
+msgid "Show comments on the player"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1929
+msgid "SoundCloud Player - Show Users"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1930
+msgid "Show SoundCloud Users on the player"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1937
+msgid "SoundCloud Player - Show Reposts"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1938
+msgid "Show RePosts on the player"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1967
+msgid "Easy Widget Tab - Number of Tabs"
+msgstr ""
+
+#: themes/videopro/inc/theme-options.php:1968
+msgid ""
+"Specify number of Tabs for Easy Widget Tab. Require \"Easy Tab\" plugin "
+"installed"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:11
+msgid "Thumb 50x50px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:11
+#: themes/videopro/inc/theme_config.php:12
+#: themes/videopro/inc/theme_config.php:13
+#: themes/videopro/inc/theme_config.php:14
+#: themes/videopro/inc/theme_config.php:15
+#: themes/videopro/inc/theme_config.php:16
+#: themes/videopro/inc/theme_config.php:17
+#: themes/videopro/inc/theme_config.php:18
+#: themes/videopro/inc/theme_config.php:19
+#: themes/videopro/inc/theme_config.php:20
+#: themes/videopro/inc/theme_config.php:21
+msgid "This thumb size is used for: ..."
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:12
+msgid "Thumb 100x75px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:13
+msgid "Thumb 205x115px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:14
+msgid "Thumb 277x156px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:15
+msgid "Thumb 298x298px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:16
+msgid "Thumb 320x180px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:17
+msgid "Thumb 407x229px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:18
+msgid "Thumb 565x318px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:19
+msgid "Thumb 636x358px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:20
+msgid "Thumb 800x450px"
+msgstr ""
+
+#: themes/videopro/inc/theme_config.php:21
+msgid "Thumb 1280x720px"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:18 themes/videopro/inc/welcome.php:44
+msgid "Welcome"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:18
+msgid "VideoPro Welcome"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:45
+msgid "Document"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:46 themes/videopro/inc/welcome.php:89
+msgid "Sample Data"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:47 themes/videopro/inc/welcome.php:94
+msgid "Support"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:65
+msgid "Please install VideoPro-SampleData plugin to use this feature"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:74
+msgid "Welcome to VideoPro - The Ultimate Video Solution for WordPress"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:78
+msgid "Quick Start Guide"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:79
+msgid "Save your time with VideoPro quick start document"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:83
+msgid "Full Document"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:84
+msgid "See the full user guide for all VideoPro functions"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:90
+msgid "Import sample data to have homepage like our live DEMO"
+msgstr ""
+
+#: themes/videopro/inc/welcome.php:95
+msgid "Need support using the theme? We are here for you."
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:9
+msgid "Show popular posts"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:17
+msgid "Popular Posts"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:47
+msgid "Style"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:50
+msgid "Style 1 - Vertical List, Small Thumbnail"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:51
+msgid "Style 2 - Vertical List, Big Thumbnail "
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:52
+msgid "Style 3 - Carousel"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:57
+msgid "Category (Category ID or Slug)"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:67
+msgid "Post IDs: (If this param is used, other params are ignored)"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:81
+msgid "Number of days"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:84
+msgid "1 day"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:85
+msgid "1 week"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:86
+msgid "1 month"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:87
+msgid "1 year"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:102
+msgid "Most liked"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:103
+msgid "Most commented"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:104
+msgid "Featured"
+msgstr ""
+
+#: themes/videopro/inc/widgets/popular_posts.php:130
+msgid "Headline"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-categories.php:13
+msgid "A list of categories."
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-categories.php:16
+msgid "VideoPro - Categories"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-categories.php:133
+msgid "Show post counts"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-categories.php:136
+msgid "Show hierarchy"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-categories.php:141
+msgid "choose widget layout"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-categories.php:143
+msgid "Show category icon"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-categories.php:144
+msgid "Show category thumbnail"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-recent-comment.php:5
+msgid "The most recent comments"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-recent-comment.php:6
+msgid "VideoPro - Recent Comments"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-recent-comment.php:32
+msgid "Recent Comments"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-recent-comment.php:104
+msgid "Number of comments to show:"
+msgstr ""
+
+#: themes/videopro/inc/widgets/widget-social-accounts.php:11
+msgid "VideoPro - Social Accounts"
+msgstr ""
+
+#: themes/videopro/index.php:92
+msgid "Order By: &nbsp; Ratings"
+msgstr ""
+
+#: themes/videopro/index.php:120
+msgid "Ratings"
+msgstr ""
+
+#: themes/videopro/live-comments.php:25
+msgid "Your comment  *"
+msgstr ""
+
+#: themes/videopro/live-comments.php:26
+msgid "YOUR COMMENTS"
+msgstr ""
+
+#: themes/videopro/live-comments.php:28
+msgid "SEND"
+msgstr ""
+
+#: themes/videopro/live-comments.php:50
+msgid "Please type a comment."
+msgstr ""
+
+#: themes/videopro/live-comments.php:51
+msgid ""
+"Duplicate comment detected; it looks as though you've already said that!"
+msgstr ""
+
+#: themes/videopro/live-comments.php:52
+msgid "Thanks for your comment"
+msgstr ""
+
+#: themes/videopro/live-comments.php:53
+msgid "Please wait a while before posting your next comment"
+msgstr ""
+
+#: themes/videopro/live-comments.php:93
+msgid "More Comments"
+msgstr ""
+
+#: themes/videopro/profile-form.php:29
+msgid "Personal Options"
+msgstr ""
+
+#: themes/videopro/profile-form.php:33
+msgid "Toolbar"
+msgstr ""
+
+#: themes/videopro/profile-form.php:36
+msgid "Show Toolbar when viewing site"
+msgstr ""
+
+#: themes/videopro/profile-form.php:52
+msgid "Username"
+msgstr ""
+
+#: themes/videopro/profile-form.php:53
+msgid "Usernames cannot be changed."
+msgstr ""
+
+#: themes/videopro/profile-form.php:62
+msgid "Last Name"
+msgstr ""
+
+#: themes/videopro/profile-form.php:67 themes/videopro/profile-form.php:116
+msgid "(required)"
+msgstr ""
+
+#: themes/videopro/profile-form.php:72
+msgid "Display name publicly as"
+msgstr ""
+
+#: themes/videopro/profile-form.php:112
+msgid "Contact Info"
+msgstr ""
+
+#: themes/videopro/profile-form.php:116
+msgid "E-mail"
+msgstr ""
+
+#: themes/videopro/profile-form.php:124
+#, php-format
+msgid ""
+"There is a pending change of your e-mail to %1$s. <a href=\"%2$s\">Cancel</a>"
+msgstr ""
+
+#: themes/videopro/profile-form.php:133
+msgid "Website"
+msgstr ""
+
+#: themes/videopro/profile-form.php:153
+msgid "About Yourself"
+msgstr ""
+
+#: themes/videopro/profile-form.php:157
+msgid "Biographical Info"
+msgstr ""
+
+#: themes/videopro/profile-form.php:159
+msgid ""
+"Share a little biographical information to fill out your profile. This may "
+"be shown publicly."
+msgstr ""
+
+#: themes/videopro/profile-form.php:172
+msgid "Account Management"
+msgstr ""
+
+#: themes/videopro/profile-form.php:175
+msgid "New Password"
+msgstr ""
+
+#: themes/videopro/profile-form.php:178
+msgid "Generate Password"
+msgstr ""
+
+#: themes/videopro/profile-form.php:184
+msgid "Hide password"
+msgstr ""
+
+#: themes/videopro/profile-form.php:188
+msgid "Cancel password change"
+msgstr ""
+
+#: themes/videopro/profile-form.php:195
+msgid "Repeat New Password"
+msgstr ""
+
+#: themes/videopro/profile-form.php:198
+msgid "Type your new password again."
+msgstr ""
+
+#: themes/videopro/profile-form.php:202
+msgid "Confirm Password"
+msgstr ""
+
+#: themes/videopro/profile-form.php:206
+msgid "Confirm use of weak password"
+msgstr ""
+
+#: themes/videopro/profile-form.php:222
+msgid "Update Profile"
+msgstr ""
+
+#: themes/videopro/widget-views/shortcode-asf.view.php:19
+#: themes/videopro/widget-views/widget-asf.view.php:9
+msgid "Look in: "
+msgstr ""
+
+#: themes/videopro/widget-views/shortcode-asf.view.php:20
+#: themes/videopro/widget-views/widget-asf.view.php:11
+msgid "All categories"
+msgstr ""
+
+#: themes/videopro/widget-views/shortcode-asf.view.php:78
+msgid "Alphabetic"
+msgstr ""
+
+#: themes/videopro/widget-views/shortcode-asf.view.php:79
+msgid "Updated date"
+msgstr ""
+
+#: themes/videopro/widget-views/shortcode-asf.view.php:87
+msgid "Asc"
+msgstr ""
+
+#: themes/videopro/widget-views/shortcode-asf.view.php:88
+msgid "Desc"
+msgstr ""
+
+#: themes/videopro/widget-views/shortcode-asf.view.php:96
+msgid "Any tag"
+msgstr ""
+
+#: themes/videopro/widget-views/widget-asf.view.php:66
+msgid "Enter Keyword"
+msgstr ""

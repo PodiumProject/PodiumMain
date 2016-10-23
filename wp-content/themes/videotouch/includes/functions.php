@@ -1,8 +1,4 @@
 <?php
-
-// Make sure that themecheck does not crash
-//set_time_limit(0);
-
 // search posts only by title
 function ts_search_by_title_only( $search, &$wp_query )
 {
@@ -157,7 +153,7 @@ function ts_layout_wrapper($elements)
         </script>';
     // Template for adding a 12 column
     echo '<script id="dragable-column-tpl" type="text/x-handlebars-template">
-        <li data-columns="12" data-type="column" class="columns12"> 
+        <li data-columns="12" data-type="column" class="columns12">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">12/12</span>
@@ -165,7 +161,7 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
@@ -173,7 +169,7 @@ function ts_layout_wrapper($elements)
     </script>';
     // Template for splitting the content in 2 halfs
     echo '<script id="dragable-column-tpl-half" type="text/x-handlebars-template">
-        <li data-columns="6" data-type="column" class="columns6"> 
+        <li data-columns="6" data-type="column" class="columns6">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/2</span>
@@ -181,12 +177,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="6" data-type="column" class="columns6"> 
+        <li data-columns="6" data-type="column" class="columns6">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/2</span>
@@ -194,7 +190,7 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
@@ -202,7 +198,7 @@ function ts_layout_wrapper($elements)
     </script>';
     // Template for splitting the content in 3 halfs
     echo '<script id="dragable-column-tpl-thirds" type="text/x-handlebars-template">
-        <li data-columns="4" data-type="column" class="columns4"> 
+        <li data-columns="4" data-type="column" class="columns4">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/4</span>
@@ -210,12 +206,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="4" data-type="column" class="columns4"> 
+        <li data-columns="4" data-type="column" class="columns4">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/4</span>
@@ -223,12 +219,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="4" data-type="column" class="columns4"> 
+        <li data-columns="4" data-type="column" class="columns4">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/4</span>
@@ -236,7 +232,7 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
@@ -244,7 +240,7 @@ function ts_layout_wrapper($elements)
     </script>';
     // Template for splitting the content in one to three
     echo '<script id="dragable-column-tpl-one_three" type="text/x-handlebars-template">
-        <li data-columns="4" data-type="column" class="columns4"> 
+        <li data-columns="4" data-type="column" class="columns4">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/3</span>
@@ -252,12 +248,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="8" data-type="column" class="columns8"> 
+        <li data-columns="8" data-type="column" class="columns8">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">2/3</span>
@@ -265,7 +261,7 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
@@ -273,7 +269,7 @@ function ts_layout_wrapper($elements)
     </script>';
     // Template for splitting the content in one fourth to one half and one fourth
     echo '<script id="dragable-column-tpl-four-half-four" type="text/x-handlebars-template">
-        <li data-columns="3" data-type="column" class="columns3"> 
+        <li data-columns="3" data-type="column" class="columns3">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/4</span>
@@ -281,12 +277,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="6" data-type="column" class="columns6"> 
+        <li data-columns="6" data-type="column" class="columns6">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/2</span>
@@ -294,12 +290,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="3" data-type="column" class="columns3"> 
+        <li data-columns="3" data-type="column" class="columns3">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/4</span>
@@ -307,7 +303,7 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
@@ -315,7 +311,7 @@ function ts_layout_wrapper($elements)
     </script>';
     // Template for splitting the content in four columns
     echo '<script id="dragable-column-tpl-four-halfs" type="text/x-handlebars-template">
-        <li data-columns="3" data-type="column" class="columns3"> 
+        <li data-columns="3" data-type="column" class="columns3">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/3</span>
@@ -323,12 +319,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="3" data-type="column" class="columns3"> 
+        <li data-columns="3" data-type="column" class="columns3">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/3</span>
@@ -336,12 +332,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="3" data-type="column" class="columns3"> 
+        <li data-columns="3" data-type="column" class="columns3">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/3</span>
@@ -349,12 +345,12 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
         </li>
-        <li data-columns="3" data-type="column" class="columns3"> 
+        <li data-columns="3" data-type="column" class="columns3">
             <div class="column-header">
                 <span class="minus icon-left" data-tooltip="'.__('Reduce column size', 'touchsize').'"></span>
                 <span class="column-size" data-tooltip="'.__('The size of the column within container', 'touchsize').'">1/3</span>
@@ -362,7 +358,7 @@ function ts_layout_wrapper($elements)
                 <span class="delete-column icon-delete" data-tooltip="'.__('Remove this column', 'touchsize').'"></span>
                 <span class="drag-column icon-drag" data-tooltip="'.__('Drag this column', 'touchsize').'"></span>
             </div>
-           
+
             <ul class="elements">
             </ul>
             <span class="add-element">'.__('Add element', 'touchsize').'</span>
@@ -377,7 +373,7 @@ function ts_layout_wrapper($elements)
         <div class="layout_builder" id="section-content">';
 
     echo $elements;
-            
+
     echo '</div>
         <div style="clear: both"></div>
         <br>
@@ -388,7 +384,7 @@ function ts_layout_wrapper($elements)
 }
 
 /**
- * Extrat information from page options  
+ * Extrat information from page options
  */
 
 //=============== Style options  ===========================
@@ -405,7 +401,7 @@ if ( ! function_exists('ts_preloader')) {
         } else {
             return false;
         }
-        
+
     }
 }
 
@@ -416,7 +412,7 @@ if ( ! function_exists('ts_display_featured_image')) {
     {
         global $post;
         $option = get_option('videotouch_general', array('featured_image_in_post' => 'Y'));
-        
+
         if ( !is_page() && $option['featured_image_in_post'] === 'Y' && !fields::logic($post->ID, 'post_settings', 'hide_featimg') || is_page() && !fields::logic($post->ID, 'page_settings', 'hide_featimg')) {
             return true;
         } else {
@@ -472,7 +468,7 @@ if ( ! function_exists('ts_facebook_app_ID')) {
     function ts_facebook_app_ID()
     {
         $option = get_option('videotouch_general', array('facebook_id' => ''));
-        
+
         return $option['facebook_id'];
     }
 }
@@ -482,7 +478,7 @@ $option = get_option('videotouch_general', array('show_wp_admin_bar' => 'Y'));
 $showAdminBar = (isset($option['show_wp_admin_bar']) && ($option['show_wp_admin_bar'] == 'Y' || $option['show_wp_admin_bar'] == 'N')) ? $option['show_wp_admin_bar'] : 'Y';
 
 if ($showAdminBar == 'N') {
-    add_filter('show_admin_bar', '__return_false');   
+    add_filter('show_admin_bar', '__return_false');
 }
 
 $user = wp_get_current_user();
@@ -545,7 +541,7 @@ if ( ! function_exists('ts_tracking_code')) {
 //=============== Styles Tab ==============================
 
 if ( ! function_exists('ts_boxed_layout')) {
-    
+
     function ts_boxed_layout()
     {
         $option = get_option('videotouch_styles', array('boxed_layout' => 'N'));
@@ -574,37 +570,32 @@ if ( ! function_exists('ts_custom_background')) {
     {
         $bg = get_option('videotouch_styles');
 
-        if ($bg) {
-            switch ($bg['theme_custom_bg']) {
-                case 'N':
-                    $css = '';
-                    break;
-                
-                case 'pattern':
-                    $css = "background: url(" . get_template_directory_uri() . '/images/patterns/' . esc_attr($bg['theme_bg_pattern']) .");\n";
-                    break;
-                
-                case 'image':
-                    $css = "background: url(" . esc_url($bg['bg_image']) .") no-repeat top center;\n";
-                    break;
+        if ( ! isset( $bg['theme_custom_bg'] ) || $bg['theme_custom_bg'] == 'N' ) return;
 
-                case 'color':
-                    $css = "background-color: " . esc_attr($bg['theme_bg_color']) .";\n";
-                    break;
-                
-                default:
-                    $css = '';
-                    break;
-            }
+        switch ($bg['theme_custom_bg']) {
+            case 'N':
+                $css = '';
+                break;
 
-            if ($css !== '') {
-                return "body {\n" . $css . "\n}";
-            } else {
-                return '';
-            }
-        } else {
-            return '';
+            case 'pattern':
+                $css = "background: url(" . get_template_directory_uri() . '/images/patterns/' . esc_attr($bg['theme_bg_pattern']) .");\n";
+                break;
+
+            case 'image':
+                $css = "background: url(" . esc_url($bg['bg_image']) .") no-repeat top center;\n";
+                break;
+
+            case 'color':
+                $css = "background-color: " . esc_attr($bg['theme_bg_color']) .";\n";
+                break;
+
+            default:
+                $css = '';
+                break;
         }
+
+        return ! empty( $css ) ? "body {\n" . $css . "\n}" : '';
+
     }
 }
 
@@ -641,7 +632,7 @@ if ( ! function_exists('ts_overlay_effect_type')) {
     function ts_overlay_effect_type()
     {
         $option = get_option('videotouch_styles', array('overlay_effect_type' => 'dots'));
-        
+
         if ($option['overlay_effect_type'] === 'dots') {
             return 'dotted';
         } else {
@@ -670,7 +661,7 @@ if ( ! function_exists('ts_get_logo')) {
 
                 if ( $option['retina_logo'] === 'Y' ) {
 
-                    $option['retina_width'] = (int)$option['retina_width']; 
+                    $option['retina_width'] = (int)$option['retina_width'];
                     $option['retina_height'] = (int)$option['retina_height'];
 
                     if( $option['retina_width'] > 0 && $option['retina_height'] > 0 ) {
@@ -685,7 +676,7 @@ if ( ! function_exists('ts_get_logo')) {
 
                 return '<img src="'.esc_url($option['logo_url']).'" alt="'.get_bloginfo('name').'" ' . $retina_style . '/>';
             } else {
-                
+
                 if ($option['retina_logo'] === 'Y' ) {
                     $retina_style = 'style="width: ' . $option['retina_width']/2 . 'px; height: auto;"';
                 } else {
@@ -705,7 +696,7 @@ if ( ! function_exists('ts_get_logo_google_fonts')) {
     function ts_get_logo_google_fonts()
     {
         $option = get_option('videotouch_styles', array('logo_type' => 'image'));
-        
+
         if ( $option['logo_type'] === 'image' ) {
             return '';
         } else {
@@ -743,7 +734,7 @@ if ( ! function_exists('ts_get_logo_css')) {
                                     $option['logo_font_weight'] : 'normal';
 
                 $option['logo_font_style']  = (in_array($option['logo_font_style'], array('normal', 'italic'))) ?
-                                    $option['logo_font_style'] : 'normal';  
+                                    $option['logo_font_style'] : 'normal';
 
                 $option['logo_font_size'] = (int)$option['logo_font_size'];
 
@@ -859,7 +850,7 @@ if ( ! function_exists('ts_get_custom_fonts_css')) {
                 ';
             }
 
-            return $additional_styles . ' 
+            return $additional_styles . '
                     @font-face{
                         font-family: "'. $font_family .'";
                         src: url("'. $file_eot .'");
@@ -880,7 +871,7 @@ if ( ! function_exists('ts_get_custom_fonts_css')) {
 
                 $option[$location]['font_weight'] = (in_array($option[$location]['font_weight'], array('normal', '700'))) ? $option[$location]['font_weight'] : 'normal';
 
-                $option[$location]['font_style'] = (in_array($option[$location]['font_style'], array('normal', 'italic'))) ? $option[$location]['font_style'] : 'normal';  
+                $option[$location]['font_style'] = (in_array($option[$location]['font_style'], array('normal', 'italic'))) ? $option[$location]['font_style'] : 'normal';
 
                 $additional_styles = '';
                 if ($location === 'headings') {
@@ -926,11 +917,11 @@ if ( ! function_exists('ts_resize')) {
             case 'grid':
                 $options =  $image_sizes['grid'];
                 break;
-            
+
             case 'thumbnails':
                 $options =  $image_sizes['thumbnails'];
                 break;
-            
+
             case 'bigpost':
                 $options =  $image_sizes['bigpost'];
                 break;
@@ -971,7 +962,7 @@ if ( ! function_exists('ts_resize')) {
                 );
 
                 break;
-            
+
             default:
                 return $image;
                 break;
@@ -1007,7 +998,6 @@ if ( ! function_exists('ts_single_social_sharing')) {
 
     function ts_single_social_sharing() {
         $single = get_option('videotouch_single_post', array('social_sharing' => 'Y'));
-
         if ($single['social_sharing'] === 'Y') {
             return true;
         } else {
@@ -1092,33 +1082,86 @@ if ( ! function_exists('hex2rgb')) {
     }
 }
 
-if ( ! function_exists('ts_get_alert')) {
-    function ts_get_alert() {
+if ( ! function_exists( 'tsz_get_alert' ) ) {
 
-        $options = get_option('videotouch_red_area', array());
+    function tsz_get_alert()
+    {
+        $red_area = get_option( 'videotouch_red_area', array() );
 
-        if ( isset($options['alert']['id']) && isset($options['alert']['message']) ) {
-            if ( $options['alert']['id'] !== 0 && ! empty($options['alert']['message']) ) {
-                if ( is_array( $options['hidden_alerts'] ) ) {
-                    if ( ! in_array( $options['alert']['id'], $options['hidden_alerts'] ) ) {
-                        echo '<div class="updated">
-                            <p>'.$options['alert']['message'].' | <a href="#" class="ts-remove-alert" data-token="'.wp_create_nonce("remove-videotouch-alert").'" data-alets-id="'.$options['alert']['id'].'">'.__('Hide', 'touchsize').'</a></p>
-                        </div><br/>';       
+        if ( isset( $red_area['alert']['id'], $red_area['alert']['message'] ) ) {
+
+            if ( $red_area['alert']['id'] !== 0 && ! empty( $red_area['alert']['message'] ) ) {
+
+                if ( is_array( $red_area['hidden_alerts'] ) ) {
+
+                    if ( ! in_array( $red_area['alert']['id'], $red_area['hidden_alerts'] ) ) {
+
+                        echo
+                            '<div class="updated">
+                                <p>' .
+                                    $red_area['alert']['message'] .
+                                    ' | <a href="#" class="ts-remove-alert" data-token="' . wp_create_nonce( 'remove-videotouch-alert' ) . '" data-alets-id="' . $red_area['alert']['id'] . '">' . esc_html__('Hide', 'touchsize') . '</a>
+                                </p>
+                            </div><br/>';
                     }
                 }
             }
         }
+
+        // Get alert if theme has updates.
+        $updates = get_site_transient( 'update_themes' );
+        $current = wp_get_theme();
+
+        if ( isset( $updates->response[ strtolower( $current->Name ) ] ) && version_compare( $current->Version, $updates->response[ strtolower( $current->Name ) ]['new_version'], '<' ) ) {
+
+            echo
+                '<div class="updated">
+                    <h3>' . __('Attention', 'touchsize') . '!</h3>
+                    <p>' . __( '<b>You are using an old version of the theme. To ensure maximum compatibility and bugs fixed please keep the theme up to date.</b> <br>Do not forget that changes done directly in the theme files will be lost, use only Custom CSS areas and child themes if you wish to make changes.', 'touchsize' ) .
+                        '<br><br><a href="' . network_admin_url( 'update-core.php' ) . '" class="button button-primary">' . __( 'Update now', 'touchsize' ) . '</a>
+                    </p>
+                </div><br><br>';
+        }
+
+        $update_options = get_option( 'videotouch_theme_update' );
+
+        if  (
+                ( empty( $update_options['update_options']['user_name'] ) || empty( $update_options['update_options']['key_api'] ) ) &&
+                ( ! isset( $red_area['hidden_alerts'] ) || ! is_array( $red_area['hidden_alerts'] ) || ! in_array( 'empty-envato-info', $red_area['hidden_alerts'], true ) )
+            )
+        {
+            echo
+                '<div class="updated">
+                    <p>' .
+                        esc_html__( 'To make sure you receive update notifications and to be able to update directly from the Dashboard please add your username and API key.', 'touchsize' ) .
+                        '<br><a class="button button-primary" href="' . admin_url( 'themes.php?page=' . strtolower( wp_get_theme()->get( 'Name' ) ) . '&tab=theme_update' ) . '">' .
+                            esc_html__( 'Set user and API Key', 'touchsize' ) .
+                        '</a> ' .
+                        '<a href="#" class="ts-remove-alert button-secondary" data-token="' . wp_create_nonce( 'remove-videotouch-alert' ) . '" data-alets-id="empty-envato-info">' .
+                            esc_html__( 'Hide notice', 'touchsize' ) .
+                        '</a>
+                    </p>
+                </div><br/>';
+        }
     }
 }
+add_action( 'admin_notices', 'tsz_get_alert' );
 
-add_action('admin_notices', 'ts_get_alert');
+$update_options = get_option( 'videotouch_theme_update' );
+
+if ( isset( $update_options['update_options'] ) ) {
+
+    load_template( trailingslashit( get_template_directory() ) . 'includes/envato-wp-theme-updater.php' );
+
+    new Envato_WP_Theme_Updater( $update_options['update_options']['user_name'], $update_options['update_options']['key_api'], 'upcode' );
+}
 
 if ( ! function_exists('ts_update_redarea')) {
     function ts_update_redarea() {
         $option = get_option('videotouch_red_area', array());
 
         if (isset($option['time'])) {
-            
+
             $current_time = time();
 
             if ( ($current_time - (int)$option['time']) >= 3600 ) {
@@ -1181,14 +1224,14 @@ if ( ! function_exists('theme_styles_rewrite')) {
                 color: <?php echo ts_get_color('general_text_color'); ?>;
             }
             .ts-user-profile-dw .user-info a,
-            .ts-user-header-profile #ts-show-login-modal{
+            .ts-user-header-profile .ts-show-login-modal{
                 color: inherit;
             }
             .ts-user-profile-dw .user-info .dropdown > .dropdown-menu a:hover{
                 color: <?php echo ts_get_color('general_text_color'); ?>;
             }
             .ts-user-profile-dw .user-info .user-role,
-            .ts-user-header-profile #ts-show-register-modal{
+            .ts-user-header-profile .ts-show-register-modal{
                 color: inherit;
                 opacity: 0.7;
             }
@@ -1220,131 +1263,131 @@ if ( ! function_exists('theme_styles_rewrite')) {
                 color: <?php echo ts_get_color('primary_color'); ?>;
                 border-color: <?php echo ts_get_color('primary_color'); ?>;
             }
-            .woocommerce .widget_price_filter .ui-slider .ui-slider-range, 
+            .woocommerce .widget_price_filter .ui-slider .ui-slider-range,
             .woocommerce-page .widget_price_filter .ui-slider .ui-slider-range,
-            .woocommerce .widget_price_filter .ui-slider .ui-slider-handle, 
+            .woocommerce .widget_price_filter .ui-slider .ui-slider-handle,
             .woocommerce-page .widget_price_filter .ui-slider .ui-slider-handle{
                 background-color: <?php echo ts_get_color('primary_color'); ?>;
             }
-            .woocommerce .widget_layered_nav_filters ul li a, 
+            .woocommerce .widget_layered_nav_filters ul li a,
             .woocommerce-page .widget_layered_nav_filters ul li a{
                 background-color: <?php echo ts_get_color('primary_color'); ?>;
                 border-color: <?php echo ts_get_color('primary_color'); ?>;
             }
-            .woocommerce #content div.product form.cart .variations label, 
-            .woocommerce div.product form.cart .variations label, 
-            .woocommerce-page #content div.product form.cart .variations label, 
+            .woocommerce #content div.product form.cart .variations label,
+            .woocommerce div.product form.cart .variations label,
+            .woocommerce-page #content div.product form.cart .variations label,
             .woocommerce-page div.product form.cart .variations label{
                 color: <?php echo ts_get_color('general_text_color'); ?>;
             }
-            .woocommerce #content div.product .woocommerce-tabs ul.tabs li.active, 
-            .woocommerce div.product .woocommerce-tabs ul.tabs li.active, 
-            .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active, 
+            .woocommerce #content div.product .woocommerce-tabs ul.tabs li.active,
+            .woocommerce div.product .woocommerce-tabs ul.tabs li.active,
+            .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li.active,
             .woocommerce-page div.product .woocommerce-tabs ul.tabs li.active{
                 background-color: #f7f7f7;
                 color: #343434;
             }
-            .woocommerce #content .quantity .minus, 
-            .woocommerce .quantity .minus, 
-            .woocommerce-page #content .quantity .minus, 
+            .woocommerce #content .quantity .minus,
+            .woocommerce .quantity .minus,
+            .woocommerce-page #content .quantity .minus,
             .woocommerce-page .quantity .minus,
-            .woocommerce #content .quantity .plus, 
-            .woocommerce .quantity .plus, 
-            .woocommerce-page #content .quantity .plus, 
+            .woocommerce #content .quantity .plus,
+            .woocommerce .quantity .plus,
+            .woocommerce-page #content .quantity .plus,
             .woocommerce-page .quantity .plus{
                 background-color: <?php echo ts_get_color('secondary_color'); ?>;
                 color: <?php echo ts_get_color('secondary_text_color'); ?>;
             }
-            .woocommerce #content .quantity .minus:hover, 
-            .woocommerce .quantity .minus:hover, 
-            .woocommerce-page #content .quantity .minus:hover, 
+            .woocommerce #content .quantity .minus:hover,
+            .woocommerce .quantity .minus:hover,
+            .woocommerce-page #content .quantity .minus:hover,
             .woocommerce-page .quantity .minus:hover,
-            .woocommerce #content .quantity .plus:hover, 
-            .woocommerce .quantity .plus:hover, 
-            .woocommerce-page #content .quantity .plus:hover, 
+            .woocommerce #content .quantity .plus:hover,
+            .woocommerce .quantity .plus:hover,
+            .woocommerce-page #content .quantity .plus:hover,
             .woocommerce-page .quantity .plus:hover{
                 background-color: <?php echo ts_get_color('primary_color_hover'); ?>;
                 color: <?php echo ts_get_color('primary_text_color_hover'); ?>;
             }
-            .woocommerce #content input.button, 
-            .woocommerce #respond input#submit, 
-            .woocommerce a.button, 
-            .woocommerce button.button, 
-            .woocommerce input.button, 
-            .woocommerce-page #content input.button, 
-            .woocommerce-page #respond input#submit, 
-            .woocommerce-page a.button, 
-            .woocommerce-page button.button, 
+            .woocommerce #content input.button,
+            .woocommerce #respond input#submit,
+            .woocommerce a.button,
+            .woocommerce button.button,
+            .woocommerce input.button,
+            .woocommerce-page #content input.button,
+            .woocommerce-page #respond input#submit,
+            .woocommerce-page a.button,
+            .woocommerce-page button.button,
             .woocommerce-page input.button,
-            .woocommerce .woocommerce-error .button, 
-            .woocommerce .woocommerce-info .button, 
-            .woocommerce .woocommerce-message .button, 
-            .woocommerce-page .woocommerce-error .button, 
-            .woocommerce-page .woocommerce-info .button, 
+            .woocommerce .woocommerce-error .button,
+            .woocommerce .woocommerce-info .button,
+            .woocommerce .woocommerce-message .button,
+            .woocommerce-page .woocommerce-error .button,
+            .woocommerce-page .woocommerce-info .button,
             .woocommerce-page .woocommerce-message .button{
                 background: transparent;
                 color: <?php echo ts_get_color('primary_color'); ?>;
             }
-            .woocommerce #content input.button:hover, 
-            .woocommerce #respond input#submit:hover, 
-            .woocommerce a.button:hover, 
-            .woocommerce button.button:hover, 
-            .woocommerce input.button:hover, 
-            .woocommerce-page #content input.button:hover, 
-            .woocommerce-page #respond input#submit:hover, 
-            .woocommerce-page a.button:hover, 
-            .woocommerce-page button.button:hover, 
+            .woocommerce #content input.button:hover,
+            .woocommerce #respond input#submit:hover,
+            .woocommerce a.button:hover,
+            .woocommerce button.button:hover,
+            .woocommerce input.button:hover,
+            .woocommerce-page #content input.button:hover,
+            .woocommerce-page #respond input#submit:hover,
+            .woocommerce-page a.button:hover,
+            .woocommerce-page button.button:hover,
             .woocommerce-page input.button:hover{
                 background: transparent;
                 color: <?php echo ts_get_color('primary_color_hover'); ?> !important;
             }
-            .woocommerce #content input.button.alt, 
-            .woocommerce #respond input#submit.alt, 
-            .woocommerce a.button.alt, 
-            .woocommerce button.button.alt, 
-            .woocommerce input.button.alt, 
-            .woocommerce-page #content input.button.alt, 
-            .woocommerce-page #respond input#submit.alt, 
-            .woocommerce-page a.button.alt, 
-            .woocommerce-page button.button.alt, 
+            .woocommerce #content input.button.alt,
+            .woocommerce #respond input#submit.alt,
+            .woocommerce a.button.alt,
+            .woocommerce button.button.alt,
+            .woocommerce input.button.alt,
+            .woocommerce-page #content input.button.alt,
+            .woocommerce-page #respond input#submit.alt,
+            .woocommerce-page a.button.alt,
+            .woocommerce-page button.button.alt,
             .woocommerce-page input.button.alt{
                 background-color: <?php echo ts_get_color('primary_color'); ?>;
                 color: <?php echo ts_get_color('primary_text_color'); ?>;
             }
-            .woocommerce #content input.button.alt:hover, 
-            .woocommerce #respond input#submit.alt:hover, 
-            .woocommerce a.button.alt:hover, 
-            .woocommerce button.button.alt:hover, 
-            .woocommerce input.button.alt:hover, 
-            .woocommerce-page #content input.button.alt:hover, 
-            .woocommerce-page #respond input#submit.alt:hover, 
-            .woocommerce-page a.button.alt:hover, 
-            .woocommerce-page button.button.alt:hover, 
+            .woocommerce #content input.button.alt:hover,
+            .woocommerce #respond input#submit.alt:hover,
+            .woocommerce a.button.alt:hover,
+            .woocommerce button.button.alt:hover,
+            .woocommerce input.button.alt:hover,
+            .woocommerce-page #content input.button.alt:hover,
+            .woocommerce-page #respond input#submit.alt:hover,
+            .woocommerce-page a.button.alt:hover,
+            .woocommerce-page button.button.alt:hover,
             .woocommerce-page input.button.alt:hover{
                 background: <?php echo ts_get_color('primary_color_hover'); ?> !important;
                 color: <?php echo ts_get_color('primary_text_color_hover'); ?> !important;
             }
-            .woocommerce .woocommerce-info, 
+            .woocommerce .woocommerce-info,
             .woocommerce-page .woocommerce-info,
-            .woocommerce .woocommerce-message, 
+            .woocommerce .woocommerce-message,
             .woocommerce-page .woocommerce-message{
                 border-color: <?php echo ts_get_color('primary_color'); ?>;
             }
-            .woocommerce .woocommerce-error, 
+            .woocommerce .woocommerce-error,
             .woocommerce-page .woocommerce-error{
                 border-color: #a80023;
             }
-            .woocommerce .woocommerce-error:before, 
+            .woocommerce .woocommerce-error:before,
             .woocommerce-page .woocommerce-error:before{
                 color: #a80023;
             }
-            .woocommerce .woocommerce-info:before, 
+            .woocommerce .woocommerce-info:before,
             .woocommerce-page .woocommerce-info:before,
-            .woocommerce .woocommerce-message:before, 
+            .woocommerce .woocommerce-message:before,
             .woocommerce-page .woocommerce-message:before{
                 color: <?php echo ts_get_color('primary_color'); ?>;
             }
-            .woocommerce #content div.product .woocommerce-tabs .panel, 
+            .woocommerce #content div.product .woocommerce-tabs .panel,
             .woocommerce div.product .woocommerce-tabs .panel{
                 background-color: #f7f7f7;
             }
@@ -1620,7 +1663,7 @@ if ( ! function_exists('theme_styles_rewrite')) {
                 color: <?php echo ts_get_color('primary_color'); ?>;
             }
             /* Set the background and text color of the view articles */
-            
+
             .ts-pagination ul .page-numbers{
                 background: #f7f7f7;
                 color: #343434;
@@ -1766,7 +1809,7 @@ function ts_imagesloaded($bool, $img_url){
 }
 
 function menuCallback(){
-    wp_page_menu(array( 
+    wp_page_menu(array(
         'menu_class'  => 'ts-behold-menu main-menu ',
         'include'     => '',
         'exclude'     => '',
@@ -1799,16 +1842,8 @@ if( !isset($ts_is_mega_menu_option['enable_mega_menu'] ) ){
 
 if( $ts_is_mega_menu_option['enable_mega_menu'] == 'Y' ) {
 
-    add_theme_support( 'ts_is_mega_menu' );  
+    add_theme_support( 'ts_is_mega_menu' );
 
-}
-
-$update_options = get_option('videotouch_theme_update');
-if( isset($update_options['update_options']) ){
-
-    load_template( trailingslashit( get_template_directory() ) . 'includes/envato-wp-theme-updater.php' );
-    Envato_WP_Theme_Updater::init($update_options['update_options']['user_name'], $update_options['update_options']['key_api'], 'TouchSize');
- 
 }
 
 function ts_set_post_views($postID) {
@@ -1828,7 +1863,7 @@ function ts_track_post_views ($post_id) {
     if ( !is_single() ) return;
     if ( empty($post_id) ) {
         global $post;
-        $post_id = $post->ID;    
+        $post_id = $post->ID;
     }
     ts_set_post_views($post_id);
 }
@@ -1852,7 +1887,7 @@ function ts_get_views($postID, $show = true){
 function ts_get_icon_format($post_id){
 
     $post_format = get_post_format( $post_id );
-   
+
     if( isset($post_format) ){
 
         if( $post_format == 'video' ){
@@ -1862,7 +1897,7 @@ function ts_get_icon_format($post_id){
         }else{
             echo '<i class="icon-page"></i>';
         }
-        
+
     }else{
         echo '<i class="icon-page"></i>';
      }
@@ -1876,7 +1911,7 @@ function ts_add_custom_true($columns) {
     if( $postType == 'video' || $postType == 'post' ){
         $columns['featured_article'] = 'Featured';
     }
-    
+
     return $columns;
 }
 add_filter('manage_posts_columns', 'ts_add_custom_true', 10, 1);
@@ -1903,7 +1938,7 @@ function ts_get_pagination_next_previous(){
     $enable_pagination = get_option('videotouch_single_post', array('post_pagination' => 'Y'));
     if( isset($enable_pagination) && is_array($enable_pagination) && !empty($enable_pagination) && isset($enable_pagination['post_pagination']) && $enable_pagination['post_pagination'] == 'Y' ){
 
-        $next_post = get_next_post(); 
+        $next_post = get_next_post();
         $prev_post = get_previous_post();
 
         ?>
@@ -1911,7 +1946,7 @@ function ts_get_pagination_next_previous(){
             <?php if( !empty($prev_post) ) :  ?>
                 <a class="prev" href="<?php echo get_permalink( $prev_post->ID, false ); ?>">
                     <span class="icon-wrap"><i class="icon-left"></i></span>
-                    <?php 
+                    <?php
                         $src = wp_get_attachment_url( get_post_thumbnail_id( $prev_post->ID ) );
                         $class_no_image = '';
                         if( !$src ){
@@ -1936,7 +1971,7 @@ function ts_get_pagination_next_previous(){
             <?php if( !empty($next_post) ) : ?>
                 <a class="next" href="<?php echo get_permalink( $next_post->ID, false ); ?>">
                     <span class="icon-wrap"><i class="icon-right"></i></span>
-                    <?php 
+                    <?php
                         $src = wp_get_attachment_url( get_post_thumbnail_id( $next_post->ID ) );
                         $class_no_image = '';
                         if( !$src ){
@@ -1968,7 +2003,7 @@ function ts_get_related_posts_author($author_id, $post_id){
 
     $related_posts = '';
     $single_options = get_option('videotouch_single_post');
-   
+
     if( isset($single_options) && is_array($single_options) && isset($single_options['related_posts']) && $single_options['related_posts'] == 'Y' ){
         if( isset($post_id) && (int)$post_id !== 0 ){
             $post_type = get_post_type($post_id);
@@ -1997,15 +2032,15 @@ function ts_get_related_posts_author($author_id, $post_id){
             $args['orderby '] = 'date';
             $args['order '] = 'DESC';
             $args['post_type'] = $post_type;
-            
+
             $query = new WP_Query( $args );
-          
+
             if ( $query->have_posts() ) {
                 echo $related_posts . LayoutCompilator::last_posts_element( $options, $query );
             } else {
                 echo '';
             }
-            
+
         }
     }else{
         return FALSE;
@@ -2013,7 +2048,7 @@ function ts_get_related_posts_author($author_id, $post_id){
 }
 
 function ts_breadcrumbs(){
- 
+
     global $post;
 
     if ( is_front_page() ) {
@@ -2024,26 +2059,26 @@ function ts_breadcrumbs(){
 
         $breadcrumbs =  '<div class="ts-breadcrumbs-content">
                             <a href="' . home_url() . '">' . __('Home', 'touchsize') . '</a>';
-    
+
         if (is_category() || is_single() ) {
 
             $breadcrumbs .= " / ";
 
             $post_type = $post->post_type;
-            
+
             if( $post_type === 'post' ){
                 $categoryies = get_the_category($post->ID);
             }else{
                 $taxonomies = get_object_taxonomies($post_type);
                 $categoryies = wp_get_post_terms($post->ID, $taxonomies);
-                
+
                 $taxonomy_link = '';
             }
-            
+
             foreach ($categoryies as $category){
 
                 if( isset($category->taxonomy) && $category->taxonomy === 'post_tag' ) break;
-                
+
                 if( is_category() ){
                     $breadcrumbs .= $category->name;
                     break;
@@ -2060,8 +2095,8 @@ function ts_breadcrumbs(){
                 if( $post_type === 'post' && is_single() ){
                     $breadcrumbs .= '<a href="' . get_category_link($category->term_id) . '">' . $category->name . '</a>';
                 }else{
-                    if( !empty($taxonomy_link) ) $breadcrumbs .= '<a href="' . $taxonomy_link . '">' . $category->name . '</a>'; 
-                    else $breadcrumbs .= $category->name; 
+                    if( !empty($taxonomy_link) ) $breadcrumbs .= '<a href="' . $taxonomy_link . '">' . $category->name . '</a>';
+                    else $breadcrumbs .= $category->name;
                 }
                 $breadcrumbs .= " / ";
                 break;
@@ -2124,7 +2159,7 @@ function ts_base_64($string, $encode_decode){
     }else if( $encode_decode === 'decode' && isset($string) && !empty($string) ){
         return @unserialize(base64_decode($string));
     }else return '';
-} 
+}
 
 function ts_validate_gravatar($email) {
     $hash = md5(strtolower(trim($email)));
@@ -2138,7 +2173,7 @@ function ts_validate_gravatar($email) {
     return $has_valid_avatar;
 }
 
-function ts_display_gravatar($size){ 
+function ts_display_gravatar($size){
     global $current_user;
     get_currentuserinfo();
     $get_user_email = $current_user->user_email;
@@ -2151,7 +2186,7 @@ function ts_display_gravatar($size){
         return '<img src="' . $user_gravatar . '" class="wpb_gravatar" />';
     }else{
         return $avatar;
-    }   
+    }
 }
 
 function ts_get_comment_count($post_id) {
@@ -2185,9 +2220,9 @@ function tsGetPreRoll($options){
                 $views = (isset($option['views']) && (int)$option['views'] > 0) ? $option['views'] : 0;
                 $clicks = (isset($option['clicks']) && (int)$option['clicks'] > 0) ? $option['clicks'] : 0;
                 $limit = (isset($option['limit']) && (int)$option['limit'] > 0) ? $option['limit'] : $views + 10;
-                $timer = '<div id="pre-roll-counter"><span></span> ' . __('seconds remaining', 'videotouch') . '</div>';
+                $timer = '<div id="pre-roll-counter"><span></span> ' . __('seconds remaining', 'touchsize') . '</div>';
                 $image_url = wp_get_attachment_url(get_post_thumbnail_id(get_the_ID()));
-                
+
                 if( !empty($video) && $limit > $views ){
                     $atts = array(
                         'src'      => $video,
@@ -2200,19 +2235,72 @@ function tsGetPreRoll($options){
                     );
 
                     $video = wp_video_shortcode($atts);
-                    $factoryHtml .= '<div class="ts-preroll" data-time="'. $time .'" data-views="'. $views .'" data-clicks="'. $clicks .'" data-id="'. $preRollId .'"> 
+                    $factoryHtml .= '<div class="ts-preroll" data-time="'. $time .'" data-views="'. $views .'" data-clicks="'. $clicks .'" data-id="'. $preRollId .'">
                                         '. $video . $link . $timer .'
                                     </div>';
-                }                
+                }
             }
             $i++;
         }
 
         return $factoryHtml;
     }
-    
+
 }
 
 remove_filter('the_content', 'ccb_single_custom_post_filter', 100);
+
+add_filter('redirect_canonical','ts_disable_redirect_canonical');
+
+function ts_disable_redirect_canonical( $redirect_url )
+{
+    if ( is_paged() && is_singular() ) $redirect_url = false; return $redirect_url;
+}
+
+// Add button socials to single product.
+function ts_add_social_single_product()
+{ ?>
+    <div class="product-sharing-options">
+        <span class="post-meta-share">
+            <?php get_template_part('social-sharing'); ?>
+        </span>
+    </div>
+    <?php
+}
+
+add_action( 'woocommerce_single_product_summary', 'ts_add_social_single_product', 100 );
+
+function ts_woocommerce_breadcrumbs() {
+    return array(
+            'delimiter'   => ' &#47; ',
+            'wrap_before' => '<div class="container"><nav class="woocommerce-breadcrumb" itemprop="breadcrumb">',
+            'wrap_after'  => '</div></nav>',
+            'before'      => '',
+            'after'       => '',
+            'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+        );
+}
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'ts_woocommerce_breadcrumbs' );
+
+function tsz_custom_post_archive( $query )
+{
+    if ( is_author() || is_category() || is_tag() ) {
+
+        $args = array(
+            'public'   => true,
+            '_builtin' => false
+        );
+
+        $post_types = get_post_types( $args, 'names' );
+        $post_types[] = 'post';
+
+        $query->set( 'post_type', array_values( $post_types ) );
+    }
+
+    remove_action( 'pre_get_posts', 'tsz_custom_post_archive' );
+}
+
+add_action( 'pre_get_posts', 'tsz_custom_post_archive' );
 
 ?>
