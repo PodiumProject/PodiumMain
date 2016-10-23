@@ -5,14 +5,14 @@ window.rtSelectPostInSearchResults = undefined;
 window.rtSelectPageInSearchResults = undefined;
 
 jQuery(document).ready(function($) {
-    
+
     var rowOptions = {
         connectWith :'.layout_builder_row',
         placeholder : 'ui-state-highlight',
         items : '>li:not(.empty-row,.row-editor,.edit-row-settings)',
         cancel: 'span.add-element, .edit, .delete'
     };
-    
+
     var layout = {
 
         init: function() {
@@ -23,10 +23,10 @@ jQuery(document).ready(function($) {
                 }
             });
             $('.layout_builder_row').sortable(rowOptions);
-            
+
             $('.elements').sortable({
-                items : 'li', 
-                connectWith :'.elements', 
+                items : 'li',
+                connectWith :'.elements',
                 cancel: '.edit, .delete',
                 stop: function( event, ui ) {
                     window.builderDataChanged = true;
@@ -52,7 +52,7 @@ jQuery(document).ready(function($) {
         },
 
         columnSizeInfo : function (size) {
-            
+
             switch(size) {
                 case 2:
                     size = '1/6';
@@ -124,7 +124,7 @@ jQuery(document).ready(function($) {
             return sum;
         },
 
-        // return the row of 
+        // return the row of
         getElementRow : function(ui) {
             return $(ui.item).parent();
         },
@@ -148,10 +148,10 @@ jQuery(document).ready(function($) {
                 $(row).append('row design');
             }
         },
-        
+
         getRowSettings: function (row) {
             var settings = {};
-            
+
             row = $(row);
 
             settings.rowName = row.attr("data-name-id") ? row.attr("data-name-id") : '';
@@ -181,7 +181,7 @@ jQuery(document).ready(function($) {
             settings.gradient = row.attr("data-gradient") ? row.attr("data-gradient") : '';
             settings.gradientColor = row.attr("data-gradient-color") ? row.attr("data-gradient-color") : '';
             settings.gradientMode = row.attr("data-gradient-mode") ? row.attr("data-gradient-mode") : '';
-            
+
             return settings;
         },
 
@@ -199,6 +199,7 @@ jQuery(document).ready(function($) {
 
             } else if (elementType === 'user') {
                 elementData.type = 'user';
+                elementData['align'] = e.attr('data-align');
 
             } else if (elementType === 'cart') {
                 elementData.type = 'cart';
@@ -218,7 +219,7 @@ jQuery(document).ready(function($) {
             } else if (elementType === 'searchbox') {
 
                 elementData.type = 'searchbox';
-            
+
             } else if (elementType === 'menu') {
 
                 elementData.type = 'menu';
@@ -308,7 +309,7 @@ jQuery(document).ready(function($) {
                     elementData['order-by'] = e.attr('data-order-by');
                     elementData['order-direction'] = e.attr('data-order-direction');
                     elementData['special-effects'] = e.attr('data-special-effects');
-                    
+
                 } else if (elementData['display-mode'] == 'timeline') {
 
                     elementData['display-title'] = e.attr('data-display-title');
@@ -576,7 +577,7 @@ jQuery(document).ready(function($) {
                 elementData['delimiter-type'] = e.attr('data-delimiter-type');
                 elementData['delimiter-color'] = e.attr('data-delimiter-color');
                 elementData['admin-label'] = e.attr('data-admin-label');
-            
+
             } else if (elementType === 'title') {
 
                 elementData.type = 'title';
@@ -594,7 +595,7 @@ jQuery(document).ready(function($) {
                 elementData.type = 'facebook-block';
                 elementData['facebook-url'] = e.attr('data-facebook-url');
                 elementData['facebook-background'] = e.attr('data-facebook-background');
-    
+
             }  else if (elementType === 'image') {
 
                 elementData.type = 'image';
@@ -604,13 +605,13 @@ jQuery(document).ready(function($) {
                 elementData['admin-label'] = e.attr('data-admin-label');
                 elementData['retina'] = e.attr('data-retina');
                 elementData['align'] = e.attr('data-align');
-    
+
             } else if (elementType === 'video') {
 
                 elementData.type = 'video';
                 elementData['embed'] = e.attr('data-embed');
                 elementData['admin-label'] = e.attr('data-admin-label');
-            
+
             } else if (elementType === 'filters') {
 
                 elementData.type = 'filters';
@@ -632,13 +633,13 @@ jQuery(document).ready(function($) {
                 elementData['toggle-description'] = e.attr('data-toggle-description');
                 elementData['toggle-state'] = e.attr('data-toggle-state');
                 elementData['admin-label'] = e.attr('data-admin-label');
-            
+
             } else if (elementType === 'timeline') {
 
                 elementData.type = 'timeline';
                 elementData['admin-label'] = e.attr('data-admin-label');
                 elementData['timeline'] = e.attr('data-timeline');
-            
+
             } else if (elementType === 'banner') {
 
                 elementData.type = 'banner';
@@ -742,7 +743,7 @@ jQuery(document).ready(function($) {
                 elementData['criteria'] = e.attr('data-criteria');
                 elementData['order-by'] = e.attr('data-order-by');
                 elementData['direction'] = e.attr('data-direction');
-                
+
             } else if (elementType === 'post') {
 
                 elementData.type = 'post';
@@ -922,23 +923,23 @@ jQuery(document).ready(function($) {
                     elementData['pagination'] = e.attr('data-pagination');
                 }
 
-            } 
+            }
 
             return elementData;
         },
 
         save: function (location) {
-            
+
             var content = $('#section-content>ul'),
                 templateData = {},
                 template_id,
                 template_name;
 
             if ( location === 'page' ) {
-                
+
                 template_id = $('#ts_layout_id').find('#ts-template-id').val();
                 template_name = $('#ts_layout_id').find('#ts-template-name').text();
-                
+
                 templateData = {
                     'post_id': $('#post_ID').val(),
                     'content': [],
@@ -947,12 +948,12 @@ jQuery(document).ready(function($) {
                 };
 
             } else {
-                
+
                 template_id = $('#ts-template-id').val();
                 template_name = $('#ts-template-name').text();
 
                 if (location === 'header') {
-                    
+
                     templateData = {
                         'videotouch_header': 1,
                         'content': [],
@@ -961,7 +962,7 @@ jQuery(document).ready(function($) {
                     };
 
                 } else if (location === 'footer') {
-                    
+
                     templateData = {
                         'videotouch_footer': 1,
                         'content': [],
@@ -970,7 +971,7 @@ jQuery(document).ready(function($) {
                     };
                 }
             }
-            
+
             // iterate over the content rows
             $.each(content, function(index, row) {
                 var parsedRow = {};
@@ -1009,21 +1010,22 @@ jQuery(document).ready(function($) {
     };
 
     layout.init();
-    
+
     $("#post").submit(function(event) {
 
         var success = false,
             d;
-            
+
         d = layout.save('page');
         d.mode = 'update';
+        d.action = 'videotouch_save_layout';
         d['location'] = 'page';
-        
+
         jQuery.ajax({
-            data: d,
-            url: ajaxurl + '?action=videotouch_save_layout',
+            data : d,
+            url  : ajaxurl,
             async: false,
-            type: "POST"
+            type : 'POST'
         }).done(function(data) {
 
             if ( data.status === 'ok' ) {
@@ -1073,7 +1075,7 @@ jQuery(document).ready(function($) {
     // Decrease column size
     $(document).on('click', '.layout_builder_row span.minus', function(event) {
         event.preventDefault();
-        
+
         var element = $(this).parent().parent(),
             current_size = parseInt(element.attr("data-columns"), 10);
 
@@ -1097,7 +1099,7 @@ jQuery(document).ready(function($) {
     // Clone element
     $(document).on('click', '.layout_builder_row span.clone', function(event) {
         event.preventDefault();
-        
+
         var element = $(this).parent();
         var element_html = $(this).parent().clone();
         window.builderDataChanged = true;
@@ -1118,7 +1120,7 @@ jQuery(document).ready(function($) {
     });
 
     // ------ Rows section -------------------------------------------------------------
-     
+
     // Inserting a row to the top
     $('.add-top-row').on('click', function(event) {
         event.preventDefault();
@@ -1207,7 +1209,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         window.currentEditedElement = $(this).parent();
         jQuery('#ts-builder-elements-modal-preloader').show();
-        jQuery('#ts-builder-elements-modal .modal-body').load(ajaxurl + '?action=edit_template_element&height=800&width=835&modal=true"',function(result){
+        jQuery('#ts-builder-elements-modal .modal-body').load(ajaxurl, 'action=edit_template_element&height=800&width=835&modal=true', function(result){
             jQuery('#ts-builder-elements-modal').modal({show:true});
             jQuery('#ts-builder-elements-modal-label').html('Builder elements');
             jQuery('#ts-builder-elements-modal-preloader').hide();
@@ -1229,7 +1231,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         if( ! layout.validateAction()) return;
         $(this).parent().remove();
-        builderDataChanged = true;        
+        builderDataChanged = true;
     });
 
     // Edit Row settings
@@ -1241,7 +1243,7 @@ jQuery(document).ready(function($) {
         window.currentSetId = new Date().getTime();
 
         jQuery('#ts-builder-elements-modal-preloader').show();
-        jQuery('#ts-builder-elements-modal .modal-body').load(ajaxurl + '?action=edit_template_row&height=700&width=835&modal=true"',function(result){
+        jQuery('#ts-builder-elements-modal .modal-body').load(ajaxurl, 'action=edit_template_row&height=700&width=835&modal=true', function(result){
             jQuery('#ts-builder-elements-modal').modal({show:true});
             jQuery('#ts-builder-elements-modal-label').html('Edit row settings');
             jQuery('#ts-builder-elements-modal-preloader').hide();
@@ -1284,10 +1286,10 @@ jQuery(document).ready(function($) {
         window.builderDataChanged = true;
         jQuery('#ts-builder-elements-modal button.close').trigger('click');
     });
-    
+
     // ------ Layout section ----------------------------------------------------------
 
-    // Create new layout       
+    // Create new layout
     $('#create-new-layout').on('click', function(event) {
         event.preventDefault();
         window.location.href = $(this).data('create-uri');
@@ -1295,7 +1297,7 @@ jQuery(document).ready(function($) {
 
     // Create Layout > Structure
     $('ul#layout-type label').on('click', function(event) {
-        
+
         event.stopPropagation();
         $_this = $(this).parent();
         var layoutTypes = $_this.parent().find('li');
@@ -1322,16 +1324,17 @@ jQuery(document).ready(function($) {
     $(document).on('click', '#save-header-footer', function(event) {
         event.preventDefault();
         var location = $(this).attr('data-location');
-        
+
         var n,
             data = layout.save(location);
 
         data.mode = 'update';
+        data.action = 'videotouch_save_layout';
         data['location'] = location;
 
          jQuery.ajax({
             data: data,
-            url: ajaxurl + '?action=videotouch_save_layout',
+            url: ajaxurl,
             async: false,
             type: "POST"
         }).done(function(data) {
@@ -1415,7 +1418,7 @@ jQuery(document).ready(function($) {
     });
 
 
-    // Create/Edit Templates    
+    // Create/Edit Templates
     $(document).on('click', '.ts-modal-confirm', function(event) {
         event.preventDefault();
         $(this).siblings('button[data-dismiss="modal"]').trigger('click');
@@ -1426,7 +1429,7 @@ jQuery(document).ready(function($) {
         event.preventDefault();
         $('#ts-confirmation').modal();
     });
-    
+
     // Save blank tempalte
     $(document).on('click', '#ts-save-blank-template-action', function(event) {
 
@@ -1478,7 +1481,7 @@ jQuery(document).ready(function($) {
     $(document).on('click', '#ts-save-as-template-action', function(event) {
 
         event.preventDefault();
-        
+
         var element = $(this);
         var closeModal = element.siblings('button');
         var template_name = $('#ts-save-template-name').val();
@@ -1511,7 +1514,7 @@ jQuery(document).ready(function($) {
             dataType: 'json',
             data: data
         }).done(function(data) {
-            
+
             if (data.status === 'ok') {
                 closeModal.trigger("click");
             } else {
@@ -1599,7 +1602,7 @@ jQuery(document).ready(function($) {
         var element = $(this);
         var template_id = element.attr('data-template-id');
         var location = element.attr('data-location');
-    
+
         $.ajax({
             url: ajaxurl,
             type: 'POST',
@@ -1620,7 +1623,7 @@ jQuery(document).ready(function($) {
         }).fail(function() {
             alert("Error");
         });
-        
+
     });
 
     jQuery('#publish').on('click', function() {

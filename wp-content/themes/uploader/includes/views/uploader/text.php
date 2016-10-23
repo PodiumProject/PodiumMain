@@ -1,0 +1,10 @@
+<?php defined('ABSPATH') OR die('restricted access');?>
+
+<div class="form-group exc-form-field col-sm-6">
+	<label for="<?php echo esc_attr( $name );?>"><?php echo $label;?></label>
+	<?php echo $markup;?>
+	
+	<?php if ( $help ): ?>
+	<p><?php echo $help;?></p>
+	<?php endif;?>
+</div>

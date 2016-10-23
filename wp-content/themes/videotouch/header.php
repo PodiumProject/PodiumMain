@@ -13,8 +13,8 @@
 
   	<?php
   		if( !function_exists('has_site_icon') || !has_site_icon() ){
-  			echo ts_custom_favicon(); 
-  		} 
+  			echo ts_custom_favicon();
+  		}
   	?>
   	<?php echo ts_get_logo_google_fonts() ?>
   	<?php echo ts_get_custom_fonts('headings') ?>
@@ -54,8 +54,8 @@
 		        <?php endif; ?>
 		<?php endif; ?>
 	<?php endif; ?>
-	    
-	<?php 
+
+	<?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).
 	 */
@@ -71,7 +71,7 @@
 
 	if ( is_singular() && $default_videoplayer === 'y' )
 		echo '<script src="https://content.jwplatform.com/libraries/4r6XfcLg.js"></script>';
-	
+
 	wp_head();
 	?>
 </head>
@@ -84,7 +84,7 @@
 			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=<?php echo ts_facebook_app_ID() ?>";
 			fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
-		</script>	
+		</script>
 	<?php endif ?>
 
 	<?php theme_styles_rewrite(); ?>
@@ -110,9 +110,9 @@
 		<div class="ts-behold-menu ts-sticky-menu <?php echo $sticky_additional_class; ?>">
 			<div class="container relative">
 				<?php
-					wp_nav_menu(array( 
-						'theme_location' => 'primary', 
-						'menu_class' => 'main-menu sf-menu' 
+					wp_nav_menu(array(
+						'theme_location' => 'primary',
+						'menu_class' => 'main-menu sf-menu'
 					));
 
 				?>
@@ -122,10 +122,6 @@
 	<div id="wrapper" class="<?php if( $theme_styles['boxed_layout'] == 'Y' ) { echo 'container'; } ?>">
 		<header id="header" class="row">
 			<div class="col-lg-12">
-				<?php
-					$header_elements = get_option('videotouch_header', array());
-					$header = LayoutCompilator::build_header($header_elements);
-					echo $header;
-				?>
+				<?php echo LayoutCompilator::build_header(); ?>
 			</div>
 		</header>

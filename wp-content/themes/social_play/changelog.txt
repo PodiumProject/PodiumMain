@@ -1,0 +1,137 @@
+Version v.1.2.8
+Youtube API update
+Youtube API key support added in theme options
+TGM plugin activater library update
+Revolution slider update
+No more duplicate enteries for new videos and audios
+
+Version v1.2.7
+Added option in theme option to hide or unhide wp admin bar
+Added max-width: 100%; & height: auto; for all images
+
+Version v1.2.6
+New user registration mail url update to home_url();
+Bug User registration error redirect to wordpress backend fixed
+Bug Forgot password redirect to wordpress backend fixed
+Fully Ajax User login
+Fully Ajax Forgot password
+
+Version v1.2.5
+Responsive Menu Slider overlay bug fixed in style.css
+page builder bug fixed
+Video multilingual embed bug fixed
+Menu on off bug fixed
+HTML entities bug fixed
+
+
+Version v 1.2.4
+Theme options - Video Settings sortby ID added
+Audio file upload button bug fixed
+PageBuilder output bug fixed
+
+Version v 1.2.3
+Admin Logo Fixed
+Videos Uploading bug fixed
+Audio Uploading verified
+Audio / Video Single page image removed
+Audio / Video multiple files upload Message fixed
+Audio / Video BreadCrumbs fixed
+Youtube Videos playlists and channel fetching limit option added in theme options
+Audio and videos posting in similar section bug fixed
+Audio / Video editing HTML entities bug fixed
+Video / Audio upload on error message bug fixed
+
+Version v 1.2.2
+Search Page design fixed
+Embedded Audio empty alert issue fixed
+Uploaded Audio empty thumb issue fixeds
+
+
+--------------------
+Update version 1.2.2
+--------------------
+
+1) Embedded Audio empty alert bug fixed
+2) Uploaded Audio empty thumb bug fixed
+
+--------------------
+Update version 1.2.1
+--------------------
+
+1)added option in theme options to change log for wp-login.php
+2)If administrator has not created login page then user can allow wp-admin area.
+3)Custom uploaded video can auto play on video detail page while click on featured image.
+4)excerpt is removed in default page template.
+5)Email was shouted when user login with facebook is fixed.
+6)Added an option in themeoptions to allow admin to change the homepage videos sorting order.
+7)Added options in theme options to allow admin to show hide upload video / add video buttons on user profile page.
+8)Featured image on blog pages can be enlarge in popup.
+9)url links highlighted as cant see them on pages. maybe red colour to match theme is fixed
+     
+10)is this typo in css "pulished" or pulished is fixed from dark.css
+11)Detailed help note is added under each field while uploading / adding videos or audios
+12)Vidoes in blog posts was to displayed properly is fixed.
+
+13)Upload button dialog box issue is fixed.
+
+14)Signup button need to proper link to signup page on login page is fixed
+
+15)Signup button need to proper link to signup page on forgot page is fixed
+
+16)Added theme option to show featured image for videos at video detail page or not.
+
+17)Private channels and playlists should not be visible publically is fixed.
+
+--------------------
+Update version 1.2.0
+--------------------
+
+1) Page builder
+    i) Gallery module issue is fixed
+    ii)Audios module change number of audios label is fixed
+    ii)Audios module audios not listed is fixed
+
+2) Twitter widget issue showing notice on failed, Fixed
+
+3) Socail Twitter Widget showing issue on failed, fixed
+
+4) option added in theme options to restrict users access to wp-admin area.
+
+5) Audios / videos added or uploaded by admin should be approved by default ( Fixed )
+
+6) Options added in theme option, the default status of users uploaded audios and videos.
+
+7) Option added in Theme opitons, show / hide top menus on load.
+
+8)  Video Title need to link on detail page ( fixed )
+
+9) User should be able to upload own videos. This feature added in the theme that user can upload audios / videos to the website.
+
+10) News Ticker Hard coded in some files, change it to dynamic news ticker.
+
+11) Fetching SoundCloud track are not working properly, fixed the regex.
+
+12) Strict standards: Only variables should be assigned by reference in \wp-content\themes\social_play\libs\grabber\config\config.php on line 3 ( Fixed ).
+
+13) When you are uploading the Video or Audio the description text for the Link field spell video wrong (corrected ).
+
+14) Views counter added on video / audio detail page.
+
+15) Description content added on each channel, playlist, albums, video category, audio category.
+
+16) Homepage filteration issue while filter content by duration. (fixed)
+
+17) Option added in theme options to enable/disable page builder.
+
+18) Option added in theme options to allow users to visit video detail page or view it on the same page
+
+19) Option added in theme options to allow admin to enable/disable tabs on frontend profile page.
+
+---------------------
+Update version 1.0.1
+---------------------
+
+1- 	Colorpicker is removed from frontend
+2-	Cookies removed for color scheme
+3-	Fixed Twitter library codebird.php to compatible with PHP 5.2 and 5.3
+4-	SMTP support added to send emails

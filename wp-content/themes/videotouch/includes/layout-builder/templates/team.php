@@ -14,7 +14,7 @@ $position = (trim(@$meta['position']) !== '') ? '<i class="author-position">'.$m
 // $position = @$meta['position'];
 $about_member = @$meta['about_member'];
 
-$arraySocials = array('facebook', 'twitter', 'linkedin', 'gplus', 'email', 'skype', 'github', 'dribble', 'lastfm', 'linkedin', 'tumblr', 'twitter', 'vimeo', 'wordpress', 'yahoo', 'youtube', 'flickr', 'pinterest', 'instagram');
+$arraySocials = array('facebook', 'twitter', 'linkedin', 'gplus', 'email', 'skype', 'github', 'dribble', 'lastfm', 'tumblr', 'twitter', 'vimeo', 'wordpress', 'yahoo', 'youtube', 'flickr', 'pinterest', 'instagram');
 $optionsSocial = get_option( 'videotouch_social' );
 $customSocial = (isset($optionsSocial['social_new']) && is_array($optionsSocial['social_new']) && !empty($optionsSocial['social_new'])) ? $optionsSocial['social_new'] : array();
 

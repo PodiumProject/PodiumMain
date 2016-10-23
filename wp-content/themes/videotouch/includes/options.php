@@ -17,11 +17,11 @@ function videotouch_impots_options()
 				if (isset($_POST['encoded_options'])) {
 
 					$import = videotouch_impots_decoded_options($_POST['encoded_options']);
-					
+
 					if ($import) {
-						$status = '&updated=true';	
+						$status = '&updated=true';
 					} else {
-						$status = '&updated=false';	
+						$status = '&updated=false';
 					}
 
 					wp_redirect( admin_url('admin.php?page=videotouch&tab=impots_options' . $status) );
@@ -55,10 +55,10 @@ function videotouch_load_patterns()
 add_action('admin_init', 'videotouch_load_patterns');
 
 function videotouch_impots_decoded_options($encoded) {
-	
+
 	$options = ts_base_64($encoded, 'decode');
 	$options = json_decode($options, true);
-	
+
 	if ($options === null) {
 		return false;
 	} else {
@@ -76,7 +76,7 @@ function videotouch_impots_decoded_options($encoded) {
 function videotouch_exports_options() {
 
 	$export = array();
-	
+
 	$expots_options = array(
 		'videotouch_general',
 		'videotouch_image_sizes',
@@ -122,10 +122,10 @@ add_action( 'init', 'register_my_menu' );
 function videotouch_create_menu()
 {
 	add_menu_page(
-		'VideoTouch Options', 
-		'VideoTouch', 
-		'administrator', 
-		'videotouch', 
+		'VideoTouch Options',
+		'VideoTouch',
+		'administrator',
+		'videotouch',
 		'videotouch_display_menu_page',
 		get_template_directory_uri() . '/includes/images/touchicon.png'
 	);
@@ -155,7 +155,7 @@ add_action( 'admin_menu', 'videotouch_create_menu' );
 function videotouch_template_modals($location = 'header', $template_id = 'default', $template_name = 'Default') {
 	ob_start();
     ob_clean();
-    	wp_editor('', 'ts_editor_id', array('textarea_name' => 'ts_name_textarea'));
+    	wp_editor('', 'ts_editor_id', array('textarea_name' => 'ts_name_textarea', 'wpautop' => true));
     $editor_code = ob_get_clean();
 	return '<table>
 		<tr>
@@ -186,7 +186,7 @@ function videotouch_template_modals($location = 'header', $template_id = 'defaul
 						</div>
 					</div>
 				</div>
-				
+
 				<!-- Blank template modal confirmation -->
 				<div class="modal ts-modal fade" id="ts-confirmation" tabindex="-1" role="dialog" aria-labelledby="blank-modal-confirmation-label" aria-hidden="true">
 					<div class="modal-dialog">
@@ -237,7 +237,7 @@ function videotouch_template_modals($location = 'header', $template_id = 'defaul
 							<div class="modal-body">
 								<h5>' . __('Select template', 'touchsize') . ':</h5>
 								<table id="ts-layout-list">
-									
+
 								</table>
 							</div>
 							<div class="modal-footer">
@@ -325,7 +325,7 @@ function videotouch_header()
 			<p><h2><?php _e('Header', 'touchsize') ?></h2></p>
 			<?php
 				$template_id = Template::get_template_info('header', 'id');
-				$template_name = Template::get_template_info('header', 'name'); 	
+				$template_name = Template::get_template_info('header', 'name');
 			 	echo videotouch_template_modals( 'header', $template_id, $template_name );
 			?>
 			<br/><br/>
@@ -348,11 +348,11 @@ function videotouch_footer()
 			<p><h2><?php _e('Footer', 'touchsize') ?></h2></p>
 			<?php
 				$template_id = Template::get_template_info('footer', 'id');
-				$template_name = Template::get_template_info('footer', 'name'); 	
+				$template_name = Template::get_template_info('footer', 'name');
 				echo videotouch_template_modals( 'footer', $template_id, $template_name );
 			?>
 			<br/><br/>
-			
+
 			<?php ts_layout_wrapper(Template::edit('footer')); ?>
 			<input id="save-header-footer" data-location="footer" type="submit" name="submit" id="submit" class="button-primary" value="<?php _e('Save Changes', 'touchsize') ?>"/>
 		</div>
@@ -367,31 +367,31 @@ function videotouch_display_menu_page( $active_tab = '')
 
 <div class="wrap">
 		<div class="wrap-red">
-		<?php 
-			settings_errors(); 
+		<?php
+			settings_errors();
 
 			if ( isset( $_GET['tab'] ) ) {
 
 				$active_tab = $_GET['tab'];
 
 			} else if ( $active_tab === 'general' ) {
-				
+
 				$active_tab = 'general';
 
 			} else if ( $active_tab === 'styles' ) {
-				
+
 				$active_tab = 'styles';
 
 			} else if ( $active_tab === 'image_sizes' ) {
-				
+
 				$active_tab = 'image_sizes';
 
 			} else if ( $active_tab === 'layout' ) {
-				
+
 				$active_tab = 'layout';
 
 			} else if ( $active_tab === 'typography' ) {
-				
+
 				$active_tab = 'typography';
 
 			} else if ( $active_tab === 'single' ) {
@@ -429,7 +429,7 @@ function videotouch_display_menu_page( $active_tab = '')
 			} else {
 
 				$active_tab = 'general';
-			}	
+			}
 		?>
 		<div id="red-wprapper">
 			<div id="red-menu">
@@ -534,7 +534,7 @@ function videotouch_display_menu_page( $active_tab = '')
 				<?php if ($active_tab !== 'impots_options' ): ?>
 				<form method="post" data-table="<?php echo $active_tab; ?>" action="options.php">
 				<?php endif ?>
-					<?php 
+					<?php
 						if ( $active_tab === 'general' ) {
 
 							settings_fields( 'videotouch_general' );
@@ -561,15 +561,15 @@ function videotouch_display_menu_page( $active_tab = '')
 							do_settings_sections( 'videotouch_layout' );
 
 						} else if ( $active_tab === 'typography' ) {
-							
+
 							settings_fields( 'videotouch_typography' );
-							do_settings_sections( 'videotouch_typography' );				
+							do_settings_sections( 'videotouch_typography' );
 
 						} else if ( $active_tab === 'single' ) {
 
 							settings_fields( 'videotouch_single_post' );
 							do_settings_sections( 'videotouch_single_post' );
-						
+
 						} else if ( $active_tab === 'page_settings' ) {
 
 							settings_fields( 'videotouch_page' );
@@ -586,12 +586,12 @@ function videotouch_display_menu_page( $active_tab = '')
 							do_settings_sections( 'videotouch_css' );
 
 						} else if ( $active_tab === 'sidebars' ) {
-							
+
 							settings_fields( 'videotouch_sidebars' );
 							do_settings_sections( 'videotouch_sidebars' );
 
 						} else if ( $active_tab === 'theme_advertising' ) {
-							
+
 							settings_fields( 'videotouch_theme_advertising' );
 							do_settings_sections( 'videotouch_theme_advertising' );
 
@@ -601,7 +601,7 @@ function videotouch_display_menu_page( $active_tab = '')
 							do_settings_sections( 'videotouch_theme_update' );
 
 						}  else if ( $active_tab === 'impots_options' ) {
-							
+
 							settings_fields( 'videotouch_impots_options' );
 							do_settings_sections( 'videotouch_impots_options' );
 
@@ -609,7 +609,7 @@ function videotouch_display_menu_page( $active_tab = '')
 
 							settings_fields( 'videotouch_red_area' );
 							do_settings_sections( 'videotouch_red_area' );
-							
+
 						}
 
 					if ( $active_tab != 'sidebars' && $active_tab != 'red_area' && $active_tab != 'impots_options' ) {
@@ -633,7 +633,7 @@ function videotouch_display_menu_page( $active_tab = '')
  * Iniaitalize the theme options page by registering the Fields, Sections, Settings
  */
 function videotouch_initialize_general_options()
-{	
+{
 	$default_update = get_option('videotouch_general');
 	if( !isset($default_update['login_register_by_facebook']) || !isset($default_update['insert_post_user']) || !isset($default_update['slug_video_taxonomy']) || !isset($default_update['slug_video']) || !isset($default_update['slug_portfolio']) || !isset($default_update['slug_portfolio_taxonomy']) || !isset($default_update['ts_seo']) ){
 
@@ -647,8 +647,8 @@ function videotouch_initialize_general_options()
 		update_option('videotouch_general', $default_update);
 	}
 	//delete_option('videotouch_general');
-	if ( false === get_option( 'videotouch_general' ) ) {	
-		
+	if ( false === get_option( 'videotouch_general' ) ) {
+
 		add_option( 'videotouch_general', array(
 			'featured_image_in_post'     => 'Y',
 			'enable_lightbox'            => 'Y',
@@ -688,11 +688,11 @@ function videotouch_initialize_general_options()
 	} // end if
 
 	// Register a section
-	add_settings_section( 
-		'general_settings_section', 
+	add_settings_section(
+		'general_settings_section',
 		__( 'General Options', 'touchsize' ),
-		'videotouch_general_options_callback', 
-		'videotouch_general' 
+		'videotouch_general_options_callback',
+		'videotouch_general'
 	);
 
 	add_settings_field(
@@ -700,7 +700,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable preloader for website?', 'touchsize' ),
 		'toggle_enable_preloader_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "If you want to add a preloader to your website, you can activate it only for your frontpage, for the whole website or disable it.", 'touchsize' )
 		)
@@ -711,7 +711,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable the onepage layout', 'touchsize' ),
 		'toggle_onepage_website_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "If you enable this, you'll activate the smooth scrolling for the menus in onepage layout. Do not forget to create links with the row names and set them in your menu. Your menu items WILL NOT LINK TO ANY EXTERNAL PAGES, so be sure you need to use this option. For more info check the documentation.", 'touchsize' )
 		)
@@ -722,7 +722,7 @@ function videotouch_initialize_general_options()
 		__( 'Display featured image in post?', 'touchsize' ),
 		'toggle_featured_image_in_post_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "Use this to hide or show the featured image in posts.", 'touchsize' )
 		)
@@ -733,7 +733,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable lightbox?', 'touchsize' ),
 		'toggle_enable_lightbox_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "Enable this if you want your featured images on single pages to have lightbox available", 'touchsize')
 		)
@@ -744,7 +744,7 @@ function videotouch_initialize_general_options()
 		__( 'Want to use imagesloaded?', 'touchsize' ),
 		'toggle_enable_imagesloaded_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "Help loading site with a relatively higher speed.", 'touchsize')
 		)
@@ -755,7 +755,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable human type date?', 'touchsize' ),
 		'toggle_human_type_date_format_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'Human types changes the way the date is shown on archive/single pages. Use this to change default wordpress settings.', 'touchsize' )
 		)
@@ -766,7 +766,7 @@ function videotouch_initialize_general_options()
 		__( 'Which comment system you want to use?', 'touchsize' ),
 		'toggle_comment_system_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'Select which type of comments do you want to use.', 'touchsize' )
 		)
@@ -777,7 +777,7 @@ function videotouch_initialize_general_options()
 		__( 'Facebook modal box page', 'touchsize' ),
 		'facebook_page_modal_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'Add the page modal box in the site.', 'touchsize' )
 		)
@@ -788,7 +788,7 @@ function videotouch_initialize_general_options()
 		__( 'Show wordpress admin bar?', 'touchsize' ),
 		'toggle_show_wp_admin_bar_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'This options disables the wordpress admin bar when logged.', 'touchsize' )
 		)
@@ -799,7 +799,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable sticky menu', 'touchsize' ),
 		'toggle_enable_sticky_menu_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'Enable sticky menu', 'touchsize' )
 		)
@@ -810,7 +810,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable mega menu', 'touchsize' ),
 		'toggle_enable_mega_menu_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "If you want to add a mega menu to your website, you can activate it.", 'touchsize' )
 		)
@@ -821,7 +821,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable likes', 'touchsize' ),
 		'toggle_like_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "If you want to add a likes to your website, you can activate it.", 'touchsize' )
 		)
@@ -832,7 +832,7 @@ function videotouch_initialize_general_options()
 		__( 'Select your icon for like', 'touchsize' ),
 		'toggle_like_icons_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "You can select your icon for likes.", 'touchsize' )
 		)
@@ -843,7 +843,7 @@ function videotouch_initialize_general_options()
 		__( 'You can add the likes to posts', 'touchsize' ),
 		'toggle_generate_likes_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( "You can generate likes in your posts.", 'touchsize' )
 		)
@@ -854,7 +854,7 @@ function videotouch_initialize_general_options()
 		__( 'Tracking code', 'touchsize' ),
 		'toggle_tracking_code_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'Google analytics or any other scripts you have', 'touchsize' )
 		)
@@ -866,7 +866,7 @@ function videotouch_initialize_general_options()
 		__( 'Grid view excerpt size', 'touchsize' ),
 		'toggle_grid_excerpt_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'If you want to shorten or use more characters for your grid articles change the number here', 'touchsize' )
 		)
@@ -877,7 +877,7 @@ function videotouch_initialize_general_options()
 		__( 'List view excerpt size', 'touchsize' ),
 		'toggle_list_excerpt_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'If you want to shorten or use more characters for your list articles change the number here', 'touchsize' )
 		)
@@ -888,7 +888,7 @@ function videotouch_initialize_general_options()
 		__( 'Big posts view excerpt size', 'touchsize' ),
 		'toggle_bigpost_excerpt_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'If you want to shorten or use more characters for your big post articles change the number here', 'touchsize' )
 		)
@@ -899,7 +899,7 @@ function videotouch_initialize_general_options()
 		__( 'Timeline view excerpt size', 'touchsize' ),
 		'toggle_timeline_excerpt_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'If you want to shorten or use more characters for your list articles change the number here', 'touchsize' )
 		)
@@ -910,7 +910,7 @@ function videotouch_initialize_general_options()
 		__( "Set status for users's posts", 'touchsize' ),
 		'toggle_post_publish_user_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'Default frontend submitted posts status', 'touchsize' )
 		)
@@ -921,7 +921,7 @@ function videotouch_initialize_general_options()
 		__( "Login/register with facebook", 'touchsize' ),
 		'toggle_login_register_by_facebook_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( 'Add register or login by facebook account', 'touchsize' )
 		)
@@ -932,7 +932,7 @@ function videotouch_initialize_general_options()
 		__( "Insert your facebook application id", 'touchsize' ),
 		'toggle_facebook_app_id_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -943,7 +943,7 @@ function videotouch_initialize_general_options()
 		__( "Insert your facebook application secret key", 'touchsize' ),
 		'toggle_facebook_app_secret_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -954,7 +954,7 @@ function videotouch_initialize_general_options()
 		__( 'Choose front-end upload post types', 'touchsize' ),
 		'toggle_insert_post_user_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -965,7 +965,7 @@ function videotouch_initialize_general_options()
 		__( 'Enable theme seo', 'touchsize' ),
 		'toggle_ts_seo_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -976,7 +976,7 @@ function videotouch_initialize_general_options()
 		__( 'Change custom post video slug', 'touchsize' ),
 		'toggle_slug_video_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -987,7 +987,7 @@ function videotouch_initialize_general_options()
 		__( 'Change archive video slug', 'touchsize' ),
 		'toggle_slug_video_taxonomy_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -998,7 +998,7 @@ function videotouch_initialize_general_options()
 		__( 'Change custom post portfolio slug', 'touchsize' ),
 		'toggle_slug_portfolio_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -1009,7 +1009,7 @@ function videotouch_initialize_general_options()
 		__( 'Change archive portfolio slug', 'touchsize' ),
 		'toggle_slug_portfolio_taxonomy_callback',
 		'videotouch_general',
-		'general_settings_section', 
+		'general_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -1033,12 +1033,12 @@ function videotouch_general_options_callback()
 function toggle_enable_preloader_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[enable_preloader]">
 		<option value="Y" '. selected( @$options["enable_preloader"], 'Y', false ). '>' . __('Yes', 'touchsize') . '</option>
 		<option value="N" '. selected( @$options["enable_preloader"], 'N', false ). '>' . __('No', 'touchsize') . '</option>
 		<option value="FP" '. selected( @$options["enable_preloader"], 'FP', false ). '>' . __('Only on first page', 'touchsize') . '</option>
-	</select>'; 
+	</select>';
 	$html .= '<p class="description">' .$args[0]. '</p>';
 
 	echo $html;
@@ -1046,11 +1046,11 @@ function toggle_enable_preloader_callback($args)
 function toggle_onepage_website_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[onepage_website]">
 		<option value="Y" '. selected( @$options["onepage_website"], 'Y', false ). '>' . __('Yes', 'touchsize') . '</option>
 		<option value="N" '. selected( @$options["onepage_website"], 'N', false ). '>' . __('No', 'touchsize') . '</option>
-	</select>'; 
+	</select>';
 	$html .= '<p class="description">' .$args[0]. '</p>';
 
 	echo $html;
@@ -1059,21 +1059,21 @@ function toggle_onepage_website_callback($args)
 function toggle_featured_image_in_post_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[featured_image_in_post]">
 					<option value="Y" '. selected( @$options["featured_image_in_post"], 'Y', false ). '>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["featured_image_in_post"], 'N', false ).'>'.__( 'No', 'touchsize' ).'</option>
 				</select>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 
 function toggle_enable_imagesloaded_callback($args){
 
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[enable_imagesloaded]">
 					<option value="Y" '. selected( @$options["enable_imagesloaded"], 'Y', false ). '>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["enable_imagesloaded"], 'N', false ).'>'.__( 'No', 'touchsize' ).'</option>
@@ -1086,7 +1086,7 @@ function toggle_enable_imagesloaded_callback($args){
 function toggle_enable_lightbox_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[enable_lightbox]">
 					<option value="Y" '. selected( @$options["enable_lightbox"], 'Y', false ). '>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["enable_lightbox"], 'N', false ).'>'.__( 'No', 'touchsize' ).'</option>
@@ -1099,7 +1099,7 @@ function toggle_enable_lightbox_callback($args)
 function toggle_human_type_date_format_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[human_type_date_format]">
 					<option value="Y" '. selected( @$options["human_type_date_format"], 'Y', false ). '>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["human_type_date_format"], 'N', false ).'>'.__( 'No', 'touchsize' ).'</option>
@@ -1112,22 +1112,22 @@ function toggle_human_type_date_format_callback($args)
 function toggle_comment_system_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$is_hidden = ( @$options["comment_system"] === 'default' ) ? 'hidden' : '';
-	$facebook_id = @$options["facebook_id"]; 
+	$facebook_id = @$options["facebook_id"];
 
 	$html = '<select name="videotouch_general[comment_system]" id="ts_comment_system">
 				<option value="default" '. selected( @$options["comment_system"], 'default', false ).'>'.__( 'Default', 'touchsize' ).'</option>
 				<option value="facebook" '. selected( @$options["comment_system"], 'facebook', false ).'>Facebook</option>
 			</select>
-			
+
 			<p class="description">' .$args[0]. '</p>
 
 			<div id="facebook_app_id" class="' . $is_hidden . '">
 				<p>' . __('Get a Facebook App ID', 'touchsize') . '</p>
 				<input type="text" name="videotouch_general[facebook_id]" value="' . esc_attr($facebook_id) . '" />
 			</div>
-			
+
 			<script>
 				jQuery( document ).ready(function( $ ) {
 					var facebook_id = $("#facebook_app_id");
@@ -1148,13 +1148,13 @@ function toggle_comment_system_callback($args)
 function facebook_page_modal_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[enable_facebook_box]" id="enable_facebook_box">
 				<option value="Y" '. selected( @$options["enable_facebook_box"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 				<option value="N" '. selected( @$options["enable_facebook_box"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
 			</select>';
-	$html .= '<p class="description">' .$args[0]. '</p>';		
-	 			
+	$html .= '<p class="description">' .$args[0]. '</p>';
+
 	$enable_facebook_box_options = ($options["enable_facebook_box"] === 'Y') ? '' : 'hidden';
 
 	$html .= '<div id="facebook_page" class="'.$enable_facebook_box_options .'">
@@ -1168,7 +1168,7 @@ function facebook_page_modal_callback($args)
 function toggle_show_wp_admin_bar_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[show_wp_admin_bar]">
 					<option value="Y" '. selected( @$options["show_wp_admin_bar"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["show_wp_admin_bar"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
@@ -1181,13 +1181,13 @@ function toggle_show_wp_admin_bar_callback($args)
 function toggle_enable_sticky_menu_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[enable_sticky_menu]" id="enable_sticky_menu">
 				<option value="Y" '. selected( @$options["enable_sticky_menu"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 				<option value="N" '. selected( @$options["enable_sticky_menu"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
 			</select>';
-	$html .= '<p class="description">' .$args[0]. '</p>';		
-	 			
+	$html .= '<p class="description">' .$args[0]. '</p>';
+
 	$enable_sticky_menu_options = ($options["enable_sticky_menu"] === 'Y') ? '' : 'hidden';
 
 	$html .= '<div id="sticky_menu_options" class="'.$enable_sticky_menu_options .'">
@@ -1211,21 +1211,21 @@ function toggle_enable_mega_menu_callback($args)
 				<option value="Y" '. selected( @$options["enable_mega_menu"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 				<option value="N" '. selected( @$options["enable_mega_menu"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
 			</select>';
-	$html .= '<p class="description">' .$args[0]. '</p>';		
-	 			
+	$html .= '<p class="description">' .$args[0]. '</p>';
+
 	echo $html;
 }
 
 function toggle_like_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<select name="videotouch_general[like]" class="enable-likes">
 				<option value="y" '. selected( @$options["like"], 'y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 				<option value="n" '. selected( @$options["like"], 'n', false ). '>'.__( 'No', 'touchsize' ).'</option>
 			</select>';
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	 			
+
 	echo $html;
 }
 
@@ -1245,7 +1245,7 @@ function toggle_like_icons_callback($args)
 	                <option value="star" '. selected( @$options["like_icons"], 'star', false ). '>' . __( 'Star', 'touchsize' ) . '</option>
 	            </select>
 	         </div>';
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
@@ -1259,7 +1259,7 @@ function toggle_post_publish_user_callback($args)
 	                <option value="pending" '. selected( @$options["post_publish_user"], 'pending', false ). '>' . __( 'Pending', 'touchsize' ) . '</option>
 	            </select>
 	         </div>';
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
@@ -1297,7 +1297,7 @@ function toggle_login_register_by_facebook_callback($args)
 		});
 	</script>
 
-	<?php		
+	<?php
 	echo $html;
 }
 
@@ -1317,7 +1317,7 @@ function toggle_generate_likes_callback($args)
 function toggle_tracking_code_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<textarea name="videotouch_general[tracking_code]">'.esc_attr(@$options["tracking_code"]).'</textarea>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
@@ -1327,7 +1327,7 @@ function toggle_tracking_code_callback($args)
 function toggle_grid_excerpt_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<input type="text" name="videotouch_general[grid_excerpt]" value="'.esc_attr(@$options["grid_excerpt"]).'" />';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
@@ -1337,7 +1337,7 @@ function toggle_grid_excerpt_callback($args)
 function toggle_list_excerpt_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<input type="text" name="videotouch_general[list_excerpt]" value="'.esc_attr(@$options["list_excerpt"]).'" />';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
@@ -1347,7 +1347,7 @@ function toggle_list_excerpt_callback($args)
 function toggle_bigpost_excerpt_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<input type="text" name="videotouch_general[bigpost_excerpt]" value="'.esc_attr(@$options["bigpost_excerpt"]).'" />';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
@@ -1357,7 +1357,7 @@ function toggle_bigpost_excerpt_callback($args)
 function toggle_timeline_excerpt_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<input type="text" name="videotouch_general[timeline_excerpt]" value="'.esc_attr(@$options["timeline_excerpt"]).'" />';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
@@ -1367,7 +1367,7 @@ function toggle_timeline_excerpt_callback($args)
 function toggle_facebook_app_id_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<input type="text" name="videotouch_general[facebook_app_id]" value="'.esc_attr(@$options["facebook_app_id"]).'" />';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
@@ -1377,7 +1377,7 @@ function toggle_facebook_app_id_callback($args)
 function toggle_facebook_app_secret_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
 	$html = '<input type="text" name="videotouch_general[facebook_app_secret]" value="'.esc_attr(@$options["facebook_app_secret"]).'" />';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
@@ -1387,73 +1387,73 @@ function toggle_facebook_app_secret_callback($args)
 function toggle_insert_post_user_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
     $html = '<select name="videotouch_general[insert_post_user]">
                 <option value="post" '. selected($options["insert_post_user"], 'post', false). '>' . __('Post', 'touchsize') . '</option>
                 <option value="video" '. selected($options["insert_post_user"], 'video', false). '>' . __('Video', 'touchsize') . '</option>
                 <option value="post-video" '. selected($options["insert_post_user"], 'post-video', false). '>' . __('Post & Video', 'touchsize') . '</option>
             </select>
 	        ';
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
 function toggle_ts_seo_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
     $html = '<select name="videotouch_general[ts_seo]">
                 <option value="y" '. selected($options["ts_seo"], 'y', false) . '>' . __('Yes', 'touchsize') . '</option>
                 <option value="n" ' . selected($options["ts_seo"], 'n', false) . '>' . __('No', 'touchsize') . '</option>
             </select>
 	        ';
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
 function toggle_slug_video_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
     $html = '<input type="text" name="videotouch_general[slug_video]" value="' . $options['slug_video'] . '"/>';
-	        
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
 function toggle_slug_video_taxonomy_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
     $html = '<input type="text" name="videotouch_general[slug_video_taxonomy]" value="' . $options['slug_video_taxonomy'] . '"/>';
-	        
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
 function toggle_slug_portfolio_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
     $html = '<input type="text" name="videotouch_general[slug_portfolio]" value="' . $options['slug_portfolio'] . '"/>';
-	        
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
 function toggle_slug_portfolio_taxonomy_callback($args)
 {
 	$options = get_option('videotouch_general');
-	
+
     $html = '<input type="text" name="videotouch_general[slug_portfolio_taxonomy]" value="' . $options['slug_portfolio_taxonomy'] . '"/>';
-	        
-	$html .= '<p class="description">' .$args[0]. '</p>';			
+
+	$html .= '<p class="description">' .$args[0]. '</p>';
 	echo $html;
 }
 
 
 function videotouch_initialize_image_sizes_options($args) {
-	
+
 	if( false === get_option( 'videotouch_image_sizes' ) ) {
 
 		$defaults = array(
@@ -1513,11 +1513,11 @@ function videotouch_initialize_image_sizes_options($args) {
 	}
 
 	// Register  section
-	add_settings_section( 
-		'image_sizes_section', 
-		__( 'Image sizes', 'touchsize' ), 
-		'videotouch_image_sizes_callback', 
-		'videotouch_image_sizes' 
+	add_settings_section(
+		'image_sizes_section',
+		__( 'Image sizes', 'touchsize' ),
+		'videotouch_image_sizes_callback',
+		'videotouch_image_sizes'
 	);
 
 	add_settings_field(
@@ -1870,11 +1870,11 @@ function videotouch_initialize_layout_options() {
 	} // end if
 
 	// Register  section
-	add_settings_section( 
-		'layout_settings_section', 
-		__( 'Default layout settings', 'touchsize' ), 
-		'videotouch_layout_category_callback', 
-		'videotouch_layout' 
+	add_settings_section(
+		'layout_settings_section',
+		__( 'Default layout settings', 'touchsize' ),
+		'videotouch_layout_category_callback',
+		'videotouch_layout'
 	);
 
 	add_settings_field(
@@ -1901,7 +1901,7 @@ function videotouch_initialize_layout_options() {
 		'layout_settings_section'
 	);
 
-	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );  
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		if( is_plugin_active( 'woocommerce/woocommerce.php' ) ){
 
 	      	add_settings_field(
@@ -1911,7 +1911,7 @@ function videotouch_initialize_layout_options() {
 				'videotouch_layout',
 				'layout_settings_section'
 			);
-		
+
 	      	add_settings_field(
 				'shop_layout',
 				__( 'Shop page', 'touchsize' ),
@@ -1919,7 +1919,7 @@ function videotouch_initialize_layout_options() {
 				'videotouch_layout',
 				'layout_settings_section'
 			);
-		}  
+		}
 
 	add_settings_field(
 		'category_layout',
@@ -2101,12 +2101,12 @@ function videotouch_sidebar_settings_generator($section = 'category_layout', $op
 
 function videotouch_layout_style_generator($section = 'category_layout', $options = array()) {
 
-	$show_grid = (@$options[$section]['display-mode'] === 'grid') ? '' : 'hidden'; 
-	$show_list = (@$options[$section]['display-mode'] === 'list') ? '' : 'hidden'; 
-	$show_thumbnails = (@$options[$section]['display-mode'] === 'thumbnails') ? '' : 'hidden'; 
-	$show_big_post = (@$options[$section]['display-mode'] === 'big-post') ? '' : 'hidden'; 
-	$show_super_post = (@$options[$section]['display-mode'] === 'super-post') ? '' : 'hidden'; 
-			
+	$show_grid = (@$options[$section]['display-mode'] === 'grid') ? '' : 'hidden';
+	$show_list = (@$options[$section]['display-mode'] === 'list') ? '' : 'hidden';
+	$show_thumbnails = (@$options[$section]['display-mode'] === 'thumbnails') ? '' : 'hidden';
+	$show_big_post = (@$options[$section]['display-mode'] === 'big-post') ? '' : 'hidden';
+	$show_super_post = (@$options[$section]['display-mode'] === 'super-post') ? '' : 'hidden';
+
 	switch ($section) {
 		case 'category_layout':
 			$prefix = 'category';
@@ -2131,7 +2131,7 @@ function videotouch_layout_style_generator($section = 'category_layout', $option
 		case 'tags_layout':
 			$prefix = 'tags';
 			break;
-		
+
 		default:
 			$prefix = '';
 			break;
@@ -2155,7 +2155,7 @@ function videotouch_layout_style_generator($section = 'category_layout', $option
                     </tr>
                 </table>
                 <div class="'.$prefix.'-last-posts-display-mode-options">
-                    <!-- Grid options -->                 		
+                    <!-- Grid options -->
                     <div class="last-posts-grid '.$show_grid.'">
                         <table cellpadding="10">
                             <tr>
@@ -2174,7 +2174,7 @@ function videotouch_layout_style_generator($section = 'category_layout', $option
                                     <label for="'.$section.'-last-posts-grid-show-meta">'.__( 'Show meta', 'touchsize' ).':</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="videotouch_layout['.$section.'][grid][show-meta]" id="'.$section.'-last-posts-grid-show-meta-y"  value="y" '.checked( @$options[$section]['grid']['show-meta'], 'y', 0 ).' /> 
+                                    <input type="radio" name="videotouch_layout['.$section.'][grid][show-meta]" id="'.$section.'-last-posts-grid-show-meta-y"  value="y" '.checked( @$options[$section]['grid']['show-meta'], 'y', 0 ).' />
                                     <label for="'.$section.'-last-posts-grid-show-meta-y">'.__( 'Yes', 'touchsize' ).'</label>
                                     <input type="radio" name="videotouch_layout['.$section.'][grid][show-meta]" id="'.$section.'-last-posts-grid-show-meta-n" value="n" '.checked( @$options[$section]['grid']['show-meta'], 'n', 0 ).'/>
                                     <label for="'.$section.'-last-posts-grid-show-meta-n">'.__( 'No', 'touchsize' ).'</label>
@@ -2217,7 +2217,7 @@ function videotouch_layout_style_generator($section = 'category_layout', $option
                                     <label for="'.$section.'-last-posts-list-show-meta">'.__( 'Show meta', 'touchsize' ).':</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="videotouch_layout['.$section.'][list][show-meta]" id="'.$section.'-last-posts-list-show-meta-y"  value="y" '.checked( @$options[$section]['list']['show-meta'], 'y', 0 ).'  /> 
+                                    <input type="radio" name="videotouch_layout['.$section.'][list][show-meta]" id="'.$section.'-last-posts-list-show-meta-y"  value="y" '.checked( @$options[$section]['list']['show-meta'], 'y', 0 ).'  />
                                     <label for="'.$section.'-last-posts-list-show-meta-y">'.__( 'Yes', 'touchsize' ).'</label>
                                     <input type="radio" name="videotouch_layout['.$section.'][list][show-meta]" id="'.$section.'-last-posts-list-show-meta-n" value="n" '.checked( @$options[$section]['list']['show-meta'], 'n', 0 ).'/>
                                     <label for="'.$section.'-last-posts-list-show-meta-n">'.__( 'No', 'touchsize' ).'</label>
@@ -2274,7 +2274,7 @@ function videotouch_layout_style_generator($section = 'category_layout', $option
                                     <label for="'.$section.'-last-posts-big-post-show-meta">'.__( 'Show meta', 'touchsize' ).':</label>
                                 </td>
                                 <td>
-                                    <input type="radio" name="videotouch_layout['.$section.'][big-post][show-meta]" id="'.$section.'-last-posts-big-post-show-meta-y"  value="y" '.checked( @$options[$section]['big-post']['show-meta'], 'y', 0 ).'   /> 
+                                    <input type="radio" name="videotouch_layout['.$section.'][big-post][show-meta]" id="'.$section.'-last-posts-big-post-show-meta-y"  value="y" '.checked( @$options[$section]['big-post']['show-meta'], 'y', 0 ).'   />
                                     <label for="'.$section.'-last-posts-big-post-show-meta-y">'.__( 'Yes', 'touchsize' ).'</label>
 
                                     <input type="radio" name="videotouch_layout['.$section.'][big-post][show-meta]" id="'.$section.'-last-posts-big-post-show-meta-n" value="n" '.checked( @$options[$section]['big-post']['show-meta'], 'n', 0 ).' />
@@ -2309,7 +2309,7 @@ function videotouch_layout_style_generator($section = 'category_layout', $option
                                 </td>
                             </tr>
                         </table>
-                    </div> 
+                    </div>
                 </div>
         </div>';
 }
@@ -2318,7 +2318,7 @@ function videotouch_layout_style_generator($section = 'category_layout', $option
  * Iniaitalize the theme options page by registering the Fields, Sections, Settings
  */
 function videotouch_initialize_styles_options()
-{	
+{
 	if( false === get_option( 'videotouch_styles' ) ) {
 		$defaultStyles = array(
 			'boxed_layout' => 'N',
@@ -2349,24 +2349,24 @@ function videotouch_initialize_styles_options()
 		}
 
 		add_option( 'videotouch_styles', $defaultStyles);
-		
+
 
 	} // end if
 
 	// Register styles section
-	add_settings_section( 
-		'style_settings_section', 
-		__( 'Styles Options', 'touchsize' ), 
-		'videotouch_styles_callback', 
-		'videotouch_styles' 
+	add_settings_section(
+		'style_settings_section',
+		__( 'Styles Options', 'touchsize' ),
+		'videotouch_styles_callback',
+		'videotouch_styles'
 	);
-	
+
 	add_settings_field(
 		'boxed_layout',
 		__( 'Boxed Layout', 'touchsize' ),
 		'toggle_boxed_layout_callback',
 		'videotouch_styles',
-		'style_settings_section', 
+		'style_settings_section',
 		array(
 			__( 'If enabled it will add white background to content and limit it to the site that is set in general settings.', 'touchsize' )
 		)
@@ -2377,7 +2377,7 @@ function videotouch_initialize_styles_options()
 		__( 'Theme background customization', 'touchsize' ),
 		'toggle_theme_custom_bg_callback',
 		'videotouch_styles',
-		'style_settings_section', 
+		'style_settings_section',
 		array(
 			__( 'Background options for your website. You can set image background, background color or pattern.', 'touchsize' )
 		)
@@ -2389,7 +2389,7 @@ function videotouch_initialize_styles_options()
 			__( 'Custom favicon', 'touchsize' ),
 			'toggle_favicon_callback',
 			'videotouch_styles',
-			'style_settings_section', 
+			'style_settings_section',
 			array(
 				'Upload your own favicon for your website.'
 			)
@@ -2401,7 +2401,7 @@ function videotouch_initialize_styles_options()
 		__( 'Facebook image', 'touchsize' ),
 		'toggle_facebook_image_callback',
 		'videotouch_styles',
-		'style_settings_section', 
+		'style_settings_section',
 		array(
 			'Upload your own facebook image for your website.'
 		)
@@ -2412,7 +2412,7 @@ function videotouch_initialize_styles_options()
 		__( 'Enable overlay stripes/dots effect for images', 'touchsize' ),
 		'toggle_overlay_effect_for_images_callback',
 		'videotouch_styles',
-		'style_settings_section', 
+		'style_settings_section',
 		array(
 			__( 'If enabled, it will add subtle effect over images in archive pages and single featured images.', 'touchsize' )
 		)
@@ -2423,7 +2423,7 @@ function videotouch_initialize_styles_options()
 		__( 'Enable sharing overlay buttons in views', 'touchsize' ),
 		'toggle_sharing_overlay_callback',
 		'videotouch_styles',
-		'style_settings_section', 
+		'style_settings_section',
 		array(
 			__( 'If enabled, it will show sharing buttons on mouse over in post views.', 'touchsize' )
 		)
@@ -2434,7 +2434,7 @@ function videotouch_initialize_styles_options()
 		__( 'Logo type', 'touchsize' ),
 		'toggle_logo_type_callback',
 		'videotouch_styles',
-		'style_settings_section', 
+		'style_settings_section',
 		array(
 			__( 'Choose which type of logo do you want to use. If text, select the font and the styles you need. If you want to use custom image logo use the uploader provided.', 'touchsize' )
 		)
@@ -2456,13 +2456,13 @@ function videotouch_styles_callback()
 	echo '<p>'.__( 'Settings for your website styling. Here you can change colors, effects, logo type, custom favicon, background.', 'touchsize' ).'</p>';
 ?>
 
-<?php               
+<?php
 } // end videotouch_styles_callback
 
 function toggle_boxed_layout_callback($args)
 {
 	$options = get_option('videotouch_styles');
-	
+
 	$html = '<select name="videotouch_styles[boxed_layout]">
 					<option value="Y" '. selected( @$options["boxed_layout"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["boxed_layout"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
@@ -2475,7 +2475,7 @@ function toggle_boxed_layout_callback($args)
 function toggle_image_hover_effect_callback($args)
 {
 	$options = get_option('videotouch_styles');
-	
+
 	$html = '<select name="videotouch_styles[image_hover_effect]">
 					<option value="Y" '. selected( @$options["image_hover_effect"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["image_hover_effect"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
@@ -2489,7 +2489,7 @@ function toggle_image_hover_effect_callback($args)
 function toggle_sharing_overlay_callback($args)
 {
 	$options = get_option('videotouch_styles');
-	
+
 	$html = '<select name="videotouch_styles[sharing_overlay]">
 					<option value="Y" '. selected( @$options["sharing_overlay"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 					<option value="N" '. selected( @$options["sharing_overlay"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
@@ -2503,7 +2503,7 @@ function toggle_sharing_overlay_callback($args)
 function toggle_theme_custom_bg_callback($args)
 {
 	$options = get_option('videotouch_styles');
-	
+
 	$html = '<select name="videotouch_styles[theme_custom_bg]" id="custom-bg-options">
 					<option value="pattern" '. selected( @$options["theme_custom_bg"], 'pattern', false ).'>'.__( 'Pattern', 'touchsize' ).'</option>
 					<option value="color" '. selected( @$options["theme_custom_bg"], 'color', false ).'>'.__( 'Color', 'touchsize' ).'</option>
@@ -2512,7 +2512,7 @@ function toggle_theme_custom_bg_callback($args)
 				</select>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	if ( trim(@$options["theme_bg_pattern"]) !== "" ) {
 		$bg_pattern_url = 'background: url(' . get_template_directory_uri(). '/images/patterns/' . $options["theme_bg_pattern"] . ')';
 	} else {
@@ -2582,7 +2582,7 @@ function toggle_facebook_image_callback($args)
 function toggle_overlay_effect_for_images_callback($args)
 {
 	$options = get_option('videotouch_styles');
-	
+
 	$html = '<select name="videotouch_styles[overlay_effect_for_images]" id="overlay-effect-for-images">
 				<option value="Y" '. selected( @$options["overlay_effect_for_images"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 				<option value="N" '. selected( @$options["overlay_effect_for_images"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
@@ -2607,7 +2607,7 @@ function toggle_logo_type_callback($args)
 	$font_url     = @$options['logo_url'];
 	$font_name    = @$options['logo_font_name'];
 	$font_subsets = @$options['logo_font_subsets'];
-	
+
 	$new_font_subsets = array();
 
 	if (is_array($font_subsets) && ! empty($font_subsets)) {
@@ -2615,7 +2615,7 @@ function toggle_logo_type_callback($args)
 			$new_font_subsets[] = "'". esc_attr($subset)."'";
 		}
 	}
-	
+
 	$font_subsets = implode(", ", $new_font_subsets);
 
 	$font_weight  = @$options['logo_font_weight'];
@@ -2624,14 +2624,14 @@ function toggle_logo_type_callback($args)
 
 	$font_sizes = array();
 
-	for ( $i=1; $i < 73; $i++ ) { 
+	for ( $i=1; $i < 73; $i++ ) {
 		if ((int)$font_size === $i) {
 			$selected = 'selected="selected"';
 		} else {
 			$selected = '';
 		}
 
-		$font_sizes[] = '<option value="'.$i.'" ' . $selected . '>'.$i.'px</option>';	
+		$font_sizes[] = '<option value="'.$i.'" ' . $selected . '>'.$i.'px</option>';
 	}
 
 	$html = '<select name="videotouch_styles[logo_type]" class="ts-logo-type">
@@ -2659,7 +2659,7 @@ function toggle_logo_type_callback($args)
 							var logo_url = $(this).val();
 							var newImg = new Image();
 							newImg.src = logo_url;
-							
+
 							$(newImg).load(function(){
 								$('#videotouch_logo_retina_width').val(newImg.width);
 								$('#videotouch_logo_retina_height').val(newImg.height);
@@ -2682,17 +2682,17 @@ function toggle_logo_type_callback($args)
 			});
 		</script>
 	<?php
-		
-		$html .= '<div id="ts-logo-fonts">'.__( 'Select font', 'touchsize' ).'	
+
+		$html .= '<div id="ts-logo-fonts">'.__( 'Select font', 'touchsize' ).'
 					<select name="videotouch_styles[logo_font_name]" id="fontchanger-logo">
 						<option value="0">'.__( 'No font selected', 'touchsize' ).'</option>
 					</select>
-			
+
 					<p>' . __( 'Available subsets:', 'touchsize' ) . '</p>
 					<div class="logo-subset-types"></div><br />
-					
+
 					<p>' . __('Font weight', 'touchsize') . ':</p>
-					
+
 					<select name="videotouch_styles[logo_font_weight]" id="logo-font-weight">
 						<option value="normal" ' . selected( @$options["logo_font_weight"], 'normal', false ) . '>regular</option>
 						<option value="700" '. selected( @$options["logo_font_weight"], '700', false ) . '>bold</option>
@@ -2703,14 +2703,14 @@ function toggle_logo_type_callback($args)
 						<option value="normal" '. selected( @$options["logo_font_style"], 'normal', false ) .'>regular</option>
 						<option value="italic" '. selected( @$options["logo_font_style"], 'italic', false ) .'>italic</option>
 					</select><br/><br/>
-					
+
 					<p>' . __( 'Font-size', 'touchsize' ). '</p>
 					<select name="videotouch_styles[logo_font_size]" id="logo-font-size">'.implode("\n", $font_sizes).'</select><br/><br/>
 					<p class="logo-text-preview">' . __( 'Logo text', 'touchsize' ) . '</p>
 					<textarea type="text" name="videotouch_styles[logo_text]" id="logo-demo">' . esc_attr($logo_text) . '</textarea><br>
 					<input type="button" name="ts-logo-preview" id="logo-preview" class="button-primary" value="Preview"/><br /><br />
 					<div class="logo-output"></div>
-			</div>';	
+			</div>';
 
 	echo $html;
 }
@@ -2720,7 +2720,7 @@ function toggle_logo_type_callback($args)
  */
 function videotouch_initialize_colors_options()
 {
-	
+
 	if( false === get_option( 'videotouch_colors' ) ) {
 
 		add_option( 'videotouch_colors', array(
@@ -2747,13 +2747,13 @@ function videotouch_initialize_colors_options()
 	} // end if
 
 	// Register styles section
-	add_settings_section( 
-		'color_settings_section', 
-		__( 'Theme color options', 'touchsize' ), 
-		'videotouch_colors_callback', 
-		'videotouch_colors' 
+	add_settings_section(
+		'color_settings_section',
+		__( 'Theme color options', 'touchsize' ),
+		'videotouch_colors_callback',
+		'videotouch_colors'
 	);
-	
+
 
 
 	add_settings_field(
@@ -2761,7 +2761,7 @@ function videotouch_initialize_colors_options()
 		__( 'General color for the text on the website', 'touchsize' ),
 		'toggle_videotouch_general_text_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Change this to any color you want and that fits the background of the website.', 'touchsize' )
 		)
@@ -2772,7 +2772,7 @@ function videotouch_initialize_colors_options()
 		__( 'General color for the text on the website', 'touchsize' ),
 		'toggle_videotouch_general_text_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Change this to any color you want and that fits the background of the website.', 'touchsize' )
 		)
@@ -2783,7 +2783,7 @@ function videotouch_initialize_colors_options()
 		__( 'Link color', 'touchsize' ),
 		'toggle_videotouch_link_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Change this color if you want the links on your website to have a different color.', 'touchsize' )
 		)
@@ -2793,7 +2793,7 @@ function videotouch_initialize_colors_options()
 		__( 'Link color on hover', 'touchsize' ),
 		'toggle_videotouch_link_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Change this color if you want the links on hover to have a different color.', 'touchsize' )
 		)
@@ -2803,7 +2803,7 @@ function videotouch_initialize_colors_options()
 		__( 'Link colors in views (grid/list/bigpost)', 'touchsize' ),
 		'toggle_videotouch_view_link_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'You have different types to showcase your articles. This option will change the color of the links of the articles.', 'touchsize' )
 		)
@@ -2813,7 +2813,7 @@ function videotouch_initialize_colors_options()
 		__( 'Title colors on hover in view', 'touchsize' ),
 		'toggle_videotouch_view_link_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'You have different types to showcase your articles. This option will change the color on hover of the titles of the articles.', 'touchsize' )
 		)
@@ -2823,7 +2823,7 @@ function videotouch_initialize_colors_options()
 		__( 'Meta text color', 'touchsize' ),
 		'toggle_videotouch_meta_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Change the color of the text for your meta.', 'touchsize' )
 		)
@@ -2833,7 +2833,7 @@ function videotouch_initialize_colors_options()
 		__( 'Primary color', 'touchsize' ),
 		'toggle_videotouch_primary_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Main color of the website. It is used for backgrounds, borders of elements, etc. This defines your main brand/website color.', 'touchsize' )
 		)
@@ -2843,7 +2843,7 @@ function videotouch_initialize_colors_options()
 		__( 'Primary color on hover', 'touchsize' ),
 		'toggle_videotouch_primary_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Main color of the website. It is used for backgrounds, borders of elements, etc. This defines your main brand/website color on hover.', 'touchsize' )
 		)
@@ -2853,7 +2853,7 @@ function videotouch_initialize_colors_options()
 		__( 'Secondary color', 'touchsize' ),
 		'toggle_videotouch_secondary_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Secondary color of the website. It is used for backgrounds, borders of elements, etc. This defines your secondary or contrast brand/website color.', 'touchsize' )
 		)
@@ -2863,7 +2863,7 @@ function videotouch_initialize_colors_options()
 		__( 'Secondary color on hover', 'touchsize' ),
 		'toggle_videotouch_secondary_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Secondary color of the website. It is used for backgrounds, borders of elements, etc. This defines your secondary or contrast brand/website color on hover.', 'touchsize' )
 		)
@@ -2873,7 +2873,7 @@ function videotouch_initialize_colors_options()
 		__( 'Primary text color', 'touchsize' ),
 		'toggle_videotouch_primary_text_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'The color of the text that has a primary color background. Primary color reffers to the color setting above.', 'touchsize' )
 		)
@@ -2883,7 +2883,7 @@ function videotouch_initialize_colors_options()
 		__( 'Primary text color on hover', 'touchsize' ),
 		'toggle_videotouch_primary_text_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'The color of the text that has a primary color background on hover. Primary color reffers to the color setting above.', 'touchsize' )
 		)
@@ -2893,7 +2893,7 @@ function videotouch_initialize_colors_options()
 		__( 'Secondary text color', 'touchsize' ),
 		'toggle_videotouch_secondary_text_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'The color of the text that has a secondary color background.', 'touchsize' )
 		)
@@ -2903,7 +2903,7 @@ function videotouch_initialize_colors_options()
 		__( 'Secondary text color on hover', 'touchsize' ),
 		'toggle_videotouch_secondary_text_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'The color of the text that has a secondary color background on hover. Primary color reffers to the color setting above.', 'touchsize' )
 		)
@@ -2913,7 +2913,7 @@ function videotouch_initialize_colors_options()
 		__( 'Submenu background color', 'touchsize' ),
 		'toggle_videotouch_submenu_bg_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'This is used for menus that have background colors. Not all menu styles can have backgrounds. Even so, this option will apply for submenu backgrounds as well, even for those that do not have a background by default', 'touchsize' )
 		)
@@ -2923,7 +2923,7 @@ function videotouch_initialize_colors_options()
 		__( 'Submenu background color on hover', 'touchsize' ),
 		'toggle_videotouch_submenu_bg_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'Same thing as the option above, only for the hover state.', 'touchsize' )
 		)
@@ -2933,7 +2933,7 @@ function videotouch_initialize_colors_options()
 		__( 'Menu text color', 'touchsize' ),
 		'toggle_videotouch_submenu_text_color_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'The colors of the text in the menus and submenus.', 'touchsize' )
 		)
@@ -2943,7 +2943,7 @@ function videotouch_initialize_colors_options()
 		__( 'Menu text color on hover', 'touchsize' ),
 		'toggle_videotouch_submenu_text_color_hover_callback',
 		'videotouch_colors',
-		'color_settings_section', 
+		'color_settings_section',
 		array(
 			__( 'The colors of the text in the menus and submenus on hover.', 'touchsize' )
 		)
@@ -2965,17 +2965,17 @@ function videotouch_colors_callback()
 	echo '<p>'.__( 'Settings for your website color settings. Here you can change colors that are shown on your website.', 'touchsize' ).'</p>';
 ?>
 
-<?php               
+<?php
 } // end videotouch_styles_callback
 
 function toggle_videotouch_general_text_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-general-text-color" class="colors-section-picker" name="videotouch_colors[general_text_color]" value="'.esc_attr(@$options["general_text_color"]).'" /><div class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 
@@ -2983,181 +2983,181 @@ function toggle_videotouch_general_text_color_callback($args)
 function toggle_videotouch_link_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-link-color" class="colors-section-picker" name="videotouch_colors[link_color]" value="'.esc_attr(@$options["link_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_link_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-link-hover-color" class="colors-section-picker" name="videotouch_colors[link_color_hover]" value="'.esc_attr(@$options["link_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 
 function toggle_videotouch_view_link_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-view-link-color" class="colors-section-picker" name="videotouch_colors[view_link_color]" value="'.esc_attr(@$options["view_link_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_view_link_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-view-link-hover-color" class="colors-section-picker" name="videotouch_colors[view_link_color_hover]" value="'.esc_attr(@$options["view_link_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_meta_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-meta-text-color" class="colors-section-picker" name="videotouch_colors[meta_color]" value="'.esc_attr(@$options["meta_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_primary_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-primary-color" class="colors-section-picker" name="videotouch_colors[primary_color]" value="'.esc_attr(@$options["primary_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_primary_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-primary-color-hover" class="colors-section-picker" name="videotouch_colors[primary_color_hover]" value="'.esc_attr(@$options["primary_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_secondary_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-secondary-color" class="colors-section-picker" name="videotouch_colors[secondary_color]" value="'.esc_attr(@$options["secondary_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_secondary_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-secondary-color-hover" class="colors-section-picker" name="videotouch_colors[secondary_color_hover]" value="'.esc_attr(@$options["secondary_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 
 function toggle_videotouch_primary_text_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-primary-text-color" class="colors-section-picker" name="videotouch_colors[primary_text_color]" value="'.esc_attr(@$options["primary_text_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_primary_text_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-primary-text-color-hover" class="colors-section-picker" name="videotouch_colors[primary_text_color_hover]" value="'.esc_attr(@$options["primary_text_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_secondary_text_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-secondary-text-color-hover" class="colors-section-picker" name="videotouch_colors[secondary_text_color_hover]" value="'.esc_attr(@$options["secondary_text_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_secondary_text_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-secondary-text-color" class="colors-section-picker" name="videotouch_colors[secondary_text_color]" value="'.esc_attr(@$options["secondary_text_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_submenu_bg_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-menu-bg-color" class="colors-section-picker" name="videotouch_colors[submenu_bg_color]" value="'.esc_attr(@$options["submenu_bg_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_submenu_bg_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-menu-bg-hover-color" class="colors-section-picker" name="videotouch_colors[submenu_bg_color_hover]" value="'.esc_attr(@$options["submenu_bg_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_submenu_text_color_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-menu-text-color" class="colors-section-picker" name="videotouch_colors[submenu_text_color]" value="'.esc_attr(@$options["submenu_text_color"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 function toggle_videotouch_submenu_text_color_hover_callback($args)
 {
 	$options = get_option('videotouch_colors');
-	
+
 	$html = '<input type="text" id="ts-menu-text-hover-color" class="colors-section-picker" name="videotouch_colors[submenu_text_color_hover]" value="'.esc_attr(@$options["submenu_text_color_hover"]).'" /><div  class="colors-section-picker-div"></div>';
 
 	$html .= '<p class="description">' .$args[0]. '</p>';
-	
+
 	echo $html;
 }
 
 // Typography tab
 function videotouch_initialize_typography_options()
 {
-	
-	if( false === get_option( 'videotouch_typography' ) ) {	
+
+	if( false === get_option( 'videotouch_typography' ) ) {
 		add_option( 'videotouch_typography', array(
 			'google_fonts_key' => 'AIzaSyBHh7VPOKMPw1oy6wsEs8FNtR5E8zjb-7A',
 			'headings' => array(
@@ -3205,16 +3205,16 @@ function videotouch_initialize_typography_options()
 				'font_family' => ''
 			),
 			'icons' => 'icon-noicon,icon-image,icon-comments,icon-delete,icon-rss,icon-drag,icon-down,icon-up,icon-layout,icon-import,icon-play,icon-desktop,icon-social,icon-empty,icon-filter,icon-money,icon-flickr,icon-pinterest,icon-user,icon-video,icon-close,icon-link,icon-views,icon-quote,icon-pencil,icon-page,icon-post,icon-category,icon-time,icon-left,icon-right,icon-palette,icon-code,icon-sidebar,icon-vimeo,icon-lastfm,icon-logo,icon-heart,icon-list,icon-attention,icon-menu,icon-delimiter,icon-image-size,icon-settings,icon-share,icon-resize-vertical,icon-text,icon-movie,icon-dribbble,icon-yahoo,icon-facebook,icon-twitter,icon-tumblr,icon-gplus,icon-skype,icon-linkedin,icon-tick,icon-edit,icon-font,icon-home,icon-button,icon-wordpress,icon-music,icon-mail,icon-lock,icon-search,icon-github,icon-basket,icon-star,icon-link-ext,icon-award,icon-signal,icon-target,icon-attach,icon-download,icon-upload,icon-mic,icon-calendar,icon-phone,icon-headphones,icon-flag,icon-credit-card,icon-save,icon-megaphone,icon-key,icon-euro,icon-pound,icon-dollar,icon-rupee,icon-yen,icon-rouble,icon-try,icon-won,icon-bitcoin,icon-anchor,icon-support,icon-blocks,icon-block,icon-graduate,icon-shield,icon-window,icon-coverflow,icon-flight,icon-brush,icon-resize-full,icon-news,icon-pin,icon-params,icon-beaker,icon-delivery,icon-bell,icon-help,icon-laptop,icon-tablet,icon-mobile,icon-thumb,icon-briefcase,icon-direction,icon-ticket,icon-chart,icon-book,icon-print,icon-on,icon-off,icon-featured-area, icon-team, icon-login, icon-clients, icon-tabs, icon-tags, icon-gauge, icon-bag, icon-key, icon-glasses, icon-ok-full, icon-restart, icon-recursive, icon-shuffle, icon-ribbon, icon-lamp, icon-flash, icon-leaf, icon-chart-pie-outline, icon-puzzle, icon-fullscreen, icon-downscreen, icon-zoom-in, icon-zoom-out, icon-pencil-alt, icon-down-dir, icon-left-dir, icon-right-dir, icon-up-dir',
-			
+
 		));
 	} // end if
 
 	// Register a section
-	add_settings_section( 
-		'typography_settings_section', 
-		__( 'Typography Options', 'touchsize' ), 
-		'videotouch_typography_callback', 
-		'videotouch_typography' 
+	add_settings_section(
+		'typography_settings_section',
+		__( 'Typography Options', 'touchsize' ),
+		'videotouch_typography_callback',
+		'videotouch_typography'
 	);
 
 	add_settings_field(
@@ -3222,7 +3222,7 @@ function videotouch_initialize_typography_options()
 		__( 'Google fonts API key', 'touchsize' ),
 		'toggle_google_api_key_callback',
 		'videotouch_typography',
-		'typography_settings_section', 
+		'typography_settings_section',
 		array(
 			__( sprintf('Get your key <a href="%s" target="_blank">%s</a>', 'https://developers.google.com/fonts/docs/developer_api', __('here', 'touchsize') ), 'touchsize' )
 		)
@@ -3233,7 +3233,7 @@ function videotouch_initialize_typography_options()
 		__( 'Headings styles', 'touchsize' ),
 		'toggle_headings_typography_callback',
 		'videotouch_typography',
-		'typography_settings_section', 
+		'typography_settings_section',
 		array(
 			__( 'Choose the font you want to use for headings on your website. If standard is selected it will use the default ones set by the developers.', 'touchsize' )
 		)
@@ -3244,7 +3244,7 @@ function videotouch_initialize_typography_options()
 		__( 'General body text styles', 'touchsize' ),
 		'toggle_primary_text_callback',
 		'videotouch_typography',
-		'typography_settings_section', 
+		'typography_settings_section',
 		array(
 			__( 'This is general body settings. This will change the font for the entire website.', 'touchsize' )
 		)
@@ -3255,13 +3255,13 @@ function videotouch_initialize_typography_options()
 		__( 'Menu text styles', 'touchsize' ),
 		'toggle_secondary_text_callback',
 		'videotouch_typography',
-		'typography_settings_section', 
+		'typography_settings_section',
 		array(
 			__( 'This is used for styling the menu element.', 'touchsize' )
 		)
 	);
 
-	
+
 	register_setting( 'videotouch_typography', 'videotouch_typography');
 
 } // END videotouch_initialize_typography_options
@@ -3292,7 +3292,7 @@ function toggle_headings_typography_callback($args)
 
 	$font_name    = @$options['headings']['font_name'];
 	$font_subsets = @$options['headings']['font_subsets'];
-	
+
 	$new_font_subsets = array();
 
 	if (is_array($font_subsets) && ! empty($font_subsets)) {
@@ -3300,7 +3300,7 @@ function toggle_headings_typography_callback($args)
 			$new_font_subsets[] = "'". esc_attr($subset)."'";
 		}
 	}
-	
+
 	$font_subsets = implode(", ", $new_font_subsets);
 
 	$font_weight  = @$options['headings']['font_weight'];
@@ -3330,17 +3330,17 @@ jQuery(document).ready(function($) {
 });
 </script>
 	<?php
-		$html .= ' 
+		$html .= '
 				<select name="videotouch_typography[headings][font_name]" id="fontchanger-headings">
 					<option value="0">'.__( 'No font selected', 'touchsize' ).'</option>
 				</select>
 			<br>
 			<div>' . __( 'Available subsets:', 'touchsize' ) . '
 				<div class="headings-subset-types">
-		
+
 				</div><br />
 				<p>' . __('Font weight', 'touchsize') . ':</p>
-				
+
 				<select name="videotouch_typography[headings][font_weight]" id="headings-font-weight">
 					<option value="400" ' . selected( @$options["headings"]["font_weight"], '400', false ) . '>regular</option>
 					<option value="700" '. selected( @$options["headings"]["font_weight"], '700', false ) . '>bold</option>
@@ -3354,20 +3354,20 @@ jQuery(document).ready(function($) {
 
 				<p>' . __('H1 font size', 'touchsize') . ':</p>
 				<input type="text" name="videotouch_typography[headings][h1_size]" value="' . @$options["headings"]["h1_size"] . '" />
-				<div class="ts-option-description">This will affect the H1 tag. Write your number (!integer) in PIXELS.</div> 
+				<div class="ts-option-description">This will affect the H1 tag. Write your number (!integer) in PIXELS.</div>
 				<p>' . __('H2 font size', 'touchsize') . ':</p>
-				<input type="text" name="videotouch_typography[headings][h2_size]" value="' . @$options["headings"]["h2_size"] . '" /> 
+				<input type="text" name="videotouch_typography[headings][h2_size]" value="' . @$options["headings"]["h2_size"] . '" />
 				<div class="ts-option-description">This will affect the H2 tag. Write your number (!integer) in PIXELS.</div>
 				<p>' . __('H3 font size', 'touchsize') . ':</p>
-				<input type="text" name="videotouch_typography[headings][h3_size]" value="' . @$options["headings"]["h3_size"] . '" /> 
+				<input type="text" name="videotouch_typography[headings][h3_size]" value="' . @$options["headings"]["h3_size"] . '" />
 				<div class="ts-option-description">This will affect the H3 tag. Write your number (!integer) in PIXELS.</div>
 				<p>' . __('H4 font size', 'touchsize') . ':</p>
-				<input type="text" name="videotouch_typography[headings][h4_size]" value="' . @$options["headings"]["h4_size"] . '" /> 
+				<input type="text" name="videotouch_typography[headings][h4_size]" value="' . @$options["headings"]["h4_size"] . '" />
 				<div class="ts-option-description">This will affect the H4 tag. Write your number (!integer) in PIXELS.</div>
 				<p>' . __('H5 font size', 'touchsize') . ':</p>
-				<input type="text" name="videotouch_typography[headings][h5_size]" value="' . @$options["headings"]["h5_size"] . '" /> 
+				<input type="text" name="videotouch_typography[headings][h5_size]" value="' . @$options["headings"]["h5_size"] . '" />
 				<div class="ts-option-description">This will affect the H5 tag. Write your number (!integer) in PIXELS.</div>
-				
+
 				<p class="logo-text-preview">' . __( 'Logo text', 'touchsize' ) . '</p>
 				<textarea type="text" name="videotouch_typography[headings][text]" id="headings-demo">' . esc_attr($headings_text) . '</textarea>
 				<input type="button" name="ts-headings-preview" id="headings-preview" class="button-primary" value="Preview"/>
@@ -3397,7 +3397,7 @@ jQuery(document).ready(function($) {
 			  <input type="button" class="button-primary" id="upload_woff" value="'.__('Upload', 'touchsize').'">';
 
 	$html .= '<p>'.__( 'Enter font-family(stylesheet.css):', 'touchsize' ).'</p>';
-	$html .= '<input type="text" name="videotouch_typography[headings][font_family]" value="'. @$options['headings']['font_family'] .'" />';  
+	$html .= '<input type="text" name="videotouch_typography[headings][font_family]" value="'. @$options['headings']['font_family'] .'" />';
 
 	$html .= '</div>';
 
@@ -3410,7 +3410,7 @@ function toggle_primary_text_callback($args)
 
 	$font_name    = @$options['primary_text']['font_name'];
 	$font_subsets = @$options['primary_text']['font_subsets'];
-	
+
 	$new_font_subsets = array();
 
 	if (is_array($font_subsets) && ! empty($font_subsets)) {
@@ -3418,7 +3418,7 @@ function toggle_primary_text_callback($args)
 			$new_font_subsets[] = "'". esc_attr($subset)."'";
 		}
 	}
-	
+
 	$font_subsets = implode(", ", $new_font_subsets);
 
 	$font_weight  = @$options['primary_text']['font_weight'];
@@ -3454,10 +3454,10 @@ function toggle_primary_text_callback($args)
 				</select>
 			<div>' . __( 'Available subsets:', 'touchsize' ) . '
 				<div class="primary_text-subset-types">
-		
+
 				</div>
 				<p>' . __('Font weight', 'touchsize') . ':</p>
-				
+
 				<select name="videotouch_typography[primary_text][font_weight]" id="primary_text-font-weight">
 					<option value="400" ' . selected( @$options["primary_text"]["font_weight"], '400', false ) . '>regular</option>
 					<option value="700" '. selected( @$options["primary_text"]["font_weight"], '700', false ) . '>bold</option>
@@ -3469,7 +3469,7 @@ function toggle_primary_text_callback($args)
 					<option value="italic" '. selected( @$options["primary_text"]["font_style"], 'italic', false ) .'>italic</option>
 				</select>
 				<p>' . __('Primary font size', 'touchsize') . ':</p>
-				<input type="text" name="videotouch_typography[primary_text][font_size]" value="' . @$options["primary_text"]["font_size"] . '" /> 
+				<input type="text" name="videotouch_typography[primary_text][font_size]" value="' . @$options["primary_text"]["font_size"] . '" />
 				<div class="ts-option-description">This will affect the most of the website. Write your number (!integer) in PIXELS.</div>
 
 				<p class="primary-preview">' . __( 'Logo text', 'touchsize' ) . '</p>
@@ -3501,7 +3501,7 @@ function toggle_primary_text_callback($args)
 			  <input type="button" class="button-primary" id="upload_primary_woff" value="'.__('Upload', 'touchsize').'">';
 
 	$html .= '<p>'.__( 'Enter font-family(stylesheet.css):', 'touchsize' ).'</p>';
-	$html .= '<input type="text" name="videotouch_typography[primary_text][font_family]" value="'. @$options['primary_text']['font_family'] .'" />';  
+	$html .= '<input type="text" name="videotouch_typography[primary_text][font_family]" value="'. @$options['primary_text']['font_family'] .'" />';
 
 	$html .= '</div>';
 
@@ -3559,10 +3559,10 @@ function toggle_secondary_text_callback($args)
 				</select>
 			<div>' . __( 'Available subsets:', 'touchsize' ) . '
 				<div class="secondary_text-subset-types">
-		
+
 				</div>
 				<p>' . __('Font weight', 'touchsize') . ':</p>
-				
+
 				<select name="videotouch_typography[secondary_text][font_weight]" id="secondary_text-font-weight">
 					<option value="400" ' . selected( @$options["secondary_text"]["font_weight"], '400', false ) . '>regular</option>
 					<option value="700" '. selected( @$options["secondary_text"]["font_weight"], '700', false ) . '>bold</option>
@@ -3575,7 +3575,7 @@ function toggle_secondary_text_callback($args)
 				</select>
 
 				<p>' . __('Menu font size', 'touchsize') . ':</p>
-				<input type="text" name="videotouch_typography[secondary_text][font_size]" value="' . @$options["secondary_text"]["font_size"] . '" /> 
+				<input type="text" name="videotouch_typography[secondary_text][font_size]" value="' . @$options["secondary_text"]["font_size"] . '" />
 				<div class="ts-option-description">This will affect the menus of the website. Write your number (!integer) in PIXELS.</div>
 
 				<p class="logo-secundary-preview">' . __( 'Logo text', 'touchsize' ) . '</p>
@@ -3607,7 +3607,7 @@ function toggle_secondary_text_callback($args)
 			  <input type="button" class="button-primary" id="upload_secondary_woff" value="'.__('Upload', 'touchsize').'">';
 
 	$html .= '<p>'.__( 'Enter font-family(stylesheet.css):', 'touchsize' ).'</p>';
-	$html .= '<input type="text" name="videotouch_typography[secondary_text][font_family]" value="'. @$options['secondary_text']['font_family'] .'" />';  
+	$html .= '<input type="text" name="videotouch_typography[secondary_text][font_family]" value="'. @$options['secondary_text']['font_family'] .'" />';
 
 	$html .= '</div>';
 	$html .= '<div class="hidden"><input name="videotouch_typography[icons]" type="hidden" value="'.@$ts_icons.'"></div>';
@@ -3624,7 +3624,7 @@ function videotouch_single_post_options()
 		update_option('videotouch_single_post', $default_update);
 	}
 	//delete_option('videotouch_single_post');
-	if( false === get_option( 'videotouch_single_post' ) ) {	
+	if( false === get_option( 'videotouch_single_post' ) ) {
 		add_option( 'videotouch_single_post', array() );
 
 		$data = array(
@@ -3648,17 +3648,18 @@ function videotouch_single_post_options()
 			'button_play' => 'y',
 			'text-user' => '',
 			'video_sidebar' => 'n',
-			'default_videoplayer' => 'n'
+			'default_videoplayer' => 'n',
+			'log_video' => 'Y'
 		);
 
 		update_option('videotouch_single_post', $data);
 	}
 
-	add_settings_section( 
-		'single_post_settings_section', 
-		__( 'Single post Options', 'touchsize' ), 
-		'videotouch_single_post_callback', 
-		'videotouch_single_post' 
+	add_settings_section(
+		'single_post_settings_section',
+		__( 'Single post Options', 'touchsize' ),
+		'videotouch_single_post_callback',
+		'videotouch_single_post'
 	);
 
 	add_settings_field(
@@ -3666,7 +3667,7 @@ function videotouch_single_post_options()
 		__( 'Enable related posts', 'touchsize' ),
 		'toggle_related_posts_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Settings for related posts on single posts', 'touchsize' )
 		)
@@ -3677,7 +3678,7 @@ function videotouch_single_post_options()
 		__( 'Set JW Player as default', 'touchsize' ),
 		'toggle_default_videoplayer_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Make JW Player as default video player for video posts on single posts', 'touchsize' )
 		)
@@ -3688,10 +3689,19 @@ function videotouch_single_post_options()
 		__( 'Social sharing', 'touchsize' ),
 		'toggle_social_sharing_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Enable social sharing on single posts.', 'touchsize' )
 		)
+	);
+
+	add_settings_field(
+		'log_video',
+		__( 'Show video users not loggeded', 'videotouch' ),
+		'toggle_log_video_callback',
+		'videotouch_single_post',
+		'single_post_settings_section',
+		array('')
 	);
 
 	add_settings_field(
@@ -3699,7 +3709,7 @@ function videotouch_single_post_options()
 		__( 'Display button play', 'touchsize' ),
 		'toggle_button_play_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Enable button play on single posts.', 'touchsize' )
 		)
@@ -3710,7 +3720,7 @@ function videotouch_single_post_options()
 		__( 'Display post meta', 'touchsize' ),
 		'toggle_post_meta_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Use this option to show or hide meta in posts.', 'touchsize' )
 		)
@@ -3721,7 +3731,7 @@ function videotouch_single_post_options()
 		__( 'Display post tags', 'touchsize' ),
 		'toggle_post_tags_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Show or hide tags in single posts.', 'touchsize' )
 		)
@@ -3732,7 +3742,7 @@ function videotouch_single_post_options()
 		__( 'Display pagination in single post', 'touchsize' ),
 		'toggle_post_pagination_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Show or hide pagination in single posts.', 'touchsize' )
 		)
@@ -3743,7 +3753,7 @@ function videotouch_single_post_options()
 		__( 'Default video size:', 'touchsize' ),
 		'toggle_resize_video_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Show big or small video in single post', 'touchsize' )
 		)
@@ -3754,7 +3764,7 @@ function videotouch_single_post_options()
 		__( 'Display video 3/4 width right sidebar', 'touchsize' ),
 		'toggle_video_sidebar_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -3765,7 +3775,7 @@ function videotouch_single_post_options()
 		__( 'Hide author box', 'touchsize' ),
 		'toggle_display_author_box_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'You can globally author box on your single posts.', 'touchsize' )
 		)
@@ -3776,7 +3786,7 @@ function videotouch_single_post_options()
 		__( 'Enable show more for video content:', 'touchsize' ),
 		'toggle_show_more_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Show or hide the button details in single video post', 'touchsize' )
 		)
@@ -3798,7 +3808,7 @@ function videotouch_single_post_options()
 		__( 'Choose the page with frontend add post template:', 'touchsize' ),
 		'toggle_user_add_post_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Create a blank page with the "Frontend - Add post" page template. After you create it, set it here.', 'touchsize' )
 		)
@@ -3809,7 +3819,7 @@ function videotouch_single_post_options()
 		__( 'Choose the page with frontend edit post template:', 'touchsize' ),
 		'toggle_user_edit_post_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Create a blank page with the "Frontend - Edit post" page template. After you create it, set it here.', 'touchsize' )
 		)
@@ -3820,7 +3830,7 @@ function videotouch_single_post_options()
 		__( 'Choose the page with frontend profile template:', 'touchsize' ),
 		'toggle_user_profile_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Create a blank page with the "Frontend - My profile" page template. After you create it, set it here.', 'touchsize' )
 		)
@@ -3831,7 +3841,7 @@ function videotouch_single_post_options()
 		__( 'Breadcrumbs:', 'touchsize' ),
 		'toggle_breadcrumbs_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( 'Activate or disable breadcrumbs on your website.', 'touchsize' )
 		)
@@ -3842,7 +3852,7 @@ function videotouch_single_post_options()
 		__( 'Frontend text user add post', 'touchsize' ),
 		'toggle_text_user_callback',
 		'videotouch_single_post',
-		'single_post_settings_section', 
+		'single_post_settings_section',
 		array(
 			__( '', 'touchsize' )
 		)
@@ -3866,7 +3876,7 @@ function videotouch_single_post_callback()
 function toggle_related_posts_callback($args)
 {
 	$options = get_option('videotouch_single_post');
-	
+
 	$html = '<select name="videotouch_single_post[related_posts]" class="ts-related-posts">
 				<option value="Y" '. selected( @$options["related_posts"], 'Y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 				<option value="N" '. selected( @$options["related_posts"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
@@ -3880,7 +3890,7 @@ function toggle_related_posts_callback($args)
 	$related_posts_nr_of_columns = (int)@$options['related_posts_nr_of_columns'];
 
 	$html .= '<div id="ts-related-posts-options">';
-	
+
 	$html .= '<p>'.__( 'Number of related posts', 'touchsize' ).'</p>';
 
 	$html .= '<select name="videotouch_single_post[number_of_related_posts]">
@@ -3913,14 +3923,14 @@ function toggle_related_posts_callback($args)
 				<option value="by_categs" '. selected( @$options["related_posts_selection_criteria"], 'by_categs', false ). '>'.__( 'by Categories', 'touchsize' ).'</option>
 			</select>';
 	$html .= '</div>';
-	
+
 	echo $html;
 
-} // END toggle_related_posts_callback() 
+} // END toggle_related_posts_callback()
 
 function toggle_default_videoplayer_callback($args)
 {
-	
+
 	$options = get_option('videotouch_single_post');
 
 	$html = '<select name="videotouch_single_post[default_videoplayer]">
@@ -3928,14 +3938,14 @@ function toggle_default_videoplayer_callback($args)
 				<option value="y" '. selected( @$options["default_videoplayer"], 'y', false ).'>'.__( 'Yes', 'touchsize' ).'</option>
 			</select>';
 	$html .= '<p class="description">' .@$args[0]. '</p>';
-	
+
 	echo $html;
 
 } // END toggle_default_videoplayer_callback()
 
 function toggle_social_sharing_callback($args)
 {
-	
+
 	$options = get_option('videotouch_single_post');
 
 	$html = '<select name="videotouch_single_post[social_sharing]">
@@ -3943,14 +3953,30 @@ function toggle_social_sharing_callback($args)
 				<option value="N" '. selected( @$options["social_sharing"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
 			</select>';
 	$html .= '<p class="description">' .@$args[0]. '</p>';
-	
+
 	echo $html;
 
 } // END toggle_social_sharing_callback()
 
+function toggle_log_video_callback($args)
+{
+	$options = get_option( 'videotouch_single_post' );
+	$log_video = isset( $options['log_video'] ) ? $options['log_video'] : 'Y';
+
+	$html = '<div>
+	            <select name="videotouch_single_post[log_video]">
+	                <option value="Y" ' . selected( $log_video, 'Y', false ) . '>' . esc_html__( 'Yes', 'videotouch' ) . '</option>
+	                <option value="N" ' . selected( $log_video, 'N', false ) . '>' . esc_html__( 'No', 'videotouch' ) . '</option>
+	            </select>
+	         </div>';
+	$html .= '<p class="description">' . $args[0] . '</p>';
+
+	echo $html;
+}
+
 function toggle_button_play_callback($args)
 {
-	
+
 	$options = get_option('videotouch_single_post');
 
 	$html = '<select name="videotouch_single_post[button_play]">
@@ -3958,13 +3984,13 @@ function toggle_button_play_callback($args)
 				<option value="n" '. selected( @$options["button_play"], 'n', false ). '>'.__( 'No', 'touchsize' ).'</option>
 			</select>';
 	$html .= '<p class="description">' .@$args[0]. '</p>';
-	
+
 	echo $html;
 
 }
 
 function toggle_post_meta_callback($args)
-{	
+{
 	$options = get_option('videotouch_single_post');
 
 	$html = '<select name="videotouch_single_post[post_meta]">
@@ -3972,7 +3998,7 @@ function toggle_post_meta_callback($args)
 				<option value="N" '. selected( @$options["post_meta"], 'N', false ). '>'.__( 'No', 'touchsize' ).'</option>
 			</select>';
 	$html .= '<p class="description">' .@$args[0]. '</p>';
-	
+
 	echo $html;
 
 } // END toggle_post_meta_callback()
@@ -4017,7 +4043,7 @@ function toggle_video_sidebar_callback($args)
 
 	echo $html;
 
-} 
+}
 
 function toggle_show_more_callback($args)
 {
@@ -4031,20 +4057,20 @@ function toggle_show_more_callback($args)
 
 	echo $html;
 
-} 
+}
 
 function toggle_user_settings_callback($args)
 {
 	$options = get_option('videotouch_single_post');
 	$pages = get_all_page_ids();
 	$select_page = $options['user_settings'];
-	
+
 	$html  = '<select name="videotouch_single_post[user_settings]">';
 			if( isset($pages) && !empty($pages) && is_array($pages) ){
 				foreach($pages as $page_id){
 					$title = get_the_title($page_id);
 					$link  = get_permalink($page_id);
-					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : ''; 
+					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : '';
 					$html .= '<option ' . $selected . ' value="' . $link . '">'. $title .'</option>';
 			 	}
 			}
@@ -4060,13 +4086,13 @@ function toggle_user_add_post_callback($args)
 	$options = get_option('videotouch_single_post');
 	$pages = get_all_page_ids();
 	$select_page = $options['user_add_post'];
-	
+
 	$html  = '<select name="videotouch_single_post[user_add_post]">';
 			if( isset($pages) && !empty($pages) && is_array($pages) ){
 				foreach($pages as $page_id){
 					$title = get_the_title($page_id);
 					$link  = get_permalink($page_id);
-					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : ''; 
+					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : '';
 					$html .= '<option ' . $selected . ' value="' . $link . '">'. $title .'</option>';
 			 	}
 			}
@@ -4082,13 +4108,13 @@ function toggle_user_edit_post_callback($args)
 	$options = get_option('videotouch_single_post');
 	$pages = get_all_page_ids();
 	$select_page = $options['user_edit_post'];
-	
+
 	$html  = '<select name="videotouch_single_post[user_edit_post]">';
 			if( isset($pages) && !empty($pages) && is_array($pages) ){
 				foreach($pages as $page_id){
 					$title = get_the_title($page_id);
 					$link  = get_permalink($page_id);
-					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : ''; 
+					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : '';
 					$html .= '<option ' . $selected . ' value="' . $link . '">'. $title .'</option>';
 			 	}
 			}
@@ -4097,20 +4123,20 @@ function toggle_user_edit_post_callback($args)
 
 	echo $html;
 
-} 
+}
 
 function toggle_user_profile_callback($args)
 {
 	$options = get_option('videotouch_single_post');
 	$pages = get_all_page_ids();
 	$select_page = $options['user_profile'];
-	
+
 	$html  = '<select name="videotouch_single_post[user_profile]">';
 			if( isset($pages) && !empty($pages) && is_array($pages) ){
 				foreach($pages as $page_id){
 					$title = get_the_title($page_id);
 					$link  = get_permalink($page_id);
-					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : ''; 
+					$selected = (isset($select_page) && $link === $select_page) ? 'selected="selected"' : '';
 					$html .= '<option ' . $selected . ' value="' . $link . '">'. $title .'</option>';
 			 	}
 			}
@@ -4177,7 +4203,7 @@ function toggle_post_pagination_callback($args)
 function videotouch_page_options()
 {
 	//delete_option('videotouch_page');
-	if( false === get_option( 'videotouch_page' ) ) {	
+	if( false === get_option( 'videotouch_page' ) ) {
 		add_option( 'videotouch_page' );
 
 		$data = array(
@@ -4190,11 +4216,11 @@ function videotouch_page_options()
 	}
 
 	// Register a section
-	add_settings_section( 
-		'page_settings_section', 
-		__( 'Page options', 'touchsize' ), 
-		'videotouch_page_callback', 
-		'videotouch_page' 
+	add_settings_section(
+		'page_settings_section',
+		__( 'Page options', 'touchsize' ),
+		'videotouch_page_callback',
+		'videotouch_page'
 	);
 
 	add_settings_field(
@@ -4202,7 +4228,7 @@ function videotouch_page_options()
 		__( 'Social sharing', 'touchsize' ),
 		'toggle_page_social_sharing_callback',
 		'videotouch_page',
-		'page_settings_section', 
+		'page_settings_section',
 		array(
 			__( 'This will enable/disable social sharing buttons on pages.', 'touchsize' )
 		)
@@ -4213,7 +4239,7 @@ function videotouch_page_options()
 		__( 'Display page meta', 'touchsize' ),
 		'toggle_page_post_meta_callback',
 		'videotouch_page',
-		'page_settings_section', 
+		'page_settings_section',
 		array(
 			__( 'Show/hide page meta', 'touchsize' )
 		)
@@ -4224,7 +4250,7 @@ function videotouch_page_options()
 		__( 'Breadcrumbs', 'touchsize' ),
 		'toggle_page_breadcrumbs_callback',
 		'videotouch_page',
-		'page_settings_section', 
+		'page_settings_section',
 		array(
 			__( 'Show/hide page meta', 'touchsize' )
 		)
@@ -4246,7 +4272,7 @@ function videotouch_page_callback()
 } // END videotouch_page_callback
 
 function toggle_page_social_sharing_callback($args)
-{	
+{
 	$options = get_option('videotouch_page');
 
 	$html = '<select name="videotouch_page[social_sharing]">
@@ -4293,13 +4319,13 @@ function videotouch_social_options()
 			$image = (isset($value['image'])) ? esc_url($image) : '';
 			$color = (isset($value['color'])) ? esc_attr($color) : '';
 			$social[]['url'] = $url;
-			$social[]['image'] = $image; 
-			$social[]['color'] = $color; 
+			$social[]['image'] = $image;
+			$social[]['color'] = $color;
 		}
 	}
-	if( false === get_option( 'videotouch_social' ) ) {	
+	if( false === get_option( 'videotouch_social' ) ) {
 		add_option( 'videotouch_social' );
-		
+
 		$data = array(
 			'email'		 => '',
 			'skype'      => '',
@@ -4324,11 +4350,11 @@ function videotouch_social_options()
 		update_option('videotouch_social', $data);
 	}
 
-	add_settings_section( 
-		'social_section', 
-		__( 'Social icons options', 'touchsize' ), 
-		'videotouch_social_callback', 
-		'videotouch_social' 
+	add_settings_section(
+		'social_section',
+		__( 'Social icons options', 'touchsize' ),
+		'videotouch_social_callback',
+		'videotouch_social'
 	);
 
 	add_settings_field(
@@ -4336,7 +4362,7 @@ function videotouch_social_options()
 		__( 'Email', 'touchsize' ),
 		'toggle_email_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'This email is used to receive emails from contact form', 'touchsize' )
 		)
@@ -4347,7 +4373,7 @@ function videotouch_social_options()
 		__( 'Skype', 'touchsize' ),
 		'toggle_skype_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Skype here', 'touchsize' )
 		)
@@ -4358,7 +4384,7 @@ function videotouch_social_options()
 		__( 'Github', 'touchsize' ),
 		'toggle_github_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your github page here', 'touchsize' )
 		)
@@ -4369,7 +4395,7 @@ function videotouch_social_options()
 		__( 'Google+', 'touchsize' ),
 		'toggle_google_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Google+ page here.', 'touchsize' )
 		)
@@ -4380,7 +4406,7 @@ function videotouch_social_options()
 		__( 'Dribble', 'touchsize' ),
 		'toggle_dribble_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Dribbble page here.', 'touchsize' )
 		)
@@ -4391,7 +4417,7 @@ function videotouch_social_options()
 		__( 'last.fm', 'touchsize' ),
 		'toggle_lastfm_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your last.fm page here.', 'touchsize' )
 		)
@@ -4402,7 +4428,7 @@ function videotouch_social_options()
 		__( 'LinkedIn', 'touchsize' ),
 		'toggle_linkedin_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your LinkedIn here.', 'touchsize' )
 		)
@@ -4413,7 +4439,7 @@ function videotouch_social_options()
 		__( 'Tumblr', 'touchsize' ),
 		'toggle_tumblr_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Tumblr page here.', 'touchsize' )
 		)
@@ -4424,7 +4450,7 @@ function videotouch_social_options()
 		__( 'Twitter', 'touchsize' ),
 		'toggle_twitter_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Twitter page here.', 'touchsize' )
 		)
@@ -4435,7 +4461,7 @@ function videotouch_social_options()
 		__( 'Vimeo', 'touchsize' ),
 		'toggle_vimeo_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Vimeo page here.', 'touchsize' )
 		)
@@ -4446,7 +4472,7 @@ function videotouch_social_options()
 		__( 'WordPress', 'touchsize' ),
 		'toggle_wordpress_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your WordPress page here.', 'touchsize' )
 		)
@@ -4457,7 +4483,7 @@ function videotouch_social_options()
 		__( 'Yahoo', 'touchsize' ),
 		'toggle_yahoo_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Yahoo ID here.', 'touchsize' )
 		)
@@ -4468,7 +4494,7 @@ function videotouch_social_options()
 		__( 'Youtube', 'touchsize' ),
 		'toggle_youtube_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your YouTube page here.', 'touchsize' )
 		)
@@ -4479,18 +4505,18 @@ function videotouch_social_options()
 		__( 'Facebook', 'touchsize' ),
 		'toggle_facebook_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Facebook page here.', 'touchsize' )
 		)
 	);
-	
+
 	add_settings_field(
 		'flickr',
 		__( 'Flickr', 'touchsize' ),
 		'toggle_flickr_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Flickr page here.', 'touchsize' )
 		)
@@ -4501,7 +4527,7 @@ function videotouch_social_options()
 		__( 'Pinterest', 'touchsize' ),
 		'toggle_pinterest_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Pinterest page here.', 'touchsize' )
 		)
@@ -4512,7 +4538,7 @@ function videotouch_social_options()
 		__( 'Instagram', 'touchsize' ),
 		'toggle_instagram_social_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your Instagram page here.', 'touchsize' )
 		)
@@ -4523,7 +4549,7 @@ function videotouch_social_options()
 		__( 'Add new', 'touchsize' ),
 		'toggle_social_new_callback',
 		'videotouch_social',
-		'social_section', 
+		'social_section',
 		array(
 			__( 'Insert your new social page here.', 'touchsize' )
 		)
@@ -4538,7 +4564,7 @@ add_action( 'admin_init', 'videotouch_social_options' );
 function videotouch_theme_update_options()
 {
 	//delete_option('videotouch_theme_update');
-	if( false === get_option( 'videotouch_theme_update' ) ) {	
+	if( false === get_option( 'videotouch_theme_update' ) ) {
 		add_option( 'videotouch_theme_update' );
 
 		$data = array(
@@ -4551,11 +4577,11 @@ function videotouch_theme_update_options()
 		update_option('videotouch_theme_update', $data);
 	}
 
-	add_settings_section( 
-		'theme_update_section', 
-		__( 'Update your Theme from the WordPress Dashboard', 'touchsize' ), 
-		'videotouch_theme_update_callback', 
-		'videotouch_theme_update' 
+	add_settings_section(
+		'theme_update_section',
+		__( 'Update your Theme from the WordPress Dashboard', 'touchsize' ),
+		'videotouch_theme_update_callback',
+		'videotouch_theme_update'
 	);
 
 	register_setting( 'videotouch_theme_update', 'videotouch_theme_update');
@@ -4567,7 +4593,7 @@ add_action( 'admin_init', 'videotouch_theme_update_options' );
 function videotouch_theme_advertising_options()
 {
 	//delete_option('videotouch_theme_advertising');
-	if( false === get_option( 'videotouch_theme_advertising' ) ) {	
+	if( false === get_option( 'videotouch_theme_advertising' ) ) {
 		add_option( 'videotouch_theme_advertising' );
 
 		$data = array(
@@ -4579,11 +4605,11 @@ function videotouch_theme_advertising_options()
 		update_option('videotouch_theme_advertising', $data);
 	}
 
-	add_settings_section( 
-		'theme_advertising_section', 
-		__( 'Advertising code', 'touchsize' ), 
-		'videotouch_theme_advertising_callback', 
-		'videotouch_theme_advertising' 
+	add_settings_section(
+		'theme_advertising_section',
+		__( 'Advertising code', 'touchsize' ),
+		'videotouch_theme_advertising_callback',
+		'videotouch_theme_advertising'
 	);
 
 	add_settings_field(
@@ -4591,7 +4617,7 @@ function videotouch_theme_advertising_options()
 		__( 'Area 1', 'touchsize' ),
 		'videotouch_add_area_1_callback',
 		'videotouch_theme_advertising',
-		'theme_advertising_section', 
+		'theme_advertising_section',
 		array(
 			__( 'This advertising will be shown <b>above the video</b> on the video single post. Used only for custom video posts.', 'touchsize' )
 		)
@@ -4602,7 +4628,7 @@ function videotouch_theme_advertising_options()
 		__( 'Area 2', 'touchsize' ),
 		'videotouch_add_area_2_callback',
 		'videotouch_theme_advertising',
-		'theme_advertising_section', 
+		'theme_advertising_section',
 		array(
 			__( 'This advertising will be shown <b>above the comments</b> on the single post. Used only for any theme posts types.', 'touchsize' )
 		)
@@ -4613,7 +4639,7 @@ function videotouch_theme_advertising_options()
 		__( 'Add pre roll', 'slimvideo' ),
 		'toggle_pre_roll_callback',
 		'videotouch_theme_advertising',
-		'theme_advertising_section', 
+		'theme_advertising_section',
 		array(
 			__( '', 'slimvideo' )
 		)
@@ -4630,7 +4656,7 @@ add_action( 'admin_init', 'videotouch_theme_advertising_options' );
 
 function videotouch_theme_advertising_callback()
 {
-	
+
 	$html   = '';
 	echo $html;
 }
@@ -4751,7 +4777,7 @@ function toggle_pre_roll_callback($args)
 			$html .= '</ul>';
 			$refreshJsForUpload .= "ts_upload_files('#ts_upload-". $key ."', '#ts-hidden-". $key ."', '#ts-video-". $key ."', 'Upload video', '', 'webm');";
 		}
-		
+
 		$refreshJsForUpload .= '});</script>';
 		$html .= $refreshJsForUpload;
 		$html .= '<ul id="preroll_items">
@@ -4851,7 +4877,7 @@ function toggle_email_callback($args)
 {
 	$options = get_option('videotouch_social');
 	$email = is_email(@$options['email']) ? @$options['email'] : '';
-	
+
 	$html = '<input type="text" name="videotouch_social[email]" value="'. $email . '">';
 	$html .= '<p class="description">' .@$args[0]. '</p>';
 	echo $html;
@@ -4927,7 +4953,7 @@ function toggle_twitter_social_callback($args)
 
 	$html = '<input type="text" name="videotouch_social[twitter]" value="'. @esc_url($options['twitter']) . '">';
 	$html .= '<p class="description">' .@$args[0]. '</p>';
-	
+
 	echo $html;
 }
 
@@ -5048,7 +5074,7 @@ function toggle_social_new_callback($args)
 					                     <input type="text" value="' . $color . '" class="colors-section-picker" name="videotouch_social[social_new][' . $i . '][color]" />
 					                     <div class="colors-section-picker-div"></div>
 					                 </td>
-					             </tr> 
+					             </tr>
 					        </table>
 			        		<input type="button" class="button button-primary remove-item" value="' . __('Remove', 'touchsize') . '" /></div>
 			        	</div>
@@ -5058,7 +5084,7 @@ function toggle_social_new_callback($args)
 		}
 		$html .= '</ul>';
 	}
-	
+
 	$html .= '<ul id="social_items">
  			</ul>
 	 		<input type="hidden" id="social_content" value="" />
@@ -5075,7 +5101,7 @@ function toggle_social_new_callback($args)
 			               <td>'.__( "Social icon", "touchsize" ).'</td>
 			               <td>
 			                    <input type="text" data-role="media-url" name="videotouch_social[social_new][{{item-id}}][image]" id="social-{{item-id}}-image" value=""/>
-			                    <input type="button" id="uploader_{{item-id}}"  class="button ts-upload-social-image ts-multiple-item-upload" value="' . __( "Upload", "touchsize" ) . '" /> 
+			                    <input type="button" id="uploader_{{item-id}}"  class="button ts-upload-social-image ts-multiple-item-upload" value="' . __( "Upload", "touchsize" ) . '" />
 			                 </td>
 			             </tr>
 			             <tr>
@@ -5094,7 +5120,7 @@ function toggle_social_new_callback($args)
 			                     <input type="text" value="#777" class="colors-section-picker" name="videotouch_social[social_new][{{item-id}}][color]" />
 			                     <div class="colors-section-picker-div" id="social-{{item-id}}-color-picker"></div>
 			                 </td>
-			             </tr> 
+			             </tr>
 			        </table>
 		        	<input type="button" class="button button-primary remove-item" value="' . __('Remove', 'touchsize') . '" /></div>
 	     		</li>
@@ -5105,21 +5131,21 @@ function toggle_social_new_callback($args)
 
 function videotouch_css_options()
 {
-	if( false === get_option( 'videotouch_css' ) ) {	
+	if( false === get_option( 'videotouch_css' ) ) {
 		add_option( 'videotouch_css' );
 		$data = array(
 			'css' => ''
 		);
 
 		update_option('videotouch_css', $data);
-	}	
+	}
 
 	// Register a section
-	add_settings_section( 
-		'css_section', 
-		__( 'Custom css', 'touchsize' ), 
-		'videotouch_css_callback', 
-		'videotouch_css' 
+	add_settings_section(
+		'css_section',
+		__( 'Custom css', 'touchsize' ),
+		'videotouch_css_callback',
+		'videotouch_css'
 	);
 
 	register_setting( 'videotouch_css', 'videotouch_css');
@@ -5145,17 +5171,17 @@ function videotouch_css_callback()
 
 function videotouch_sidebars_options()
 {
-	if( false === get_option( 'videotouch_sidebars' ) ) {	
+	if( false === get_option( 'videotouch_sidebars' ) ) {
 		add_option( 'videotouch_sidebars' );
 		update_option( 'videotouch_sidebars', array() );
-	}	
+	}
 
 	// Register a section
-	add_settings_section( 
-		'sidebars_section', 
-		__( 'Sidebars', 'touchsize' ), 
-		'videotouch_sidebars_callback', 
-		'videotouch_sidebars' 
+	add_settings_section(
+		'sidebars_section',
+		__( 'Sidebars', 'touchsize' ),
+		'videotouch_sidebars_callback',
+		'videotouch_sidebars'
 	);
 
 	register_setting( 'videotouch_sidebars', 'videotouch_sidebars');
@@ -5198,16 +5224,16 @@ function videotouch_sidebars_callback()
 
 function videotouch_init_impots_options()
 {
-	if( false === get_option( 'videotouch_impots_options' ) ) {	
+	if( false === get_option( 'videotouch_impots_options' ) ) {
 		add_option( 'videotouch_impots_options', array() );
-	}	
+	}
 
 	// Register a section
-	add_settings_section( 
-		'videotouch_impots_options_section', 
-		__( 'Import Options', 'touchsize' ), 
-		'videotouch_impots_options_callback', 
-		'videotouch_impots_options' 
+	add_settings_section(
+		'videotouch_impots_options_section',
+		__( 'Import Options', 'touchsize' ),
+		'videotouch_impots_options_callback',
+		'videotouch_impots_options'
 	);
 
 	add_settings_field(
@@ -5215,7 +5241,7 @@ function videotouch_init_impots_options()
 		__( 'Import demo', 'touchsize' ),
 		'videotouch_import_demo_callback',
 		'videotouch_impots_options',
-		'videotouch_impots_options_section', 
+		'videotouch_impots_options_section',
 		array(
 			__( 'Import demo settings', 'touchsize' )
 		)
@@ -5226,7 +5252,7 @@ function videotouch_init_impots_options()
 		__( 'Reset settings', 'touchsize' ),
 		'videotouch_reset_settings_callback',
 		'videotouch_impots_options',
-		'videotouch_impots_options_section', 
+		'videotouch_impots_options_section',
 		array(
 			__( 'Reset your settings to default.', 'touchsize' )
 		)
@@ -5246,7 +5272,7 @@ function videotouch_impots_options_callback($args)
 	if($file_headers[0] !== 'HTTP/1.1 404 Not Found') {
 		$file_data = wp_remote_fopen(get_template_directory_uri() . '/import-data/import.txt');
 	}
-	
+
 	echo '<p>' . __( 'Proceed with caution. Warning! You <b style="color: #E75750">WILL lose all your current settings FOREVER</b> if you paste the import data and click "Save changes". Double check everything!', 'touchsize' ) . '</p>';
 
 	if (isset($_GET['updated'])) {
@@ -5255,7 +5281,7 @@ function videotouch_impots_options_callback($args)
 		} else {
 			echo '<div class="error">' . __("Options can't be imported. Inserted data can't be decoded properly", 'touchsize').'</div>';
 		}
-	}	
+	}
 ?><br>
 	<form action="<?php echo admin_url('admin.php?page=videotouch&tab=save_options') ?>" method="POST">
 		<textarea data-import-demo="<?php echo $file_data; ?>" name="encoded_options" id="ts_encoded_options" cols="30" rows="10"><?php echo esc_attr(videotouch_exports_options()); ?></textarea>
@@ -5282,7 +5308,7 @@ function videotouch_import_demo_callback(){
 				'</button>
 				<div style="display:none;" class="ts-import-demo">' . __('Please wait ...', 'touchsize') . '</div>
 			</div>';
-	$html .= '<p class="description">' . @$args[0] . '</p>'; 
+	$html .= '<p class="description">' . @$args[0] . '</p>';
 	echo $html; ?>
 	<script>
 		jQuery("button#import-demo").click(function(){
@@ -5293,14 +5319,14 @@ function videotouch_import_demo_callback(){
 			var jsonData = jQuery("#ts_encoded_options").attr("data-import-demo");
 			jQuery("#ts_encoded_options").val(jsonData);
 			jQuery('[name="ts_submit_button"]').trigger('click');
-			
+
 		    /*var data = {
-		        'action': 'ts_import'       
+		        'action': 'ts_import'
 		    };
 
 			jQuery('.ts-import-demo').css('display', '');
 		    jQuery.post(ajaxurl, data, function(response) {
-		    	
+
 		    	if(response){
 		    		jQuery('.ts-import-demo').css('display', 'none');
 		    		//jQuery('[name="ts_submit_button"]').trigger('click');
@@ -5311,7 +5337,7 @@ function videotouch_import_demo_callback(){
 <?php
 }
 
-function videotouch_reset_settings_callback(){ 
+function videotouch_reset_settings_callback(){
 	if( isset($_POST['reset-settings']) ){
 		$expots_options = array(
 			'videotouch_general',
@@ -5353,8 +5379,8 @@ function videotouch_reset_settings_callback(){
 // ========================================================================================
 
 function videotouch_red_area()
-{	
-	if( false === get_option( 'videotouch_red_area' ) ) {	
+{
+	if( false === get_option( 'videotouch_red_area' ) ) {
 		$data = array(
 			'news' => '',
 			'alert' => array(
@@ -5366,14 +5392,14 @@ function videotouch_red_area()
 		);
 
 		add_option( 'videotouch_red_area', $data );
-	}	
+	}
 
 	// Register a section
-	add_settings_section( 
-		'videotouch_red_area', 
-		__( 'Red Area', 'touchsize' ), 
-		'videotouch_red_area_callback', 
-		'videotouch_red_area' 
+	add_settings_section(
+		'videotouch_red_area',
+		__( 'Red Area', 'touchsize' ),
+		'videotouch_red_area_callback',
+		'videotouch_red_area'
 	);
 
 	register_setting( 'videotouch_red_area', 'videotouch_red_area');
@@ -5413,24 +5439,24 @@ function videotouch_theme_update_callback(){
 	if($update = check_for_theme_update()){
 		$html .= '<p>You have update for your theme</p>';
 	}
-	
+
 	echo $html;
 }
 
 function check_for_theme_update(){
 	$updates = get_site_transient('update_themes');
-	
+
 	if(!empty($updates) && !empty($updates->response))
 	{
 		$theme = wp_get_theme();
-		
+
 		if($key = array_key_exists($theme->get_template(), $updates->response))
 		{
 			return $updates->response[$theme->get_template()];
 		}
 	}
-	
+
 	return false;
-	
+
 }
 ?>

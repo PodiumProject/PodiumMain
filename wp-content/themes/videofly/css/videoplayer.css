@@ -1,0 +1,1602 @@
+.ts_videoPlayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0px;
+    margin: 0px;
+    -webkit-user-select: none;
+    background: #000000;
+    /* height: 100%; */
+    z-index: 90;
+    width:100%;
+}
+.ts_videoPlayerAD {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    -webkit-user-select: none;
+    background: #000000;
+    height: 100%;
+    z-index: 1;
+}
+.ts_progressAD{
+  position: absolute;
+  height: 5px;
+  background: #FFFFFF;
+  left:0px;
+	bottom: 0px;
+	z-index:999999;
+}
+.ts_ads{
+    position: absolute;
+    opacity:1;
+    z-index: 502;
+    cursor: pointer;
+    left:50% !important;
+    -webkit-transform: translatex(-50%);
+       -moz-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+         -o-transform: translatex(-50%);
+            transform: translatex(-50%);
+}
+.ts_adClose{
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: 3px;
+    top: 3px;
+    padding: 0px;
+    border-radius: 50%;
+    background: rgba(60,60,60,0.5);
+    color: #FFF;
+    font-size: 9px;
+    line-height: 15px;
+    text-align: center;
+}
+.ts_ads img {
+    border: 1px solid #CFCFCF;
+    -moz-border-radius:5px;
+    border-radius:5px;
+}
+.ts_textAdsWindow{
+    position: absolute;
+	width:400px;
+	height:100px;
+    z-index: 503;
+	background: rgba(0,0,0,0.56);
+	border: 1px solid rgba(241,241,241,0.25);
+    -moz-border-radius:5px;
+    border-radius:5px;
+	cursor:pointer;
+	overflow:hidden;
+      left:50% !important;
+    -webkit-transform: translatex(-50%);
+       -moz-transform: translatex(-50%);
+        -ms-transform: translatex(-50%);
+         -o-transform: translatex(-50%);
+            transform: translatex(-50%);
+}
+.ts_textAdsWindow:hover{
+    border: 1px solid rgba(241, 241, 241, 0.35);
+	-webkit-transition: all .2s ease-out;
+	-moz-transition: all .2s ease-out;
+	-o-transition: all .2s ease-out;
+	transition: all .2s ease-out;
+}
+.ts_textAdsWindowWrapper{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+.ts_textAdsContent{
+	position: absolute;
+	height: 100%;
+	margin-right: 30px;
+	margin-left: 15px;
+}
+.ts_textAdsTexts{
+	font-size: 15px;
+  color: #e4e4e4;
+  font-family: inherit;
+	line-height: 1.45em;
+	text-align: justify;
+  padding-top: 15px;
+}
+.ts_skipAdBox{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.56);
+    border: 1px solid rgb(241, 241, 241);
+    z-index: 2;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.ts_skipAdBox:hover{
+    border: 1px solid rgb(158, 158, 158);
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.ts_skipAdTitle {
+    position: absolute;
+    top: 0;
+    left: 6px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px #000;
+    text-align: left;
+    font-family: inherit;
+    z-index: 100;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+.ts_toggleAdPlayBox{
+    position: absolute;
+    width: 105px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.56);
+    border: 1px solid rgb(241, 241, 241);
+    z-index: 2;
+    cursor: pointer;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.ts_toggleAdPlayBox:hover{
+    border: 1px solid rgb(158, 158, 158);
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.ts_skipAdBox > span:before,
+.ts_toggleAdPlayBox > span:before{
+  color: #FFF;
+  position: absolute;
+  right: 5px;
+  height: 30px;
+  line-height: 30px;
+  width: auto;
+}
+.ts_toggleAdPlayBoxTitle {
+    position: absolute;
+    top: 0;
+    left: 16px;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px #000;
+    text-align: left;
+    font-family: inherit;
+    z-index: 100;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.ts_preloader{
+    position:absolute;
+    width:32px;
+    height:32px;
+    left: 50%;
+    top: 50%;
+    margin:-12px 0px 0px -12px;
+    background: url(../images/preloader.gif) no-repeat center center;
+    z-index: 600;
+}
+.ts_fullScreen {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  overflow: hidden;
+}
+#ts_ytWrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    z-index: 300;
+}
+#ts_vimeoWrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    z-index: 300;
+}
+.ts_overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    z-index: 501;
+    overflow: hidden;
+}
+
+.ts_overlay img{
+   width: 100%;
+}
+#ts_overlayPoster{
+    max-width:100%;
+    /*max-height:100%;*/
+    margin:auto;
+    display:block;
+}
+.ts_playButtonPoster{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:-41.5px 0px 0px -41.5px;
+    width: 83px;
+    height: 83px;
+    background-color: transparent;
+    z-index: 502;
+    cursor: pointer;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.ts_playButtonPoster:hover{
+    opacity: 0.75;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.ts_playButtonPoster{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:-33px 0px 0px -33px;
+    width: 66px;
+    height: 66px;
+    background-color: rgba(200,200,200,0.2);
+    z-index: 501;
+    font-size: 36px;
+    line-height: 70px;
+    text-align: center;
+    border: 3px solid rgba(60,60,60,0.8);
+    border-radius: 50%;
+}
+.ts_logo{
+    position: absolute;
+    z-index: 999;
+}
+
+.ts_controls .ts_disabled {
+  display: none;
+}
+
+.ts_videoPlayer video
+{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.ts_videoPlayerAD video
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ts_videoPlayer .embed, .ts_videoPlayer object {
+  z-index: 100;
+}
+.ts_controls {
+  z-index: 200;
+}
+
+.ts_videoAdBoxInside{
+    position: absolute;
+    width: 200px;
+    height:24px;
+    line-height:24px;
+    background: #000;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 3px #000;
+    text-align: left;
+    font-family: inherit;
+}
+.ts_adsTitleInside {
+    position: absolute;
+    z-index: 501;
+    height:24px;
+    line-height:24px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+	margin: 0;
+}
+.ts_timeLeftInside{
+    position: absolute;
+    right: -7px;
+    z-index: 501;
+    height:24px;
+    line-height:24px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.ts_videoAdBoxInsideNowPlaying{
+    position: absolute;
+    width: 190px;
+    height:16px;
+    left:0px;
+    top:0px;
+    padding: 0px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    text-align: left;
+    font-family: inherit;
+    cursor: default;
+    z-index: 200;
+}
+.ts_adsTitleInsideNowPlaying {
+    position: absolute;
+    z-index: 501;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+.ts_fsEnterADBox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+.ts_screenBtnsWindow{
+    position: absolute;
+    z-index: 200;
+    /*right: 0px; set in jquery*/
+    top: 0px;
+    right:0px;
+}
+
+
+/*==================================================
+ * Effect 1
+ * ===============================================*/
+.ts_effect1{
+	
+}
+/*==================================================
+ * Effect 2
+ * ===============================================*/
+.ts_effect2
+{
+  position: relative;
+}
+.ts_effect2:before, .ts_effect2:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: rgba(0,0,0,.6);
+  -webkit-box-shadow: 0 15px 10px rgba(0,0,0,.6);
+  -moz-box-shadow: 0 15px 10px rgba(0,0,0,.6);
+  box-shadow: 0 15px 10px rgba(0,0,0,.6);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.ts_effect2:after
+{
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
+  right: 10px;
+  left: auto;
+}
+/*==================================================
+ * Effect 3
+ * ===============================================*/
+.ts_effect3
+{
+  position: relative;
+}
+.ts_effect3:before, .ts_effect3:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: rgba(0,0,0,.6);
+  -webkit-box-shadow: 0 35px 20px rgba(0,0,0,.6);
+  -moz-box-shadow: 0 35px 20px rgba(0,0,0,.6);
+  box-shadow: 0 35px 20px rgba(0,0,0,.6);
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.ts_effect3:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================
+ * Effect 4
+ * ===============================================*/
+.ts_effect4
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.ts_effect4:before, .ts_effect4:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:50%;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+/*==================================================
+ * Effect 5
+ * ===============================================*/
+.ts_effect5{
+	-webkit-box-shadow:0px 4px 7px rgba(0,0,0,.6); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	-moz-box-shadow:0px 4px 7px rgba(0,0,0,.6);  /* Firefox 3.5 - 3.6 */
+	box-shadow:0px 4px 7px rgba(0,0,0,.6);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.ts_effect5:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+/*==================================================
+ * Effect 6
+ * ===============================================*/
+.ts_effect6
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.ts_effect6:before, .ts_effect6:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.ts_effect6:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+.icon-general.icon-pause:before,
+.icon-general.icon-play:before{
+  left: 0;
+  padding-left: 7px;
+  padding-right: 7px;
+  position: absolute;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+}
+.icon-general.icon-restart:before{
+  padding-left: 3px;
+  padding-right: 3px;
+  position: absolute;
+  right: 269px;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+}
+.icon-general.icon-info-circled:before{
+  padding-left: 3px;
+  padding-right: 3px;
+  position: absolute;
+  right: 239px;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+}
+.icon-general.icon-volume-off:before,
+.icon-general.icon-volume-on:before{
+  padding-left: 8px;
+  padding-right: 8px;
+  position: absolute;
+  right: 106px;
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+}
+.icon-general.icon-fullscreen:before{
+  padding-left: 5px;
+  padding-right: 5px;
+  position: absolute;
+  right: 0;
+  line-height: 30px;
+  height: 30px;
+}
+.ts_controls {
+      position: absolute;
+      height: 30px;
+      bottom: 0px;
+      width:100%;
+    background: rgba(60,60,60,0.4);
+}
+.ts_playButtonScreen{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin:-33px 0px 0px -33px;
+  width: 66px;
+  height: 66px;
+    background-color: rgba(200,200,200,0.7);
+    z-index: 200;
+    font-size: 36px;
+    line-height: 70px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+
+.micro-player .ts_playButtonScreen{
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.ts_playButtonScreen:before{
+    margin: 0 0 0 3px;
+}
+/*******PLAYLIST BTN*********/
+.ts_playlistBtn{
+    margin: 5px;
+  width: 45px;
+  height: 50px;
+  background: rgba(30,30,30,0.3);
+    z-index: 200;
+}
+.ts_playlistBtnText{
+    width: 100%;
+    font-weight: bold;
+    font-size: 9px;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/*******EMBED BTN*********/
+.ts_embedBtn{
+  /*position: absolute;*/
+    margin: 5px;
+  width: 45px;
+  height: 50px;
+  background: rgba(30,30,30,0.3);
+    z-index: 200;
+}
+.ts_embedBtnText{
+    width: 100%;
+    font-weight: bold;
+    font-size: 9px;
+    font-family: inherit;
+    cursor: pointer;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+/************************** VIDEO TRACK *******************/
+.ts_videoTrack {
+  position: absolute;
+  left: 55px;
+  height:4px;
+    background: rgba(90,90,90,0.3);
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-top: 2px;
+}
+.ts_videoTrackProgress{
+    position: absolute;
+    height:4px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.ts_videoTrackDownload{
+    position: absolute;
+    height:3px;
+    background: #252525;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+
+}
+.ts_videoTrackProgressScrubber{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: -7px;
+    top: -4px;
+    background: #9e152c;
+    border-radius: 50%;
+}
+/************************** VOLUME TRACK *******************/
+.ts_volumeTrack {
+  position: absolute;
+  right: 45px;
+  width: 58px;
+  height:4px;
+    background: #2F2F2F;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    margin-top: 2px;
+}
+.ts_volumeTrackProgress{
+    position: absolute;
+    width: 50%;
+    height:4px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+}
+.ts_volumeTrackProgressScrubber{
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    right: -7px;
+    top: -4px;
+    border-radius: 50%;
+}
+/********************************************tooltip time***************************/
+.ts_toolTip{
+    position: absolute;
+    width: 47px;
+    height: 23px;
+}
+.ts_toolTipText{
+    position:absolute;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 11px;
+    color: #000;
+    text-align: center;
+    background: #fff;
+    padding: 4px 11px;
+}
+.ts_toolTipTriangle {
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+}
+/******************************tooltip volume***********************************/
+.ts_toolTipVolume{
+    position: absolute;
+    width: 78px;
+    height: 23px;
+}
+.ts_toolTipVolumeText{
+    position:absolute;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 11px;
+    color: #000;
+    text-align: center;
+    background: #fff;
+    padding: 4px 10px;
+}
+.ts_toolTipTriangle {
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+}
+.ts_timeElapsed {
+  position: absolute;
+  top: 5px;
+  right: 192px;
+      padding: 0 5px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor:defats;
+}
+.ts_timeTotal {
+  position: absolute;
+  top: 5px;
+  right: 152px;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor:defats;
+}
+.ts_timeElapsed,
+.ts_timeTotal {
+    font-family: inherit;
+  font-size: 11px;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 1px 1px #000;
+    margin-top: 5px;
+
+}
+/**************************************separators*********************************/
+.ts_sep1{
+    position: absolute;
+    top: 0;
+    width:1px;
+    height: 22px;
+    left:35px;
+    border: 1px solid rgba(255, 255, 255, 0);
+}
+.ts_sep2{
+    position: absolute;
+    top: 0;
+    width:1px;
+    height: 22px;
+    right:297px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    /* border-left-color: #333; */
+
+}
+.ts_sep3{
+    position: absolute;
+    top: 0;
+    width:1px;
+    height: 22px;
+    right:267px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    /* border-left-color: #333; */
+
+}
+.ts_sep4{
+    position: absolute;
+    top: 0;
+    width:1px;
+    height: 22px;
+    right:237px;
+    border: 1px solid rgba(255, 255, 255, 0);
+
+    /* border-right-color: #333; */
+}
+.ts_sep5{
+    position: absolute;
+    top: 0;
+    width:1px;
+    height: 22px;
+    right:136px;
+    border: 1px solid rgba(255, 255, 255, 0);
+
+}
+.ts_sep6{
+    position: absolute;
+    top: 0;
+    width:1px;
+    height: 22px;
+    right:33px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    /* border-left-color: #333; */
+
+}
+/******************************INFO WINDOW*****************************/
+.ts_infoWindow{
+    position: absolute;
+    width: 370px;
+    height:110px;
+    background: #000;
+    border: 1px solid;
+    border-top-color: #333333;
+    border-left-color: #333333;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 201;
+    /*background: -moz-linear-gradient(top, #252525, #000000);*/
+    /*background: -o-linear-gradient(top, #252525, #000000);*/
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#252525), to(#000000));*/
+}
+.ts_btnClose{
+    position: absolute;
+    width: 42px;
+    height: 23px;
+    right: 0px;
+    bottom: 0px;
+}
+.ts_btnCloseText{
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 9px;
+    text-align: center;
+    font-family: inherit;
+    cursor: pointer;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+}
+.ts_infoTitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    margin:0px;
+    padding: 10px 10px 0px 10px;
+    /*padding-left: 10px ;*/
+    text-align: left;
+    font-family: inherit;
+    cursor: defats;
+}
+.ts_infoText{
+    font-size: 12px;
+    color: #e4e4e4;
+    margin:0px;
+    padding: 0px 10px 10px 10px;
+    text-align: left;
+    font-family: inherit;
+
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: defats;
+}
+.ts_nowPlayingText {
+    position: absolute;
+    left:0px;
+    top:0px;
+    padding: 0px 10px 10px 10px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    text-align: left;
+    font-family: inherit;
+    cursor: defats;
+    z-index: 200;
+}
+/*****************************EMBED WINDOW**************************/
+.ts_embedWindow{
+    position: absolute;
+    width: 310px;
+    /* height:105px; */
+    background: #000;
+    border: 1px solid;
+    border-top-color: #333333;
+    border-left-color: #333333;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 505;
+    /*background: -moz-linear-gradient(top, #252525, #000000);*/
+    /*background: -o-linear-gradient(top, #252525, #000000);*/
+    /*background: -webkit-gradient(linear, left top, left bottom, from(#252525), to(#000000));*/
+}
+.ts_embedTitle {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    margin:0px;
+    padding: 0px 0px 0px 10px;
+    /*padding-left: 10px ;*/
+    text-align: left;
+    font-family: inherit;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor:defats;
+}
+.ts_embedText{
+  font-size: 12px;
+  color: #e4e4e4;
+  margin: 0px 10px 20px 5px;
+  padding: 5px 5px 5px 10px;
+  text-align: left;
+  font-family: inherit;
+  border: 2px solid;
+  border-top-color: #000000;
+  border-left-color: #000;
+  border-bottom-color: #000;
+  border-right-color: #000;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-user-select: text;
+  /* background-color: #060606; */
+  background: #080808;
+}
+.ts_embedMessageTxt {
+    font-weight: bold;
+    font-size: 14px;
+    color: #eb1700;
+    text-align: left;
+    font-family: inherit;
+    cursor: pointer;
+}
+/* .ts_embedMessage {
+    position:absolute;
+} */
+/**************SHARE WINDOW************************/
+.ts_shareWindow{
+    position: absolute;
+    z-index: 200;
+  top:3px;
+  right:51px;
+}
+.ts_shareWindow > div{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    background: rgba(60,60,60,0.6);
+    color: #FFF;
+}
+
+/*.play,*/
+.ts_playButtonScreen,
+/*.pause,*/
+/*.ts_infoBtn,*/
+/*.rewindBtn,*/
+/*.ts_fullScreenEnter,*/
+/*.ts_fullScreenExit,*/
+/*.mute,*/
+/*.unmute,*/
+/*.ts_infoBtnClose,*/
+/*.ts_embedBtnClose,*/
+.ts_playlistBtn,
+.ts_shareBtn,
+.ts_embedBtn,
+.ts_facebook,
+.ts_twitter,
+.ts_googleplus,
+/*.myspace,*/
+/*.wordpress,*/
+/*.linkedin,*/
+/*.flickr,*/
+/*.blogger,*/
+/*.delicious,*/
+.mail,
+.ts_videoTrack,
+.ts_volumeTrack{
+  cursor: pointer;
+}
+
+/****icons general****/
+.icon-general{
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    height: 24px;
+    text-align: center;
+    color: #f4f4f4;
+    cursor: pointer;
+
+    /*custom*/
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    /*font-size: 1.5em;*/
+}
+.icon-general:hover{
+    color: #000;
+    /* background-color: #000; */
+}
+/****icons over screen****/
+.icon-overScreen,
+.icon-overScreen-hover{
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 0;
+    -webkit-font-smoothing: antialiased;
+    height: 16px;
+    text-align: center;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 8px;
+    display: inline-block;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.icon-overScreen-Texts,
+.icon-overScreen-Texts-hover{
+    color: #ffffff;
+    text-align: center;
+    margin: 3px 0 0 0;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.btnOverScreen{
+    text-align: center;
+}
+.btnOverScreen:hover{
+    /* position: absolute; */
+    background: #c51230;
+}
+
+
+
+
+/*** Playlist ***/
+/*=====================================*/
+/*===========item general===========*/
+/*=====================================*/
+/*item left container with thumbnail_image*/
+
+.ts_itemLeft{
+    position: absolute;
+    width:60px;
+    height: 50px;
+    z-index: 100;
+}
+/*item right container with title and description*/
+.ts_itemRight{
+    position: absolute;
+    right: 0px;
+    left: 75px;
+    top: 5px;
+    font-family: inherit;
+}
+.ts_title{
+    color: inherit;
+    width: 100%;
+    font-size: inherit;
+    font-weight:bold;  
+}
+.ts_title,
+.ts_description{
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    overflow: hidden;
+    max-height: 3.6em;
+    line-height: 1.8em  
+}
+
+.ts_description{
+    color: #e4e4e4;
+    width: 100%;
+    font-size: 11px;
+    padding: 4px 0px 5px 0px;
+    font-size: 10px;
+    max-height: 1.8em;
+    line-height: 1.8em  
+}
+.ts_thumbnail_image{
+    position:absolute;
+    height: 100%;
+    margin: 5px 5px 5px 5px;
+    -moz-box-shadow: 0 0 1px #191919;
+    -webkit-box-shadow: 0 0 1px #191919;
+    box-shadow: 0px 0px 1px #191919;
+    border: 1px solid;
+    border-top-color: #4E4E4E;
+    border-right-color: #4E4E4E;
+    border-bottom-color: #4E4E4E;
+    border-left-color: #4E4E4E;
+}
+/*=====================================*/
+/*===========right playlist===========*/
+/*=====================================*/
+#ts_playlist{
+  position:absolute;
+  background: #000000;
+  width:260px;
+  top:0px;
+  overflow:hidden;
+  z-index: 100000;
+}
+#ts_playlistContent{
+  position:absolute;
+  background: #191919;
+  top:0px;
+  left:0px;
+  width:100%;
+    margin: 0px;
+    padding: 0px;
+}
+.ts_item{
+  position:relative;
+  width:100%;
+  height:64px;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+  background:#212121;
+  border: 1px solid;
+  border-top-color: #333333;
+  border-left-color: #333333;
+  border-bottom-color: #000000;
+  border-right-color: #000000;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 11px;
+    cursor:pointer;
+}
+.ts_item:hover{
+    position:absolute;
+
+    width:100%;
+    height:64px;
+    background: #2b2a2a;
+}
+.ts_itemSelected{
+    position:absolute;
+
+    width:100%;
+    height:64px;
+    background: #2b2a2a;
+}
+.ts_itemUnselected{
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    background: #222222;
+    border: 1px solid;
+    border-top-color: #3C3C3C;
+    border-left-color: #3C3C3C;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
+}
+.ts_topArrow{
+    position: absolute;
+    right: 0;
+    z-index: 101;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid ;
+    border-top-color: #333333;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    border-left-color: #333333;
+    background: #000000;
+}
+.ts_topArrow > div:before,
+.ts_bottomArrow > div:before{
+  -webkit-transition: color .1s linear;
+  -o-transition: color .1s linear;
+  transition: color .1s linear;
+}
+.ts_topArrow > div:before{
+  top:7px;
+  position: relative;
+}
+.ts_bottomArrow{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    border: 1px solid ;
+    border-top-color: #333333;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    border-left-color: #333333;
+    background: #000000;
+}
+.ts_bottomArrow > div:before{
+  top:7px;
+  position: relative;
+}
+.ts_myScrollbarV {
+    position:absolute;
+    z-index:100;
+    width:6px;bottom:30px;top:30px;right:0px
+}
+
+.ts_myScrollbarV > div {
+    position:absolute;
+    z-index:100;
+    width:100%;
+
+    background:#333;
+    border: 1px solid;
+    border-top-color: #666;
+    border-left-color: #666;
+    border-bottom-color: #000;
+    border-right-color: #000;
+}
+
+
+
+
+/*=====================================*/
+/*===========bottom playlist===========*/
+/*=====================================*/
+#ts_playlist_bottom{
+    position:absolute;
+    background: #000000;
+    height:64px;
+    overflow:hidden;
+}
+#ts_playlistContent_bottom{
+    position:absolute;
+    background: #191919;
+    top:0px;
+    left:0px;
+    height:100%;
+    margin: 0;
+    padding: 0;
+}
+.ts_item_bottom{
+    position: absolute;
+    width:250px;/*fixed width*/
+    height: 100%;
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    background:#212121;
+    border: 1px solid;
+    border-top-color: #333333;
+    border-left-color: #333333;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
+    cursor:pointer;
+}
+.ts_item_bottom:hover{
+    width:252px;
+    height:64px;
+    background: #aeaeae;
+    border: 1px solid #aeaeae;
+    border-top-color: #aeaeae;
+    border-left-color: #aeaeae;
+    border-bottom-color: #aeaeae;
+}
+.ts_itemSelected_bottom{
+    position:absolute;
+
+    width:252px;
+    height:64px;
+    background: #aeaeae;
+    border: 1px solid #aeaeae;
+    border-top-color: #aeaeae;
+    border-left-color: #aeaeae;
+    border-bottom-color: #aeaeae;
+}
+.ts_itemUnselected_bottom{
+    position: absolute;
+    width: 252px;
+    height: 64px;
+    background: #222222;
+    border: 1px solid;
+    border-top-color: #3C3C3C;
+    border-left-color: #3C3C3C;
+    border-bottom-color: #000000;
+    border-right-color: #000000;
+}
+.ts_leftArrow{
+    position: absolute;
+    width: 25px;
+    height: 50%;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+
+    border: 1px solid ;
+    border-top-color: #333333;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    border-left-color: #333333;
+    background: #000000;
+}
+.ts_rightArrow{
+    right:0;
+    position: absolute;
+    width: 25px;
+    height: 50%;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+
+    border: 1px solid ;
+    border-top-color: #333333;
+    border-right-color: #000000;
+    border-bottom-color: #000000;
+    border-left-color: #333333;
+    background: #000000;
+}
+/*=========Horizontal scrollbar=============*/
+.ts_myScrollbarH {
+    position:absolute;
+    z-index:100;height: 6px;bottom: 1px;left:1px;right:1px
+}
+
+.ts_myScrollbarH > div {
+    position:absolute;
+    z-index:100;
+    height:100%;
+
+    /* The following is probably what you want to customize */
+    background:#333;
+    border: 1px solid;
+    border-top-color: #666;
+    border-left-color: #666;
+    border-bottom-color: #000;
+    border-right-color: #000;
+}
+
+
+
+/********************************************************************
+        Overwriting styles
+**********************************************************************/
+   .ts-video{
+     position: relative;
+   }
+
+  .ts_playButtonPoster {
+    position: absolute;
+    color: #fff;
+    width: 185px;
+    height: 185px;
+    display: inline-block;
+    border: 3px solid;
+    border-color: #fff;
+    line-height: 185px;
+    border-radius: 50%;
+    top:50%;
+    right:50%;
+    margin:0;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+         -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    
+    -webkit-transition: color .3s linear, border-color .3s linear;
+    -o-transition: color .3s linear, border-color .3s linear;
+    transition: color .3s linear, border-color .3s linear;
+}
+
+.ts_playButtonPoster:hover{
+      color: #c51230;
+      border-color: #c51230;
+    }
+
+#ts_overlayPoster{
+  width: 100%;
+}
+
+
+.ts_mainContainer{
+  width: 100%;
+}
+
+.ts_playlistContent .ts_item{
+  margin-bottom: 15px;
+}
+
+#ts_playlist{
+  z-index: 99;
+}
+#ts_playlist .ts-item{}
+#ts_playlist .ts-item .ts-title{
+  font-family: inherit;
+}
+.vdf-video-player{
+  position: relative;
+}
+@media only screen and (max-width : 768px) {
+  .ts_playButtonPoster {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+    .ts_playButtonPoster {
+        width: 50px;
+      height: 50px;
+      line-height: 48px;
+  }
+
+}
+
+
+.micro-player{
+  position: fixed !important;
+  top:0;
+  left:0;
+  height: 80px !important;
+  width: 160px !important;
+  z-index: 999;
+}
+
+.admin-bar .micro-player{
+  top:32px;
+}
+
+.micro-player .ts_controls{
+  opacity: 0;
+  -webkit-transition: opacity .25s ease;
+  -o-transition: opacity .25s ease;
+  transition: opacity .25s ease;
+}
+
+.micro-player .ts_videoPlayer:not(.ts_playing) .ts_controls,
+.micro-player:hover .ts_controls{
+  opacity: 1;
+}
+
+.micro-player .ts_videoPlayerAD,
+.micro-player .vdf-video-player,
+.micro-player .ts_videoPlayer,
+.micro-player iframe{
+  height: 80px !important;
+  width: 160px !important;
+
+}
+.micro-player .ts_playButtonPoster{
+  width: 45px;
+  height: 45px;
+  line-height: 40px;
+  font-size: 20px;
+
+}
+
+.micro-player .ts_playButtonScreen{
+  left:50%;
+  -webkit-transform: translatex(50%);
+  -ms-transform: translatex(50%);
+  -o-transform: translatex(50%);
+  transform: translatex(50%);
+}
+
+.micro-player.has-mega-menu{
+  height: 95px !important;
+  width: 180px !important;
+
+}
+.micro-player.has-mega-menu .ts_videoPlayerAD,
+.micro-player.has-mega-menu .vdf-video-player,
+.micro-player.has-mega-menu .ts_videoPlayer,
+.micro-player.has-mega-menu iframe{
+  height: 95px !important;
+  width: 180px !important;
+
+}
+
+.micro-player .ts_toggleAdPlayBox{
+  width: 30px !important;
+  right:auto !important;
+  left:0 !important;
+}
+.micro-player .ts_skipAdBox{
+  width: 65px;
+}
+
+.micro-player .ts_videoAdBoxInsideNowPlaying{
+  max-width: 140px;
+  overflow: hidden;
+}
+.micro-player .ts_ads,
+.micro-player .ts_textAdsWindow,
+.micro-player .ts_skipAdBox span,
+.micro-player .ts_videoAdBoxInside,
+.micro-player .ts_toggleAdPlayBoxTitle,
+.micro-player .ts_timeElapsed, 
+.micro-player .ts_timeTotal,
+.micro-player .ts_nowPlayingText,
+.micro-player .ts_videoTrack,
+.micro-player .ts_screenBtnsWindow{
+  display: none !important;
+}
+
+
+.micro-player .ts_toggleAdPlayBox,
+.micro-player .ts_skipAdBox{
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+}

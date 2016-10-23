@@ -1,0 +1,157 @@
+#elite_player_admin .actions-holder {
+    padding: 10px;
+}
+#elite_player_admin .submit {
+    clear: both;
+	text-align: left;
+	max-width: 100%;
+	margin-top: 5px;
+	margin-left: 10px;
+	padding-top: 5px;
+}
+#elite_player_admin .float-left {
+    float:left;
+}
+#elite_player_admin .float-right {
+    float:right;
+}
+#elite_player_admin .column-left {
+    position: relative;
+    float: left;
+	width:50%;
+}
+#elite_player_admin .column-right {
+    position: relative;
+	width:50%;
+    float: right;
+}
+#elite_player_admin .back-to-list-link {
+    text-decoration: none;
+    margin-top: 11px;
+    display: block;
+    width: 180px;
+}
+.settings-title{
+	/* color:#ff0000; */
+	
+}
+#elite_player_admin #add-new-video-button {
+    margin-bottom:10px;
+    margin-top:10px;
+}
+#elite_player_admin #video-section-count {
+    color:#2ea2cc; 
+	/* color: #D33737; */
+	font-size: 15px;
+	/* font-weight: bold; */
+}
+#elite_player_admin #sortable-title {
+    color:#fff; 
+	font-size: 16px;
+	font-weight: bold;
+}
+#elite_player_admin .deletediv {
+	margin-left:30px
+}
+#elite_player_admin .button80 {
+    min-width: 80px;
+    text-align: center;
+}
+
+#elite_player_admin .video{
+	margin-bottom:20px;
+}
+#elite_player_admin .sep {
+	border: 0;
+	/* border-top: 1px solid #E5E5E5; 
+	border-bottom: 1px solid #FFF;  */
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #FFFFFF; 
+	margin: 10px 0 15px 0;
+	padding: 0;
+	height: 0;
+}
+
+#elite_player_admin .widget-top, .postbox {
+    margin-right: 10px;
+	/* background: #F6F6F6; 
+	border: 1px solid rgb(214, 214, 214);  */
+	background: #f2f2f2;
+	border: 1px solid #cccccc); 
+}
+#elite_player_admin .widget-top, .postbox .inside{
+    margin-bottom: 30px;
+}
+#elite_player_admin a.button-primary {
+    color:#FFF !important;
+}
+#elite_player_admin .field-row {
+    clear: both;
+    margin-bottom: 10px;
+    height: 20px;
+    position: relative;
+}
+#elite_player_admin .hidden {
+    display:none !important;
+}
+
+#elite_player_admin .ad_players-table tr {
+    height:45px;
+}
+#elite_player_admin .postbox .hndle, .stuffbox .hndle {
+	background: #2ea2cc;
+	cursor:pointer;
+}
+#elite_player_admin .accordion-section-title:after, .handlediv, .item-edit, .sidebar-name-arrow, .widget-action{
+	color:#fff;
+}
+#elite_player_admin .accordion-section-title:hover:after, .handlediv:hover, .item-edit:hover, .sidebar-name:hover .sidebar-name-arrow, .widget-action:hover{
+	color:#fff;
+}
+#elite_player_admin .form-table th, .form-wrap label{
+	color:#000;
+	font-weight: normal;
+}
+.btn1{
+	position:relative;
+	width:10%;
+	background:#f2f2f2;
+	font-size: 16px;
+	font-weight: bold;
+	width:146px;
+	cursor: pointer;
+	border: 1px solid #ddd;
+	border-top: 1px solid white;
+}
+.btn2{
+	position:relative;
+	width:10%;
+	background:#f2f2f2;
+	font-size: 16px;
+	font-weight: bold;
+	width:146px;
+	cursor: pointer;
+	margin-bottom: 30px;
+	border: 1px solid #ddd;
+	border-top: 1px solid white;
+}
+.btns{
+	width: 146px;
+	margin-bottom: 30px;
+}
+.title_btn1_inside h3 {
+	font-size: 14px;
+	padding: 8px 12px;
+	margin: 0;
+	line-height: 1.4;
+}
+#elite_player_admin #btn1-title {
+    color:#2ea2cc; 
+	font-size: 16px;
+	font-weight: bold;
+}
+#elite_player_admin #btn2-title {
+    color:#2ea2cc; 
+	font-size: 16px;
+	font-weight: bold;
+}

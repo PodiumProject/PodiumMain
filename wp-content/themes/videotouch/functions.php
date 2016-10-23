@@ -108,7 +108,7 @@ require( get_template_directory() . '/includes/functions.php' );
 require( get_template_directory() . '/includes/theme-setup.php' );
 
 /**
- * Dynamic included CSS and JavaScript 
+ * Dynamic included CSS and JavaScript
  */
 require( get_template_directory() . '/includes/dynamic-css-and-js.php' );
 
@@ -118,10 +118,6 @@ require( get_template_directory() . '/includes/dynamic-css-and-js.php' );
 require( get_template_directory() . '/includes/include-to-search.php' );
 
 require( get_template_directory() . '/includes/frontend-submit.php' );
-/**
- * Include the Widgets Functions File
- */
-require( get_template_directory() . '/includes/widgets.php' );
 
 /**
  * Include the Most liked Functions File
@@ -129,6 +125,8 @@ require( get_template_directory() . '/includes/widgets.php' );
 require( get_template_directory() . '/includes/widgets/most-liked.php' );
 
 require( get_template_directory() . '/includes/widgets/video-categories.php' );
+
+require( get_template_directory() . '/includes/widgets/user.php' );
 
 /**
  * Include the Most liked Functions File

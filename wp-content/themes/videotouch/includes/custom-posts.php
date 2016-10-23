@@ -544,7 +544,7 @@ function ts_videos_options_custom_box($post)
 			}
 
 			jQuery('#ts-get-featured-image').click(function(){
-			    var link = jQuery('#ts-video-url').val();
+			    var link = jQuery('#ts-video-url').val();		    	
 			    jQuery.ajax({
 			        url: ajaxurl,
 			        type: 'POST',
@@ -567,7 +567,7 @@ function ts_videos_options_custom_box($post)
 function ts_videos_save_post($post_id)
 {
 	global $post;
-
+	
     if ( isset($post->post_type) && @$post->post_type !== 'video' ) return;
 	
 	if ( !isset( $_POST['ts_videos_nonce'] ) || !wp_verify_nonce($_POST['ts_videos_nonce'], plugin_basename( __FILE__ )) ) return;
@@ -729,7 +729,7 @@ function ts_teams_options_custom_box($post)
 function ts_teams_social_networks_custom_box($post)
 {
 	$teams = get_post_meta($post->ID, 'ts_member', TRUE);
-	$arraySocials = array('facebook', 'twitter', 'linkedin', 'gplus', 'email', 'skype', 'github', 'dribble', 'lastfm', 'linkedin', 'tumblr', 'vimeo', 'wordpress', 'yahoo', 'youtube', 'flickr', 'pinterest', 'instagram');
+	$arraySocials = array('facebook', 'twitter', 'linkedin', 'gplus', 'email', 'skype', 'github', 'dribble', 'lastfm', 'tumblr', 'vimeo', 'wordpress', 'yahoo', 'youtube', 'flickr', 'pinterest', 'instagram');
     $teams  = (isset($teams) && !empty($teams)) ? $teams : array();
     $optionsSocial = get_option( 'videotouch_social' );
     $customSocial = (isset($optionsSocial['social_new']) && is_array($optionsSocial['social_new']) && !empty($optionsSocial['social_new'])) ? $optionsSocial['social_new'] : '';
@@ -798,7 +798,7 @@ function ts_teams_save_post($post_id)
     $optionsSocial = get_option( 'videotouch_social' );
     $customSocial = (isset($optionsSocial['social_new']) && is_array($optionsSocial['social_new']) && !empty($optionsSocial['social_new'])) ? $optionsSocial['social_new'] : '';
 
-    $arraySocials = array('facebook', 'twitter', 'linkedin', 'gplus', 'email', 'skype', 'github', 'dribble', 'lastfm', 'linkedin', 'tumblr', 'vimeo', 'wordpress', 'yahoo', 'youtube', 'flickr', 'pinterest', 'instagram');
+    $arraySocials = array('facebook', 'twitter', 'linkedin', 'gplus', 'email', 'skype', 'github', 'dribble', 'lastfm', 'tumblr', 'vimeo', 'wordpress', 'yahoo', 'youtube', 'flickr', 'pinterest', 'instagram');
 
     if( !empty($customSocial) ){
         $arraySocials = array_merge($arraySocials, array_keys($customSocial));

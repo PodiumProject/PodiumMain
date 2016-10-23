@@ -1,0 +1,81 @@
+.profile_head {
+    background-image: url("http://9to5wp.com/happy/wp-content/uploads/frontend/2015/12/above-wallpaper-1920x1080.jpg");
+    background-position: center bottom;
+    background-size: 100% auto;
+    filter: grayscale(0.8);
+    height: 250px;
+    padding-top: 30px;
+    width: 100%;
+}
+.profile_head img.avatar {
+    border: 5px solid #ffffff;
+    border-radius: 5px;
+    clear: both;
+    display: block;
+    height: 115px;
+    margin: 0 auto;
+    width: 115px;
+}
+form.profile_edit_form .profile_content {
+    padding: 10px 0 0;
+    width: 100%;
+}
+form.profile_edit_form .profile_content fieldset {
+    border: medium none;
+    margin: 0;
+}
+form.profile_edit_form .profile_content fieldset > div {
+    display: inline-block;
+    vertical-align: top;
+    width: 49%;
+}
+form.profile_edit_form .profile_content fieldset > div input {
+    margin-top: 5px;
+    border: 3px solid #ebe6e2;
+    border-radius: 5px;
+    display: block;
+    font-family: "Lato",Calibri,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 5px;
+    padding: 5px;
+    transition: all 0.3s ease-out 0s;
+    width: 100%;	
+}
+form.profile_edit_form .profile_content fieldset > div input:focus {
+    border-color: #bbbbbb;
+    outline: medium none;
+}
+form.profile_edit_form .profile_content fieldset > div input:hover {
+    border-color: #cccccc;
+}
+form.profile_edit_form .profile_content fieldset label {
+    color: #808080;
+    cursor: pointer;
+    font-family: arial;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-top: 9px;
+    text-indent: 10px;
+    text-shadow: 0 0px 0 #000000;
+}
+form.profile_edit_form fieldset.user-submit input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    background: #38a6f0 none repeat scroll 0 0;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 10px 10px rgba(255, 255, 255, 0.1) inset;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: "Ubuntu","Lato",sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 8px 10px;
+    text-shadow: 0 0px 0 rgba(0, 0, 0, 0.8);
+}
+
+
+
+

@@ -1,11 +1,11 @@
-<?php 
+<?php
 /*
 Template Name: Frontend - Add post
 */
 if( !is_user_logged_in()){
 	wp_redirect(home_url());
 	exit;
-} 
+}
 
 get_header();
 $insert_post_type = get_option('videotouch_general');
@@ -28,7 +28,7 @@ $insert_post_type = $insert_post_type['insert_post_user'];
 					        <?php wp_editor('', 'ts-post-editor', array('textarea_name' => 'ts-post-content', 'quicktags' => 0, 'media_buttons' => 0, 'teeny' => true, 'tinymce' => true)); ?>
 					    </div>
 					    <div class="form-group">
-					    	<label for="ts-post-type"><?php _e('Chose post type', 'touchsize'); ?></label>
+					    	<label for="ts-post-type"><?php _e('Choose post type', 'touchsize'); ?></label>
 						    <select name="ts-post-type" style="display:block">
 						    	<?php if( $insert_post_type == 'post' || $insert_post_type == 'post-video' ) : ?>
 							  		<option value="p"><?php _e('Posts', 'touchsize'); ?></option>
@@ -39,7 +39,7 @@ $insert_post_type = $insert_post_type['insert_post_user'];
 							</select>
 						</div>
 					    <div class="form-group">
-				    		<label for="ts-post-type"><?php _e('Chose your category', 'touchsize'); ?></label>
+				    		<label for="ts-post-type"><?php _e('Choose your category', 'touchsize'); ?></label>
 				    		<?php
 
 
@@ -86,7 +86,7 @@ $insert_post_type = $insert_post_type['insert_post_user'];
 							    </ul>
 							    <div class="tab-content">
 							      	<div class="tab-pane active" id="y_video">
-							      		<label for="ts-upload-video-input"><?php _e('Chose file to upload', 'touchsize'); ?></label>
+							      		<label for="ts-upload-video-input"><?php _e('Choose file to upload', 'touchsize'); ?></label>
 							        	<input type="file" name="ts-upload-video" id="ts-upload-video-input" />
 							        	<span class="help-block"><?php _e('Please use .mp4 files for your video', 'touchsize'); ?></span>
 							      	</div>
@@ -104,18 +104,18 @@ $insert_post_type = $insert_post_type['insert_post_user'];
 					    <input type="submit" name="save-posts" class="btn btn-primary active medium" value="<?php _e('Add new post', 'touchsize') ?>" />
 					</form>
 				</div>
-				
+
 				<div class="col-sm-5 col-sm-offset-1 col-md-4 col-md-offset-0">
 					<?php if( $statusPost == 'pending' ) : ?>
 						<div class="post-pending">
 							<?php _e('The post will be pending until an Administrator will approve it.', 'touchsize'); ?>
 						</div>
-						<div style="height:60px"></div>
+						<div style="height:60px;"></div>
 					<?php endif; ?>
 					<div class="alert alert-warning">
-						<?php 
+						<?php
 							$text = get_option('videotouch_single_post', array('text-user' => ''));
-							if(isset($text['text-user'])) echo apply_filters('the_content', $text['text-user']);	
+							if(isset($text['text-user'])) echo apply_filters('the_content', $text['text-user']);
 						?>
 					</div>
 				</div>

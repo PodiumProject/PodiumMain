@@ -110,7 +110,7 @@ function save_touchsize_news()
 		foreach ($news as $news_id => $n) {
 			$parsed_news[] = '<li><a href="' . esc_url($n['url']) . '" target="_blank">' . wp_kses($n['title'], $allowed_html) . '</a><em>' .   $n['date'] . '</em>
 				<img src="' . esc_url($n['image']) . '" /><p>' . wp_kses($n['excerpt'], $allowed_html) . '</p>
-			</li>';		
+			</li>';
 		}
 	}
 
@@ -122,14 +122,14 @@ function save_touchsize_news()
 
 	if ( is_array( $alerts ) && ! empty( $alerts ) ) {
 		if ( isset($alerts['id']) && isset($alerts['message']) ) {
-			$parsed_alerts['id'] = (int)$alerts['id'];
+			$parsed_alerts['id'] = $alerts['id'];
 			$parsed_alerts['message'] = stripslashes($alerts['message']);
 		} else {
 			$parsed_alerts['id'] = 0;
 			$parsed_alerts['message'] = '';
 		}
 	}
-	
+
 	$options['news']  = $parsed_news;
 	$options['alert'] = $parsed_alerts;
 	$options['time']  = time();
@@ -139,7 +139,7 @@ function save_touchsize_news()
 	}
 
 	update_option('videotouch_red_area', $options);
-	
+
 	$data = array(
 		'status'  => 'ok',
 		'message' => __( 'Saved', 'touchsize')
@@ -156,7 +156,7 @@ function videotouch_hide_touchsize_alert()
 	check_ajax_referer( 'remove-videotouch-alert', 'token' );
 
 	header('Content-Type: application/json');
-			
+
 	$options = get_option('videotouch_red_area', array(
 		'news' => '',
 		'alert' => array(
@@ -167,10 +167,11 @@ function videotouch_hide_touchsize_alert()
 		'time' => time()
 	));
 
-	$alets_id = (int)@$_POST['alertID'];
+	$alert_id = sanitize_text_field( $_POST['alertID'] );
 
-	if ( ! in_array($alets_id, $options['hidden_alerts'])) {
-		array_push($options['hidden_alerts'], $alets_id);
+	if ( ! in_array( $alert_id, $options['hidden_alerts'], true ) ) {
+
+		array_push( $options['hidden_alerts'], $alert_id );
 	}
 
 	update_option('videotouch_red_area', $options);
@@ -192,14 +193,14 @@ function videotouch_contact_me()
 	check_ajax_referer( 'submit-contact-form', 'token' );
 
 	header('Content-Type: application/json');
-			
+
 	$data = array(
 		'status'  => 'ok',
 		'message' => ''
 	);
 
 	$options = get_option( 'videotouch_social', array('email' => ''));
-	
+
 	$from    	  = @$_POST['from'];
 	$subject 	  = @$_POST['subject'];
 	$message 	  = @$_POST['message'];
@@ -227,7 +228,7 @@ function videotouch_contact_me()
 				}
 			}
 		}
-		
+
 		$headers = 'From: '.esc_attr($name) . ' <'.$from.'>' . "\r\n";
 		$sent = wp_mail($options['email'], $subject, wp_kses($message, array()) ,$headers);
 
@@ -267,11 +268,11 @@ function videotouch_load_template()
 {
 	header('Content-Type: application/json');
 	// check_ajax_referer( 'remove-videotouch-alert', 'token' );
-	
+
 	$template_id     = @$_GET['template_id'];
 	$location        = @$_GET['location'];
 
-	$result = Template::load_template($location, $template_id);	
+	$result = Template::load_template($location, $template_id);
 	echo json_encode($result);
 	die();
 }
@@ -288,7 +289,7 @@ function videotouch_save_layout()
 
 	header('Content-Type: application/json');
 	// check_ajax_referer( 'remove-videotouch-alert', 'token' );
-	
+
 	$location    = @$_POST['location'];
 	$mode		 = @$_POST['mode'];
 
@@ -323,14 +324,14 @@ function videotouch_remove_template()
 	$result = Template::delete( $location, $template_id );
 
 	if ( $result ) {
-		
+
 		$data = array(
 			'status' => 'removed',
 			'message' => ''
 		);
 
 	} else {
-		
+
 		$data = array(
 			'status' => 'error',
 			'message' => __("Cannot delete this template", 'touchsize')
@@ -351,7 +352,7 @@ function videotouch_load_all_templates()
 	$edit = '';
 	if ( $templates ) {
 		foreach ($templates as $template_id => $template) {
-			
+
 			$remove_template = '';
 
 			if ( $template_id !== 'default' ) {
@@ -388,12 +389,12 @@ function ts_updateFeatures(){
     $value_checkbox = (isset($_POST['checked']) && $_POST['checked'] !== '' && ($_POST['checked'] == 'yes' || $_POST['checked'] == 'no')) ? $_POST['checked'] : 'no';
 
     if( isset($id_post) ){
-       update_post_meta($id_post, 'featured', $value_checkbox); 
+       update_post_meta($id_post, 'featured', $value_checkbox);
     }
-    
+
     die();
 }
- 
+
 if( is_admin() ) {
     add_action('wp_ajax_ts_updateFeatures', 'ts_updateFeatures');
     add_action('wp_ajax_nopriv_ts_updateFeatures', 'ts_updateFeatures');
@@ -418,10 +419,10 @@ function ts_get_video_modal_callback(){
         $post = get_post($post_id);
 
         if( isset($video_url) && !empty($video_url) && is_array($video_url) && isset($post) && is_object($post) && !empty($post) ){
-        	
+
             if( isset($video_url['extern_url'], $video_url['your_url'], $video_url['embed']) ){
-                $video = ''; 
-           
+                $video = '';
+
                 if( isset($video_url['extern_url'], $video_url['your_url'], $video_url['embed']) && empty($video_url['embed']) && empty($video_url['extern_url']) && !empty($video_url['your_url']) ){
 
                     $atts = array(
@@ -433,7 +434,7 @@ function ts_get_video_modal_callback(){
                         'height'   => 560,
                         'width'    => 1380,
                     );
-                    $video = wp_video_shortcode($atts); 
+                    $video = wp_video_shortcode($atts);
                 }
                 // Get the date
                 if (ts_human_type_date_format()) {
@@ -442,13 +443,13 @@ function ts_get_video_modal_callback(){
                     $article_date =  get_the_date();
                 }
                 ?>
-           
+
                 <div class="featured-image">
                     <?php if( (isset($video_url['embed']) && !empty($video_url['embed'])) || (isset($video_url['your_url']) && !empty($video_url['your_url'])) || (isset($video_url['extern_url']) && !empty($video_url['extern_url'])) ) : ?>
                         <div class="embedded_videos">
                             <div class="video-container">
                                 <div id="videoframe" class="video-frame">
-                                    <?php if( !empty($video_url['your_url']) ) : ?> 
+                                    <?php if( !empty($video_url['your_url']) ) : ?>
                                         <div id="post-video">
                                             <?php echo $video; ?>
                                         </div>
@@ -456,7 +457,7 @@ function ts_get_video_modal_callback(){
                                     <?php if( !empty($video_url['embed']) ) : ?>
                                     	<?php echo $video_url['embed']; ?>
                                 	<?php endif; ?>
-                                </div>  
+                                </div>
                             </div>
                         </div>
                     <?php else : ?>
@@ -476,7 +477,7 @@ function ts_get_video_modal_callback(){
                                         <span class="views-count"><?php ts_get_views($post->ID); ?></span>
                                         <small><?php _e('views','touchsize') ?></small>
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                             <div class="col-lg-12 col-md-12 post-author-block">
                                 <div class="row">
@@ -485,7 +486,7 @@ function ts_get_video_modal_callback(){
                                         <ul>
                                             <li class="author-name"><?php _e('by ','touchsize') ?><a href="<?php echo get_author_posts_url($post->post_author); ?>"><?php echo get_the_author_meta('user_nicename', $post->post_author); ?></a></li>
                                             <li class="author-published"><?php _e('Published ','touchsize') ?><span><?php echo $article_date; ?></span></li>
-                                        </ul>   
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -495,13 +496,13 @@ function ts_get_video_modal_callback(){
     <?php   }
         }
     }
-    
+
     die();
 }//end function for get video modal
 
 //function generate random likes for all posts
 function ts_generate_like_callback(){
-  
+
     check_ajax_referer( 'like-generate', 'nonce' );
     if ( !current_user_can( 'manage_options' ) ) return false;
 
@@ -509,7 +510,7 @@ function ts_generate_like_callback(){
     $sql="SELECT ID FROM $wpdb->posts";
 
     $posts = $wpdb->get_results($sql, ARRAY_N);
-    
+
     if( isset($posts) && is_array($posts) && !empty($posts) ){
         foreach($posts as $id){
         	$rand_likes = rand(50, 100);
@@ -543,7 +544,7 @@ function ts_pagination_callback(){
             if( isset($options) && is_array($options) ){
 
                 $offset = (isset($args['offset'])) ? (int)$args['offset'] : 0;
-                
+
                 if(isset($args['posts_per_page'])){
                     if( $args['posts_per_page'] === 0 ){
                         $args['posts_per_page'] = get_option('posts_per_page');
@@ -556,9 +557,9 @@ function ts_pagination_callback(){
                     if( $loop === 0){
                         $args['offset'] = $offset + (int)$args['posts_per_page'];
                     }
-                    
+
                 }
-                
+
             	$args['post_status'] = 'publish';
 
                 if( isset($args['post_type']) && $args['post_type'] === 'video' ){
@@ -601,7 +602,7 @@ function ts_video_image_callback(){
                	$video_id = str_replace(array('http://vimeo.com/', 'https://vimeo.com/'), '', $video_url);
                	$hash = unserialize(file_get_contents("http://vimeo.com/api/v2/video/$video_id.php"));
                	$video_thumbnail = $hash[0]['thumbnail_large'];
-           	
+
            	}elseif( strpos($video_url, 'youtube' ) > 0 ) {
                	parse_str(parse_url($video_url, PHP_URL_QUERY));
                	$video_id = $v;
@@ -631,9 +632,9 @@ function ts_video_image_callback(){
 	           	'numberposts' => 1,
 	           	'order'       => 'DESC'
      		));
-     	
+
      	$attachment = isset($attachments[0]) ? $attachments[0] : '';
-     	
+
      	set_post_thumbnail($post_id, $attachment->ID);
      	echo $video_thumbnail;
 	endif;
@@ -645,7 +646,7 @@ add_action('wp_ajax_ts_video_image', 'ts_video_image_callback');
 function ts_set_video_thumbnail ($content) {
     if( has_post_format('video') && !has_post_thumbnail() ):
     	$post_id = get_the_ID();
-     
+
      	if( get_post_meta($post_id, '_format_video_embed', true) ) {
          	$video_url = get_post_meta($post_id, '_format_video_embed', true);
      	} else {
@@ -660,7 +661,7 @@ function ts_set_video_thumbnail ($content) {
                	$video_id = str_replace( 'http://vimeo.com/', '', $video_url );
                	$hash = unserialize(file_get_contents('http://vimeo.com/api/v2/video/$video_id.php'));
                	$video_thumbnail = $hash[0]['thumbnail_large'];
-           	
+
            	} elseif( strpos($video_url, 'youtube' ) > 0 ) {
                parse_str( parse_url( $video_url, PHP_URL_QUERY ) );
                $video_id = $v;
@@ -679,7 +680,7 @@ function ts_set_video_thumbnail ($content) {
 	           	'order'       => 'ASC',
 	           	'post_parent' => $post_id
      		));
-     
+
      	$attachment = isset($attachments[0]) ? $attachments[0] : '';
      	set_post_thumbnail($post_id, $attachment->ID);
 	endif;
@@ -687,9 +688,9 @@ function ts_set_video_thumbnail ($content) {
 add_action('save_post', 'ts_set_video_thumbnail');
 
 /*add_action( 'wp_ajax_ts_import', 'ts_import_callback' );
-function ts_import_callback() 
+function ts_import_callback()
 {
-    global $wpdb; 
+    global $wpdb;
 
     if ( !defined('WP_LOAD_IMPORTERS') ) define('WP_LOAD_IMPORTERS', true);
 
@@ -711,8 +712,8 @@ function ts_import_callback()
     }
 
 
-    if ( class_exists( 'WP_Import' ) ) 
-    { 
+    if ( class_exists( 'WP_Import' ) )
+    {
         $import_filepath = get_template_directory() ."/import-data/demo.xml" ;
 
         $wp_import = new WP_Import();
@@ -731,7 +732,7 @@ function tsSetViewClickPreroll(){
     if( !empty($prerollId) && !empty($updateField) ){
         $options = get_option('videotouch_theme_advertising');
         $prerolls = (isset($options['pre_roll']) && is_array($options['pre_roll']) && !empty($options['pre_roll'])) ? $options['pre_roll'] : '';
-        
+
         if( !empty($prerolls) ){
             foreach($prerolls as $id => $option){
                 if( $id == $prerollId ){
@@ -755,7 +756,7 @@ add_action('wp_ajax_nopriv_tsSetViewClickPreroll', 'tsSetViewClickPreroll');
 function ts_login()
 {
 	check_ajax_referer('video_nonce', 'nonce');
-	
+
 	if ( ! isset( $_POST['username'] ) || empty( $_POST['username'] ) || ! isset( $_POST['password'] ) || empty( $_POST['password'] ) ) {
 		echo __( 'One of the fields is empty', 'videotouch' );
 		die();
@@ -778,7 +779,7 @@ function ts_login()
 		wp_send_json( array( 'url' => home_url() ) );
 
 	}
-	
+
 	die();
 }
 

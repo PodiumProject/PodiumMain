@@ -1,0 +1,272 @@
+/* Morph Button: Default Styles */
+
+.morph-button[class*="un-open"] {
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+
+.morph-button[class*="un-open"].open {
+	z-index: 10;
+}
+
+.morph-content {
+	pointer-events: none;
+}
+
+.morph-button.open .morph-content {
+	background: #fff;
+	padding: 15px;
+	pointer-events: auto;
+}
+
+/* Common styles for overlay and modal type (fixed morph) */
+.morph-button-fixed[class*="un-open"],
+.morph-button-fixed[class*="un-open"] .morph-content {
+	height: 30px;
+    width: 143px;
+}
+
+.morph-button-fixed .morph-content {
+	position: fixed;
+	z-index: 900;
+	opacity: 0;
+	-webkit-transition:none;/* opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;*/
+	transition: none; /* opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;*/
+}
+
+.morph-button-fixed.open .morph-content {
+	opacity: 1;
+}
+
+.morph-button-fixed .morph-content > div {
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: none; /* opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;*/
+	transition: none; /*opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;*/
+}
+
+.morph-button-fixed.open[class*="un-open"] .morph-content > div {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+	-webkit-transition: none; /* opacity 0.3s 0.5s;*/
+	transition: none; /*opacity 0.3s 0.5s;*/
+}
+
+.morph-button-fixed.active[class*="un-open"] .morph-content {
+	z-index: 1900;
+}
+
+
+
+/* Morph Button Style: Modal */
+.morph-button-modal[class*="un-open"]::before {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	content: '';
+	opacity: 0;
+	-webkit-transition:none; /* opacity 0.5s;*/
+	transition: none; /* opacity 0.5s;*/
+	pointer-events: none;
+}
+
+.morph-button-modal[class*="un-open"].open::before {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.morph-button-modal.active[class*="un-open"]::before {
+	z-index: 1800;
+}
+
+.morph-button-modal[class*="un-open"] .morph-content {
+	overflow: hidden;
+	-webkit-transition: none; /* opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;*/
+	transition: none; /* opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;*/
+}
+.morph-button-modal.open[class*="un-open"] .morph-content {
+    border-radius: 4px;
+    height: auto;
+    left: 0;
+    margin: 0 auto;
+    right: 0;
+    top: 20%;
+    transition: none 0s ease 0s ;
+    width: 340px;
+}
+
+
+.morph-button-modal.open[class*="un-open"] .morph-content.un-morph-content-right {	
+	height: 380px;
+	display: none;
+    overflow-y: scroll;
+}
+
+.morph-button-modal.open[class*="un-open"] .morph-content.un-morph-content-left.active {	
+	display: none;
+}
+
+.morph-button-modal.open[class*="un-open"] .morph-content.un-morph-content-right.active {
+	display: block;
+}
+
+
+/* Let's add some nice easing for all cases */
+.morph-button[class*="un-open"] .morph-content,
+.morph-button.open[class*="un-open"] .morph-content{
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.un-morph-content-left div.user-form {
+    height: 300px;    
+    position: relative;
+}
+
+.un-morph-content-right div.user-form {
+    height: 480px;    
+    position: relative;
+}
+
+.un-morph-content-left div.user-form fieldset.user-submit {
+	bottom: 0;
+}
+
+.un-morph-content-left .content-style-form > p {
+    margin: -10px 0;
+    padding: 0 30px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+	.morph-button-modal.open[class*="un-open"] .morph-content {
+		top: 0% !important;
+		left: 0% !important;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		-webkit-transition: none;/* width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;*/
+		transition: none; /* width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;*/
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.morph-button-fixed[class*="un-open"],
+	.morph-button-fixed[class*="un-open"] .morph-content {
+		width: 200px;
+		height: 80px;
+	}
+}
+
+
+.content-style-text h1 {
+    font-size: 20px;
+    line-height: 3;
+    margin: 0;
+    text-align: center;
+}
+
+.content-style-text > div::after {
+    clear: both;
+    content: " ";
+    display: table;
+}
+
+.uk-read-markup .uk-nav {
+    box-shadow: 1px 1px 1px 1px #cccccc;
+    list-style: outside none none;
+    margin: 0;
+    max-height: 135px;
+    overflow-y: scroll;
+}
+
+.uk-read-markup .uk-nav li {
+    list-style: outside none none;
+}
+
+.readlist_form > input {
+    display: inline-block;
+    float: left;
+    height: 40px;
+    padding: 0 10px;
+}
+
+/*.readlist_form > input:first-child {
+    margin-right: 10px;
+    width: 180px;
+}*/
+
+/*.readlist_form > input:last-child {
+    width: 90px;
+}*/
+
+
+
+
+
+.content-style-text .uk-notice {
+    color: #008000; 
+    font-size: 15px;
+    display: none;
+    margin: 0;
+    position: absolute;
+    top: 15px;
+}
+
+.uk-spin {
+    animation: 2s linear 0s normal none infinite running rotating;
+    border-color: #cccccc #cccccc #cccccc #666666;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 3px;
+    display: none;
+    height: 20px;
+    position: absolute;
+    top: 15px;
+    width: 20px;
+}
+
+
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

@@ -9,7 +9,7 @@ if ( have_posts() ) {
 	$single_sidebar = get_option('videotouch_single_post', array('video_sidebar' => 'n'));
 
 	if (LayoutCompilator::sidebar_exists()) {
-		
+
 		$options = LayoutCompilator::get_sidebar_options();
 
 		extract(LayoutCompilator::build_sidebar($options));
@@ -34,9 +34,9 @@ if ( have_posts() ) {
 	} else {
 		$article_date =  get_the_date();
 	}
-	
+
 	$topics = wp_get_post_terms(get_the_ID() , $category_tax);
-	
+
 
 	$article_categories = '';
 	if( isset($topics[0]) && !is_wp_error($topics) ){
@@ -67,11 +67,19 @@ if ( have_posts() ) {
 <!-- // End of Ad Area 1 -->
 
 <?php
-	if( $single_sidebar['video_sidebar'] == 'y' ) :
-		get_template_part('single-video-sidebar');
-	else :
-		get_template_part('single-video-full');
-	endif;
+
+	if ( ! isset( $single_sidebar['log_video'] ) || ( isset( $single_sidebar['log_video'] ) && $single_sidebar['log_video'] == 'Y' ) || ( isset( $single_sidebar['log_video'] ) && $single_sidebar['log_video'] == 'N' && is_user_logged_in() ) ) {
+
+		if( $single_sidebar['video_sidebar'] == 'y' ) {
+
+			get_template_part('single-video-sidebar');
+
+		} else {
+
+			get_template_part('single-video-full');
+
+		}
+	}
 ?>
 
 <section id="main">
@@ -91,106 +99,111 @@ if ( have_posts() ) {
 			}
 		?>
 		<div id="primary" class="<?php echo $content_class; ?>">
-			<div id="content" role="main">
-				<article <?php post_class(''); ?>>
-					<header class="post-header">
-						<div class="row">
-							<?php
-								$breadcrumbs = get_option('videotouch_single_post', array('breadcrumbs' => 'y'));
-								if( $breadcrumbs['breadcrumbs'] === 'y' ):
-							?>
-								<div class="ts-breadcrumbs breadcrumbs-single-video">
-									<div class="container">
-										<div class="row">
-											<div class="col-md-12 col-lg-12">
-												<?php  echo ts_breadcrumbs(); ?>
+			<?php if ( ! isset( $single_sidebar['log_video'] ) || ( isset( $single_sidebar['log_video'] ) && $single_sidebar['log_video'] == 'Y' ) || ( isset( $single_sidebar['log_video'] ) && $single_sidebar['log_video'] == 'N' && is_user_logged_in() ) ) : ?>
+				<div id="content" role="main">
+					<article <?php post_class(''); ?>>
+						<header class="post-header">
+							<div class="row">
+								<?php
+									$breadcrumbs = get_option('videotouch_single_post', array('breadcrumbs' => 'y'));
+									if( $breadcrumbs['breadcrumbs'] === 'y' ):
+								?>
+									<div class="ts-breadcrumbs breadcrumbs-single-video">
+										<div class="container">
+											<div class="row">
+												<div class="col-md-12 col-lg-12">
+													<?php  echo ts_breadcrumbs(); ?>
+												</div>
 											</div>
 										</div>
 									</div>
-								</div>
-							<?php endif; ?>
-							<div class="col-lg-8 col-md-8 col-sm-12">
-								<h1 class="post-title video-title"><?php esc_attr(the_title()); ?></h1>
-							</div>
-							<div class="col-lg-4 col-md-4 col-sm-12 text-right">
-								<?php if( fields::get_options_value('videotouch_single_post','social_sharing') != 'n' ): ?>
-									<div class="post-share-box-circle action-effect">
-										<label for="share-menu-circle"><div class="icon-share"></div></label>
-									    <ul class="share-options share-menu">
-									        <li class="share-menu-item">
-									            <a class="icon-facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(get_the_ID()); ?>"></a>
-									        </li>
-									        <li class="share-menu-item">
-									            <a class="icon-twitter" target="_blank" href="http://twitter.com/home?status=<?php echo urlencode(get_the_title()); ?>+<?php echo get_permalink(get_the_ID()); ?>"></a>
-									        </li>
-									        <li class="share-menu-item">
-									            <a class="icon-gplus" target="_blank" href="https://plus.google.com/share?url=<?php echo get_permalink(get_the_ID()); ?>"></a>
-									        </li>
-									        <li class="share-menu-item">
-									            <a class="icon-linkedin" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(get_the_ID()); ?>&title=<?php echo urlencode(get_the_title()); ?>"></a>
-									        </li>
-									        <li class="share-menu-item">
-									            <a class="icon-tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=<?php echo get_permalink(get_the_ID()); ?>&name=<?php echo esc_attr($post->post_title); ?>&description=<?php echo $post->post_excerpt; ?>"></a>
-									        </li>
-									        <li class="share-menu-item">
-									            <a class="icon-pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&amp;media=<?php if(function_exists('the_post_thumbnail')) echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>&amp;description=<?php echo urlencode(esc_attr(get_the_title())); ?>" ></a>
-									        </li>
-									    </ul>
-									</div>
 								<?php endif; ?>
-								<div class="post-meta">
-									<?php touchsize_likes($post->ID, '<div class="post-meta-likes">', '</div>'); ?>
-									<div class="post-meta-views video-post-likes">
-										<span class="views-count"><?php ts_get_views($post->ID); ?></span>
-										<small><?php _e('views', 'touchsize'); ?></small>
-									</div>
+								<div class="col-lg-8 col-md-8 col-sm-12">
+									<h1 class="post-title video-title"><?php esc_attr(the_title()); ?></h1>
 								</div>
-							</div>
-							<?php if ( ts_single_display_meta() ): ?>
-								<div class="col-lg-12 col-md-12 post-author-block">
-									<div class="row">
-										<div class="col-lg-12 col-md-12 col-sm-12">
-											<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-avatar"><?php echo ts_display_gravatar(50); ?></a>
-											<ul>
-												<li class="author-name"><?php _e('by','touchsize') ?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_the_author(); ?></a></li>
-												<li class="author-published"><?php _e('Published','touchsize') ?> <span><?php echo $article_date; ?></span></li>
-											</ul>	
+								<div class="col-lg-4 col-md-4 col-sm-12 text-right">
+									<?php if( fields::get_options_value('videotouch_single_post','social_sharing') != 'N' ): ?>
+										<div class="post-share-box-circle action-effect">
+											<label for="share-menu-circle"><div class="icon-share"></div></label>
+										    <ul class="share-options share-menu">
+										        <li class="share-menu-item">
+										            <a class="icon-facebook" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<?php echo get_permalink(get_the_ID()); ?>"></a>
+										        </li>
+										        <li class="share-menu-item">
+										            <a class="icon-twitter" target="_blank" href="http://twitter.com/home?status=<?php echo urlencode(get_the_title()); ?>+<?php echo get_permalink(get_the_ID()); ?>"></a>
+										        </li>
+										        <li class="share-menu-item">
+										            <a class="icon-gplus" target="_blank" href="https://plus.google.com/share?url=<?php echo get_permalink(get_the_ID()); ?>"></a>
+										        </li>
+										        <li class="share-menu-item">
+										            <a class="icon-linkedin" target="_blank" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(get_the_ID()); ?>&title=<?php echo urlencode(get_the_title()); ?>"></a>
+										        </li>
+										        <li class="share-menu-item">
+										            <a class="icon-tumblr" target="_blank" href="http://www.tumblr.com/share/link?url=<?php echo get_permalink(get_the_ID()); ?>&name=<?php echo esc_attr($post->post_title); ?>&description=<?php echo $post->post_excerpt; ?>"></a>
+										        </li>
+										        <li class="share-menu-item">
+										            <a class="icon-pinterest" target="_blank" href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&amp;media=<?php if(function_exists('the_post_thumbnail')) echo wp_get_attachment_url(get_post_thumbnail_id(get_the_ID())); ?>&amp;description=<?php echo urlencode(esc_attr(get_the_title())); ?>" ></a>
+										        </li>
+										    </ul>
+										</div>
+									<?php endif; ?>
+									<div class="post-meta">
+										<?php touchsize_likes($post->ID, '<div class="post-meta-likes">', '</div>'); ?>
+										<div class="post-meta-views video-post-likes">
+											<span class="views-count"><?php ts_get_views($post->ID); ?></span>
+											<small><?php _e('views', 'touchsize'); ?></small>
 										</div>
 									</div>
 								</div>
+								<?php if ( ts_single_display_meta() ): ?>
+									<div class="col-lg-12 col-md-12 post-author-block">
+										<div class="row">
+											<div class="col-lg-12 col-md-12 col-sm-12">
+												<a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>" class="author-avatar"><?php echo ts_display_gravatar(50); ?></a>
+												<ul>
+													<li class="author-name"><?php _e('by','touchsize') ?> <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ) ); ?>"><?php echo get_the_author(); ?></a></li>
+													<li class="author-published"><?php _e('Published','touchsize') ?> <span><?php echo $article_date; ?></span></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								<?php endif; ?>
+							</div>
+						</header>
+
+						<div class="post-content ">
+							<?php the_content(); ?>
+							<?php if( !empty($article_categories) ) : ?>
+								<div>
+									<i class="icon-category"></i>
+									<ul class="single-video-categories">
+										<?php echo $article_categories; ?>
+									</ul>
+								</div>
+							<?php endif; ?>
+							<div>
+								<?php if( has_tag() ) : ?>
+									<i class="icon-tags"></i>
+									<?php echo get_the_tag_list('<ul class="single-video-tags"><li>','</li>, <li>','</li></ul>'); ?>
+								<?php endif; ?>
+							</div>
+							<?php if($show_more === 'y' ) : ?>
+								<div class="content-cortina"></div>
 							<?php endif; ?>
 						</div>
-					</header>
-					<div class="post-content ">
-						<?php the_content(); ?>
-						<?php if( !empty($article_categories) ) : ?>
-							<div>
-								<i class="icon-category"></i>
-								<ul class="single-video-categories">
-									<?php echo $article_categories; ?>
-								</ul>
+
+						<?php if( $show_more === 'y' ) : ?>
+							<div class="video-post-open">
+								<i class="icon-down"></i>
+								<span><?php _e('details','touchsize'); ?></span>
 							</div>
 						<?php endif; ?>
-						<div>
-							<?php if( has_tag() ) : ?>
-								<i class="icon-tags"></i>
-								<?php echo get_the_tag_list('<ul class="single-video-tags"><li>','</li>, <li>','</li></ul>'); ?>
-							<?php endif; ?>
-						</div>
-						<?php if($show_more === 'y' ) : ?>
-							<div class="content-cortina"></div>
-						<?php endif; ?>
-					</div>
-					<?php if( $show_more === 'y' ) : ?>
-						<div class="video-post-open">
-							<i class="icon-down"></i>
-							<span><?php _e('details','touchsize'); ?></span>
-						</div>
-					<?php endif; ?>
-				</article>
-			</div>
+					</article>
+				</div>
+			<?php else : ?>
+				<h1 class="post-title video-title"><?php esc_attr(the_title()); ?></h1>
+			<?php endif;
 
-			<?php
 			endwhile;
 			?>
 		</div>

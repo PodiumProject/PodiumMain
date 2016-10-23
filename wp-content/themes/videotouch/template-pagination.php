@@ -31,7 +31,7 @@ if( $total > 1 ){ // if we have more than 1 page
     $pgn = paginate_links( $pl_args );
 
     if(!empty($pgn)){
-        echo '<div class="ts-pagination">';
+        echo '<div class="col-xs-12"><div class="ts-pagination">';
         echo '<ul class="page-numbers">';
         foreach($pgn as $k => $link){
             echo '<li>'; 
@@ -39,7 +39,7 @@ if( $total > 1 ){ // if we have more than 1 page
             echo '</li>';
         }
         echo '</ul>';
-        echo '</div>';
+        echo '</div></div>';
     }
 }
 ?>

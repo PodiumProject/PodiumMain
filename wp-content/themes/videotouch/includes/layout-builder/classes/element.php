@@ -1,4 +1,4 @@
-<?php 
+<?php
 /**
 * Element
 */
@@ -55,14 +55,14 @@ class Element
 	);
 
 	/**
-	 * Prepare an element for JS Layout Juilder 
+	 * Prepare an element for JS Layout Juilder
 	 * @param  array $element
 	 * @return string
 	 */
 	public static function html ( $element )
 	{
 		$attributes = array();
-		
+
 		array_push( $attributes, 'data-element-type="' . $element['type'] . '"' );
 		$admin_label = '';
 
@@ -78,7 +78,7 @@ class Element
 		}
 
 		$attributes = implode( ' ', $attributes );
-		$option = (isset($element['option'])) ? $element['options'] : '';	
+		$option = (isset($element['option'])) ? $element['options'] : '';
 		return '<li ' . $attributes . '>
 					<i class="element-icon ' . self::get_element_icons($element['type']) . '"></i>
 					<span class="element-name">' . self::descriptions($element['type'], $admin_label). $option .'</span>
@@ -95,7 +95,7 @@ class Element
 	public static function base_validation( $element )
 	{
 		if ( is_array( $element ) && ! empty( $element ) ) {
-			
+
 			$type = array_key_exists('type', $element) ? $element['type'] : false;
 			$size = array_key_exists('columns', $element) ? (int)$element['columns'] : false;
 
@@ -218,7 +218,7 @@ class Element
 			case 'video':
 				return __('Video', 'touchsize');
 				break;
-			
+
 			case 'filters':
 				return __('Filters', 'touchsize');
 				break;
@@ -237,7 +237,7 @@ class Element
 
 			case 'clients':
 				return __('Clients block', 'touchsize');
-				break;	
+				break;
 
 			case 'contact-form':
 				return __('Contact form', 'touchsize');
@@ -296,7 +296,7 @@ class Element
 
 			case 'list-videos':
 				return __('List Videos', 'touchsize');
-				break;		
+				break;
 
 			case 'user':
 				return __('User login', 'touchsize');
@@ -502,7 +502,7 @@ class Element
 
 			case 'list-videos':
 				return 'icon-movie';
-				break;		
+				break;
 
 			case 'user':
 				return 'icon-login';
@@ -569,11 +569,11 @@ class Element
 
 			case 'image-carousel':
 				return self::parse_image_carousel( $element );
-				break;		
+				break;
 
 			case 'slider':
 				return self::parse_slider( $element );
-				break;		
+				break;
 
 			case 'list-portfolios':
 				return self::parse_list_portfolios( $element );
@@ -609,7 +609,7 @@ class Element
 
 			case 'facebook-block':
 				return self::parse_facebook_block( $element );
-				break;	
+				break;
 
 			case 'callaction':
 				return self::parse_callaction( $element );
@@ -709,7 +709,7 @@ class Element
 
 			case 'list-videos':
 				return self::parse_list_videos( $element );
-				break;			
+				break;
 
 			case 'user':
 				return self::parse_user( $element );
@@ -1099,7 +1099,7 @@ class Element
 		);
 
 		$filtered = array_intersect_key( $element, array_flip( $whitelist ) );
-		
+
 		$valid_elements_per_row = array(1, 2, 3, 4, 6);
 		$filtered['elements-per-row'] = (int)$filtered['elements-per-row'];
 		$filtered['elements-per-row'] = in_array($filtered['elements-per-row'] , $valid_elements_per_row) ?
@@ -1122,7 +1122,7 @@ class Element
 		);
 
 		$filtered = array_intersect_key( $element, array_flip( $whitelist ) );
-		
+
 		$valid_elements_per_row = array(1, 2, 3, 4, 6);
 		$filtered['elements-per-row'] = (int)$filtered['elements-per-row'];
 		$filtered['elements-per-row'] = in_array($filtered['elements-per-row'] , $valid_elements_per_row) ?
@@ -1175,7 +1175,7 @@ class Element
 			'line',
 			'iconed icon-close'
 		);
-		
+
 		if (!in_array($filtered['delimiter-type'], $delimiter_types)) {
 			$filtered['delimiter-type'] = 'line';
 		}
@@ -1218,7 +1218,7 @@ class Element
 			'simplecenter',
 			'lineariconcenter'
 		);
-		
+
 		if ( !in_array( @$filtered['style'], $styles ) ) {
 			$filtered['style'] = '2lines';
 		}
@@ -1231,7 +1231,7 @@ class Element
 			'h5',
 			'h6'
 		);
-		
+
 		if ( !in_array( @$filtered['size'], $sizes ) ) {
 			$filtered['size'] = 'h2';
 		}
@@ -1331,7 +1331,7 @@ class Element
 				$filtered['height'] = 20;
 			}
 		}
-		
+
 		if( !isset($filtered['mobile']) ) $filtered['mobile'] = 'n';
 
 		return $filtered;
@@ -1462,7 +1462,7 @@ class Element
 		if ( ! in_array( $filtered['direction'], array('asc', 'desc')) ) {
 			$filtered['direction'] = 'asc';
 		}
-		
+
 		return $filtered;
 	}
 
@@ -1504,7 +1504,7 @@ class Element
 		if (trim($filtered['text-color']) === '') {
 			$filtered['text-color'] = '#FFF';
 		}
-		
+
 		if (trim($filtered['bg-color']) === '') {
 			$filtered['bg-color'] = '#EB593C';
 		}
@@ -1535,7 +1535,7 @@ class Element
 		if ( ! in_array( $filtered['hide-subject'], array('0', '1')) ) {
 			$filtered['hide-subject'] = '0';
 		}
-		
+
 		return $filtered;
 	}
 
@@ -1558,18 +1558,18 @@ class Element
 		$filtered['selected-categories'] = array();
 
 		if ( $categs ) {
-			
+
 			foreach ($categs as $index => $category_id) {
 				array_push($filtered['selected-categories'], (int)$category_id );
 			}
-			
+
 			$filtered['selected-categories'] = array_unique($filtered['selected-categories']);
 			$filtered['selected-categories'] = implode(',', $filtered['selected-categories']);
 
 		} else {
 			$filtered['selected-categories'] = array();
 		}
-		
+
 		return $filtered;
 	}
 
@@ -1595,7 +1595,7 @@ class Element
 		);
 
 		$filtered = array_intersect_key( $element, array_flip( $whitelist ) );
-		$filtered['text'] = (isset($filtered['text'])) ? $filtered['text'] : ''; 
+		$filtered['text'] = (isset($filtered['text'])) ? $filtered['text'] : '';
 		return $filtered;
 	}
 
@@ -1628,7 +1628,7 @@ class Element
 			'toggle-description',
 			'toggle-state',
 			'admin-label'
-		
+
 		);
 
 		$filtered = array_intersect_key( $element, array_flip( $whitelist ) );
@@ -1730,7 +1730,8 @@ class Element
 	public static function parse_user( $element )
 	{
 		$whitelist = array(
-			'type'
+			'type',
+			'align'
 		);
 
 		$filtered = array_intersect_key( $element, array_flip( $whitelist ) );

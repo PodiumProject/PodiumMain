@@ -10,7 +10,7 @@ class Template
 	 */
 	public static function validate_template_structure( $post = array() )
 	{
-					
+
 		if ( isset( $post['content'] )) {
 			if (is_array($post['content'])) {
 				return true;
@@ -67,7 +67,7 @@ class Template
 	/**
 	 * Validate row settings
 	 * @param  array  $settings
-	 * @return array 
+	 * @return array
 	 */
 	public static function validate_row_settings($settings)
 	{
@@ -99,12 +99,12 @@ class Template
 			'gradientColor' => '',
 			'gradientMode' => ''
 		);
-		
+
 		$positions     = array('left', 'center', 'right');
 		$attachements  = array('fixed', 'scroll');
 		$bgSizes  = array('auto', 'cover');
 		$repetitions   = array('repeat', 'no-repeat', 'repeat-x', 'repeat-y');
-		
+
 		$valid_effects = array(
 			'none',
 			'slideup',
@@ -174,12 +174,12 @@ class Template
 											esc_attr($settings['bgAttachement']) : '';
 
 			$filtred_settings['bgAttachement'] = in_array($filtred_settings['bgAttachement'], $attachements) ?
-										$filtred_settings['bgAttachement'] : '';								
+										$filtred_settings['bgAttachement'] : '';
 
 			$filtred_settings['bgRepeat'] = isset($settings['bgRepeat']) ? esc_attr($settings['bgRepeat']) : '';
 
 			$filtred_settings['bgRepeat'] = in_array($settings['bgRepeat'], $repetitions ) ?
-										$settings['bgRepeat'] : 'no-repeat';								
+										$settings['bgRepeat'] : 'no-repeat';
 
 			$filtred_settings['bgSize'] = isset($settings['bgSize']) ? esc_attr($settings['bgSize']) : '';
 
@@ -282,7 +282,7 @@ class Template
 			array_push( $attributes, 'data-bg-attachment="' . @$attr['bgAttachement'] . '"' );
 			array_push( $attributes, 'data-bg-repeat="' . @$attr['bgRepeat'] . '"' );
 			array_push( $attributes, 'data-bg-size="' . @$attr['bgSize'] . '"' );
-			
+
 			array_push( $attributes, 'data-margin-top="' . @$attr['rowMarginTop'] . '"' );
 			array_push( $attributes, 'data-margin-bottom="' . @$attr['rowMarginBottom'] . '"' );
 			array_push( $attributes, 'data-padding-top="' . @$attr['rowPaddingTop'] . '"' );
@@ -329,7 +329,7 @@ class Template
 		$valid_locations = array('header', 'footer', 'page');
 
 		if ( in_array($location, $valid_locations) ) {
-			
+
 			$templates = get_option('videotouch_' . $location . '_templates', array());
 
 			if (array_key_exists($template_id, $templates)) {
@@ -337,7 +337,7 @@ class Template
 				return array(
 					'template_id' => $template_id,
 					'name' => $templates[$template_id]['name'],
-					'elements' => self::visual_editor($templates[$template_id]['elements']) 
+					'elements' => self::visual_editor($templates[$template_id]['elements'])
 				);
 
 			} else {
@@ -354,11 +354,11 @@ class Template
 		$valid_locations = array('header', 'footer', 'page');
 		$template_id     = 'ts-template-'.time();
 
-		$template_name = isset($_POST['template_name']) ? trim($_POST['template_name']) : ''; 
+		$template_name = isset($_POST['template_name']) ? trim($_POST['template_name']) : '';
 		$template_name = ($template_name === '') ? __('New template ' . date('d-m-Y'), 'touchsize') : $template_name;
 
 		if ( in_array($action, $valid_actions) && in_array($location, $valid_locations) ) {
-			
+
 			if ($action === 'blank_template') {
 
 				$templates = get_option( 'videotouch_' . $location . '_templates', array() );
@@ -379,19 +379,24 @@ class Template
 				}
 
 				$updated = update_option('videotouch_' . $location . '_templates', $templates);
-				
+
 
 			} else if ( $action === 'update') {
 
 				$content = (isset($_POST['content']) && is_array($_POST['content'])) ? $_POST['content'] : array();
 				$validated_content = self::validate_content($content);
-				
+
 				if (isset($_POST['post_id'])) {
+
 					update_post_meta((int)$_POST['post_id'], 'ts_template', $validated_content);
+
 				} else {
-					$updated = update_option( 'videotouch_' . $location,  $validated_content );
+
+					$lang = defined( 'ICL_LANGUAGE_CODE' ) ? '_' . ICL_LANGUAGE_CODE : '';
+
+					$updated = update_option( 'videotouch_' . $location . $lang, $validated_content );
 				}
-				
+
 				if (isset($_POST['template_id'])) {
 					$template_id = $_POST['template_id'];
 				} else {
@@ -436,21 +441,38 @@ class Template
 	 */
 	public static function edit( $location = 'header' )
 	{
-		if ( $location === 'header' || $location === 'footer') {
-			
-			$template    = get_option( 'videotouch_' . $location, array());
-			$template_id = get_option( 'videotouch_' . $location . '_template_id', 'default');
-			$templates   = get_option( 'videotouch_' . $location . '_templates', array());
+		if ( $location === 'header' || $location === 'footer' ) {
 
-			if ( isset($templates[$template_id]['elements']) ) {
-				$template = $templates[$template_id]['elements'];
+			$lang = defined( 'ICL_LANGUAGE_CODE' ) ? '_' . ICL_LANGUAGE_CODE : '';
+
+			$template = get_option( 'videotouch_' . $location . $lang );
+
+			if ( empty( $template ) ) {
+
+				if ( ! empty( $lang ) ) {
+
+					$template = get_option( 'videotouch_' . $location );
+
+				} else {
+
+					$template_id = get_option( 'videotouch_' . $location . '_template_id', 'default' );
+					$templates   = get_option( 'videotouch_' . $location . '_templates', array() );
+
+					if ( isset( $templates[ $template_id ]['elements'] ) ) {
+
+						$template = $templates[ $template_id ]['elements'];
+					}
+
+				}
 			}
 
 		} else {
-			$template = self::get_structure( $location );
+
+			$template = ( $template = get_post_meta( $location, 'ts_template', true ) ) && is_array( $template ) ? $template : array();
+
 		}
 
-		return self::visual_editor($template);
+		return self::visual_editor( $template );
 	}
 
 
@@ -530,7 +552,7 @@ class Template
 					// travers each row and parse columns
 					foreach ($row['columns'] as $column_index => $column) {
 
-						$column_start = '<li data-columns="'.$column['size'].'" data-type="column" class="columns'.$column['size'].'"> 
+						$column_start = '<li data-columns="'.$column['size'].'" data-type="column" class="columns'.$column['size'].'">
 							<div class="column-header">
 								<span class="minus icon-left" data-tooltip="Reduce column size"></span>
 								<span class="column-size" data-tooltip="The size of the column within container">'.self::get_column_size($column['size']).'</span>
@@ -539,11 +561,11 @@ class Template
 								<span class="drag-column icon-drag" data-tooltip="Drag this column"></span>
 							</div>
 							<ul class="elements">';
-						
+
 							$column_end = '</ul><span class="add-element">'.__('Add element', 'touchsize').'</span>
 						</li>';
 						$elements = '';
-						
+
 						// check if row is not empty
 						if (is_array($column['elements']) && !empty($column['elements']) ) {
 							foreach ($column['elements'] as $element_index => $element) {
@@ -575,7 +597,7 @@ class Template
 		return ( $template ) ? $template : array();
 	}
 
-	
+
 	public static function validate_content($content = array()) {
 
 		$validated_content = array();
@@ -586,7 +608,7 @@ class Template
 
 				// if row is not empty
 				if ( is_array( $row ) && ! empty( $row ) ) {
-					
+
 					$filtered_row = array(
 						'settings' => array(),
 						'columns' => array()
@@ -599,7 +621,7 @@ class Template
 					$filtered_columns = array();
 
 					if (isset($row['columns']) && is_array($row['columns'])) {
-						
+
 						// traversing columns
 						foreach ( $row['columns'] as $column_id => $column ) {
 
